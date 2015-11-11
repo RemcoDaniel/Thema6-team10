@@ -1,0 +1,45 @@
+Notulen van vergadering 1 van projectgroep 10
+
+Maandag 13 november 2015 11.45-12.25 uur.
+Aanwezig: Kevin (voorzitter), Remco (notulen) , Jeroen, Jordan.
+Afwezig: -
+
+1. opening:
+Iedereen is aanwezig en op tijd.
+Als extra punt is omgang met documenten toegevoegd aan de punten.
+
+===================================================================
+2. verwachtingen:
+We zitten aardig op 1 lijn met alles.
+De verwachtingen zijn samengevoegd en verwerkt in het teamcontract.
+
+===================================================================
+3. agenda:
+de vergaderagenda moet bijgehouden worden
+afgesproken is dit uiterlijk de zondag voor de nieuwe
+vergadering online te zetten.
+hierin staat waar, hoe laat en welke vergaderpunten.
+
+===================================================================
+4. plan van aanpak:
+De opzet hiervoor zal deze week gemaakt worden.
+
+===================================================================
+5. afspraken over uren invullen:
+Invullen van de gemaakte uren door ieder apart, elke keer na
+het werk meteen invullen in Google Drive.
+
+===================================================================
+6. documenten:
+Documenten bewerken in Google Drive.
+Hier kan makkelijk tegelijkertijd aan worden gewerkt.
+Plus minder conflicten bij het mergen op GitHub.
+Na afloop van een bewerkingssessie meteen in GitHub plaatsen.
+
+===================================================================
+7. afsluiting:
+Het was een goede vergadering iedereen is aan bod gekomen.
+Geen aparte vragen meer.
+Volgende vergadering is volgende week woensdag, Remco zal dan
+de voorzitter zijn.
+Plaats, tijd en agendapunten volgen nog.
