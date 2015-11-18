@@ -1,9 +1,12 @@
 Agenda van vergadering 2 van projectgroep 10
-Woensdag 11 november 2015 11.45-12.30 uur.
+Woensdag 18 november 2015 11.45-12.30 uur.
 Locatie D07.21
 
 1. opening
-2. interview
-3. aanpak requirements
-4. samenwerking (terugblik afgelopen week)
-5. afsluiting
+2. notulen
+3. interview
+4. aanpak requirements
+5. samenwerking (terugblik afgelopen week)
+6. mededelingen
+7. rondvraag
+8. afsluiting
