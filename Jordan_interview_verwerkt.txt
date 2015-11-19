@@ -1,0 +1,47 @@
+De veiligheid van de webapplicatie moet aanwezig zijn.
+Om te voorkomen dat  mensen die niet geautoriseerd zijn op de wasmachine er ook niet bij kunnen komen.
+	-Martin vindt een wachtwoord voor het openen van de webapplicatie prima.
+
+Een simpele user interface is gewenst. (Dit project gaat niet zo zeer om de user interface maar om het correct laten werken van de wasmachine.)
+Het protype interface wat wij hebben laten zien voldaat aan een groot aantal puten.
+
+Een aantal dingen die nog toegevoegd moeten worden zijn de volgden punten:
+
+-Stop knop
+	Duidelijke stop knop die de hele wasmachine uitschakeld.
+-Pauzeer knop
+	-Stopt het huidge wasprogramma, onthoud waar hij is in dat programma, en kan weer doorgaan met het uitvoeren van dat programma als er nog een keer op de knop gedrukt worden.
+
+-Snel stoppen (Mogelijk, niet verplicht)
+	De wasmachine moet niet direct uit gaan maar wel binnen een korte tijd periode zodat de gebruiker weet dat de wasmachien binnen zoveel minuten klaar is.
+
+Ook zijn er nog dingen die niet opgenomen waren in onze userinterface:
+
+-Foutmeldingen
+	Een foutmelding simpel aan een gebruiker laten zien, de monteur/fabrikant wel de mogelijkheid laten hebben om een gedetaileerd rapport in te laten zien. De foutmelding kan weergeven worden via een pop up. Bij sommig foutmeldingen sluit de wasmachine af en kan de gebruiker om hulp vragen van de fabrikant/monteur.
+
+-Inplannen
+	Wasmachine instellen zodat deze op een bepaald tijdstip begint met het uitvoeren van het wasprogramma.
+
+-Loggen
+	Het loggen van data is voor de fabrikant mogelijk interrasant, Ook kan de gebruiker hier baad bij hebben door stroomverbruik uit te rekenen en kosten over een bepaalde periode.
+
+-Efficienty wasprogramma
+	Uitrekenen hoeveel het draaien van een was kost/Hoe efficient een wasprogramma is.
+
+-Data versturen
+	Data versturen naar de fabrikant als de gebruiker daar toesteming voor geeft
+
+-Data binnehalen
+	Nieuwe informatie binnehalen voor wasprogramma's als de gebruiker daar toestemming voor geeft	
+
+
+Punten die niet meer hoeven
+
+-Custom wasprogramma
+	De gruiker heeft niet de mogelijkheid wasprogramma's aan te passen, dit zorgt voor problemen met de garantie.
+
+-Technische details
+	De gebruiker hoeft niet gewezen worden op de technische details van een fout.
+(Mogelijk wel een manier van de foutrapporten en status van de wasmachine technisch kunnen laten zien?)
+
