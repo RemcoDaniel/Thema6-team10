@@ -1,0 +1,42 @@
+-Veiligheid op de webapplicatie
+	Wachtwoord op de webapplicatie!
+-
+
+Simpele user interface, punten die verwerkt kunnen worden.
+
+Stop knop verhelderen.
+Huidige interface is oke, met nog wat aanpassingen.
+
+Extra optie voor het stoppen en pauzeren
+
+Stoppen - direct te stoppen
+Pauzeren - even pauzeren
+Snel stoppen - stoppen maar wel afhandelen
+
+Verbonden aan het internet voor het aanpassen vna software om de nieuwste optie in te stellen.
+Updaten van wasprogramma's. 
+
+
+Doorsturen naar fabircant?
+-Prettig om berichten te krijgen, maar prive kwesties, vragen om toestemming.
+
+Foutmeldingen, hoeveel informatie aan de gebruiker?
+-De gebruiker hoeft alleen een melding te krijgen dat de wasmachine tijdens een sotring is uitgevallen. Voor service monteur gedetaileerdere informatie.
+
+-Was in te plannen op een tijdstip. als er tijd is.
+
+-Customizen
+-Totaal niet belangrijk!
+
+-Loggen van data
+	-Elektrischtijd verbruik
+	-Water
+	-Wat er gebeurd is
+	-Motor draai tijd
+	-
+	Gebruiker waarschuwen voor slijtage van de wasmachine
+
+-Effiecienty van wasprogramma's
+Elektirasiteits verbruik. 
+	-Foutdetectie (allerlij fouten).
+
