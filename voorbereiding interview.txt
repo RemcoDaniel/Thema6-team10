@@ -1,0 +1,143 @@
+VRAGEN:
+==========================================================
+wat is de doelgroep/doelgroepen voor de wasmachine?
+Wat is de gemiddelde gebruiksomgeving. bv: Huishoudelijk of in een bedrijf.
+In eerste instantie huishoudens. Mogelijk daarna nog bedrijven.
+waarop moet het programma komen te draaien? (laptop/tablet)
+welke webbrowsers moeten bruikbaar zijn? (prioriteit)
+waar ligt de verantwoordelijkheid om te bepalen of een wasprogramma verder kan gaan? (gebruiker of applicatie)
+hoeveel informatie krijgt de gebruiker bij technische mankementen?
+hoe moet de user interface eruit zien, met vooral het oog op welke functies allemaal beschikbaar moeten zijn.
+welke wasprogrammas moeten er beschikbaar komen?
+wat moet de gebruiker allemaal kunnen?
+
+moet de gebruiker zelf een wasprogramma samen kunnen stellen?
+op welke manieren wordt het wasmiddel toegevoegd? (handmatig of automatisch?)
+moet hij vooraf programmeerbaar zijn? dus dat je in kan stellen dat hij om een bepaalde tijd start.
+
+moet er een vergrendeling zitten op de webapplicatie?
+wanneer moet deze vergrendeling actief zijn?
+zijn er zaken die de gebruiker absoluut NIET zelf in mag stellen?
+moet een monteur ook een eigen profiel hebben op de webpagina?
+moet het interfase te customizen zijn?
+wat moet er zichtbaar zijn na inloggen?
+moet je een log bijhouden van je wasprogrammas?
+zijn er zaken die altijd zichtbaar moeten zijn?
+kan je al een nieuwe was plannen als er nog een was draait?
+kan je de huidige wasprogramma aanpassen?
+stopknop webapplicatie, wat moet er dan gebeuren?
+extra afhandelings knop voor snel afhandelen. 
+wat wil de gebruiker weten
+wat voor feedback moet er komen als er iets mis gaat/ iets niet naar behoren werkt?
+
+
+wat moet er gebeuren als er op de noodknop wordt gedrukt?
+als de verbinding wegvalt met de server, moet de wasmachine dat gewoon doorgaan of een andere afhandeling verzorgen? (bijvoorbeeld zo snel mogelijk stoppen)
+
+
+==========================================================
+
+veiligheid:
+vergrendelingen en dergelijke om veiligheid te garanderen (bijvoorbeeld tegen kinderen die de wasmachine open trekken halverwege)
+
+
+technische aspecten:
+
+
+user interface:
+hoe moet deze eruit zien?
+moet er verschil zijn in welke user er op dat moment bezig is? zegmaar functies die alleen voor de gebruiker zijn en functies die zichtbaar worden voor onderhouders. (of zelfs een eigen interface voor pietje en een voor jan)
+
+wasprogramma’s:
+welke wasprogrammas moeten erop komen?
+moeten zelf wasprogrammas samengesteld kunnen worden?
+
+wasmachine zelf:
+hoeveel rotaties
+hoeveel graden water maximaal en minimaal
+
+
+
+algemeen
+wat is de doelgroep?
+
+
+
+
+
+MoSCoW:
+must:
+webinterface
+wasprogramma selecteren
+temperatuur instellen
+hoeveelheid wasmiddel instellen
+status wasmachine weergeven
+resterende tijd programma
+veiligheid
+single user
+should:
+zelf wasprogramma samenstellen
+multiuser
+could:
+melding als de was klaar is
+app
+wasserette
+automatisch wasmiddel dosering 
+would like but won’t get:
+de wereld overheersen
+Ingewikkeld label systeem
+
+
+
+zelf geen programmas updaten 
+
+bij klachten bedrijf informeren. vragen aan gebruiker 
+
+
+
+
+Notulen Jordan:
+
+-Veiligheid op de webapplicatie
+    Wachtwoord op de webapplicatie!
+-
+
+Simpele user interface, punten die verwerkt kunnen worden.
+
+Stop knop verhelderen.
+Huidige interface is oke, met nog wat aanpassingen.
+
+Extra optie voor het stoppen en pauzeren
+
+Stoppen - direct te stoppen
+Pauzeren - even pauzeren
+Snel stoppen - stoppen maar wel afhandelen
+
+Verbonden aan het internet voor het aanpassen vna software om de nieuwste optie in te stellen.
+Updaten van wasprogramma's.
+
+
+Doorsturen naar fabircant?
+-Prettig om berichten te krijgen, maar prive kwesties, vragen om toestemming.
+
+Foutmeldingen, hoeveel informatie aan de gebruiker?
+-De gebruiker hoeft alleen een melding te krijgen dat de wasmachine tijdens een sotring is uitgevallen. Voor service monteur gedetaileerdere informatie.
+
+-Was in te plannen op een tijdstip. als er tijd is.
+
+-Customizen
+-Totaal niet belangrijk!
+
+-Loggen van data
+    -Elektrischtijd verbruik
+    -Water
+    -Wat er gebeurd is
+    -Motor draai tijd
+    -
+    Gebruiker waarschuwen voor slijtage van de wasmachine
+
+-Effiecienty van wasprogramma's
+Elektirasiteits verbruik.
+    -Foutdetectie (allerlij fouten).
+
+
