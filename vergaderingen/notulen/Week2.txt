@@ -1,0 +1,70 @@
+Notulen van vergadering 2 van project groep 10
+
+Woensdag  18 Novemer  12:20
+Aanwezig: Kevin, Remco (voorzitter), Jordan, Jeroen (notulen), Jan Zuurbier (docent)
+Afwezig: -
+
+======
+1 opening
+ Iedereen is aanwezig.
+ Met Jan Zuurbier langs de notulen gegaan. Hij vondt ze niet slecht.
+ Daarna agenda punten langs gaan.
+ Missende punten;
+	Notulen van vorige week langs gaan
+	Mededelingen
+	Vragenrondje voor de afsluiting.
+ Verder was de agenda goed
+
+======
+2. Notulen
+ Langs gaan waar we overal langs gaan.
+ Kevin; met notulen eens
+ Jordan; miste namen, voor de rest goed.
+ Jeroen; geen mening.
+
+======
+3. Agenda
+ We lopen op schema
+ Plan van de aanpak van het interviewt.
+ Kevin; vorige persoon maakt notulen, niet de volgende persoon
+  Jordan&Remco&Jeroen mee eens
+  Remco nieuw agenda punt; Communicatie problemen niet duidelijk
+ Na interview alles bespreken
+
+ Remco: onduidelijkheid over hoe techniesch het moet
+ Zuurbier: De man is niet technisch
+
+======
+4. Plan van aanpak
+ Jordan; Na het interview weten we meer/beter om de requirements te maken Als we iets missen, moeten we direct vragen stellen ipv het achterwegen laten.
+ Jeroen; Geen opmerking
+ Kevin; Met Jordan eens
+ Remco; Goed, maar kijken naar taakverdeling. Misschien extra werkbijeenkomst. Extra werkbijeenkomst donderdag 19 na C++ hoorcolege; werken aan requirements
+ 
+======
+5. Samenwerking
+ Jeroen; prima
+ Jordan; te kort om echt een mening te hebben. Beetje stroef, maar neemt wel af. Ziet geen problemen in de toekomst.
+ Kevin; Goede samenwerking. Iedereen altijd aanwezig - positief. Ziet geen problemen in de toekomst.
+ Remco; Ziet er goed uit.
+ Jan Zuurbier; Als er iets mis is met Jeroen, direct naar Zuurbier gaan.
+ Remco; Elke week terug kijken naar de communicatie
+ 
+
+======
+5. Mededelingen
+ Geen mededelingen
+	
+======
+6. Rondvraag
+ Remco; Hoe is de vergadering ervaren?
+ Kevin; prettig, duidelijk. Weet waar hij aan toe is.
+ Jordan; enige probleem; concreet afspreken wat er gedaan moet worden.
+ Jeroen; -
+ Remco; inteview om 14:00. Daarna weer bijeenkomst om te samenvatting wat er allemaal gezegt is. Mail naar Wensink sturen met het de samenvatting. De requirements maken - nog niet duidelijk .
+ Zuurbier; requirements zijn de MoSCoW langsgaan 
+ Remco; requirements maken en anders taakverdeling
+ 
+======
+7.
+Afsluiting

@@ -1,0 +1,13 @@
+Agenda van vergadering 3 van projectgroep 10
+Woensdag 25 november 2015 11.45-12.30 uur.
+Locatie D07.21
+
+1. opening
+2. notulen
+	-  Notulen vorige week ontbreken omdat github blijkbaar niet gepusht was en ondertussen verwijderd is.
+4. aanpak requirements
+5. samenwerking
+	- Terugblik vorige week
+6. mededelingen
+7. rondvraag
+8. afsluiting
