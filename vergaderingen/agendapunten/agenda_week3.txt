@@ -5,7 +5,8 @@ Locatie D07.21
 1. opening
 2. notulen
 	-  Notulen vorige week ontbreken omdat github blijkbaar niet gepusht was en ondertussen verwijderd is.
-4. aanpak requirements
+4. aanpak requirements/PvA
+	- E-mail Wensink ontvangen omtrent de MoSCoW?
 5. samenwerking
 	- Terugblik vorige week
 6. mededelingen
