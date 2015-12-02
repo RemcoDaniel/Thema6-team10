@@ -8,7 +8,7 @@ Niet wat iedereen heeft gezegd per onderwerp.
 
 3. Aanpak requirements
 
-We hebben voor de requirements de MoSCoW gemaakt en één keer verbeterd.
+We hebben voor de requirements de MoSCoW gemaakt en Ã©Ã©n keer verbeterd.
 We wachten nog op de volgende feedback om eventuele problemen nog op te lossen.
 
 Kijken of we een begin kunnen maken aan het Requirements architecture.
