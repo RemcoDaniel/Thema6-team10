@@ -1,0 +1,60 @@
+Notulen van vergadering 4 van project 10. 
+
+Woensdag  2 December  13:20
+Aanwezig: Jordan (voorzitter), Kevin (notulist), Remco, Jeroen
+Afwezig: - 
+
+===============================================================
+1 Opening
+Gepland om 13:00u. 
+Vergadering is geopend om 13:20u. 
+Het is iets later dan gepland wegens kleine foutjes met skype.
+===============================================================
+2 Notulen
+Notulen ziet er goed uit. We hadden besloten de taken te verdelen. 
+Uiteindelijk iets meer samen gewerkt.
+===============================================================
+3 PvA voortgang en resterende taken
+We Zijn al ver op weg. 
+to do: 
+- planning 
+- project activiteiten
+- check op spelling
+- opmaak bekijken 
+
+Vrijdag af 4 December. Woensdag 2 december (vandaag) naar Gerald sturen voor goedkeuring. 
+==============================================================
+4 Requirement architecture
+Woensdag 9 December 9:00u -> inleveren 
+Maandag graag af. 
+Donderdag 10 December -> feedback
+
+use case: bijna af - maandag 7 December allen eraan werken.
+activity diagram: allemaal bekijken - maandag 7 December allen eraan werken.  
+contrains model: allemaal bekijken - maandag 7 December allen eraan werken.  
+
+=============================================================
+5 Solution architecture
+Woensdag 16 December 9:00u -> inleveren
+Donderdag 17 December -> feedback
+=============================================================
+6 Bespreken inleverdata van mail Marten
+dit is al besproken met de andere agenda punten. 
+=============================================================
+7 Planning
+De planning is op GitHub gezet. 
+Vooral RA en SA kan nu heel goed ingepland worden voor de komende weken. 
+Wordt zometeen in de planning ingevuld door Remco. 
+============================================================
+8 Mededelingen 
+Agenda punt erbij over Samerwerking.
+===========================================================
+9 Samenwerking
+Iedereen is nog tevreden over de samenwerking en de sfeer is goed. 
+==========================================================
+10 Rondvraag
+Niemand heeft verder een rondvraag. 
+===========================================================
+11 Afsluiting
+De vergadering is gesloten om 13:50u. 
+Over skype ging de vergadering verder voortspoedig na de rommelige start. 
