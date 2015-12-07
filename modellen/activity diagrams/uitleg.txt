@@ -1,0 +1,5 @@
+De activity diagrams beginnen als het ware in de user interface.
+Van hieruit worden uitstapjes gemaakt naar de wasmachine besturing AD en de
+wasprogramma AD. (te zien aan de action blocks met een * erin)
+Zodra een end node van 1 van deze 2 AD's is bereikt, wordt terug gesprongen naar
+het userface AD.
