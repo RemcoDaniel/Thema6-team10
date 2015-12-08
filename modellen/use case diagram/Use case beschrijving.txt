@@ -1,0 +1,71 @@
+Use-Case diagram beschrijving
+Systeem: 	De wasmachine
+
+==========================================================================================
+naam			wasprogramma draaien	
+__________________________________________________________________________________________
+doel			het wasprogramma instellen en daarna laten draaien.
+			en op het einde af laten ronden.  
+__________________________________________________________________________________________
+pre-conditie		Het systeem staat aan en de gebruiker is ingelogt
+ 			in de webapplicatie.
+__________________________________________________________________________________________
+post-conditie		op de webapplicatie komt de status te staan hoe ver het 
+			wasprogramma is en er gaat een timer lopen hoe lang
+			het wasprogramma nog gaat duren. 
+			en de use case "wasmachine besturing" begint. 
+__________________________________________________________________________________________
+uitzondering		wanneer er op de stop knop wordt wordt gedrukt dan gaan 
+			we naar de use case "vroegtijdig stoppen van wasprogramma"
+			en als er een fout blijkt te ontstaan dan start de 
+			use case "noodstop wasprogramma". 
+==========================================================================================
+naam			vroegtijdig stoppen van wasprogramma
+__________________________________________________________________________________________
+doel			wanneer op de STOP-knop wordt gedrukt. dan maakt de wasmachine 
+			het wasprogramma op een snelle manier af.
+__________________________________________________________________________________________
+pre-conditie		de use case "wasprogramma draaien"
+__________________________________________________________________________________________
+post-conditie		de use case "wasprogramma besturing"
+__________________________________________________________________________________________
+uitzondering		- 
+==========================================================================================
+naam			was log weergeven
+__________________________________________________________________________________________
+doel			Het weergeven van de log die door de webapplicatie zijn
+			opgeslagen. bijvoorbeeld het laten zijn welke wasprogramma's 
+			er voor het laatst zijn gedraaid of hoeveel water er is verbruikt
+			de afgelopen tijd(maand, jaar, wasmachines levensduur).
+__________________________________________________________________________________________
+pre-conditie		Het systeem staat aan. Er is ingelogd op de webapplicatie. 
+__________________________________________________________________________________________
+post-conditie		-
+__________________________________________________________________________________________
+uitzondering		- 
+==========================================================================================
+naam			noodstop wasprogramma
+__________________________________________________________________________________________
+doel			Wanneer er een fout is op getreden in het systeem of
+			met de wasmachine bijvoorbeeld de wasmachine lekt. 
+			dan wordt er een noodstop gemaakt.
+__________________________________________________________________________________________
+pre-conditie		de use case "wasprogramma draaien"
+__________________________________________________________________________________________
+post-conditie		de use case "wasmachine besturing"
+__________________________________________________________________________________________
+uitzondering		-	
+==========================================================================================
+naam			wasmachine besturing
+__________________________________________________________________________________________
+doel			het water toevoeren in de wasmachine of het leeg lopen.
+			de temperatuur regelen van het water.
+			het laten roteren van de wasmachine.
+__________________________________________________________________________________________
+pre-conditie		de use cases "wasprogramma draaien", "noodstop wasprogramma",
+			"vroegtijdig stoppen van wasprogramma". 
+__________________________________________________________________________________________
+post-conditie		- 
+__________________________________________________________________________________________
+uitzondering		- 
+==========================================================================================
