@@ -1,0 +1,15 @@
+Agenda van vergadering 5 van projectgroep 10.
+Datum: Woensdag 9 december 2015 12:00.
+Locatie: D07.23
+Voorzitter: Remco
+Notulist: Jeroen
+
+1. Opening
+2. Notulen
+3. PvA terugblik
+4. Requirement architecture
+5. Solution architecture
+6. Planning (ook met kijk op vakantie)
+7. Mededelingen
+8. Rondvraag
+9.Afsluiting
