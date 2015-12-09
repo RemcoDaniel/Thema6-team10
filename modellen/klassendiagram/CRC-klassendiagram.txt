@@ -1,11 +1,12 @@
+WASMACHINE:
 -Boundary objecten
 	1.theMotor
 	2.theButton
 	3.theHeater
 	4.thePump
 	5.theLed
--Gebruikersrol-objecten
-	1.theUser
+-Gebruikersrol objecten
+	1.theUser		????????? moet dat wel hier ????????
 -Controller objecten
 	1.theMeasurmentCtrl
 	2.theInputCtrl
@@ -16,5 +17,21 @@
 	2.theWasprogramma
 	3.theUsers
 	4.
+-Utility objecten
+	1.
+
+
+============================================================================
+WEBAPPLICATIE:
+-Boundary objecten
+	1.theWebSocket
+	2.
+	3.
+-Gebruikersrol objecten
+	1.theUser
+-Controller objecten
+	1.
+-Entity objecten
+	1.
 -Utility objecten
 	1.
