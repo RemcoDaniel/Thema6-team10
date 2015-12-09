@@ -83,7 +83,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="AbstractElementGroup" />
-        <value>178</value>
+        <value>183</value>
       </counter>
       <counter>
         <item-type stereotype="" type="UmlComment" />
@@ -886,7 +886,7 @@
           </authors>
           <description />
           <creation-date>12/07/2015 11:20:49</creation-date>
-          <change-date>12/07/2015 12:09:06</change-date>
+          <change-date>12/09/2015 21:35:30</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -929,12 +929,6 @@
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
-          </item>
-          <item id="di453179216228341065" cid="ACT024" type="action" name="wasprogramma instellen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:07:53">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
           </item>
           <item id="di570827200878063311" cid="ELEM109" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:09:01">
             <stereotypes />
@@ -1105,9 +1099,6 @@
           </item>
           <item id="di688061504374416030" iid="4ee3b927a91e494cabd93ab44920f44d" creation-date="12/07/2015 12:07:04" order-index="16" type="entity">
             <layout ax="394" ay="406" awidth="208" aheight="50" x="394" y="406" width="208" height="50" angle="0" />
-          </item>
-          <item id="di453179216228341065" iid="99f5b86e22ec49b9be75f150381d62da" creation-date="12/07/2015 12:07:53" order-index="18" type="entity">
-            <layout ax="397" ay="323" awidth="203" aheight="50" x="397" y="323" width="203" height="50" angle="0" />
           </item>
           <item id="di320829515147397993" iid="63bda262b144489fbd691ef3b8164f6d" creation-date="12/07/2015 12:08:05" order-index="19" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="498" y1="373" x2="498" y2="406" start-border-pos="0.625615763546798" end-border-pos="0.125">
