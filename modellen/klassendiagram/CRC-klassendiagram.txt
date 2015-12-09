@@ -1,0 +1,20 @@
+-Boundary objecten
+	1.theMotor
+	2.theButton
+	3.theHeater
+	4.thePump
+	5.theLed
+-Gebruikersrol-objecten
+	1.theUser
+-Controller objecten
+	1.theMeasurmentCtrl
+	2.theInputCtrl
+	3.theWasmachineCtrl
+	4.
+-Entity objecten
+	1.theLog
+	2.theWasprogramma
+	3.theUsers
+	4.
+-Utility objecten
+	1.
