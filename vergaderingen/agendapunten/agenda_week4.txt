@@ -1,0 +1,14 @@
+Agenda van vergadering 4 van projectgroep 10.
+Datum: Woensdag 2 december 2015 12:00.
+Locatie: Online (via Skype).
+
+1. Opening
+2. Notulen
+3. PvA voortgang en resterende taken
+4. Requirement architecture
+5. Solution architecture
+6. Bespreken inleverdata van mail marten
+7. Planning
+8. Mededelingen
+9. Rondvraag
+10.Afsluiting

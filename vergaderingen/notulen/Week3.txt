@@ -1,0 +1,40 @@
+1. De vergadering is geopend om 11:51 op wonesdag 25-11-2015.
+
+2. Notulen bespreken
+
+De notulen ziet er goed uit.
+Misschien iets te veel informatie, meer richting een conlusie werkeng van een punt.
+Niet wat iedereen heeft gezegd per onderwerp.
+
+3. Aanpak requirements
+
+We hebben voor de requirements de MoSCoW gemaakt en één keer verbeterd.
+We wachten nog op de volgende feedback om eventuele problemen nog op te lossen.
+
+Kijken of we een begin kunnen maken aan het Requirements architecture.
+Er zijn drie diagrammen die in dit requirements architecture moeten komen.
+
+Ook moet er nog een plan van aanpak worden gemaakt.
+
+We hebben besloten het in vieren te delen zodat iedereen een eigen deel kan maken.
+Volgende week kijken we naar de voortgang van deze delen, en of iemand ergens hulp bij nodig heeft en of er nog aanpassingen gemaakt moeten worden.
+
+	-Kevin 	:Use case 
+	-Jeroen :Constrains
+	-Remco 	:Activity diagram
+	-Jordan :Plan van aanpak
+
+4. Samenwerking
+
+We hebben vorige week het interview voorbereid en de MoSCow gemaakt. 
+Deze samenwerking verliep goed. We hebben met z'n alle gekeken naar de feedback van de MoSCoW.
+We hebben allemaal ons steentje bijgedragen aan deze taken.
+
+5. Mededelingen
+	-Geen mededelingen
+6. Rondvraag / wat verder ter tafel komt
+Mappenstructuur op github is nog niet helemaal geregeld.
+	Remco kijkt nog naar de mappenstructuur op github.
+
+7.Afsluiting
+	De vergadering is afgerond op 12:08
