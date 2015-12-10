@@ -1,0 +1,12 @@
+Toegevoegt; "Inlog error weergeven"
+	Handig om een error te laten zien ipv weer het inlog scherm te laten zien.
+	Optioneel;
+		ipv naar inlogscherm weergeven gaan, naar "inlog signaal" gaan. Het inlogscherm wordt namelijk al weergegeven.
+Veranderd; "[Else]" naar "[inloggegevens onjuist]"
+	Het is onhandig om er vanuit te gaan dat als er iets mis gaat dit altijd onjuist gegeven gegevens zijn, ipv bijv. een netwerk error die optreed.
+Hersteld; "[Else]" gaurd van Disision node "Inlog Signaal"
+	Natuurlijk kan er ook iets geheel anderd optreden en is het handig /dat/ ook af te vangen.
+Opmerking; Is dit het user interface gezien vanuit de browser of vanuit de server/Pi?
+	Dingen zoals "inlogscherm weergeven" suggereren vanuit de browser, maar "uitlog signaal" ontvangt een signaal? Moet het signaal dan niet naar die server/Pi gaan die dan de nieuwe webpagina weergeeft?
+Toegevoegt; "Inloggegevens controleren"
+	Is een poging om te onderzoeken of communicatie met de server/pi ook hierin moet verwerkt worden. Zie Opmerking op regel 9.
