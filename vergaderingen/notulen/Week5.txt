@@ -1,0 +1,42 @@
+Notulen van vergadering 5 van project 10. 
+
+Woensdag  10 December  12:40
+Aanwezig: Jordan, Kevin, Remco (voorzitter), Jeroen (notulist)
+Afwezig: - 
+
+===============================================================
+1 Opening
+===============================================================
+2 Notulen
+Nog geen email gehad van Gerald.
+Notulen zien er goed uit.
+===============================================================
+3/4/5 PvA terugblik
+PvA ging in het begin goed, maar op het eind wat minder.
+Communicatie was erg slecht, moet in de komende weken beter gaan.
+Hetzelfde met de requirements architecture.
+Deadlines iets eerder en met elkaar kijken hoe het eruit ziet.
+
+Vóór maandag requirements architecture nagekeken.
+Eerst feedback van deze week toepassen op gemaakte diagram, daarna rouleren van de diagram.
+Diagram nakijken en verbeteren indien mogelijk.
+Jeroen - Activity Diagram
+Kevin - Constraints Table
+Jordan - Use Case
+Remco - Class Diagram
+
+Jeroen Maandag kamer met whiteboard reserveren.
+Volgende week om 11:00-12:00 inlopen, werkbijeenkomst voor solution architecture.
+Dinsdag nog kort naar kijken - wat mist er, ziet het er degelijk uit.
+
+Alleen op gitHub werken.
+
+Voor de vakantie nader kijken of er in de vakantie moet worden gewerkt of niet. Hangt af van achterstand.
+
+=============================================================
+6 Mededelingen
+
+Kijken naar structuur van het versiebeheer.
+
+=============================================================
+11 Afsluiting
