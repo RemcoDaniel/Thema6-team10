@@ -51,7 +51,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="AbstractElementGroup" />
-        <value>102</value>
+        <value>108</value>
       </counter>
     </entity-ids>
     <diagrams>
@@ -67,7 +67,7 @@
       </counter>
       <counter>
         <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
-        <value>17</value>
+        <value>19</value>
       </counter>
     </fields>
   </counters>
@@ -103,6 +103,8 @@
       <type id="Float" tid="" name="Float" description="" nullable="false" />
       <type id="Unsigned Integer" tid="" name="Unsigned Integer" description="" nullable="false" />
       <type id="Char *" tid="" name="Char *" description="" nullable="false" />
+      <type id="int" tid="" name="int" description="" nullable="false" />
+      <type id="port" tid="" name="port" description="" nullable="false" />
     </custom-types>
   </types>
   <filters />
@@ -660,9 +662,16 @@
             <style class="default" />
             <attributes>
               <attribute id="a057d00b17cb642809309802e0f4bea25559" cid="AT004" name="UARTdata" type="" type-id="" visibility="private" abstract="false" virtual="false" static="false" />
+              <attribute id="a4d1d95c656034074ae4a0ae9a40cf6bb464" cid="AT017" name="baudrate" type="int" type-id="int" visibility="private" abstract="false" virtual="false" static="false" />
+              <attribute id="a252c45e6bfa2436eb242a00c86d26431595" cid="AT018" name="UARTPort" type="port" type-id="port" visibility="private" abstract="false" virtual="false" static="false" />
             </attributes>
             <operations>
-              <operation id="o9282d1cbb32942cf9a930e2b13193b7d436" cid="OP036" name="NewOperation3" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+              <operation id="o9282d1cbb32942cf9a930e2b13193b7d436" cid="OP036" name="UART" type="void" type-id="void" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters>
+                  <parameter id="" name="baudRate" type="" type-id="" direction="In" />
+                  <parameter id="" name="port" type="int" type-id="int" />
+                  <parameter id="" name="Port" type="" type-id="" />
+                </parameters>
                 <source-codes />
               </operation>
               <operation id="oaabd5dfe30d540da866d0c6ee9f92959747" cid="OP016" name="sendCommand" type="void" type-id="void" visibility="public" abstract="false" virtual="false" static="false">
