@@ -9,7 +9,7 @@
     <entity-names>
       <counter>
         <item-type stereotype="" type="UmlClass" />
-        <value>25</value>
+        <value>24</value>
       </counter>
       <counter>
         <item-type stereotype="" type="UmlEnumeration" />
@@ -19,7 +19,7 @@
     <entity-ids>
       <counter>
         <item-type stereotype="" type="UmlClass" />
-        <value>26</value>
+        <value>25</value>
       </counter>
       <counter>
         <item-type stereotype="" type="UmlEnumeration" />
@@ -31,7 +31,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="UmlRealization" />
-        <value>14</value>
+        <value>13</value>
       </counter>
       <counter>
         <item-type stereotype="" type="UmlProvidedInterfaceConnector" />
@@ -51,7 +51,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="AbstractElementGroup" />
-        <value>44</value>
+        <value>38</value>
       </counter>
     </entity-ids>
     <diagrams>
@@ -63,11 +63,11 @@
     <fields>
       <counter>
         <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
-        <value>39</value>
+        <value>38</value>
       </counter>
       <counter>
         <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
-        <value>21</value>
+        <value>20</value>
       </counter>
     </fields>
   </counters>
@@ -344,7 +344,7 @@
           </authors>
           <description />
           <creation-date>12/09/2015 01:49:24</creation-date>
-          <change-date>12/15/2015 16:36:53</change-date>
+          <change-date>12/15/2015 16:29:14</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -1309,28 +1309,23 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di418603617447761882" cid="REA013" type="realization" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/15/2015 16:36:53">
+          <item id="di897202266403008173" cid="REA010" type="realization" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/15/2015 16:28:50">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di312805708187266989" cid="C025" type="class" name="AbstractHardwareController" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/15/2015 16:34:38">
+          <item id="di693248127335156681" cid="REA011" type="realization" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/15/2015 16:29:05">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <attributes>
-              <attribute id="a9553e3711bbc4f9a9bf421b48e59ad87445" cid="AT020" name="theUART" type="" type-id="" visibility="private" abstract="false" virtual="false" static="false" />
-            </attributes>
-            <operations>
-              <operation id="o70b7a084829a45dfb194fde5ff3ec272708" cid="OP038" name="setUART" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
-                <source-codes />
-              </operation>
-            </operations>
-            <template-parameters>
-              <source-codes />
-            </template-parameters>
+          </item>
+          <item id="di494159933926429907" cid="REA012" type="realization" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/15/2015 16:29:14">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
           </item>
         </abstract-items>
         <layer name="Default" visible="true" enabled="true" locked="false">
@@ -1744,7 +1739,7 @@
             <relation from="di173516434351764698" from-iid="77fd5764efc74a8c81a8cee4164d8669" to="di167229658430704829" to-iid="a81a6a45fbc64f5dadb0d7fbdcfa396c" />
           </item>
           <item id="di619091151379617074" iid="e3740bd2e9674f04bde50bda34d0ed1b" creation-date="12/15/2015 16:10:31" order-index="68" type="entity">
-            <layout ax="-121" ay="63.5" awidth="162" aheight="80" x="-121" y="63.5" width="162" height="80" angle="0" />
+            <layout ax="-119" ay="183.5" awidth="162" aheight="80" x="-119" y="183.5" width="162" height="80" angle="0" />
             <class />
           </item>
           <item id="di901192097518757727" iid="bfbc58db49814fb2a7a5e64476ae96c1" creation-date="12/15/2015 16:18:42" order-index="69" type="relation">
@@ -1819,18 +1814,32 @@
             <relation from="di865958448679699767" from-iid="f52f83a56d9c4abfaa3ad6ed7d96abc0" to="di677883195308955403" to-iid="cc94ecf23475403eb2738c44f01e30aa" />
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
-          <item id="di312805708187266989" iid="ffb03be0b3cf4d058a97be754d2f6896" creation-date="12/15/2015 16:34:38" order-index="79" type="entity">
-            <layout ax="-110" ay="220.5" awidth="140" aheight="160" x="-110" y="220.5" width="140" height="160" angle="0" />
-            <class />
-          </item>
-          <item id="di418603617447761882" iid="3b7a6363b4d74610a3a80b7279984888" creation-date="12/15/2015 16:36:53" order-index="80" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="-40" y1="220" x2="-40" y2="144" start-border-pos="0.125" end-border-pos="0.625">
+          <item id="di897202266403008173" iid="47f6e0f8444047b586413d90051ce53e" creation-date="12/15/2015 16:28:50" order-index="76" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="-144" y1="290" x2="-101" y2="264" start-border-pos="0.27265625" end-border-pos="0.722398922767168">
               <points>
-                <point x="-40" y="220" />
-                <point x="-40" y="144" />
+                <point x="-144" y="290" />
+                <point x="-101" y="264" />
               </points>
             </layout>
-            <relation from="di312805708187266989" from-iid="ffb03be0b3cf4d058a97be754d2f6896" to="di619091151379617074" to-iid="e3740bd2e9674f04bde50bda34d0ed1b" />
+            <relation from="di677883195308955403" from-iid="cc94ecf23475403eb2738c44f01e30aa" from-field="oca83ad404ace4612adf61e892ae7def8757" to="di619091151379617074" to-iid="e3740bd2e9674f04bde50bda34d0ed1b" />
+          </item>
+          <item id="di693248127335156681" iid="068cee55b1414541a724e23ad585ce05" creation-date="12/15/2015 16:29:05" order-index="77" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="-203" y1="502" x2="-61" y2="264" start-border-pos="0.18903592636025" end-border-pos="0.660640386887539">
+              <points>
+                <point x="-203" y="502" />
+                <point x="-61" y="264" />
+              </points>
+            </layout>
+            <relation from="di426704020167463771" from-iid="dc0eb7c7dbdf4e57a7abd60bceeb6de4" from-field="obf7911d01e674b27b1110e015ca2a7f0136" to="di619091151379617074" to-iid="e3740bd2e9674f04bde50bda34d0ed1b" />
+          </item>
+          <item id="di494159933926429907" iid="86837f7353cb4be68be71aa1140e881c" creation-date="12/15/2015 16:29:14" order-index="78" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="-220" y1="740" x2="-52" y2="264" start-border-pos="0.165277825027216" end-border-pos="0.646230050075201">
+              <points>
+                <point x="-220" y="740" />
+                <point x="-52" y="264" />
+              </points>
+            </layout>
+            <relation from="di956674592834654243" from-iid="f950b33bfd744ec89bfd2b20ff079897" from-field="a47ea2c3d224a40a9be83d51991b85a67988" to="di619091151379617074" to-iid="e3740bd2e9674f04bde50bda34d0ed1b" />
           </item>
         </layer>
       </diagram>
