@@ -1,0 +1,14 @@
+Agenda van vergadering 6 van projectgroep 10.
+Datum: Woensdag 16 december 2015 12:00.
+Locatie: D07.23
+Voorzitter: Kevin
+Notulist: Remco
+
+1. opening
+2. nutulen
+3. RA terugblik
+4. Solution architecture
+5. planning + vakantie
+6. mededelingen
+7. rondvraag
+8. afsluiting
