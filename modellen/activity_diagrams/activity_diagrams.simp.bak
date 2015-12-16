@@ -85,6 +85,10 @@
         <item-type stereotype="" type="AbstractTextItem" />
         <value>3</value>
       </counter>
+      <counter>
+        <item-type stereotype="" type="AbstractElementGroup" />
+        <value>7</value>
+      </counter>
     </entity-ids>
     <diagrams>
       <counter>
