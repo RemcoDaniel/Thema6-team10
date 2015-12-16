@@ -1,5 +1,4 @@
-
-# Gitignore file 
+# Gitignore file
 
 # Ignore localy generated tempory file from Software ideas modeller
 *.bak
@@ -19,4 +18,3 @@
 
 #User Specific Files
 *.atsuo
-
