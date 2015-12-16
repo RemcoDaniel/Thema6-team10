@@ -5,10 +5,10 @@ Voorzitter: Kevin
 Notulist: Remco
 
 1. opening
-2. nutulen
-3. RA terugblik
-4. Solution architecture
-5. planning + vakantie
-6. mededelingen
+2. mededelingen
+3. nutulen
+4. RA terugblik
+5. Solution architecture
+6. planning + vakantie
 7. rondvraag
 8. afsluiting
