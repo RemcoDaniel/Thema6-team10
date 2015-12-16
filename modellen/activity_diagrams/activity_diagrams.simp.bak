@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sim-project version="8.55" multi-file="no">
+<sim-project version="8.2" multi-file="no">
   <meta>
     <name>thema6req</name>
     <authors> Remco</authors>
@@ -121,52 +121,52 @@
   </types>
   <filters />
   <items>
-    <item id="di998315075470737757" cid="ELEM086" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:36:38">
+    <item id="di998315075470737757" cid="ELEM086" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:36:38">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
       <style class="default" />
       <control-flow guard="" />
     </item>
-    <item id="di292417192554281105" cid="ACT021" type="action" name="deur ontgrendelen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:36:21">
+    <item id="di292417192554281105" cid="ACT021" type="action" name="deur ontgrendelen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:36:21">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
       <style class="default" />
     </item>
-    <item id="di995316250237827380" cid="AFN003" type="activity-final-node" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:28:58">
+    <item id="di995316250237827380" cid="AFN003" type="activity-final-node" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:28:58">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
       <style class="default" />
     </item>
-    <item id="di888309696455162385" cid="ELEM085" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:36:36">
+    <item id="di888309696455162385" cid="ELEM085" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:36:36">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
       <style class="default" />
       <control-flow guard="" />
     </item>
-    <item id="di194838182989908565" cid="ACT019" type="action" name="water wegpompen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:34:32">
+    <item id="di194838182989908565" cid="ACT019" type="action" name="water wegpompen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:34:32">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
       <style class="default" />
     </item>
-    <item id="di290756913254751529" cid="ELEM090" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:45:40">
+    <item id="di290756913254751529" cid="ELEM090" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:45:40">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
       <style class="default" />
       <control-flow guard="systeem werkend" />
     </item>
-    <item id="di311277522317460712" cid="DC014" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:45:33">
+    <item id="di311277522317460712" cid="DC014" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:45:33">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
       <style class="default" />
     </item>
-    <item id="di996032095371295234" cid="ELEM131" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:57:02">
+    <item id="di996032095371295234" cid="ELEM131" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:57:02">
       <stereotypes />
       <associated-diagrams />
       <owned-items />
@@ -175,7 +175,7 @@
     </item>
   </items>
   <models>
-    <model id="p544133908936597011" name="Model 1" type="model" namespace="" order-index="1" expanded="true">
+    <model id="p544133908936597011" name="Model 1" type="model" namespace="" order-index="1">
       <meta>
         <authors>
           <author> </author>
@@ -188,7 +188,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-activity" id="p161102934347227199" name="user interface" order-index="2" overview-order-index="0" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="0,450">
+      <diagram type="uml-activity" id="p161102934347227199" name="user interface" order-index="2" overview-order-index="0" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" auto-routed-paths="false">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -205,288 +205,288 @@
           <version />
         </meta>
         <abstract-items>
-          <item id="di880869616802114156" cid="IN004" type="initial-node" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:05:19">
+          <item id="di880869616802114156" cid="IN004" type="initial-node" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:05:19">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di898679494519657906" cid="SR010" type="signal-receipt" name="inlog signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:05:30">
+          <item id="di898679494519657906" cid="SR010" type="signal-receipt" name="inlog signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:05:30">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di433623701977592617" cid="ACT008" type="action" name="inlogscherm weergeven" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:05:41">
+          <item id="di433623701977592617" cid="ACT008" type="action" name="inlogscherm weergeven" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:05:41">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di375605419640935433" cid="DC007" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:06:49">
+          <item id="di375605419640935433" cid="DC007" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:06:49">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di415204101392640736" cid="ELEM041" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:07:15">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di579124175243639486" cid="ELEM042" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:07:18">
+          <item id="di415204101392640736" cid="ELEM041" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:07:15">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di777466263706687384" cid="ELEM043" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:07:23">
+          <item id="di579124175243639486" cid="ELEM042" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:07:18">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di572434517481856250" cid="DC008" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:07:32">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di883803438686176389" cid="ELEM044" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:07:51">
+          <item id="di777466263706687384" cid="ELEM043" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:07:23">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di920430344929829511" cid="A009" type="activity" name="gebruiker is ingelogd" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:08:17">
+          <item id="di572434517481856250" cid="DC008" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:07:32">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di788151099197300460" cid="ELEM045" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:08:30">
+          <item id="di883803438686176389" cid="ELEM044" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:07:51">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di920430344929829511" cid="A009" type="activity" name="gebruiker is ingelogd" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:08:17">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di788151099197300460" cid="ELEM045" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:08:30">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="inloggegevens juist" />
           </item>
-          <item id="di344813655440982703" cid="ACT009" type="action" name="hoofdpagina weergeven" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:08:55">
+          <item id="di344813655440982703" cid="ACT009" type="action" name="hoofdpagina weergeven" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:08:55">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di127343710684808407" cid="ELEM068" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:24:41">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di420848654621868401" cid="DC009" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:09:29">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di383595775998595111" cid="ELEM047" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:09:31">
+          <item id="di127343710684808407" cid="ELEM068" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:24:41">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di276752761305544647" cid="SR011" type="signal-receipt" name="uitlog signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:09:45">
+          <item id="di420848654621868401" cid="DC009" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:09:29">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di400518635373631947" cid="SR012" type="signal-receipt" name="toon loggings signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:09:52">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di500862581219371903" cid="SR013" type="signal-receipt" name="wasprogramma signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:10:08">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di841526527313729726" cid="SR014" type="signal-receipt" name="toon status signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:10:18">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di456033026491808462" cid="ELEM048" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:10:34">
+          <item id="di383595775998595111" cid="ELEM047" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:09:31">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di255867225926102045" cid="ELEM050" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:10:37">
+          <item id="di276752761305544647" cid="SR011" type="signal-receipt" name="uitlog signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:09:45">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di400518635373631947" cid="SR012" type="signal-receipt" name="toon loggings signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:09:52">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di500862581219371903" cid="SR013" type="signal-receipt" name="wasprogramma signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:10:08">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di841526527313729726" cid="SR014" type="signal-receipt" name="toon status signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:10:18">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di456033026491808462" cid="ELEM048" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:10:34">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di805471388413494786" cid="ELEM052" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:10:40">
+          <item id="di255867225926102045" cid="ELEM050" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:10:37">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di655382265863421983" cid="ELEM054" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:10:43">
+          <item id="di805471388413494786" cid="ELEM052" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:10:40">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di457056428712586121" cid="ELEM060" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:11:55">
+          <item id="di655382265863421983" cid="ELEM054" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:10:43">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di269017998111205842" cid="ELEM061" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:12:27">
+          <item id="di457056428712586121" cid="ELEM060" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:11:55">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di606345240480778064" cid="ACT011" type="action" name="gebruiker afmelden" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:13:21">
+          <item id="di269017998111205842" cid="ELEM061" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:12:27">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di606345240480778064" cid="ACT011" type="action" name="gebruiker afmelden" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:13:21">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di389844598395665033" cid="SS001" type="signal-sending" name="onjuiste gegevens" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:15:08">
+          <item id="di389844598395665033" cid="SS001" type="signal-sending" name="onjuiste gegevens" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:15:08">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di272594043587100277" cid="ELEM063" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:15:48">
+          <item id="di272594043587100277" cid="ELEM063" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:15:48">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="else" />
           </item>
-          <item id="di236609360935279358" cid="ELEM064" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:16:12">
+          <item id="di236609360935279358" cid="ELEM064" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:16:12">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di330623124436403623" cid="ACT012" type="action" name="wasprogramma draaien *" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:21:03">
+          <item id="di330623124436403623" cid="ACT012" type="action" name="wasprogramma draaien *" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:21:03">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di593879991224576706" cid="ELEM065" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:21:18">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di333159516379308364" cid="ACT013" type="action" name="logging pagina weergeven" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:21:46">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di153704913690783858" cid="ELEM066" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:21:58">
+          <item id="di593879991224576706" cid="ELEM065" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:21:18">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di812704734226343840" cid="ELEM067" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:23:48">
+          <item id="di333159516379308364" cid="ACT013" type="action" name="logging pagina weergeven" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:21:46">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di153704913690783858" cid="ELEM066" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:21:58">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di437253845203203448" cid="DC010" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:24:23">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di488528264841875412" cid="ELEM069" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:24:43">
+          <item id="di812704734226343840" cid="ELEM067" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:23:48">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di629154037273778007" cid="ELEM121" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 13:05:27">
+          <item id="di437253845203203448" cid="DC010" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:24:23">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di488528264841875412" cid="ELEM069" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:24:43">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di168766105439172228" cid="ELEM071" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:24:59">
+          <item id="di629154037273778007" cid="ELEM121" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 13:05:27">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di493775388229945586" cid="ELEM072" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:25:09">
+          <item id="di168766105439172228" cid="ELEM071" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:24:59">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di845203046481531563" cid="SR021" type="signal-receipt" name="terug naar hoofdpagina signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:12:34">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di488188733402642990" cid="ACT026" type="action" name="status pagina weergeven" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:12:00">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di506830698579403769" cid="SR021" type="signal-receipt" name="terug naar hoofdpagina signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:12:34">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di683313526759876094" cid="ELEM120" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 13:04:29">
+          <item id="di493775388229945586" cid="ELEM072" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:25:09">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di324771983414665444" cid="ELEM115" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:13:15">
+          <item id="di845203046481531563" cid="SR021" type="signal-receipt" name="terug naar hoofdpagina signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:12:34">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di488188733402642990" cid="ACT026" type="action" name="status pagina weergeven" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:12:00">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di506830698579403769" cid="SR021" type="signal-receipt" name="terug naar hoofdpagina signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:12:34">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di683313526759876094" cid="ELEM120" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 13:04:29">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di324771983414665444" cid="ELEM115" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:13:15">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -496,7 +496,7 @@
         </abstract-items>
         <layer name="Default" visible="true" enabled="true" locked="false">
           <item id="di880869616802114156" iid="9723b9c88b644a929d36cd063c46265a" creation-date="12/07/2015 11:05:19" order-index="0" type="entity">
-            <layout ax="474" ay="1" awidth="25" aheight="25" x="474" y="1" width="25" height="25" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="474" ay="1" awidth="25" aheight="25" x="474" y="1" width="25" height="25" angle="0" name-position="0,10" />
           </item>
           <item id="di898679494519657906" iid="e0e8f4d5314e4bc08a23e3fab4353b68" creation-date="12/07/2015 11:05:30" order-index="1" type="entity">
             <layout ax="420" ay="228" awidth="137" aheight="50" x="420" y="228" width="137" height="50" angle="0" />
@@ -505,7 +505,7 @@
             <layout ax="390" ay="144" awidth="196" aheight="50" x="390" y="144" width="196" height="50" angle="0" />
           </item>
           <item id="di375605419640935433" iid="0664b67f94da47c8a20d3be780c01579" creation-date="12/07/2015 11:06:49" order-index="3" type="entity">
-            <layout ax="467" ay="57" awidth="40" aheight="60" x="467" y="57" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="467" ay="57" awidth="40" aheight="60" x="467" y="57" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di415204101392640736" iid="63f59333e8c542699a0f79d7f22afce8" creation-date="12/07/2015 11:07:15" order-index="4" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="486" y1="26" x2="487" y2="57" start-border-pos="0.628356018066406" end-border-pos="0.122431564331055">
@@ -535,7 +535,7 @@
             <relation from="di433623701977592617" from-iid="b6410b618ca04f289b2788632e1af024" to="di898679494519657906" to-iid="e0e8f4d5314e4bc08a23e3fab4353b68" />
           </item>
           <item id="di572434517481856250" iid="76815761f6d844b5a871e0f831d53e0c" creation-date="12/07/2015 11:07:32" order-index="7" type="entity">
-            <layout ax="471" ay="309" awidth="40" aheight="60" x="471" y="309" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="471" ay="309" awidth="40" aheight="60" x="471" y="309" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di883803438686176389" iid="5e4773cb86ec4c229f6b26e2d10e4540" creation-date="12/07/2015 11:07:51" order-index="8" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="489" y1="278" x2="490" y2="310" start-border-pos="0.624320983886719" end-border-pos="0.118459320068359">
@@ -562,7 +562,7 @@
             <layout ax="404" ay="579" awidth="198" aheight="50" x="404" y="579" width="198" height="50" angle="0" />
           </item>
           <item id="di420848654621868401" iid="f220b7d2f9834a84b01248782647f0fb" creation-date="12/07/2015 11:09:29" order-index="13" type="entity">
-            <layout ax="481" ay="660" awidth="40" aheight="60" x="481" y="660" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="481" ay="660" awidth="40" aheight="60" x="481" y="660" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di383595775998595111" iid="bc1eded63de84d4f9ff594ffeb2472c8" creation-date="12/07/2015 11:09:31" order-index="14" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="502" y1="629" x2="502" y2="661" start-border-pos="0.625734078763711" end-border-pos="0.129360389709473">
@@ -699,7 +699,7 @@
             <relation from="di841526527313729726" from-iid="8288dd5edbd04401b88366c7ffa2362d" to="di488188733402642990" to-iid="c66552d841fd4c3084e88ad39db1d335" />
           </item>
           <item id="di437253845203203448" iid="2973f0b7dc5a4f63be17bbd9b3a44b5c" creation-date="12/07/2015 11:24:23" order-index="37" type="entity">
-            <layout ax="471" ay="491" awidth="40" aheight="60" x="471" y="491" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="471" ay="491" awidth="40" aheight="60" x="471" y="491" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di127343710684808407" iid="4192ae633ccc4cceb88c2bfe6a7ab7db" creation-date="12/07/2015 11:24:41" order-index="38" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="492" y1="460" x2="491" y2="491" start-border-pos="0.626129586356027" end-border-pos="0.127180290222168">
@@ -779,7 +779,7 @@
           </item>
         </layer>
       </diagram>
-      <diagram type="uml-activity" id="p488577075771138959" name="wasprogramma draaien" order-index="3" overview-order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="0,14">
+      <diagram type="uml-activity" id="p488577075771138959" name="wasprogramma draaien" order-index="3" overview-order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" auto-routed-paths="false">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -796,91 +796,91 @@
           <version />
         </meta>
         <abstract-items>
-          <item id="di605636982872603548" cid="IN005" type="initial-node" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:27:38">
+          <item id="di605636982872603548" cid="IN005" type="initial-node" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:27:38">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di371049167694847982" cid="AFN002" type="activity-final-node" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:27:40">
+          <item id="di371049167694847982" cid="AFN002" type="activity-final-node" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:27:40">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di822512215833116404" cid="ELEM108" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:08:19">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di320829515147397993" cid="ELEM107" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:08:05">
+          <item id="di822512215833116404" cid="ELEM108" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:08:19">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di453179216228341065" cid="ACT024" type="action" name="wasprogramma instellen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:07:53">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di174782693272076053" cid="IAR005" type="interruptible-activity-region" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/12/2015 09:25:12">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di710481734587763625" cid="ELEM097" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:01:45">
+          <item id="di320829515147397993" cid="ELEM107" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:08:05">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di799253825600383591" cid="SR017" type="signal-receipt" name="terug naar hoofdpagina signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:01:03">
+          <item id="di453179216228341065" cid="ACT024" type="action" name="wasprogramma instellen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:07:53">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di678008093162988998" cid="ELEM095" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:00:23">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di276773222376857213" cid="ELEM094" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:59:22">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di135267926839640184" cid="SR016" type="signal-receipt" name="start wasprogramma signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:59:05">
+          <item id="di174782693272076053" cid="IAR005" type="interruptible-activity-region" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/12/2015 09:25:12">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di998831608410459789" cid="ELEM093" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:58:56">
+          <item id="di710481734587763625" cid="ELEM097" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:01:45">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di231148808766978788" cid="ACT023" type="action" name="wasprogramma instelpagina weergeven" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:56:10">
+          <item id="di799253825600383591" cid="SR017" type="signal-receipt" name="terug naar hoofdpagina signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:01:03">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di577462759990130152" cid="ACT022" type="action" name="wasmachine besturing *" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:53:27">
+          <item id="di678008093162988998" cid="ELEM095" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:00:23">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di276773222376857213" cid="ELEM094" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:59:22">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di135267926839640184" cid="SR016" type="signal-receipt" name="start wasprogramma signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:59:05">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di998831608410459789" cid="ELEM093" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:58:56">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di231148808766978788" cid="ACT023" type="action" name="wasprogramma instelpagina weergeven" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:56:10">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di577462759990130152" cid="ACT022" type="action" name="wasmachine besturing *" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:53:27">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -907,10 +907,10 @@
             <relation from="di605636982872603548" from-iid="285577dd5b614be3845bd22dd20046f2" to="di231148808766978788" to-iid="a7d48284dc614ff0b541d4f73ae53d5b" />
           </item>
           <item id="di605636982872603548" iid="285577dd5b614be3845bd22dd20046f2" creation-date="12/07/2015 11:27:38" order-index="0" type="entity">
-            <layout ax="489.5" ay="94" awidth="25" aheight="25" x="489.5" y="94" width="25" height="25" angle="0" name-position="0,9.999996" name-anchor="bottom" />
+            <layout ax="489.5" ay="94" awidth="25" aheight="25" x="489.5" y="94" width="25" height="25" angle="0" name-position="0,9.999996" />
           </item>
           <item id="di371049167694847982" iid="ee499bd1fba84290b52f67a631dc7add" creation-date="12/07/2015 11:27:40" order-index="1" type="entity">
-            <layout ax="490.5" ay="510" awidth="25" aheight="25" x="490.5" y="510" width="25" height="25" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="490.5" ay="510" awidth="25" aheight="25" x="490.5" y="510" width="25" height="25" angle="0" name-position="0,10" />
           </item>
           <item id="di320829515147397993" iid="63bda262b144489fbd691ef3b8164f6d" creation-date="12/07/2015 12:08:05" order-index="19" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="502" y1="289" x2="502" y2="323" start-border-pos="0.625" end-border-pos="0.125">
@@ -969,7 +969,7 @@
           </item>
         </layer>
       </diagram>
-      <diagram type="uml-activity" id="p875197801147196283" name="wasmachine besturing" order-index="6" overview-order-index="4" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-98,-319" zoom="0.8000001">
+      <diagram type="uml-activity" id="p875197801147196283" name="wasmachine besturing" order-index="6" overview-order-index="4" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" auto-routed-paths="false">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -986,275 +986,275 @@
           <version />
         </meta>
         <abstract-items>
-          <item id="di132569130761100669" cid="IN006" type="initial-node" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:28:56">
+          <item id="di132569130761100669" cid="IN006" type="initial-node" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:28:56">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di639569408183303275" cid="DC011" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:29:38">
+          <item id="di639569408183303275" cid="DC011" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:29:38">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di596443433892339644" cid="ELEM014" type="fork" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:29:42">
+          <item id="di596443433892339644" cid="ELEM014" type="fork" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:29:42">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di989007771104989599" cid="ELEM016" type="join" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:29:44">
+          <item id="di989007771104989599" cid="ELEM016" type="join" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:29:44">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di652513341141722307" cid="ELEM073" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:29:55">
+          <item id="di652513341141722307" cid="ELEM073" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:29:55">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="voldoende water en zeep aanwezig" />
           </item>
-          <item id="di374244033641796963" cid="ACT015" type="action" name="water toevoegen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:30:30">
+          <item id="di374244033641796963" cid="ACT015" type="action" name="water toevoegen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:30:30">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di229140989416907586" cid="ACT016" type="action" name="zeep toevoegen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:30:41">
+          <item id="di229140989416907586" cid="ACT016" type="action" name="zeep toevoegen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:30:41">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di805399902597586598" cid="ELEM074" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:30:52">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di667993667943046079" cid="ELEM075" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:30:55">
+          <item id="di805399902597586598" cid="ELEM074" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:30:52">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di182226676623798880" cid="ELEM076" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:30:57">
+          <item id="di667993667943046079" cid="ELEM075" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:30:55">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di819230852898512545" cid="ELEM077" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:30:59">
+          <item id="di182226676623798880" cid="ELEM076" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:30:57">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di801802153809914250" cid="DC012" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:31:20">
+          <item id="di819230852898512545" cid="ELEM077" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:30:59">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di801802153809914250" cid="DC012" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:31:20">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di829464054511766144" cid="ACT017" type="action" name="verwarmen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:31:33">
+          <item id="di829464054511766144" cid="ACT017" type="action" name="verwarmen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:31:33">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di765817470258093332" cid="ACT018" type="action" name="draaien" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:31:44">
+          <item id="di765817470258093332" cid="ACT018" type="action" name="draaien" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:31:44">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di396049089988170552" cid="ELEM078" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:32:01">
+          <item id="di396049089988170552" cid="ELEM078" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:32:01">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="temperatuur goed" />
           </item>
-          <item id="di914534514582867092" cid="ELEM079" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:32:22">
+          <item id="di914534514582867092" cid="ELEM079" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:32:22">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="else" />
           </item>
-          <item id="di548674604481148096" cid="ELEM080" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:32:42">
+          <item id="di548674604481148096" cid="ELEM080" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:32:42">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di125536142707876336" cid="ELEM087" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:42:41">
+          <item id="di125536142707876336" cid="ELEM087" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:42:41">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di848297334450087553" cid="ELEM082" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:33:05">
+          <item id="di848297334450087553" cid="ELEM082" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:33:05">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="na 1 min" />
           </item>
-          <item id="di704304398106601893" cid="ACT020" type="action" name="deur vergrendelen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:35:56">
+          <item id="di704304398106601893" cid="ACT020" type="action" name="deur vergrendelen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:35:56">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di554335408122587798" cid="ELEM084" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:36:13">
+          <item id="di554335408122587798" cid="ELEM084" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:36:13">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di375326987411856892" cid="DC013" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:42:05">
+          <item id="di375326987411856892" cid="DC013" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:42:05">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di631007179995739823" cid="ELEM088" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:42:44">
+          <item id="di631007179995739823" cid="ELEM088" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:42:44">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="else" />
           </item>
-          <item id="di268119045402073008" cid="ELEM089" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:43:04">
+          <item id="di268119045402073008" cid="ELEM089" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:43:04">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="(voor)wastijd voorbij" />
           </item>
-          <item id="di948907671871794543" cid="SR015" type="signal-receipt" name="foutmelding" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 11:45:08">
+          <item id="di948907671871794543" cid="SR015" type="signal-receipt" name="foutmelding" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 11:45:08">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di752196632563559368" cid="ELEM123" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:43:47">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="" />
-          </item>
-          <item id="di867851911421442692" cid="ELEM132" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:57:34">
+          <item id="di752196632563559368" cid="ELEM123" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:43:47">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di909586179308702436" cid="SR019" type="signal-receipt" name="stop signaal" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:02:53">
+          <item id="di867851911421442692" cid="ELEM132" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:57:34">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="" />
+          </item>
+          <item id="di909586179308702436" cid="SR019" type="signal-receipt" name="stop signaal" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:02:53">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di974396031814102049" cid="ELEM122" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:42:59">
+          <item id="di974396031814102049" cid="ELEM122" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:42:59">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="voorwas opgenomen" />
           </item>
-          <item id="di113543080688447877" cid="ACT027" type="action" name="voorwasprogramma inladen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:42:51">
+          <item id="di113543080688447877" cid="ACT027" type="action" name="voorwasprogramma inladen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:42:51">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di160005759604197107" cid="DC020" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:42:02">
+          <item id="di160005759604197107" cid="DC020" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:42:02">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di421489636173235259" cid="ELEM102" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/07/2015 12:03:45">
+          <item id="di421489636173235259" cid="ELEM102" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/07/2015 12:03:45">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di751052990490237413" cid="IAR004" type="interruptible-activity-region" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:58:48">
+          <item id="di751052990490237413" cid="IAR004" type="interruptible-activity-region" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:58:48">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di236002805261092858" cid="ACT028" type="action" name="wasprogramma inladen" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:45:10">
+          <item id="di236002805261092858" cid="ACT028" type="action" name="wasprogramma inladen" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:45:10">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di548449333622392640" cid="ELEM124" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:45:35">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <control-flow guard="else" />
-          </item>
-          <item id="di267866724718459355" cid="DC021" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:48:17">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-          </item>
-          <item id="di223037169990895914" cid="ELEM126" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:48:42">
+          <item id="di548449333622392640" cid="ELEM124" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:45:35">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="else" />
           </item>
-          <item id="di772972833789589423" cid="DC022" type="decision" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:49:04">
+          <item id="di267866724718459355" cid="DC021" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:48:17">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di472653676292615778" cid="ELEM127" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:49:07">
+          <item id="di223037169990895914" cid="ELEM126" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:48:42">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <control-flow guard="else" />
+          </item>
+          <item id="di772972833789589423" cid="DC022" type="decision" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:49:04">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+          </item>
+          <item id="di472653676292615778" cid="ELEM127" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:49:07">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="voorwas voorbij" />
           </item>
-          <item id="di734016374729716323" cid="ELEM128" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:49:28">
+          <item id="di734016374729716323" cid="ELEM128" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:49:28">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="else" />
           </item>
-          <item id="di687918623130700513" cid="ELEM129" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:49:32">
+          <item id="di687918623130700513" cid="ELEM129" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:49:32">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
             <control-flow guard="" />
           </item>
-          <item id="di871830838738060495" cid="ELEM133" type="control-flow" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="12/11/2015 12:57:38">
+          <item id="di871830838738060495" cid="ELEM133" type="control-flow" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/11/2015 12:57:38">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1331,7 +1331,7 @@
             <relation from="di596443433892339644" from-iid="9f3cd45612d9426a92806a469fad9528" to="di229140989416907586" to-iid="9f7be25fe35f43f6be461d0a56e960d6" />
           </item>
           <item id="di375326987411856892" iid="d5baf12383af4f0eb34d9e040ba473d8" creation-date="12/07/2015 11:42:05" order-index="28" type="entity">
-            <layout ax="426.7633" ay="433" awidth="40" aheight="60" x="426.7633" y="433" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="426.7633" ay="433" awidth="40" aheight="60" x="426.7633" y="433" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di125536142707876336" iid="3fd02618c6bf4a3c8a0a3f63c4a40eda" creation-date="12/07/2015 11:42:41" order-index="29" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="448" y1="403" x2="447" y2="433" start-border-pos="0.625076934814453" end-border-pos="0.129364013671875">
@@ -1352,7 +1352,7 @@
             <relation from="di375326987411856892" from-iid="d5baf12383af4f0eb34d9e040ba473d8" to="di801802153809914250" to-iid="94a0d3e1677b49b1a238bae6163c57f4" />
           </item>
           <item id="di801802153809914250" iid="94a0d3e1677b49b1a238bae6163c57f4" creation-date="12/07/2015 11:31:20" order-index="12" type="entity">
-            <layout ax="426.7633" ay="529" awidth="40" aheight="60" x="426.7633" y="529" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="426.7633" ay="529" awidth="40" aheight="60" x="426.7633" y="529" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di829464054511766144" iid="f4705b01ac5c48fba4f5748aa9ff15b6" creation-date="12/07/2015 11:31:33" order-index="13" type="entity">
             <layout ax="396.7633" ay="624" awidth="100" aheight="50" x="396.7633" y="624" width="100" height="50" angle="0" />
@@ -1390,7 +1390,7 @@
             <relation from="di829464054511766144" from-iid="f4705b01ac5c48fba4f5748aa9ff15b6" to="di801802153809914250" to-iid="94a0d3e1677b49b1a238bae6163c57f4" />
           </item>
           <item id="di639569408183303275" iid="7781ed51c5e941f88a5f800e00c66e99" creation-date="12/07/2015 11:29:38" order-index="2" type="entity">
-            <layout ax="428.75" ay="192" awidth="40" aheight="60" x="428.75" y="192" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="428.75" ay="192" awidth="40" aheight="60" x="428.75" y="192" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di113543080688447877" iid="c27cf2b367f3483aafb5c89855497a6d" creation-date="12/11/2015 12:42:51" order-index="46" type="entity">
             <layout ax="334.25" ay="108" awidth="229" aheight="50" x="334.25" y="108" width="229" height="50" angle="0" />
@@ -1416,7 +1416,7 @@
             <relation from="di375326987411856892" from-iid="d5baf12383af4f0eb34d9e040ba473d8" to="di160005759604197107" to-iid="b51fea0de0114e6a824041c8bbcf3a5a" />
           </item>
           <item id="di267866724718459355" iid="e144deb2a3674ba9a2117c8e2d31aa16" creation-date="12/11/2015 12:48:17" order-index="51" type="entity">
-            <layout ax="428.75" ay="1" awidth="40" aheight="60" x="428.75" y="1" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="428.75" ay="1" awidth="40" aheight="60" x="428.75" y="1" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di223037169990895914" iid="e89ce7bd236c4de3b1e2f32019f89e3a" creation-date="12/11/2015 12:48:42" order-index="52" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="5,-9" auto-path="" x1="449" y1="60" x2="449" y2="108" start-border-pos="0.6234375" end-border-pos="0.125272925764192">
@@ -1428,7 +1428,7 @@
             <relation from="di267866724718459355" from-iid="e144deb2a3674ba9a2117c8e2d31aa16" to="di113543080688447877" to-iid="c27cf2b367f3483aafb5c89855497a6d" />
           </item>
           <item id="di772972833789589423" iid="f10e41a490924c20b18b2ab38d77f080" creation-date="12/11/2015 12:49:04" order-index="53" type="entity">
-            <layout ax="689" ay="1" awidth="40" aheight="60" x="689" y="1" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="689" ay="1" awidth="40" aheight="60" x="689" y="1" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di974396031814102049" iid="89712a01f60f403e8d40026acb81b70e" creation-date="12/11/2015 12:42:59" order-index="47" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="-1,6" auto-path="" x1="449" y1="-42" x2="449" y2="1" start-border-pos="0.6234375" end-border-pos="0.1265625" name-width="184">
@@ -1522,7 +1522,7 @@
             <layout ax="950.25" ay="383" awidth="155" aheight="50" x="950.25" y="383" width="155" height="50" angle="0" />
           </item>
           <item id="di995316250237827380" iid="af77865c4e944fc3bd9f89cf14bda32e" creation-date="12/07/2015 11:28:58" order-index="1" type="entity">
-            <layout ax="1015.25" ay="471" awidth="25" aheight="25" x="1015.25" y="471" width="25" height="25" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="1015.25" ay="471" awidth="25" aheight="25" x="1015.25" y="471" width="25" height="25" angle="0" name-position="0,10" />
           </item>
           <item id="di751052990490237413" iid="c17f6f7e963942049ac3636f5783b050" creation-date="12/11/2015 12:58:48" order-index="60" type="entity">
             <layout ax="202" ay="-210" awidth="741" aheight="892" x="202" y="-210" width="741" height="892" angle="0" />
@@ -1557,16 +1557,16 @@
             <layout ax="778" ay="28" awidth="137" aheight="50" x="778" y="28" width="137" height="50" angle="0" />
           </item>
           <item id="di311277522317460712" iid="09f57292493d4814b15ea82db6ef10f3" creation-date="12/07/2015 11:45:33" order-index="33" type="entity">
-            <layout ax="1007.75" ay="192" awidth="40" aheight="60" x="1007.75" y="192" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="1007.75" ay="192" awidth="40" aheight="60" x="1007.75" y="192" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di909586179308702436" iid="44331add50404f978b962f23a9901747" creation-date="12/07/2015 12:02:53" order-index="37" type="entity">
             <layout ax="778" ay="-73" awidth="137" aheight="50" x="778" y="-73" width="137" height="50" angle="0" />
           </item>
           <item id="di132569130761100669" iid="0957de2b4fa348f0a517097a12aa1db8" creation-date="12/07/2015 11:28:56" order-index="0" type="entity">
-            <layout ax="436.25" ay="-255" awidth="25" aheight="25" x="436.25" y="-255" width="25" height="25" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="436.25" ay="-255" awidth="25" aheight="25" x="436.25" y="-255" width="25" height="25" angle="0" name-position="0,10" />
           </item>
           <item id="di160005759604197107" iid="b51fea0de0114e6a824041c8bbcf3a5a" creation-date="12/11/2015 12:42:02" order-index="45" type="entity">
-            <layout ax="428.75" ay="-102" awidth="40" aheight="60" x="428.75" y="-102" width="40" height="60" angle="0" name-position="0,10" name-anchor="bottom" />
+            <layout ax="428.75" ay="-102" awidth="40" aheight="60" x="428.75" y="-102" width="40" height="60" angle="0" name-position="0,10" />
           </item>
           <item id="di548449333622392640" iid="18274337fa03458085dcdcd391c6b6b8" creation-date="12/11/2015 12:45:35" order-index="50" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="468" y1="-72" x2="709" y2="1" start-border-pos="0.375" end-border-pos="0.125">

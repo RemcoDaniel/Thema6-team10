@@ -1,7 +1,7 @@
 # Gitignore file
 
 # Ignore localy generated tempory file from Software ideas modeller
-*.bak
+*.simp.bak
 
 #Build Directories
 [Dd]ebug/
