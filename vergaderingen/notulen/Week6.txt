@@ -1,0 +1,64 @@
+Notulen van vergadering 6 van projectgroep 10
+
+Woensdag 16 december 2015 13.45-14.10 uur.
+Aanwezig: Kevin (voorzitter), Remco (notulen) , Jeroen, Jordan.
+Afwezig: -
+
+
+1. opening:
+Iedereen is aanwezig en op tijd.
+Door kleine uitloop van het gesprek met Jan is de vergadering iets opgeschoven.
+
+===================================================================
+2. mededelingen:
+Joost toegevoegd aan de github,
+dit was de afgelopen keer niet helemaal goed gegaan.
+
+===================================================================
+3. notulen:
+notulen vorige keer hadden wat gebreken:
+-nummering klopte niet (van 6 naar 11)
+-punten niet meer samenvoegen, dit is niet overzichtelijk (nummer 3,4,5 staan samen)
+-punt over de planning mist
+
+===================================================================
+4. RA terugblik:
+nog niet helemaal af, maar zit progressie in
+we willen alles zo goed mogelijk uitwerken dus daar gaat meer tijd in
+zitten dan verwacht. Juist ook door de terugkoppelingen steeds blijkt
+dat we toch niet helemaal tevreden zijn.
+afgelopen week wel goedgegaan met het samenwerken aan de requirements architecture.
+
+===================================================================
+5. Solution architecture:
+klassendiagram redelijk af, maar nog wel zeker wat aanpassingen
+concurrency diagram is al een begin, helaas niet af voor de feedback
+std nog niet aan begonnen omdat de rest nog niet af was
+
+afspraak is eerst te gaan focussen op klassendiagram en concurrency voordat we verder
+gaan met de std.
+hiervoor ook eerst feedback van joost afwachten morgen
+
+===================================================================
+6. planning + vakantie:
+projectweken elke dag op school, zeker 4 uur per dag.
+11 uur op school aanwezig.
+
+projectruimten bespreken voor projectweek, dit doet remco
+(als het niet mogelijk is gewoon kijken waar nog plek vrij is)
+
+vakantie is vooral focus op tentamens
+
+taken verdelen en moeten de eerste maandag van de eerste projectweek af.
+morgen na de feedback van joost nog even de taken verdelen.
+
+===================================================================
+7. rondvraag:
+Geen aparte vragen meer.
+
+===================================================================
+8. afsluiting:
+Vergadering is goed verlopen.
+De volgende vergadering vindt plaats in de eerste projectweek.
+De exacte afspraak wordt nog gemaakt.
+
