@@ -27,6 +27,15 @@
     <ClCompile Include="Motor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UARTController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UART.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MotorController.h">
@@ -39,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Motor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UARTController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UART.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
