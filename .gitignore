@@ -18,3 +18,8 @@
 
 #User Specific Files
 *.atsuo
+
+#Visual studio
+*.suo
+*.opensdf
+*.sdf

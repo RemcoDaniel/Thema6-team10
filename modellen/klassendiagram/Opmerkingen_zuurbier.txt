@@ -1,0 +1,7 @@
+Doorlock <<boundary>>
+
+webSocket
+
+RTOS taak send
+RTOS taak receive
+
