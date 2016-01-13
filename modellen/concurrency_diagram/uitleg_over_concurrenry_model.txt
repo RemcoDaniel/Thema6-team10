@@ -1,0 +1,23 @@
+washingmachinecontroller heeft een eigen taak.
+deze stuur naar de tempcontroller dat hij een bepaalde temp wil hebben
+dit gebeurt over een pool met mutex erop
+de tempcontroller (ook een taak) gaat nu regelen dat deze temp wordt bereikt
+hij werkt samen met de tempsensor en de heater.
+door een timer/clock te zetten en steeds te verwarmen en als de timer afgaat
+te kijken of de temp al goed is regelt hij dit.
+is dit zo? dan zet hij een flag voor de washingmachinecontroller.
+als de timer gaat checkt de tempcontroller (taak) ook ff of de flag
+is gezet dat er een nieuwe temp klaarstaat die gehanteerd moet worden.
+
+======================================================================
+
+de washingmachinecontroller (taak) stuurt naar de watercontroller (taak)
+wat het waterlevel moet zijn dmv een pool met mutex
+de watercontroller (taak) zet een timer en als deze afgaat checkt hij
+hoe het water niveau is en vult eventueel bij.
+als het water level goed is zet hij een flag voor de watermachinecontroller.
+als de timer gaat checkt de watercontroller (taak) ook ff of de flag
+is gezet dat er een nieuw waterlevel klaarstaat die gehanteerd moet worden.
+
+=======================================================================
+
