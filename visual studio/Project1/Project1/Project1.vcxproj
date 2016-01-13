@@ -118,11 +118,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Motor.cpp" />
     <ClCompile Include="MotorController.cpp" />
     <ClCompile Include="WashingMachineController.cpp" />
     <ClCompile Include="WaterController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Motor.h" />
     <ClInclude Include="MotorController.h" />
     <ClInclude Include="WashingMachineController.h" />
     <ClInclude Include="WaterController.h" />
