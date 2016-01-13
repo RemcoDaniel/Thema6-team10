@@ -1,0 +1,32 @@
+Performance
+	Leessnelheid tempratuursensor
+		15ms*
+Performance
+	Leessnelheid watersensor
+		15ms*
+Performance
+	Reactiesnelheid verwarmingselement
+		15ms*
+Performance
+	Reactiesnelheid Pomp
+		15ms*
+Performance
+	Reactiesnelheid Waterklep
+		15ms*
+Performance
+	Reactiesnelheid Motor
+		15ms*
+Performance
+	Reactiesnelheid Signiaalled
+		15ms*
+Performance
+	Leessnelheid Deursensor
+		15ms*
+Performance
+	Leessnelheid Noodknop
+		15ms*
+
+
+
+
+*Er moet rekening worden gehouden worden met de wachttijd dat de emulator zegt dat het commando geslaagt is.
