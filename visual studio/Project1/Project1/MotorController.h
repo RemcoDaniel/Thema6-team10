@@ -4,8 +4,9 @@
 #define _MOTORCONTROLLER_H
 
 #include "Motor.h"
+#include "pRTOS.h"
 
-class MotorController {
+class MotorController : public RTOS::task {
 private:
 	Motor motor;
 public:

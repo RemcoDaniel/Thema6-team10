@@ -3,9 +3,13 @@
 #ifndef _WATERCONTROLLER_H
 #define _WATERCONTROLLER_H
 
-class WaterController {
-private:
+#include "pRTOS.h"
 
+class WaterController : public RTOS::task {
+private:
+	RTOS::flag new_level_flag;
+	RTOS::pool< int > water_level_pool;
+	RTOS::mutex water_level_mutex;
 public:
 	WaterController();
 
@@ -14,6 +18,8 @@ public:
 	bool getValveStatus();
 	void setValveStatus(bool state);
 	void updateState();
+
+	void main();
 };
 
 #endif

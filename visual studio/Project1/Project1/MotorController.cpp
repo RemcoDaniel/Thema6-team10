@@ -2,7 +2,11 @@
 
 #include "MotorController.h"
 
-MotorController::MotorController(Motor motor) : motor{motor} {}
+MotorController::MotorController(Motor motor) : 
+	motor{motor},
+	task{ 0, "motorctrl" }		// priority, name
+{}
+
 
 void MotorController::stopMotor() {
 	motor.turn(0, 0);
