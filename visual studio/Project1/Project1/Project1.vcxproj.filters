@@ -48,6 +48,9 @@
     <ClCompile Include="Valve.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="libserial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MotorController.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Valve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libserial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
