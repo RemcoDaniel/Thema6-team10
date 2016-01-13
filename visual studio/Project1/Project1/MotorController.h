@@ -3,15 +3,15 @@
 #ifndef _MOTORCONTROLLER_H
 #define _MOTORCONTROLLER_H
 
+#include "Motor.h"
+
 class MotorController {
-protected: // of private
-	// theUART
+private:
+	Motor motor;
 public:
-	MotorController();
-	unsigned int getMotorSpeed();		// protected?
-	void setMotorSpeed(unsigned int rpm);	// protected?
-	void updateState();
-	void setUART();
+	MotorController(Motor motor);
+	void stopMotor();
+	void rotateMotor();
 };
 
 #endif

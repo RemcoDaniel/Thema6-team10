@@ -7,13 +7,11 @@
 
 class WashingMachineController {
 private:
-	time_t time;
-	currentWasprog wasprogramma;
-	TemperaturController theTempController;
-	WaterController theWaterController;
-	MotorController theMotorController;
-	// theUART
-	// List<Subject>
+	//time_t time;
+	//currentWasprog wasprogramma;
+	//TemperaturController theTempController;
+	//WaterController theWaterController;
+	//MotorController theMotorController;
 
 public:
 	WashingMachineController();
@@ -23,7 +21,7 @@ public:
 	void removeObserver();
 	void notifyObserver();
 	void washingMachineController(); //???????????
-	void startWasprogramma(Wasprogramma wp);
+	//void startWasprogramma(Wasprogramma wp);
 	void stopWasprogramma();
 	void start();
 	void stop();
