@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#include "MotorController.h"
+=======
 // file MotorController.cpp
 
 #include "MotorController.h"
@@ -18,3 +21,4 @@ void MotorController::rotateMotor(int speed) {		// dit moet het programma zijn d
 	motor.turn(0, 0);
 	wait();
 }
+>>>>>>> a7edb3850a3833b06e387c5487ffe5a2285ff29f
