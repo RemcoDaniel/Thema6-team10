@@ -79,7 +79,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="AbstractElementGroup" />
-        <value>98</value>
+        <value>5</value>
       </counter>
     </entity-ids>
     <diagrams>
@@ -131,7 +131,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="concurrency" id="p867206115178849713" name="ConcurrencyDiagram1" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-31,-240" zoom="0.7">
+      <diagram type="concurrency" id="p867206115178849713" name="ConcurrencyDiagram1" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-31,-181" zoom="0.7">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -143,7 +143,7 @@
           </authors>
           <description />
           <creation-date>01/13/2016 19:37:33</creation-date>
-          <change-date>01/14/2016 13:38:49</change-date>
+          <change-date>01/14/2016 14:23:22</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -545,29 +545,6 @@
               </messages>
             </communication-message>
           </item>
-          <item id="di239160932128124670" cid="TMR004" type="concurrency-timer" name="motor timer" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="01/14/2016 12:00:02">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <communication-lifeline classifier-name="" is-active="false" is-multi-object="false" />
-          </item>
-          <item id="di493572927740555231" cid="CMSG027" type="communication-message" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="01/14/2016 12:00:19">
-            <stereotypes />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <communication-message from="di943038993336445123" to="di239160932128124670">
-              <messages>
-                <message id="" seq-number="" text="set()" reverse="false" return-value="" assign-to-variable="">
-                  <parameters />
-                </message>
-                <message id="" seq-number="" text="wait()" reverse="false" return-value="" assign-to-variable="">
-                  <parameters />
-                </message>
-              </messages>
-            </communication-message>
-          </item>
         </abstract-items>
         <layer name="Default" visible="true" enabled="true" locked="false">
           <item id="di943038993336445123" iid="398c8ff893364934aafa4ab94f43cdc0" creation-date="01/13/2016 19:37:37" order-index="0" type="entity">
@@ -839,20 +816,6 @@
             </layout>
             <relation from="di734235160821680948" from-iid="522b32cc449f4de89362e6db9ca99574" to="di766584313439764240" to-iid="5ca25ccd8bcb414ca301488bf1e9eeac" />
             <positions normal="-25.22701,-5.492934" reverse="0,30" />
-            <communication-message />
-          </item>
-          <item id="di239160932128124670" iid="1f66f323bbbc477e84d64a6b4c83e1c7" creation-date="01/14/2016 12:00:02" order-index="47" type="entity">
-            <layout ax="742" ay="-257" awidth="30" aheight="50" x="742" y="-257" width="30" height="50" angle="0" name-position="0,4.000002" name-anchor="bottom" name-width="131" />
-          </item>
-          <item id="di493572927740555231" iid="165bf14f489c45dabb845a883030b358" creation-date="01/14/2016 12:00:19" order-index="48" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="756" y1="-102" x2="757" y2="-207" start-border-pos="0.125284006897832" end-border-pos="0.626344299316406">
-              <points>
-                <point x="756" y="-102" />
-                <point x="757" y="-207" />
-              </points>
-            </layout>
-            <relation from="di943038993336445123" from-iid="398c8ff893364934aafa4ab94f43cdc0" to="di239160932128124670" to-iid="1f66f323bbbc477e84d64a6b4c83e1c7" />
-            <positions normal="-18.60194,-21.11366" reverse="0,30" />
             <communication-message />
           </item>
         </layer>

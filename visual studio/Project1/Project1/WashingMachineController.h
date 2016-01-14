@@ -3,33 +3,36 @@
 #ifndef _WASHINGMACHINECONTROLLER_H
 #define _WASHINGMACHINECONTROLLER_H
 
-//#include "TempController.h"
 #include "pRTOS.h"
+#include "MotorController.h"
+#include "WaterController.h"
+#include "TempController.h"
 
 class WashingMachineController : public RTOS::task {
 private:
 	//time_t time;
 	//currentWasprog wasprogramma;
-	//TemperaturController theTempController;
-	//WaterController theWaterController;
-	//MotorController theMotorController;
+	TempController tempcontroller;
+	WaterController watercontroller;
+	MotorController motorcontroller;
 	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag;
 	RTOS::clock interval_clock;
 
 public:
-	WashingMachineController();
+	WashingMachineController(TempController tempcontroller, WaterController watercontroller, MotorController motorcontroller);
 
 	void setTempReached();
+	void setWaterLevelReached();
+	void setMotorDone();
 
 	void registerObserver();
 	void removeObserver();
 	void notifyObserver();
-	void washingMachineController(); //???????????
-	//void startWasprogramma(Wasprogramma wp);
+
+	void loadWasprogramma(int temp, int water, int time);
+
+	void startWasprogramma(Wasprogramma wp);
 	void stopWasprogramma();
-	void start();
-	void stop();
-	void errorHandling();
 
 	void main();
 };

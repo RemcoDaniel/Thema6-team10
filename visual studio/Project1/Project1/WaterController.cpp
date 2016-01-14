@@ -1,9 +1,10 @@
 #include "WaterController.h"
 
-WaterController::WaterController(WaterSensor watersensor, Pump pump, Valve valve) :
+WaterController::WaterController(WaterSensor watersensor, Pump pump, Valve valve, WashingMachineController wascontroller) :
 	watersensor(watersensor),
 	pump(pump),
 	valve(valve),
+	wascontroller(wascontroller),
 	task{ 3, "watercontroller" },
 	interval_clock{ this, 500 * bmptk::us, "interval" },
 	water_level_pool("water_level"),

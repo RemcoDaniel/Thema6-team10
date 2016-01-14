@@ -1,8 +1,9 @@
 #include "TempController.h"
 
-TempController::TempController(Heater heater, TempSensor tempsensor) :
+TempController::TempController(Heater heater, TempSensor tempsensor, WashingMachineController wascontroller) :
 	heater(heater),
 	tempsensor(tempsensor),
+	wascontroller(wascontroller),
 	task{ 3, "watercontroller" },
 	interval_clock{ this, 500 * bmptk::us, "interval" },
 	temp_pool("temp"),
@@ -29,6 +30,7 @@ void TempController::main() {
 		int temp = tempsensor.getTemp();
 		if (temp >= newtemp) {
 			heater.off();
+			wascontroller.setTempReached();	// flag zetten
 		}
 		else heater.on();
 	}

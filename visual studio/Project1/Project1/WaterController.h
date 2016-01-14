@@ -5,12 +5,14 @@
 
 #include "pRTOS.h"
 #include "WaterSensor.h"
+#include "WashingMachineController.h"
 #include "Pump.h"
 #include "Valve.h"
 
 class WaterController : public RTOS::task {
 private:
 	WaterSensor watersensor;
+	WashingMachineController wascontroller;
 	Pump pump;
 	Valve valve;
 	RTOS::pool< int > water_level_pool;
@@ -20,8 +22,8 @@ private:
 	int getWaterLevel();
 
 public:
-	WaterController(WaterSensor watersensor, Pump pump, Valve valve);
-	void setWaterLevel(int wlvl);
+	WaterController(WaterSensor watersensor, Pump pump, Valve valve, WashingMachineController wascontroller);
+	void setWaterLevel(int level);
 
 	void main();
 };
