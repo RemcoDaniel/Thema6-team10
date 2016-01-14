@@ -13,7 +13,7 @@ private:
 	//TemperaturController theTempController;
 	//WaterController theWaterController;
 	//MotorController theMotorController;
-	RTOS::flag temp_reached_flag, level_reached_flag;
+	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag;
 	RTOS::clock interval_clock;
 
 public:

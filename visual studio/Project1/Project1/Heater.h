@@ -3,7 +3,6 @@
 #ifndef _HEATER_H
 #define _HEATER_H
 
-//#include "TempController.h"
 #include "UART.h"
 
 class Heater {

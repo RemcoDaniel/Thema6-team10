@@ -4,7 +4,8 @@ WashingMachineController::WashingMachineController() :
 	task{ 0, "beep" },
 	interval_clock{ this, 500 * bmptk::us, "washing_timer" },
 	temp_reached_flag{ this, "temp_reached" },
-	level_reached_flag{ this, "water_reached" }
+	level_reached_flag{ this, "water_reached" },
+	motor_done_flag{ this, "motor_done" }
 {}
 
 
