@@ -30,10 +30,31 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UARTController.cpp">
+    <ClCompile Include="UART.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UART.cpp">
+    <ClCompile Include="Heater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TempSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Valve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libserial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pRTOS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TempController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,10 +71,31 @@
     <ClInclude Include="Motor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UARTController.h">
+    <ClInclude Include="UART.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UART.h">
+    <ClInclude Include="Heater.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TempSensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterSensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Valve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libserial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pRTOS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TempController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
