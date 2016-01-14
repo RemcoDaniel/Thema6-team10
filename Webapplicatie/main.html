@@ -3,16 +3,89 @@
     <head>
          <title>wasmachine applicatie</title>
          <link rel="stylesheet" href="main.css">
+		 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     </head>
     <body>
-		<div class="navbar">
-			<li><H2>Wasmachine App<h2></li>
-			<li><a href="">Wassen</a></li>		
-			<li><a href="">Log</a></li>
-			<li><a href="">Instellingen</a></li>
-			<li><a href="">Klantenservice</a></li>
-			<li><a href="">Bedrijfsinfo</a></li>
-		</div>
-             
+	
+	<!--mainpage-->
+	<div class=Mainwasscherm>
+			<header>
+				<li>Wasmachine App</li>
+				<li>#huidigetijdTimer#</li>
+				<li>Status:</li>
+				<li>#verwarmen#</li>
+				<li><a href="#" class="MyStopButton">Stop</a></li>
+				<li>resterende tijd:</li>
+				<li>#resterdendetijdTimer#</li>
+			</header>
+				<div class= navbar>
+					<li ><a href="" class=active>Wassen</a></li>		
+					<li><a href="">Log</a></li>
+					<li><a href="">Instellingen</a></li>
+					<li><a href="">Klantenservice</a></li>
+					<li><a href="">Bedrijfsinfo</a></li>
+					<li><a href="">Log out</a></li>
+				</div>
+				
+				<div class=wasscherm> 
+					<li>
+						<div class=Wateroptie>
+							<label>Hoeveelheid Water</label><br/>
+							<input type="radio" name="watervalue" value="50" />50liter
+							<br/>
+							<input type="radio" name="watervalue" value="100" />100liter
+							<br/>
+							<input type="radio" name="watervalue" value="200" />200leter
+							<br/>
+						</div>
+					</li>
+					
+					<li>
+						<div class=wastype>
+						<label>type was</label>
+							<br/>
+							<input type="radio" name="wastype" value="wol" />wol
+							<br/>
+							<input type="radio" name="wastype" value="zwart" />zwart
+							<br/>
+							<input type="radio" name="wastype" value="witte" />witte was
+							<br/>
+							<input type="radio" name="wastype" value="bont" />bonte was
+							<br/>
+						</div>
+					</li>
+					
+					
+					<li>
+						<div class=tempoptie>
+							<label>Temperatuur</label>
+							<br/>
+							<input type="radio" name="temp" value="10" />10graden
+							<br/>
+							<input type="radio" name="temp" value="40" />40graden
+							<br/>
+							<input type="radio" name="temp" value="60" />60graden
+							<br/>
+							<input type="radio" name="temp" value="90" />90graden
+							<br/>	
+						</div>
+					</li>
+					
+					<li>
+						<a href="#" class="MyStartButton">Start</a>
+					</li>
+				</div>
+		</div>	
+		
+		<!--fwefewfwefewfwf-->
+		
+		
     </body>
+	
+	<script>
+		jQuery(document).ready(function() {
+			jQuery(".Mainwasscherm").hide();
+			jQuery(".Mainwasscherm").delay(1000).fadeIn(1500);
+		});
+	</script>
 </html>
