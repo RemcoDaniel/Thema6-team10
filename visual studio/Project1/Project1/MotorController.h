@@ -9,10 +9,20 @@
 class MotorController : public RTOS::task {
 private:
 	Motor motor;
-public:
-	MotorController(Motor motor);
+	RTOS::flag new_motor_job_flag;
+	RTOS::pool< int > motor_job_pool;
+	RTOS::mutex motor_job_mutex;
+	RTOS::clock interval_clock;
+
 	void stopMotor();
 	void rotateMotor();
+
+public:
+	MotorController(Motor motor);
+	void normalMotorJob();
+	void centrifuge();
+
+	void main();
 };
 
 #endif

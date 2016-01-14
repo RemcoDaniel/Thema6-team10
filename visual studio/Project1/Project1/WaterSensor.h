@@ -12,7 +12,7 @@ private:
 	UART &uart;
 public:
 	WaterSensor(UART uart);
-	void getWaterLevel();
+	int getWaterLevel();
 };
 
 #endif

@@ -10,6 +10,6 @@ int TempSensor::getTemp() {
 
 	int temp = 0;
 
-	// wachten op antwoord....
+	// wachten op antwoord....!!!
 	return temp;
 }
