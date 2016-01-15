@@ -11,13 +11,9 @@ int main(){
 		/*Motor m = Motor(u);
 		m.turn(0, 1600);*/
 
-		char x[2] = {DOOR_LOCK_REQ, LOCK_CMD};
 		while (true){
-			x[1] = LOCK_CMD;
-			u.executeCommand(x);
-
-			x[1] = UNLOCK_CMD;
-			u.executeCommand(x);
+			u.executeCommand(DOOR_LOCK_REQ, LOCK_CMD);
+			u.executeCommand(DOOR_LOCK_REQ, UNLOCK_CMD);
 		}
 	}
 	catch (std::exception &e){
