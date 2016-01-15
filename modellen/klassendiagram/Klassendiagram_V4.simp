@@ -57,10 +57,6 @@
         <item-type stereotype="" type="UmlCommentConnector" />
         <value>2</value>
       </counter>
-      <counter>
-        <item-type stereotype="" type="AbstractElementGroup" />
-        <value>32</value>
-      </counter>
     </entity-ids>
     <diagrams>
       <counter>
@@ -768,7 +764,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di920990760331727176" cid="C015" type="class" name="UART" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/13/2015 21:50:39">
+          <item id="di920990760331727176" cid="C015" type="class" name="UARTController" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="12/13/2015 21:50:39">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1181,7 +1177,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di895915688693185565" cid="REL106" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 13:06:36">
+          <item id="di895915688693185565" cid="REL106" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 13:06:36">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1534,7 +1530,7 @@
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di158545968647439621" cid="CMT002" type="comment" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 12:53:31">
+          <item id="di158545968647439621" cid="CMT002" type="comment" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 12:53:31">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1542,7 +1538,7 @@
             <comment>UART nog een task maken?
 </comment>
           </item>
-          <item id="di402289379281469144" cid="CMT003" type="comment" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 12:53:58">
+          <item id="di402289379281469144" cid="CMT003" type="comment" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 12:53:58">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1550,7 +1546,7 @@
             <comment>Nog een class toevoegen voor het pollen van de server, en het regelen van data versturen naar de server
 </comment>
           </item>
-          <item id="di335687270831956186" cid="C032" type="class" name="CommunicationController" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 12:55:26">
+          <item id="di335687270831956186" cid="C032" type="class" name="CommunicationController" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="01/14/2016 12:55:26">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
