@@ -3,24 +3,13 @@
 #include "UART.h"
 #include <iostream>
 
-class uart_error : public std::exception {
-public:
-	uart_error(const std::string &error) : s(std::string{ "Something went wrong trying to open the uart port on port: [" } + error + "]")
-	{}
-	const char * what() const override {
-		return s.c_str();
-	}
-private:
-	std::string s;
-};
-
 UART::UART(const char * device, unsigned int baudrate):
 device{ device },
 baudrate{baudrate}
 {
 	int portMakeState = theSerialPort.open(device, baudrate);
 	if (portMakeState < 1){
-		throw(uart_error(std::string{ "" } + device + " with error value " + char(portMakeState)));
+		std::cout <<  " with error value " + char(portMakeState);
 	}
 }
 
@@ -36,17 +25,19 @@ void UART::sendCommand(unsigned int byte1, unsigned int byte2) {
 }
 
 int UART::readAnswer(){
-	
+	return 0;
 }
 
 char * UART::executeCommand(const char * s){
+	std::cout << s << "\n";
 	theSerialPort.writeString(s);
 
-	while(theSerialPort.peek < 2){
+	while(theSerialPort.peek() < 2){
+		std::cout << "jup\n";
 	}
 
-	char * response;
+	char * response = 0;
 	theSerialPort.readString(response, char(0xFF), 2);
-
+	
 	return response;
 }

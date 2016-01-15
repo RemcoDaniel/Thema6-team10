@@ -5,20 +5,17 @@
 #include <stdint.h>
 
 int main(){
-	
+	std::cout << "HALLOOOOOOO\n";
 	try{
 		UART u = UART("/dev/ttyAMA0", 9600);
 		/*Motor m = Motor(u);
 		m.turn(0, 1600);*/
 
-		char x[2] = {DOOR_LOCK_REQ, LOCK_CMD};
-		while (true){
-			x[1] = LOCK_CMD;
-			u.executeCommand(x);
+		char y[3] = {MACHINE_REQ, START_CMD,'\0'};
+		u.executeCommand(y);
 
-			x[1] = UNLOCK_CMD;
-			u.executeCommand(x);
-		}
+		char x[3] = {SIGNAL_LED_REQ, ON_CMD, '\0'};
+		u.executeCommand(x);
 	}
 	catch (std::exception &e){
 		std::cerr << e.what();
