@@ -7,11 +7,13 @@
 #include "MotorController.h"
 #include "WaterController.h"
 #include "TempController.h"
+#include "Door.h"
 
 class WashingMachineController : public RTOS::task {
 private:
 	//time_t time;
 	//currentWasprog wasprogramma;
+	Door door;
 	TempController tempcontroller;
 	WaterController watercontroller;
 	MotorController motorcontroller;
@@ -19,15 +21,11 @@ private:
 	RTOS::clock interval_clock;
 
 public:
-	WashingMachineController(TempController tempcontroller, WaterController watercontroller, MotorController motorcontroller);
+	WashingMachineController(Door door, TempController tempcontroller, WaterController watercontroller, MotorController motorcontroller);
 
 	void setTempReached();
 	void setWaterLevelReached();
 	void setMotorDone();
-
-	void registerObserver();
-	void removeObserver();
-	void notifyObserver();
 
 	void loadWasprogramma(int temp, int water, int time);
 

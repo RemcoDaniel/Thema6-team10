@@ -2,7 +2,8 @@
 
 #include "WashingMachineController.h"
 
-WashingMachineController::WashingMachineController(TempController tempcontroller, WaterController watercontroller, MotorController motorcontroller) :
+WashingMachineController::WashingMachineController(Door door, TempController tempcontroller, WaterController watercontroller, MotorController motorcontroller) :
+	door(door),
 	tempcontroller(tempcontroller),
 	watercontroller(watercontroller),
 	motorcontroller(motorcontroller),
@@ -26,24 +27,12 @@ void WashingMachineController::setMotorDone() {
 	motor_done_flag.set();
 }
 
-void WashingMachineController::registerObserver() {
-
-}
-
-void WashingMachineController::removeObserver() {
-
-}
-
-void WashingMachineController::notifyObserver() {
-
-}
-
 void WashingMachineController::loadWasprogramma(int temp, int water, int time) {
 
 }
 
 void WashingMachineController::startWasprogramma(Wasprogramma wp) {
-	// deur dicht
+	door.lock();		// deur dicht
 
 	// voorwas (zonder zeep!):
 	watercontroller.setWaterLevel(wp.getLevel());		// water erbij
@@ -78,7 +67,7 @@ void WashingMachineController::startWasprogramma(Wasprogramma wp) {
 	motorcontroller.setMotorJob(wp.getJob());		// draaien
 	wait(motor_done_flag);		// wachten tot motor klaar is
 
-	// deur ontgrendelen
+	door.unlock();		// deur ontgrendelen
 }
 
 void WashingMachineController::stopWasprogramma() {
@@ -87,9 +76,8 @@ void WashingMachineController::stopWasprogramma() {
 
 void WashingMachineController::main() {
 	for (;;) {
-		// iets doen
 		// wachten op signaal voor nieuw wasprogramma
-		// wasprogramma starten
-		// kan ondertussen signaal krijgen dat wasprogramma onderbroken moet worden!
+		startWasprogramma(wp);		// wasprogramma starten
+		// kan ondertussen signaal krijgen dat wasprogramma onderbroken moet worden!!!!!!!!!!!!!
 	}
 }

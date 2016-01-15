@@ -2,7 +2,7 @@
 
 #include "Motor.h"
 
-Motor::Motor(UART uart) : uart(uart){
+Motor::Motor(UART uart) : uart(uart) {
 	speed = 0;
 }
 
@@ -11,8 +11,8 @@ void Motor::setMotorSpeed(int speed) {		// getal van 0 - 1600 rpm
 }
 
 int Motor::getMotorSpeed() {		// getal van 0 - 1600 rpm
-	uart.sendCommand(0x09, 0x00);
-	// wachten op antwoord!!!
+	int speed = uart.sendCommand(0x09, 0x00);		// dit is nu wel een andere methode!
+	// de speed hier weer uitrekenen
 	return speed;
 }
 
@@ -21,6 +21,5 @@ void Motor::turn(bool dir, int speed) {
 	if (dir) {		// 1 = left
 		hulp = hulp | 0x80;			// de RPM OR'en met 0x80
 	}
-
-	uart.sendCommand(0x0A, hulp);
+	int turning = uart.sendCommand(0x0A, hulp);
 }
