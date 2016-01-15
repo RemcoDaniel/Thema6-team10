@@ -8,7 +8,7 @@
     <body>
 	
 	<!--mainpage-->
-	<div class=Mainwasscherm>
+	
 			<header>
 				<li>Wasmachine App</li>
 				<li>#huidigetijdTimer#</li>
@@ -18,13 +18,14 @@
 				<li>resterende tijd:</li>
 				<li>#resterdendetijdTimer#</li>
 			</header>
+			<div id=Mainwasscherm>
 				<div class= navbar>
-					<li ><a href="" class=active>Wassen</a></li>		
-					<li><a href="">Log</a></li>
-					<li><a href="">Instellingen</a></li>
-					<li><a href="">Klantenservice</a></li>
-					<li><a href="">Bedrijfsinfo</a></li>
-					<li><a href="">Log out</a></li>
+					<li class=wassen><a class=active>Wassen</a></li>		
+					<li class=log><a>Log</a></li>
+					<li class=instelling><a>Instellingen</a></li>
+					<li class=klantenservice><a>Klantenservice</a></li>
+					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+					<li class=logout><a>Log out</a></li>
 				</div>
 				
 				<div class=wasscherm> 
@@ -72,20 +73,163 @@
 					</li>
 					
 					<li>
-						<a href="#" class="MyStartButton">Start</a>
+						<a class="MyStartButton">Start</a>
 					</li>
 				</div>
-		</div>	
+			</div>	
 		
-		<!--fwefewfwefewfwf-->
+		<!--logscherm----------------------------------------------------------->
+		<div id=logscherm>
+				<div class= navbar>
+					<li class=wassen><a>Wassen</a></li>		
+					<li class=log><a class=active>Log</a></li>
+					<li class=instelling><a>Instellingen</a></li>
+					<li class=klantenservice><a>Klantenservice</a></li>
+					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+					<li class=logout><a>Log out</a></li>
+				</div>
+		</div>
 		
+		<!--instellingenscherm----------------------------------------------------------->
+		<div id=instellingenscherm>
+				<div class= navbar>
+					<li class=wassen><a>Wassen</a></li>		
+					<li class=log><a>Log</a></li>
+					<li class=instelling><a class=active>Instellingen</a></li>
+					<li class=klantenservice><a>Klantenservice</a></li>
+					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+					<li class=logout><a>Log out</a></li>
+				</div>
+		</div>
 		
+		<!--klantenservicescherm----------------------------------------------------------->
+		<div id=klantenservicescherm>
+				<div class= navbar>
+					<li class=wassen><a>Wassen</a></li>		
+					<li class=log><a>Log</a></li>
+					<li class=instelling><a>Instellingen</a></li>
+					<li class=klantenservice><a class=active>Klantenservice</a></li>
+					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+					<li class=logout><a>Log out</a></li>
+				</div>
+		</div>
+		
+		<!--bedrijfsinfoscherm----------------------------------------------------------->
+		<div id=bedrijfsinfoscherm>
+				<div class= navbar>
+					<li class=wassen><a>Wassen</a></li>		
+					<li class=log><a>Log</a></li>
+					<li class=instelling><a>Instellingen</a></li>
+					<li class=klantenservice><a>Klantenservice</a></li>
+					<li class=bedrijfsinfo><a class=active>Bedrijfsinfo</a></li>
+					<li class=logout><a>Log out</a></li>
+				</div>
+		</div>
+		
+		<div id=logoutpopup>
+			<h1>are you sure you wanna log out?<h1>
+		</div>
+		
+		<!--inlogscherm----------------------------------------------------------->
+		<div id=loginscherm>
+			<label>Username:</label>
+            <input type="text" name="Username" size="30" />
+            <label>Password:</label>
+            <input type="password" name="Password" size="30" />
+			<input class="inlogbutton" type="submit" value="login">
+            <br/>	
+		</div>
     </body>
+	
+	
 	
 	<script>
 		jQuery(document).ready(function() {
-			jQuery(".Mainwasscherm").hide();
-			jQuery(".Mainwasscherm").delay(1000).fadeIn(1500);
+			$("#logoutpopup").hide();	
+			jQuery("header").hide();
+			jQuery("#Mainwasscherm").hide();
+			jQuery("#logscherm").hide();
+			jQuery("#instellingenscherm").hide();
+			jQuery("#klantenservicescherm").hide();
+			jQuery("#bedrijfsinfoscherm").hide();
+			jQuery("#loginscherm").show();			
 		});
+		
+		$(".wassen").click(function(){
+			$("#logoutpopup").hide();	
+			$("header").show();
+			$("#Mainwasscherm").show();
+			$("#logscherm").hide();	
+			$("#instellingenscherm").hide();	
+			$("#klantenservicescherm").hide();	
+			$("#bedrijfsinfoscherm").hide();	
+			$("#loginscherm").hide();				
+		});
+		
+		$(".log").click(function(){
+			$("#logoutpopup").hide();	
+			$("header").show();
+			$("#Mainwasscherm").hide();
+			$("#logscherm").show();	
+			$("#instellingenscherm").hide();	
+			$("#klantenservicescherm").hide();	
+			$("#bedrijfsinfoscherm").hide();	
+			$("#loginscherm").hide();				
+		});
+		
+		$(".instelling").click(function(){
+			$("#logoutpopup").hide();	
+			$("header").show();
+			$("#Mainwasscherm").hide();
+			$("#logscherm").hide();	
+			$("#instellingenscherm").show();	
+			$("#klantenservicescherm").hide();	
+			$("#bedrijfsinfoscherm").hide();	
+			$("#loginscherm").hide();				
+		});
+		
+		$(".klantenservice").click(function(){
+			$("#logoutpopup").hide();	
+			$("header").show();
+			$("#Mainwasscherm").hide();
+			$("#logscherm").hide();	
+			$("#instellingenscherm").hide();	
+			$("#klantenservicescherm").show();	
+			$("#bedrijfsinfoscherm").hide();	
+			$("#loginscherm").hide();				
+		});
+
+		$(".bedrijfsinfo").click(function(){
+			$("#logoutpopup").hide();	
+			$("header").show();
+			$("#Mainwasscherm").hide();
+			$("#logscherm").hide();	
+			$("#instellingenscherm").hide();	
+			$("#klantenservicescherm").hide();	
+			$("#bedrijfsinfoscherm").show();	
+			$("#loginscherm").hide();				
+		});
+		
+		$(".inlogbutton").click(function(){
+			$("#logoutpopup").hide();	
+			$("header").show();
+			$("#Mainwasscherm").show();
+			$("#logscherm").hide();	
+			$("#instellingenscherm").hide();	
+			$("#klantenservicescherm").hide();	
+			$("#bedrijfsinfoscherm").hide();	
+			$("#loginscherm").hide()		
+		});
+		
+		$(".logout").click(function(){
+			$("#logoutpopup").show();
+		});		
+		
+		
+			
+		
+
+
+		
 	</script>
 </html>
