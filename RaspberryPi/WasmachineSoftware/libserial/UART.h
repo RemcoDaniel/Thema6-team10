@@ -11,7 +11,7 @@ public:
 	UART(const char * device, unsigned int baudrate);
 	void sendCommand(unsigned int byte1, unsigned int byte2);
 	int readAnswer();
-	char * executeCommand(const char * s);
+	char * executeCommand(char c, char Char);
 private:
 	const char * device;
 	unsigned int baudrate;

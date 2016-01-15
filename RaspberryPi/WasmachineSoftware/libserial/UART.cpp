@@ -9,7 +9,7 @@ baudrate{baudrate}
 {
 	int portMakeState = theSerialPort.open(device, baudrate);
 	if (portMakeState < 1){
-		std::cout <<  " with error value " + char(portMakeState);
+		std::cout << "Error opening port" + char(portMakeState);
 	}
 }
 

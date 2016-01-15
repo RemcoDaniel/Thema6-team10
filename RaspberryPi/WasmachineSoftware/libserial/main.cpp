@@ -11,6 +11,7 @@ int main(){
 		/*Motor m = Motor(u);
 		m.turn(0, 1600);*/
 
+
 		char y[3] = {MACHINE_REQ, START_CMD,'\0'};
 		u.executeCommand(y);
 
