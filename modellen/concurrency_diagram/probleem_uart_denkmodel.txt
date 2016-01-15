@@ -1,0 +1,50 @@
+de motor moet wachten op antwoord van de uart.
+dit zou moeten door op een flag te wachten. maar dan zou het een taak moeten zijn
+en anders zou de communicatie verplaatst moeten worden naar de motorcontroller
+
+eventueel:
+methode opsplitsen in 1 methode voor het zenden naar uart en 1 voor ophalen van uart.
+in dat geval zou de motorcontroller eerst opdracht moeten geven aan de motor dat
+deze de uart een bericht stuurt.
+en dan op een flag moeten wachten en als die flag er is kan de motor uitlezen.
+
+maar eigenlijk is er dan nog een probleem, namelijk HOE stuurt de motor berichten
+en waaruit kan hij deze lezen?
+Want het mooiste is dit te doen via een channel, maar ook hiertoe heeft de motor
+geen toegang omdat het geen taak is.
+
+een andere mogelijke oplossing:
+de motorcontroller heeft een flag waarop hij wacht tot de uart hem zet,
+deze heeft nu een antwoord klaar.
+zodra de motorcontroller deze flag ziet, geeft hij aan de motor door dat hij moet
+stoppen met waarmee hij bezig was.
+nu is de motor vrij toegankelijk.
+de motorcontroller geeft nu bericht aan de uart dat deze de motor aan mag sturen
+de uart roept nu direct een methode aan binnen de motor waarmee de waarde terugkomt
+en de motor geeft deze aan de motorcontroller.
+
+dit kan wel maar is wel erg omslagtig
+
+
+
+of nog een andere manier:
+de motorcontroller geeft aan de motor door dat hij moet draaien.
+deze stuurt dan een bericht naar de uart, direct via een methode, dus niet met
+een pool of flag ofzo.
+op deze manier is de uart niet een controller!!!
+MOET WEL EVEN VOOR WORDEN GEZORGD DAT GEEN ANDERE TAAK BIJ DE UART KAN DAN!
+de motorcontroller kan ondertussen gewoon vrolijk verder en de motor wacht
+op antwoord van de uart.
+dit doet hij niet actief (er staat nergens een wait ofzo bij de motor)
+maar zodra de uart antwoord heeft roept hij een methode aan van de motor die het
+antwoord geeft. als de motor deze aanroep heeft gekregen zal hij de motorcontroller
+een seintje geven.
+vragen over dit idee:
+1) hoe geeft de motor dit seintje door aan de motorcontroller?
+2) is dat seintje wel nodig? kan de motor niet gewoon zijn werk gaan doen?
+	--> de motor opzich wel, maar dit idee moet ook voor temperatuursensor
+		en dan wil de tempcontroller wel een antwoord krijgen!
+
+
+persoonlijk voel ik er het meeste voor om de boundaries gewoon te verwerken binnen
+de taken. dan is in 1 klap het hele probleem opgelost. maar is dit wel netjes?

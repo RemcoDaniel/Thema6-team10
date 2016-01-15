@@ -8,8 +8,8 @@
 
 class Motor {
 private:
+	UART uart;
 	int speed;
-	UART &uart;
 public:
 	Motor(UART uart);
 	void setMotorSpeed(int speed);		// getal van 0 - 1600 rpm    // overbodig?

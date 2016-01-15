@@ -5,7 +5,7 @@ TempController::TempController(Heater heater, TempSensor tempsensor, WashingMach
 	tempsensor(tempsensor),
 	wascontroller(wascontroller),
 	task{ 3, "watercontroller" },
-	interval_clock{ this, 500 * bmptk::us, "interval" },
+	interval_clock{ this, 20 * bmptk::us, "interval" },
 	temp_pool("temp"),
 	temp_mutex("temp")
 {}
