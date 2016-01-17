@@ -14,9 +14,15 @@ private:
 	std::string s;
 };
 
-UART::UART(const char * device, unsigned int baudrate):
-device{ device },
-baudrate{baudrate}
+UART::UART(const char * device, unsigned int baudrate, MotorController motorctrl, TempController tempctrl, WaterController waterctrl, WashingMachineController wasctrl):
+	task{ 0, "uart" },			// de priority moet nog goed worden ingesteld
+	device{ device },
+	baudrate{baudrate},
+	motorctrl(motorctrl),
+	tempctrl(tempctrl),
+	waterctrl(waterctrl),
+	wasctrl(wasctrl),
+	commandchannel(this, "channel")
 {
 	int portMakeState = theSerialPort.open(device, baudrate);
 	if (portMakeState < 1){
@@ -24,29 +30,46 @@ baudrate{baudrate}
 	}
 }
 
-void UART::sendCommand(unsigned int byte1, unsigned int byte2) {
-	printf("dit werkt\n");
-	//printf("%u", code);
-
-	unsigned int code = byte1 << 8 | byte2;
-	printf("%x\n", byte1);
-	printf("%x\n", byte2);
-	printf("%x\n", code);
-
-}
-
-int UART::readAnswer(){
-	
-}
-
-char * UART::executeCommand(const char * s){
+void UART::executeCommand(char * s){
 	theSerialPort.writeString(s);
 
-	while(theSerialPort.peek < 2){
+	while(theSerialPort.peek() < 2){
+		// hier moet wat in komen te staan, anders kan de compiler dit misschien overslaan!
 	}
 
 	char * response;
 	theSerialPort.readString(response, char(0xFF), 2);
+	returnResponse(response);
+}
 
-	return response;
+char * UART::readChannel() {
+	return commandchannel.read();
+}
+
+void UART::returnResponse(char * response) {
+	switch (response[0]) {
+		case '0x09':
+		case '0x0A': 	motorctrl.writeResponse(response); motorctrl.setResponseFlag(); break;	// motortaak
+		case '0x07':
+		case '0x08': 	tempctrl.writeResponse(response); tempctrl.setResponseFlag();	break;	// temperatuurtaak
+		case '0x03':
+		case '0x05':
+		case '0x06': 	waterctrl.writeResponse(response); waterctrl.setResponseFlag();	break;	// watertaak
+		case '0x01':
+		case '0x02':
+		case '0x04':
+		case '0x0B': 	wasctrl.writeResponse(response); wasctrl.setResponseFlag();		break;	// wasmachinetaak
+	}
+}
+
+void UART::writeChannel(char * request) {
+	commandchannel.write(request);
+}
+
+void UART::main() {
+	for (;;) {
+		// hier moet hij dingen gaan doen
+
+		char * command = readChannel();
+	}
 }

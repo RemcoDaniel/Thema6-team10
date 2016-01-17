@@ -2,16 +2,19 @@
 
 #include "Pump.h"
 
-Pump::Pump(UART uart) : uart(uart) {}
+Pump::Pump() {}
 
-void Pump::on() {
-	uart.sendCommand(0x05, 0x10);
+char * Pump::getOnCommand() {
+	char command[3] = { PUMP_REQ, ON_CMD, '\0' };
+	return command;
 }
 
-void Pump::off() {
-	uart.sendCommand(0x05, 0x20);
+char * Pump::getOffCommand() {
+	char command[3] = { PUMP_REQ, OFF_CMD, '\0' };
+	return command;
 }
 
-void Pump::getStatus() {
-	uart.sendCommand(0x05, 0x01);
+char * Pump::getStatusCommand() {
+	char command[3] = { PUMP_REQ, STATUS_CMD, '\0' };
+	return command;
 }

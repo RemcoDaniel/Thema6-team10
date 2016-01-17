@@ -4,15 +4,11 @@
 #define _WATERSENSOR_H
 
 #include "WaterController.h"
-#include "UART.h"
 
 class WaterSensor {
-private:
-	int speed;
-	UART &uart;
 public:
-	WaterSensor(UART uart);
-	int getWaterLevel();
+	WaterSensor();
+	char * getWaterLevelCommand();
 };
 
 #endif

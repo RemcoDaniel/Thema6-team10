@@ -1,16 +1,18 @@
-// file WasProgramma.h
+// file Wasprogramma.h
 
 #ifndef _WASPROGRAMMA_H
 #define _WASPROGRAMMA_H
 
-class WasProgramma {
+class Wasprogramma {
 private:
-
+	int temp, waterlevel, time, job;
 public:
-	WasProgramma();
-	void setTemp();		// welke temperatuur
-	void setWater();	// hoeveelheid water
-	void setTime();		// lengte van het programma (in tijd)
+	Wasprogramma(int temp, int waterlevel, int time, int job);
+
+	int getLevel();
+	int getTemp();
+	int getTime();
+	int getJob();
 };
 
 #endif

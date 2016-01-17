@@ -2,16 +2,19 @@
 
 #include "Valve.h"
 
-Valve::Valve(UART uart) : uart(uart) {}
+Valve::Valve() {}
 
-void Valve::on() {
-	uart.sendCommand(0x03, 0x10);
+char * Valve::getOnCommand() {
+	char command[3] = { WATER_VALVE_REQ, ON_CMD, '\0' };
+	return command;
 }
 
-void Valve::off() {
-	uart.sendCommand(0x03, 0x20);
+char * Valve::getOffCommand() {
+	char command[3] = { WATER_VALVE_REQ, OFF_CMD, '\0' };
+	return command;
 }
 
-void Valve::getStatus() {
-	uart.sendCommand(0x03, 0x01);
+char * Valve::getStatusCommand() {
+	char command[3] = { WATER_VALVE_REQ, STATUS_CMD, '\0' };
+	return command;
 }

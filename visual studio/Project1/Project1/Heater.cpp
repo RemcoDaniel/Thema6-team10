@@ -2,16 +2,19 @@
 
 #include "Heater.h"
 
-Heater::Heater(UART uart) : uart(uart) {}
+Heater::Heater() {}
 
-void Heater::on() {
-	uart.sendCommand(0x07, 0x10);
+char * Heater::getOnCommand() {
+	char command[3] = { HEATING_UNIT_REQ, ON_CMD, '\0' };
+	return command;
 }
 
-void Heater::off() {
-	uart.sendCommand(0x07, 0x20);
+char * Heater::getOffCommand() {
+	char command[3] = { HEATING_UNIT_REQ, OFF_CMD, '\0' };
+	return command;
 }
 
-void Heater::getStatus() {
-	uart.sendCommand(0x07, 0x01);
+char * Heater::getStatusCommand() {
+	char command[3] = { HEATING_UNIT_REQ, STATUS_CMD, '\0' };
+	return command;
 }

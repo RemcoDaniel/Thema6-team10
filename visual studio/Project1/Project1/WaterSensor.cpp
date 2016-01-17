@@ -2,15 +2,9 @@
 
 #include "WaterSensor.h"
 
-WaterSensor::WaterSensor(UART uart) : uart(uart) {
-	speed = 0;
-}
+WaterSensor::WaterSensor() {}
 
-int WaterSensor::getWaterLevel() {
-	uart.sendCommand(0x06, 0x00);
-
-	// wachten op antwoord
-	int level = 0; //
-
-	return level;
+char * WaterSensor::getWaterLevelCommand() {
+	char command[3] = { WATER_LEVEL_REQ , '\0' };
+	return command;
 }

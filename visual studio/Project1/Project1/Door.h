@@ -3,16 +3,14 @@
 #ifndef _DOOR_H
 #define _DOOR_H
 
-#include "UART.h"
+#include "Protocol.h"
 
 class Door {
-private:
-	UART uart;
 public:
-	Door(UART uart);
-	void lock();
-	void unlock();
-	void getStatus();
+	Door();
+	char * getLockCommand();
+	char * getUnlockCommand();
+	char * getStatusCommand();
 };
 
 #endif

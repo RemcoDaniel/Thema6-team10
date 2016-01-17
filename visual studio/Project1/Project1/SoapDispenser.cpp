@@ -2,16 +2,19 @@
 
 #include "SoapDispenser.h"
 
-SoapDispenser::SoapDispenser(UART uart) : uart(uart) {}
+SoapDispenser::SoapDispenser() {}
 
-void SoapDispenser::open() {
-	uart.sendCommand(0x04, 0x10);
+char * SoapDispenser::getOpenCommand() {
+	char command[3] = { SOAP_DISPENSER_REQ, OPEN_CMD, '\0' };
+	return command;
 }
 
-void SoapDispenser::close() {
-	uart.sendCommand(0x04, 0x20);
+char * SoapDispenser::getCloseCommand() {
+	char command[3] = { SOAP_DISPENSER_REQ, CLOSE_CMD, '\0' };
+	return command;
 }
 
-void SoapDispenser::getStatus() {
-	uart.sendCommand(0x04, 0x01);
+char * SoapDispenser::getStatusCommand() {
+	char command[3] = { SOAP_DISPENSER_REQ, LOCK_CMD, '\0' };
+	return command;
 }

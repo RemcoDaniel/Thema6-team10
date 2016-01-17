@@ -1,0 +1,25 @@
+als van de uart geen taak wordt gemaakt, staan alle taken op een bepaald moment
+te wachten.
+dit is natuurlijk niet de bedoeling.
+maar als het wel een taak is, is het lastig om de boundary objecten een bericht te
+laten sturen naar de uart.
+
+eventueel kan er een klasse tussen de boundary objecten en de uart worden gestopt.
+deze vormt dan ook een taak. (KAN DIT????)
+
+
+
+
+de uart moet alle boundary objecten kennen.
+
+
+
+
+motorcontroller vraagt aan motor welk bericht hij moet sturen.
+motor geeft dit terug aan de motorcontroller.
+de motorcontroller handelt nu de communicatie met de uart verder af.
+in dit geval zouden de boundary objecten eigenlijk niet echt hoeven te bestaan,
+maar om het net te houden is ervoor gekozen om ze toch mee te nemen en dan maar
+hun gegevens eerst weer terug te sturen naar de bijbehorden controller.
+deze controller kan op zijn beurt weer communicatie met de uart afhandelen.
+nu zullen andere taken niet worden geblockt.

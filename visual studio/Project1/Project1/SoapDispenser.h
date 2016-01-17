@@ -3,17 +3,14 @@
 #ifndef _SOAPDISPENSER_H
 #define _SOAPDISPENSER_H
 
-//#include "WaterController.h"
-#include "UART.h"
+#include "Protocol.h"
 
 class SoapDispenser {
-private:
-	UART &uart;
 public:
-	SoapDispenser(UART uart);
-	void open();
-	void close();
-	void getStatus();
+	SoapDispenser();
+	char * getOpenCommand();
+	char * getCloseCommand();
+	char * getStatusCommand();
 };
 
 #endif

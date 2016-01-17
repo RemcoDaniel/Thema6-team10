@@ -3,14 +3,12 @@
 #ifndef _TEMPSENSOR_H
 #define _TEMPSENSOR_H
 
-#include "UART.h"
+#include "Protocol.h"
 
 class TempSensor {
-private:
-	UART &uart;
 public:
-	TempSensor(UART uart);
-	int getTemp();
+	TempSensor();
+	char * getTempCommand();
 };
 
 #endif

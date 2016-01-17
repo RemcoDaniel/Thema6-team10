@@ -2,18 +2,19 @@
 
 #include "Door.h"
 
-Door::Door(UART uart) :
-	uart(uart)
-{}
+Door::Door() {}
 
-void Door::lock() {
-	uart.sendCommand(0x02, 0x40);
+char * Door::getLockCommand() {
+	char command[3] = { DOOR_LOCK_REQ, LOCK_CMD, '\0' };
+	return command;
 }
 
-void Door::unlock() {
-	uart.sendCommand(0x02, 0x80);
+char * Door::getUnlockCommand() {
+	char command[3] = { DOOR_LOCK_REQ, UNLOCK_CMD, '\0' };
+	return command;
 }
 
-void Door::getStatus() {
-	uart.sendCommand(0x02, 0x01);
+char * Door::getStatusCommand() {
+	char command[3] = { DOOR_LOCK_REQ, STATUS_CMD, '\0' };
+	return command;
 }
