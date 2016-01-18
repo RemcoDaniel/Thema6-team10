@@ -30,7 +30,7 @@ private:
 	char* uartTask(char * command);
 
 public:
-	TempController(Heater heater, TempSensor tempsensor, WashingMachineController wascontroller, UART uart);
+	TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller, UART & uart);
 	void setTemp(int temp);
 
 	//uart:

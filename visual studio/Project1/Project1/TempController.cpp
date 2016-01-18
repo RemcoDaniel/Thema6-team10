@@ -1,17 +1,17 @@
 #include "TempController.h"
 
-TempController::TempController(Heater heater, TempSensor tempsensor, WashingMachineController wascontroller, UART uart) :
-	heater(heater),
-	tempsensor(tempsensor),
-	wascontroller(wascontroller),
-	uart(uart),
+TempController::TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller, UART & uart) :
+	heater{heater},
+	tempsensor{tempsensor},
+	wascontroller{wascontroller},
+	uart{uart},
 	task{ 3, "watercontroller" },
 	interval_clock{ this, 20 * bmptk::us, "interval" },
-	response_flag(this, "uart_response_ready"),
-	temp_pool("temp"),
-	temp_mutex("temp"),
-	response_pool("uart_response"),
-	response_mutex("uart_response")
+	response_flag{this, "uart_response_ready"},
+	temp_pool{"temp"},
+	temp_mutex{"temp"},
+	response_pool{"uart_response"},
+	response_mutex{"uart_response"}
 {}
 
 void TempController::setTemp(int temp) {

@@ -2,22 +2,22 @@
 
 #include "WashingMachineController.h"
 
-WashingMachineController::WashingMachineController(Door door, TempController temp, WaterController water, MotorController motor, Wasprogramma was, UART uart, SoapDispenser soap) :
-	door(door),
-	tempcontroller(temp),
-	watercontroller(water),
-	motorcontroller(motor),
-	wasprogramma(was),
-	uart(uart),
-	soap(soap),
-	task{ 0, "beep" },
-	interval_clock{ this, 500 * bmptk::us, "washing_timer" },
-	temp_reached_flag(this, "temp_reached"),
-	level_reached_flag(this, "water_reached"),
-	response_flag(this, "uart_response_ready"),
-	motor_done_flag(this, "motor_done"),
-	response_pool("uart_response"),
-	response_mutex("uart_response")
+WashingMachineController::WashingMachineController(Door & door, TempController & temp, WaterController & water, MotorController & motor, Wasprogramma & was, UART & uart, SoapDispenser & soap) :
+	door{door},
+	tempcontroller{temp},
+	watercontroller{water},
+	motorcontroller{motor},
+	wasprogramma{was},
+	uart{uart},
+	soap{soap},
+	task{0, "beep"},			// priority instellen nog !!!!!!!!!
+	interval_clock{this, 500 * bmptk::us, "washing_timer"},
+	temp_reached_flag{this, "temp_reached"},
+	level_reached_flag{this, "water_reached"},
+	response_flag{this, "uart_response_ready"},
+	motor_done_flag{this, "motor_done"},
+	response_pool{"uart_response"},
+	response_mutex{"uart_response"}
 {}
 
 void WashingMachineController::doorlock(bool lock) {

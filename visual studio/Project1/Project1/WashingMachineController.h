@@ -34,7 +34,7 @@ private:
 	char* uartTask(char * command);
 
 public:
-	WashingMachineController(Door door, TempController temp, WaterController water, MotorController motor, Wasprogramma was, UART uart, SoapDispenser soap);
+	WashingMachineController(Door & door, TempController & temp, WaterController & water, MotorController & motor, Wasprogramma & was, UART & uart, SoapDispenser & soap);
 
 	void setTempReached();
 	void setWaterLevelReached();

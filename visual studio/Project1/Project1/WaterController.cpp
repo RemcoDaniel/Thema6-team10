@@ -1,18 +1,18 @@
 #include "WaterController.h"
 
-WaterController::WaterController(WaterSensor watersensor, Pump pump, Valve valve, WashingMachineController wascontroller, UART uart) :
-	watersensor(watersensor),
-	pump(pump),
-	valve(valve),
-	wascontroller(wascontroller),
-	uart(uart),
-	task{ 3, "watercontroller" },
-	interval_clock{ this, 500 * bmptk::us, "interval" },
-	response_flag(this, "uart_response_ready"),
-	water_level_pool("water_level"),
-	water_level_mutex("water_level"),
-	response_pool("uart_response"),
-	response_mutex("uart_response")
+WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller, UART & uart) :
+	watersensor{watersensor},
+	pump{pump},
+	valve{valve},
+	wascontroller{wascontroller},
+	uart{uart},
+	task{3, "watercontroller"},
+	interval_clock{this, 500 * bmptk::us, "interval"},
+	response_flag{this, "uart_response_ready"},
+	water_level_pool{"water_level"},
+	water_level_mutex{"water_level"},
+	response_pool{"uart_response"},
+	response_mutex{"uart_response"}
 {}
 
 int WaterController::getNewWaterLevel() {

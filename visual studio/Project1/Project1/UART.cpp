@@ -18,11 +18,11 @@ UART::UART(const char * device, unsigned int baudrate, MotorController motorctrl
 	task{ 0, "uart" },			// de priority moet nog goed worden ingesteld
 	device{ device },
 	baudrate{baudrate},
-	motorctrl(motorctrl),
-	tempctrl(tempctrl),
-	waterctrl(waterctrl),
-	wasctrl(wasctrl),
-	commandchannel(this, "channel")
+	motorctrl{motorctrl},
+	tempctrl{tempctrl},
+	waterctrl{waterctrl},
+	wasctrl{wasctrl},
+	commandchannel{this, "channel"}
 {
 	int portMakeState = theSerialPort.open(device, baudrate);
 	if (portMakeState < 1){

@@ -2,20 +2,20 @@
 
 #include "MotorController.h"
 
-MotorController::MotorController(UART uart, Motor motor, WashingMachineController wascontroller) : 
-	uart(uart),
-	motor(motor),
-	wascontroller(wascontroller),
+MotorController::MotorController(UART & uart, Motor & motor, WashingMachineController & wascontroller) : 
+	uart{uart},
+	motor{motor},
+	wascontroller{wascontroller},
 	task{ 0, "motorctrl" },		// priority, name
-	response_flag(this, "uart_response_ready"),
-	new_job_flag(this, "new_job"),
-	motor_job_pool("motor_job"),
-	motor_job_mutex("motor_job"),
-	motor_time_pool("motor_time"),
-	motor_time_mutex("motor_time"),
-	response_pool("uart_response"),
-	response_mutex("uart_response"),
-	rotate_timer(this, "rotate_timer")
+	response_flag{ this, "uart_response_ready" },
+	new_job_flag{ this, "new_job" },
+	motor_job_pool{"motor_job" },
+	motor_job_mutex{"motor_job" },
+	motor_time_pool{"motor_time"},
+	motor_time_mutex{ "motor_time" },
+	response_pool{ "uart_response" },
+	response_mutex{ "uart_response" },
+	rotate_timer{ this, "rotate_timer" }
 {}
 
 void MotorController::stopMotor() {
