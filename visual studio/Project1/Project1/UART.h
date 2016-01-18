@@ -21,12 +21,14 @@ private:
 	unsigned int baudrate;
 	LibSerial theSerialPort;
 	RTOS::channel< char *, 100 > commandchannel;
+	RTOS::clock interval_clock;
 
-	char * readChannel();
+	void readChannel();
 	void returnResponse(char * response);
 
 public:
-	UART(const char * device, unsigned int baudrate, MotorController motorctrl, TempController tempctrl, WaterController waterctrl, WashingMachineController wasctrl);
+	UART(const char * device, unsigned int baudrate, MotorController & motorctrl, TempController & tempctrl, WaterController & waterctrl, WashingMachineController & wasctrl);
+	UART();
 	void executeCommand(char * s);
 
 	void writeChannel(char * request);

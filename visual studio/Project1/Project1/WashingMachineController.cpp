@@ -2,14 +2,8 @@
 
 #include "WashingMachineController.h"
 
-WashingMachineController::WashingMachineController(Door & door, TempController & temp, WaterController & water, MotorController & motor, Wasprogramma & was, UART & uart, SoapDispenser & soap) :
-	door{door},
-	tempcontroller{temp},
-	watercontroller{water},
-	motorcontroller{motor},
+WashingMachineController::WashingMachineController(Wasprogramma & was) :
 	wasprogramma{was},
-	uart{uart},
-	soap{soap},
 	task{0, "beep"},			// priority instellen nog !!!!!!!!!
 	interval_clock{this, 500 * bmptk::us, "washing_timer"},
 	temp_reached_flag{this, "temp_reached"},
@@ -18,7 +12,32 @@ WashingMachineController::WashingMachineController(Door & door, TempController &
 	motor_done_flag{this, "motor_done"},
 	response_pool{"uart_response"},
 	response_mutex{"uart_response"}
-{}
+{
+	// boundaries:
+	Motor motor = Motor();
+	Heater heater = Heater();
+	TempSensor tempsensor = TempSensor();
+	Pump pump = Pump();
+	Valve valve = Valve();
+	WaterSensor watersensor = WaterSensor();
+	soap = SoapDispenser();
+	door = Door();
+
+	//controllers:
+	motorcontroller = MotorController(motor, *this);
+	tempcontroller = TempController(heater, tempsensor, *this);
+	watercontroller = WaterController(watersensor, pump, valve, *this);
+
+	//uart:
+	uart = UART("/dev/ttyAMA0", 9600, motorcontroller, tempcontroller, watercontroller, *this);
+
+	// uart doorgeven aan de controllers:
+	motorcontroller.setUart(uart);
+	tempcontroller.setUart(uart);
+	watercontroller.setUart(uart);
+}
+
+WashingMachineController::WashingMachineController() {}
 
 void WashingMachineController::doorlock(bool lock) {
 	char * command;
@@ -105,7 +124,7 @@ char * WashingMachineController::readResponse() {
 }
 
 char * WashingMachineController::uartTask(char * command) {
-	uart.executeCommand(command);
+	uart.writeChannel(command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }

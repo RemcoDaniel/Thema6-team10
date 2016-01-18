@@ -1,11 +1,10 @@
 #include "WaterController.h"
 
-WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller, UART & uart) :
+WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller) :
 	watersensor{watersensor},
 	pump{pump},
 	valve{valve},
 	wascontroller{wascontroller},
-	uart{uart},
 	task{3, "watercontroller"},
 	interval_clock{this, 500 * bmptk::us, "interval"},
 	response_flag{this, "uart_response_ready"},
@@ -14,6 +13,12 @@ WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve &
 	response_pool{"uart_response"},
 	response_mutex{"uart_response"}
 {}
+
+WaterController::WaterController() {}
+
+void WaterController::setUart(UART u) {
+	uart = u;
+}
 
 int WaterController::getNewWaterLevel() {
 	water_level_mutex.wait();
@@ -63,7 +68,7 @@ char * WaterController::readResponse() {
 }
 
 char * WaterController::uartTask(char * command) {
-	uart.executeCommand(command);
+	uart.writeChannel(command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }
@@ -86,9 +91,9 @@ void WaterController::main() {
 		int newlevel = getNewWaterLevel();
 		int level = getWaterLevel();
 		if (level >= newlevel) {
-			pumping(0);		//pumping off
+			pumping(0);					//pumping off
 			if (level > newlevel) {
-				valving(1);			// nog ff kijken naar het gedrag van de valve, want dit klopt niet helemaal...		// open valve
+				valving(1);				// nog ff kijken naar het gedrag van de valve, want dit klopt niet helemaal...		// open valve
 			}
 		}
 		else valving(0); pumping(1);	// close valve	// pumping on

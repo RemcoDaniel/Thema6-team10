@@ -2,8 +2,7 @@
 
 #include "MotorController.h"
 
-MotorController::MotorController(UART & uart, Motor & motor, WashingMachineController & wascontroller) : 
-	uart{uart},
+MotorController::MotorController(Motor & motor, WashingMachineController & wascontroller) : 
 	motor{motor},
 	wascontroller{wascontroller},
 	task{ 0, "motorctrl" },		// priority, name
@@ -16,7 +15,15 @@ MotorController::MotorController(UART & uart, Motor & motor, WashingMachineContr
 	response_pool{ "uart_response" },
 	response_mutex{ "uart_response" },
 	rotate_timer{ this, "rotate_timer" }
-{}
+{
+	uart = UART();
+}
+
+MotorController::MotorController() {}
+
+void MotorController::setUart(UART & u) {
+	uart = u;
+}
 
 void MotorController::stopMotor() {
 	char * command = motor.turn(0, 0);
@@ -133,7 +140,7 @@ char * MotorController::readResponse() {
 }
 
 char * MotorController::uartTask(char * command) {
-	uart.executeCommand(command);
+	uart.writeChannel(command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }

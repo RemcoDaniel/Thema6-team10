@@ -33,7 +33,9 @@ private:
 	char* uartTask(char * command);
 
 public:
-	MotorController(UART & uart, Motor & motor, WashingMachineController & wascontroller);
+	MotorController(Motor & motor, WashingMachineController & wascontroller);
+	MotorController();
+	void setUart(UART & uart);
 
 	int getMotorSpeed();		// getal van 0 - 1600 rpm
 	void setMotorJob(int job, int time);

@@ -33,7 +33,10 @@ private:
 	char* uartTask(char * command);
 
 public:
-	WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller, UART & uart);
+	WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller);
+	WaterController();
+	void setUart(UART uart);
+
 	void setWaterLevel(int level);
 
 	//uart:

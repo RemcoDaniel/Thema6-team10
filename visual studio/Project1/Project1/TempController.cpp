@@ -1,10 +1,9 @@
 #include "TempController.h"
 
-TempController::TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller, UART & uart) :
+TempController::TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller) :
 	heater{heater},
 	tempsensor{tempsensor},
 	wascontroller{wascontroller},
-	uart{uart},
 	task{ 3, "watercontroller" },
 	interval_clock{ this, 20 * bmptk::us, "interval" },
 	response_flag{this, "uart_response_ready"},
@@ -13,6 +12,12 @@ TempController::TempController(Heater & heater, TempSensor & tempsensor, Washing
 	response_pool{"uart_response"},
 	response_mutex{"uart_response"}
 {}
+
+TempController::TempController() {}
+
+void TempController::setUart(UART u) {
+	uart = u;
+}
 
 void TempController::setTemp(int temp) {
 	temp_mutex.wait();
@@ -52,7 +57,7 @@ char * TempController::readResponse() {
 }
 
 char * TempController::uartTask(char * command) {
-	uart.executeCommand(command);
+	uart.writeChannel(command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }

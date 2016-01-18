@@ -14,7 +14,7 @@ private:
 	std::string s;
 };
 
-UART::UART(const char * device, unsigned int baudrate, MotorController motorctrl, TempController tempctrl, WaterController waterctrl, WashingMachineController wasctrl):
+UART::UART(const char * device, unsigned int baudrate, MotorController & motorctrl, TempController & tempctrl, WaterController & waterctrl, WashingMachineController & wasctrl):
 	task{ 0, "uart" },			// de priority moet nog goed worden ingesteld
 	device{ device },
 	baudrate{baudrate},
@@ -22,6 +22,7 @@ UART::UART(const char * device, unsigned int baudrate, MotorController motorctrl
 	tempctrl{tempctrl},
 	waterctrl{waterctrl},
 	wasctrl{wasctrl},
+	interval_clock{ this, 10 * bmptk::us, "interval" },
 	commandchannel{this, "channel"}
 {
 	int portMakeState = theSerialPort.open(device, baudrate);
@@ -30,20 +31,22 @@ UART::UART(const char * device, unsigned int baudrate, MotorController motorctrl
 	}
 }
 
+UART::UART() {}
+
 void UART::executeCommand(char * s){
 	theSerialPort.writeString(s);
 
 	while(theSerialPort.peek() < 2){
-		// hier moet wat in komen te staan, anders kan de compiler dit misschien overslaan!
+		wait(interval_clock);
 	}
-
+	
 	char * response;
 	theSerialPort.readString(response, char(0xFF), 2);
 	returnResponse(response);
 }
 
-char * UART::readChannel() {
-	return commandchannel.read();
+void UART::readChannel() {
+	returnResponse(commandchannel.read());
 }
 
 void UART::returnResponse(char * response) {
@@ -67,9 +70,14 @@ void UART::writeChannel(char * request) {
 }
 
 void UART::main() {
-	for (;;) {
-		// hier moet hij dingen gaan doen
+	//=========================================================================
+	// dit moet eerst!!!:
+	char start_machine[3] = { MACHINE_REQ, START_CMD, '\0' };
+	executeCommand(start_machine);
+	//=========================================================================
 
-		char * command = readChannel();
+	for (;;) {
+		readChannel();
+		wait(interval_clock);
 	}
 }
