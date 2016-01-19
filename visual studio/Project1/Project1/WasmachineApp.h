@@ -9,6 +9,7 @@ class WasmachineApp : public WebSocketListener{
 public:
 	WasmachineApp(Broadcaster *broadcaster);
 	void onTextMessage(const string & msg, WebSocket *ws) override;
+	void sendTextMessage(const string &msg, WebSocket *ws);
 	void onClose(WebSocket *ws) override;
 	void broadcastMessage(const string & msg);
 	Broadcaster* getBroadcaster();
