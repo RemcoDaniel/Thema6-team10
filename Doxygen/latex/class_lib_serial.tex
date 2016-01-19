@@ -1,0 +1,260 @@
+\hypertarget{class_lib_serial}{}\section{Lib\+Serial Class Reference}
+\label{class_lib_serial}\index{Lib\+Serial@{Lib\+Serial}}
+
+
+This class can manage a serial port. \hyperlink{class_the}{The} class allows basic operations (opening the connection, reading, writing data and closing the connection).  
+
+
+
+
+{\ttfamily \#include $<$libserial.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_lib_serial_a06bf0b9fdef8eb5390bc4f0ec187bd5a}{Lib\+Serial} (void)\hypertarget{class_lib_serial_a06bf0b9fdef8eb5390bc4f0ec187bd5a}{}\label{class_lib_serial_a06bf0b9fdef8eb5390bc4f0ec187bd5a}
+
+\begin{DoxyCompactList}\small\item\em Constructor of class \hyperlink{class_lib_serial}{Lib\+Serial}. \end{DoxyCompactList}\item 
+\hyperlink{class_lib_serial_aaf59ab1dc978f562c6b85432a6274a0d}{$\sim$\+Lib\+Serial} (void)\hypertarget{class_lib_serial_aaf59ab1dc978f562c6b85432a6274a0d}{}\label{class_lib_serial_aaf59ab1dc978f562c6b85432a6274a0d}
+
+\begin{DoxyCompactList}\small\item\em Destructor of class \hyperlink{class_lib_serial}{Lib\+Serial}. It closes the connection. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_adbcac5969ef17791e9115f090cf158ce}{open} (const char $\ast$device, unsigned int bauds)
+\begin{DoxyCompactList}\small\item\em Open the serial port. \end{DoxyCompactList}\item 
+void \hyperlink{class_lib_serial_a7edc8286ab0e3e200a4ba35a9d503bec}{close} (void)\hypertarget{class_lib_serial_a7edc8286ab0e3e200a4ba35a9d503bec}{}\label{class_lib_serial_a7edc8286ab0e3e200a4ba35a9d503bec}
+
+\begin{DoxyCompactList}\small\item\em Close the connection with the current device. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_aace55a1a3fbf452728e00fc5ee7afafd}{write\+Char} (char)
+\begin{DoxyCompactList}\small\item\em Write a char on the current serial port. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_a0999084a8ac1d5304dff5733c500a93d}{read\+Char} (char $\ast$p\+Byte)
+\begin{DoxyCompactList}\small\item\em Wait for a char from the serial device and return the data read. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_a113ef8fcfd06b7b46a4a7c8a059dfa4d}{write\+String} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Write a string on the current serial port. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_aa958f3032eb7036ae221d7e5d021df67}{read\+String} (char $\ast$string, char final\+Char, unsigned int max\+Bytes)
+\begin{DoxyCompactList}\small\item\em Read a string from the serial device. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_a3dc028d5d297b832da5b7e681facd83c}{write} (const void $\ast$buffer, unsigned int nb\+Bytes)
+\begin{DoxyCompactList}\small\item\em Write an array of data on the current serial port. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_ad2fb4e4927715b83de41d12fa4e2f329}{read} (void $\ast$buffer, unsigned int max\+Bytes)
+\begin{DoxyCompactList}\small\item\em Read an array of bytes from the serial device. \end{DoxyCompactList}\item 
+void \hyperlink{class_lib_serial_a71ea44ca686ce86e73d4f5ffcce36266}{flush} (void)\hypertarget{class_lib_serial_a71ea44ca686ce86e73d4f5ffcce36266}{}\label{class_lib_serial_a71ea44ca686ce86e73d4f5ffcce36266}
+
+\begin{DoxyCompactList}\small\item\em Empty send and receive buffers. \end{DoxyCompactList}\item 
+int \hyperlink{class_lib_serial_a29f75ef78a44ae58d2665cfd66447b3c}{peek} (void)
+\begin{DoxyCompactList}\small\item\em Return the number of bytes in the receive buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class can manage a serial port. \hyperlink{class_the}{The} class allows basic operations (opening the connection, reading, writing data and closing the connection). 
+
+\subsection{Member Function Documentation}
+\index{Lib\+Serial@{Lib\+Serial}!open@{open}}
+\index{open@{open}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{open(const char $\ast$device, unsigned int bauds)}{open(const char *device, unsigned int bauds)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{device, }
+\item[{unsigned int}]{bauds}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_adbcac5969ef17791e9115f090cf158ce}{}\label{class_lib_serial_adbcac5969ef17791e9115f090cf158ce}
+
+
+Open the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & \+: Port name /dev/tty\+S0, /dev/tty\+A\+M\+A0, /dev/tty\+U\+S\+B0 ... \\
+\hline
+{\em bauds} & \+: Baud rate of the serial port.\\
+\hline
+\end{DoxyParams}
+~\newline
+ Supported baud rate for Linux \+:~\newline
+
+\begin{DoxyItemize}
+\item 110
+\item 300
+\item 600
+\item 1200
+\item 2400
+\item 4800
+\item 9600
+\item 19200
+\item 38400
+\item 57600
+\item 115200
+\end{DoxyItemize}
+
+~\newline
+ \hyperlink{class_the}{The} device is configured 8\+N1\+: 8 bits, no parity, 1 stop bit
+
+\begin{DoxyReturn}{Returns}
+1 success 
+
+-\/1 error while opening the device 
+
+-\/2 unable to set non-\/blocking mode 
+
+-\/3 speed (bauds) not recognized 
+
+-\/4 unable to set baud rate 
+
+-\/5 unable to set flags 
+\end{DoxyReturn}
+\index{Lib\+Serial@{Lib\+Serial}!peek@{peek}}
+\index{peek@{peek}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{peek(void)}{peek(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::peek (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_a29f75ef78a44ae58d2665cfd66447b3c}{}\label{class_lib_serial_a29f75ef78a44ae58d2665cfd66447b3c}
+
+
+Return the number of bytes in the receive buffer. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_the}{The} number of bytes in the receive buffer 
+\end{DoxyReturn}
+\index{Lib\+Serial@{Lib\+Serial}!read@{read}}
+\index{read@{read}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{read(void $\ast$buffer, unsigned int max\+Bytes)}{read(void *buffer, unsigned int maxBytes)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buffer, }
+\item[{unsigned int}]{max\+Bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_ad2fb4e4927715b83de41d12fa4e2f329}{}\label{class_lib_serial_ad2fb4e4927715b83de41d12fa4e2f329}
+
+
+Read an array of bytes from the serial device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \+: array of bytes read from the serial device \\
+\hline
+{\em max\+Bytes} & \+: maximum allowed number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 success, return the number of bytes read 
+
+-\/1 error while reading the bytes 
+\end{DoxyReturn}
+\index{Lib\+Serial@{Lib\+Serial}!read\+Char@{read\+Char}}
+\index{read\+Char@{read\+Char}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{read\+Char(char $\ast$p\+Byte)}{readChar(char *pByte)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::read\+Char (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p\+Char}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_a0999084a8ac1d5304dff5733c500a93d}{}\label{class_lib_serial_a0999084a8ac1d5304dff5733c500a93d}
+
+
+Wait for a char from the serial device and return the data read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Char} & \+: char read on the serial device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 success 
+
+-\/1 error while reading the char 
+\end{DoxyReturn}
+\index{Lib\+Serial@{Lib\+Serial}!read\+String@{read\+String}}
+\index{read\+String@{read\+String}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{read\+String(char $\ast$string, char final\+Char, unsigned int max\+Bytes)}{readString(char *string, char finalChar, unsigned int maxBytes)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::read\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{char}]{final\+Char, }
+\item[{unsigned int}]{max\+Chars}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_aa958f3032eb7036ae221d7e5d021df67}{}\label{class_lib_serial_aa958f3032eb7036ae221d7e5d021df67}
+
+
+Read a string from the serial device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: string read on the serial device \\
+\hline
+{\em final\+Char} & \+: final char of the string \\
+\hline
+{\em max\+Chars} & \+: maximum allowed number of chars read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$>$0 success, return the number of chars read 
+
+-\/1 error while reading the char 
+
+-\/2 max\+Chars is reached 
+\end{DoxyReturn}
+\index{Lib\+Serial@{Lib\+Serial}!write@{write}}
+\index{write@{write}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{write(const void $\ast$buffer, unsigned int nb\+Bytes)}{write(const void *buffer, unsigned int nbBytes)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::write (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buffer, }
+\item[{unsigned int}]{nb\+Bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_a3dc028d5d297b832da5b7e681facd83c}{}\label{class_lib_serial_a3dc028d5d297b832da5b7e681facd83c}
+
+
+Write an array of data on the current serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \+: array of bytes to send on the port \\
+\hline
+{\em nb\+Bytes} & \+: number of bytes to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 success 
+
+-\/1 error while writting data 
+\end{DoxyReturn}
+\index{Lib\+Serial@{Lib\+Serial}!write\+Char@{write\+Char}}
+\index{write\+Char@{write\+Char}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{write\+Char(char)}{writeChar(char)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::write\+Char (
+\begin{DoxyParamCaption}
+\item[{char}]{Char}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_aace55a1a3fbf452728e00fc5ee7afafd}{}\label{class_lib_serial_aace55a1a3fbf452728e00fc5ee7afafd}
+
+
+Write a char on the current serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Char} & \+: char to send on the port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 success 
+
+-\/1 error while writting data 
+\end{DoxyReturn}
+\index{Lib\+Serial@{Lib\+Serial}!write\+String@{write\+String}}
+\index{write\+String@{write\+String}!Lib\+Serial@{Lib\+Serial}}
+\subsubsection[{\texorpdfstring{write\+String(const char $\ast$string)}{writeString(const char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lib\+Serial\+::write\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lib_serial_a113ef8fcfd06b7b46a4a7c8a059dfa4d}{}\label{class_lib_serial_a113ef8fcfd06b7b46a4a7c8a059dfa4d}
+
+
+Write a string on the current serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: string to send on the port (must be terminated by \textquotesingle{}\textbackslash{}0\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 success 
+
+-\/1 error while writting data 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/\hyperlink{libserial_8h}{libserial.\+h}\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/\hyperlink{libserial_8cpp}{libserial.\+cpp}\end{DoxyCompactItemize}

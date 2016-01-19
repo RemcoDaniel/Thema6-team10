@@ -1,0 +1,59 @@
+\hypertarget{class_water_controller}{}\section{Water\+Controller Class Reference}
+\label{class_water_controller}\index{Water\+Controller@{Water\+Controller}}
+Inheritance diagram for Water\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_water_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Water\+Controller} (\hyperlink{class_water_sensor}{Water\+Sensor} \&watersensor, \hyperlink{class_pump}{Pump} \&pump, \hyperlink{class_valve}{Valve} \&valve, \hyperlink{class_washing_machine_controller}{Washing\+Machine\+Controller} \&wascontroller, shared\+\_\+ptr$<$ \hyperlink{class_u_a_r_t}{U\+A\+RT} $>$ uartptr)\hypertarget{class_water_controller_a3c3e05d57fa688fc5183230d330141b3}{}\label{class_water_controller_a3c3e05d57fa688fc5183230d330141b3}
+
+\item 
+void {\bfseries set\+Uart\+Pointer} (shared\+\_\+ptr$<$ \hyperlink{class_u_a_r_t}{U\+A\+RT} $>$ u)\hypertarget{class_water_controller_a208f42ad1242b146d96fb19626feb811}{}\label{class_water_controller_a208f42ad1242b146d96fb19626feb811}
+
+\item 
+void {\bfseries set\+Water\+Level} (int level)\hypertarget{class_water_controller_a513f385f75e0e358e6fee6726c625454}{}\label{class_water_controller_a513f385f75e0e358e6fee6726c625454}
+
+\item 
+void {\bfseries set\+Response\+Flag} ()\hypertarget{class_water_controller_ada996735d82efcda3dd47016d08693e7}{}\label{class_water_controller_ada996735d82efcda3dd47016d08693e7}
+
+\item 
+void {\bfseries write\+Response} (char $\ast$response)\hypertarget{class_water_controller_a833f22a3c64097e8c557db7231c77e51}{}\label{class_water_controller_a833f22a3c64097e8c557db7231c77e51}
+
+\item 
+void \hyperlink{class_water_controller_a617fdcb283f49ef2e512a75fe5a72950}{main} ()
+\begin{DoxyCompactList}\small\item\em task body, must be provided by a derived class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Water\+Controller@{Water\+Controller}!main@{main}}
+\index{main@{main}!Water\+Controller@{Water\+Controller}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}void Water\+Controller\+::main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_water_controller_a617fdcb283f49ef2e512a75fe5a72950}{}\label{class_water_controller_a617fdcb283f49ef2e512a75fe5a72950}
+
+
+task body, must be provided by a derived class 
+
+A task is created by inheriting from task and providing a \hyperlink{class_water_controller_a617fdcb283f49ef2e512a75fe5a72950}{main()} function. Initialisation of the task, including creating its waitables, should be done in the constructor. Don\textquotesingle{}t forget to call the constructor of the task class!
+
+\hyperlink{class_the}{The} \hyperlink{class_water_controller_a617fdcb283f49ef2e512a75fe5a72950}{main()} is the body of the task. It should never terminate.
+
+Each task has a unique priority (an unsigned integer). A lower value indicates a higher priority. \hyperlink{class_the}{The} \hyperlink{class_r_t_o_s}{R\+T\+OS} scheduler will always run the task with the higest-\/priority runnable (neither blocked nor suspended) task. A task runs until it changes this \textquotesingle{}situation\textquotesingle{} by using an \hyperlink{class_r_t_o_s}{R\+T\+OS} call that changes its own state to not runnable, or the state of a higher priority task to runnable.
+
+Timers are served only when the \hyperlink{class_r_t_o_s}{R\+T\+OS} is activated by calling any of its state-\/changing interfaces. Hence the longest run time between such calls determines the granularity (time wise responsiveness) of the application. Within a time consuming computation a task can call \hyperlink{class_r_t_o_s_1_1task_aa3eec7220a2724d30e2156cc395035f2}{release()} to have the \hyperlink{class_r_t_o_s}{R\+T\+OS} serve the timers. 
+
+Implements \hyperlink{class_r_t_o_s_1_1task_addc6d52f8792ddba1158d7ae5ef0037d}{R\+T\+O\+S\+::task}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Water\+Controller.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Water\+Controller.\+cpp\end{DoxyCompactItemize}

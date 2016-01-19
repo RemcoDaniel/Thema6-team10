@@ -1,0 +1,124 @@
+\hypertarget{classfiber__t}{}\section{fiber\+\_\+t Class Reference}
+\label{classfiber__t}\index{fiber\+\_\+t@{fiber\+\_\+t}}
+
+
+Provides a coroutine-\/based tasking service using the P\+O\+S\+IX ucontext.  
+
+
+
+
+{\ttfamily \#include $<$libfiber.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfiber__t_a50a8f05937a58d95a71d3ede82b1efd0}{fiber\+\_\+t} (void($\ast$func)(void), int sz)
+\item 
+\hyperlink{classfiber__t_a9c9fe3849bd98abdbb4c9bffd999517f}{$\sim$fiber\+\_\+t} (void)
+\item 
+void \hyperlink{classfiber__t_aceda850cc53b943217da36b704f6f133}{resume} (void)
+\item 
+void $\ast$ \hyperlink{classfiber__t_a64b080d0c21caf0223c4866350b454c9}{stack\+Base} (void)
+\item 
+int \hyperlink{classfiber__t_abce88a91afa77d0ae5781dd9683c4b48}{stack\+Size} (void)
+\item 
+int \hyperlink{classfiber__t_a5debce5b9bd44ae04cb039456de8a4e9}{stack\+Used} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classfiber__t}{fiber\+\_\+t} \hyperlink{classfiber__t_ae6a75ba1b2421668d4611272a7c841fa}{main\+\_\+fiber}
+\item 
+static \hyperlink{classfiber__t}{fiber\+\_\+t} $\ast$ \hyperlink{classfiber__t_aa54a9653ee240c81c8b2ba161e1b5bd3}{running\+\_\+fiber} = \&\hyperlink{classfiber__t_ae6a75ba1b2421668d4611272a7c841fa}{main\+\_\+fiber}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a coroutine-\/based tasking service using the P\+O\+S\+IX ucontext. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fiber\+\_\+t@{fiber\+\_\+t}!fiber\+\_\+t@{fiber\+\_\+t}}
+\index{fiber\+\_\+t@{fiber\+\_\+t}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{fiber\+\_\+t(void($\ast$func)(void), int sz)}{fiber_t(void(*func)(void), int sz)}}]{\setlength{\rightskip}{0pt plus 5cm}fiber\+\_\+t\+::fiber\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{func, }
+\item[{int}]{sz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfiber__t_a50a8f05937a58d95a71d3ede82b1efd0}{}\label{classfiber__t_a50a8f05937a58d95a71d3ede82b1efd0}
+Construct a fiber object
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & the function body for the fiber \\
+\hline
+{\em sz} & the size of the stack \\
+\hline
+\end{DoxyParams}
+\index{fiber\+\_\+t@{fiber\+\_\+t}!````~fiber\+\_\+t@{$\sim$fiber\+\_\+t}}
+\index{````~fiber\+\_\+t@{$\sim$fiber\+\_\+t}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{$\sim$fiber\+\_\+t(void)}{~fiber_t(void)}}]{\setlength{\rightskip}{0pt plus 5cm}fiber\+\_\+t\+::$\sim$fiber\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfiber__t_a9c9fe3849bd98abdbb4c9bffd999517f}{}\label{classfiber__t_a9c9fe3849bd98abdbb4c9bffd999517f}
+Destroy a fiber object 
+
+\subsection{Member Function Documentation}
+\index{fiber\+\_\+t@{fiber\+\_\+t}!resume@{resume}}
+\index{resume@{resume}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{resume(void)}{resume(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void fiber\+\_\+t\+::resume (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classfiber__t_aceda850cc53b943217da36b704f6f133}{}\label{classfiber__t_aceda850cc53b943217da36b704f6f133}
+Resume this fiber \index{fiber\+\_\+t@{fiber\+\_\+t}!stack\+Base@{stack\+Base}}
+\index{stack\+Base@{stack\+Base}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{stack\+Base(void)}{stackBase(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ fiber\+\_\+t\+::stack\+Base (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfiber__t_a64b080d0c21caf0223c4866350b454c9}{}\label{classfiber__t_a64b080d0c21caf0223c4866350b454c9}
+Return the base address off the stack
+
+\begin{DoxyReturn}{Returns}
+the base address off the stack 
+\end{DoxyReturn}
+\index{fiber\+\_\+t@{fiber\+\_\+t}!stack\+Size@{stack\+Size}}
+\index{stack\+Size@{stack\+Size}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{stack\+Size(void)}{stackSize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int fiber\+\_\+t\+::stack\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classfiber__t_abce88a91afa77d0ae5781dd9683c4b48}{}\label{classfiber__t_abce88a91afa77d0ae5781dd9683c4b48}
+Return the size off the stack
+
+\begin{DoxyReturn}{Returns}
+the size off the stack 
+\end{DoxyReturn}
+\index{fiber\+\_\+t@{fiber\+\_\+t}!stack\+Used@{stack\+Used}}
+\index{stack\+Used@{stack\+Used}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{stack\+Used(void)}{stackUsed(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int fiber\+\_\+t\+::stack\+Used (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classfiber__t_a5debce5b9bd44ae04cb039456de8a4e9}{}\label{classfiber__t_a5debce5b9bd44ae04cb039456de8a4e9}
+Return the \# stack bytes used
+
+\begin{DoxyReturn}{Returns}
+\# bytes used 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{fiber\+\_\+t@{fiber\+\_\+t}!main\+\_\+fiber@{main\+\_\+fiber}}
+\index{main\+\_\+fiber@{main\+\_\+fiber}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{main\+\_\+fiber}{main_fiber}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fiber\+\_\+t} fiber\+\_\+t\+::main\+\_\+fiber\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfiber__t_ae6a75ba1b2421668d4611272a7c841fa}{}\label{classfiber__t_ae6a75ba1b2421668d4611272a7c841fa}
+\hyperlink{class_the}{The} fiber object for the main thread. \index{fiber\+\_\+t@{fiber\+\_\+t}!running\+\_\+fiber@{running\+\_\+fiber}}
+\index{running\+\_\+fiber@{running\+\_\+fiber}!fiber\+\_\+t@{fiber\+\_\+t}}
+\subsubsection[{\texorpdfstring{running\+\_\+fiber}{running_fiber}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fiber\+\_\+t} $\ast$ fiber\+\_\+t\+::running\+\_\+fiber = \&{\bf main\+\_\+fiber}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfiber__t_aa54a9653ee240c81c8b2ba161e1b5bd3}{}\label{classfiber__t_aa54a9653ee240c81c8b2ba161e1b5bd3}
+Pointer to the object for the running fiber. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/libfiber.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/libfiber.\+cpp\end{DoxyCompactItemize}

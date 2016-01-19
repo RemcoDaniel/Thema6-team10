@@ -1,0 +1,13 @@
+When a task is activated by a timeout (either by a timer or clock, or because it is a periodic task) at a certain moment in time it will in general not be run at that time exactly, but at some later time. This delay is called the latency. Two things contribute to the latency\+:
+
+
+\begin{DoxyEnumerate}
+\item Higher priority taks will be run first, until no higher priority tasks are runnable.
+\item When a lower priority task is running when the timer fires the \hyperlink{class_r_t_o_s}{R\+T\+OS} will notice this only when one of the \hyperlink{class_r_t_o_s}{R\+T\+OS} functions is called that does a rescheduling\+: task\+::wait(), flag\+::set(), task\+::suspend(), task\+::resume(), task\+::release().
+\end{DoxyEnumerate}
+
+\hyperlink{class_the}{The} first contribution is a consequence of the design of the application. When you feel that it is inappropriate that a particular higher-\/priority task is run first and hence contributes to the latency of the task that is activated by the timer, you have set the task priorities wrong.
+
+\hyperlink{class_the}{The} second contribution is specific for a non-\/preemptive \hyperlink{class_r_t_o_s}{R\+T\+OS}. (A preemptive \hyperlink{class_r_t_o_s}{R\+T\+OS} would immediately stop (preempt) the running lower-\/priority task and switch to the higher-\/priority task.) When you have lower priority tasks in your system that use a lot of C\+PU time between the \hyperlink{class_r_t_o_s}{R\+T\+OS} calls that do rescheduling you can insert task\+::release() calls. This call checks whether any timers that have timed out made a higher-\/priority task runnable, and if so, switches to that task.
+
+When a task is made runnable by an explicit action of another task, for instance a task\+:resume() call or a flag\+::set() call, only the first source of delay (higher priority tasks that are runnable) is applicable, because inside such calls the \hyperlink{class_r_t_o_s}{R\+T\+OS} will immediatley switch to the highest priority runnable task. 

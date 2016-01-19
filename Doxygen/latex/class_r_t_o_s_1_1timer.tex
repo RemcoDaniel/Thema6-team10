@@ -1,0 +1,69 @@
+\hypertarget{class_r_t_o_s_1_1timer}{}\section{R\+T\+OS\+:\+:timer Class Reference}
+\label{class_r_t_o_s_1_1timer}\index{R\+T\+O\+S\+::timer@{R\+T\+O\+S\+::timer}}
+
+
+one-\/short timer  
+
+
+
+
+{\ttfamily \#include $<$p\+R\+T\+O\+S.\+h$>$}
+
+Inheritance diagram for R\+T\+OS\+:\+:timer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_r_t_o_s_1_1timer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_t_o_s_1_1timer_a5a2a759e35dd9d7cea8971db60fbe741}{timer} (\hyperlink{class_r_t_o_s_1_1task}{task} $\ast$\hyperlink{class_r_t_o_s_1_1event_a1402687edb26c1d5d26e54dbda21919d}{t}, const char $\ast$name=\char`\"{}\char`\"{})\hypertarget{class_r_t_o_s_1_1timer_a5a2a759e35dd9d7cea8971db60fbe741}{}\label{class_r_t_o_s_1_1timer_a5a2a759e35dd9d7cea8971db60fbe741}
+
+\begin{DoxyCompactList}\small\item\em create a timer for task t, specify its name \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1timer_a534e80e413c82507b436ef098f8a7ffb}{set} (unsigned long int time)
+\item 
+void \hyperlink{class_r_t_o_s_1_1timer_a6df8dddc38d933432131efba05168d10}{cancel} (void)
+\begin{DoxyCompactList}\small\item\em stop and clear the timer \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1timer_aca6725d409de3630e4b8b7883dacbc4f}{print} (std\+::ostream \&s, bool header=true) const \hypertarget{class_r_t_o_s_1_1timer_aca6725d409de3630e4b8b7883dacbc4f}{}\label{class_r_t_o_s_1_1timer_aca6725d409de3630e4b8b7883dacbc4f}
+
+\begin{DoxyCompactList}\small\item\em print the timer (for debugging) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries R\+T\+OS}\hypertarget{class_r_t_o_s_1_1timer_aa5b30b5b619f01a5d94b779bf0e58610}{}\label{class_r_t_o_s_1_1timer_aa5b30b5b619f01a5d94b779bf0e58610}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+one-\/short timer 
+
+A (one-\/shot) timer is a special type of flag, which can be instructed to set itself after a fixed amount of time. \hyperlink{class_the}{The} amount of time is supplied with the \hyperlink{class_r_t_o_s_1_1waitable_a3a72bdf94092471e82ba2d04cdc4a58e}{timer\+::set()} call. This call starts the timer. A timer that is running (waiting for its timeout to expire) can be canceled by the \hyperlink{class_r_t_o_s_1_1timer_a6df8dddc38d933432131efba05168d10}{timer\+::cancel()} call. When a timer that is already running is set again the previous timeout is overwritten by the new one. \hyperlink{class_the}{The} suspend/resume state of its owner taks has no effect on a timer\+: even when the task is suspended the timer will run to its timeout and set isetlf. But of course the task, being suspended, will not be able to react. 
+
+\subsection{Member Function Documentation}
+\index{R\+T\+O\+S\+::timer@{R\+T\+O\+S\+::timer}!cancel@{cancel}}
+\index{cancel@{cancel}!R\+T\+O\+S\+::timer@{R\+T\+O\+S\+::timer}}
+\subsubsection[{\texorpdfstring{cancel(void)}{cancel(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+T\+O\+S\+::timer\+::cancel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1timer_a6df8dddc38d933432131efba05168d10}{}\label{class_r_t_o_s_1_1timer_a6df8dddc38d933432131efba05168d10}
+
+
+stop and clear the timer 
+
+Stop the timer (when it was running), and clears its (when it was set). \index{R\+T\+O\+S\+::timer@{R\+T\+O\+S\+::timer}!set@{set}}
+\index{set@{set}!R\+T\+O\+S\+::timer@{R\+T\+O\+S\+::timer}}
+\subsubsection[{\texorpdfstring{set(unsigned long int time)}{set(unsigned long int time)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+T\+O\+S\+::timer\+::set (
+\begin{DoxyParamCaption}
+\item[{unsigned long int}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1timer_a534e80e413c82507b436ef098f8a7ffb}{}\label{class_r_t_o_s_1_1timer_a534e80e413c82507b436ef098f8a7ffb}
+Start the timer\+: it will set itself after the indicated timeout, starting from now. When the timer was already running the previous timout is overwritten. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+cpp\end{DoxyCompactItemize}

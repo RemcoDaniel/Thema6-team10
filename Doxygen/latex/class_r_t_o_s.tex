@@ -1,0 +1,85 @@
+\hypertarget{class_r_t_o_s}{}\section{R\+T\+OS Class Reference}
+\label{class_r_t_o_s}\index{R\+T\+OS@{R\+T\+OS}}
+
+
+static class, namespace-\/like container for \hyperlink{class_r_t_o_s}{R\+T\+OS} declarations  
+
+
+
+
+{\ttfamily \#include $<$p\+R\+T\+O\+S.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_r_t_o_s_1_1channel}{channel}
+\begin{DoxyCompactList}\small\item\em waitable data queue \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1channel__base}{channel\+\_\+base}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_r_t_o_s}{R\+T\+OS} private implementation class. \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1clock}{clock}
+\begin{DoxyCompactList}\small\item\em free-\/running clock, ticks at a fixed frequency \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1event}{event}
+\begin{DoxyCompactList}\small\item\em set of things that can happen, or a thing that has happened \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1flag}{flag}
+\begin{DoxyCompactList}\small\item\em basic synchronisation mechanism. \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1mailbox}{mailbox}
+\begin{DoxyCompactList}\small\item\em Synchronously handing over of a data item. \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1mailbox__base}{mailbox\+\_\+base}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_r_t_o_s}{R\+T\+OS} private implementation class. \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1mutex}{mutex}
+\begin{DoxyCompactList}\small\item\em mutual execlusion semaphore \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1pool}{pool}
+\begin{DoxyCompactList}\small\item\em place to store and rectrieve data, no built-\/in synchronisation \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1pool__base}{pool\+\_\+base}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_r_t_o_s}{R\+T\+OS} private implementation class. \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1task}{task}
+\begin{DoxyCompactList}\small\item\em an independent thread of execution \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1timer}{timer}
+\begin{DoxyCompactList}\small\item\em one-\/short timer \end{DoxyCompactList}\item 
+class \hyperlink{class_r_t_o_s_1_1waitable}{waitable}
+\begin{DoxyCompactList}\small\item\em abstract thing that a task can wait for \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_r_t_o_s_a27731fa3169d3337e826ff0c9994c384}{run} (void)\hypertarget{class_r_t_o_s_a27731fa3169d3337e826ff0c9994c384}{}\label{class_r_t_o_s_a27731fa3169d3337e826ff0c9994c384}
+
+\begin{DoxyCompactList}\small\item\em runs the scheduler \end{DoxyCompactList}\item 
+static \hyperlink{class_r_t_o_s_1_1task}{task} $\ast$ \hyperlink{class_r_t_o_s_a7e455e2e010e6af8f9f41cbeacfe6bd0}{current\+\_\+task} (void)\hypertarget{class_r_t_o_s_a7e455e2e010e6af8f9f41cbeacfe6bd0}{}\label{class_r_t_o_s_a7e455e2e010e6af8f9f41cbeacfe6bd0}
+
+\begin{DoxyCompactList}\small\item\em returns (a pointer to) the currently executing task \end{DoxyCompactList}\item 
+static unsigned long long int \hyperlink{class_r_t_o_s_a543dc322355f7277b027a3120ca13853}{run\+\_\+time} (void)\hypertarget{class_r_t_o_s_a543dc322355f7277b027a3120ca13853}{}\label{class_r_t_o_s_a543dc322355f7277b027a3120ca13853}
+
+\begin{DoxyCompactList}\small\item\em get elapsed time in micro seconds since OS startup \end{DoxyCompactList}\item 
+static void \hyperlink{class_r_t_o_s_a93b6c76a8ddc42126f9996d9c63168b8}{print} (std\+::ostream \&stream)\hypertarget{class_r_t_o_s_a93b6c76a8ddc42126f9996d9c63168b8}{}\label{class_r_t_o_s_a93b6c76a8ddc42126f9996d9c63168b8}
+
+\begin{DoxyCompactList}\small\item\em prints statistics about the \hyperlink{class_r_t_o_s}{R\+T\+OS} to the stream. \end{DoxyCompactList}\item 
+static void \hyperlink{class_r_t_o_s_aa9b2602178a340b2ad59ca82d4b09b5e}{statistics\+\_\+clear} (void)
+\begin{DoxyCompactList}\small\item\em clears the statistics. \end{DoxyCompactList}\item 
+static void \hyperlink{class_r_t_o_s_ace9fc0f1b35c1383b1050222706f3b70}{display\+\_\+statistics} (void)\hypertarget{class_r_t_o_s_ace9fc0f1b35c1383b1050222706f3b70}{}\label{class_r_t_o_s_ace9fc0f1b35c1383b1050222706f3b70}
+
+\begin{DoxyCompactList}\small\item\em print the statistics collect for the used \hyperlink{class_r_t_o_s}{R\+T\+OS} objects \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+static class, namespace-\/like container for \hyperlink{class_r_t_o_s}{R\+T\+OS} declarations 
+
+\hyperlink{class_the}{The} \hyperlink{class_r_t_o_s}{R\+T\+OS} is a static class, instantiation is not needed. After creating the tasks, call \hyperlink{class_r_t_o_s_a27731fa3169d3337e826ff0c9994c384}{R\+T\+O\+S\+::run()} to start the scheduling of the tasks. \hyperlink{class_r_t_o_s_a27731fa3169d3337e826ff0c9994c384}{R\+T\+O\+S\+::run()} will never return. 
+
+\subsection{Member Function Documentation}
+\index{R\+T\+OS@{R\+T\+OS}!statistics\+\_\+clear@{statistics\+\_\+clear}}
+\index{statistics\+\_\+clear@{statistics\+\_\+clear}!R\+T\+OS@{R\+T\+OS}}
+\subsubsection[{\texorpdfstring{statistics\+\_\+clear(void)}{statistics_clear(void)}}]{\setlength{\rightskip}{0pt plus 5cm}static void R\+T\+O\+S\+::statistics\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_r_t_o_s_aa9b2602178a340b2ad59ca82d4b09b5e}{}\label{class_r_t_o_s_aa9b2602178a340b2ad59ca82d4b09b5e}
+
+
+clears the statistics. 
+
+\hyperlink{class_the}{The} actual clearing will be done later, inside \hyperlink{class_r_t_o_s_a27731fa3169d3337e826ff0c9994c384}{run()}, when the current task has given up the processor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+cpp\end{DoxyCompactItemize}

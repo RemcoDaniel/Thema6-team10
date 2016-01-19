@@ -1,0 +1,113 @@
+\hypertarget{class_r_t_o_s_1_1pool}{}\section{R\+T\+OS\+:\+:pool$<$ T $>$ Class Template Reference}
+\label{class_r_t_o_s_1_1pool}\index{R\+T\+O\+S\+::pool$<$ T $>$@{R\+T\+O\+S\+::pool$<$ T $>$}}
+
+
+place to store and rectrieve data, no built-\/in synchronisation  
+
+
+
+
+{\ttfamily \#include $<$p\+R\+T\+O\+S.\+h$>$}
+
+Inheritance diagram for R\+T\+OS\+:\+:pool$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_r_t_o_s_1_1pool}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_t_o_s_1_1pool_a34dfd08a46f1fd274f1692469eebaf36}{pool} (const char $\ast$name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em construct a pool, specify its name (for debgging only) \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1pool_a2bd2a2bfb99d74c8b123de344698ff53}{write} (T item)
+\begin{DoxyCompactList}\small\item\em atomic write operation on a pool \end{DoxyCompactList}\item 
+T \hyperlink{class_r_t_o_s_1_1pool_a0ef6382b71ae141cf38f477c8bfea325}{read} (void)
+\begin{DoxyCompactList}\small\item\em atomic read operation on a pool \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\\*
+class R\+T\+O\+S\+::pool$<$ T $>$}
+
+place to store and rectrieve data, no built-\/in synchronisation 
+
+A (communication) pool is a template class that stores a single value. It supports the read and write operations, which are guaranteed to be atomic. (On a non-\/preemptive \hyperlink{class_r_t_o_s}{R\+T\+OS} every assignment is atomic, but the pool template is still usefull to make it explicit that data is transferred between tasks.) A pool is just a variable.
+
+\hyperlink{class_the}{The} example below demonstrates the use of a pool to maintain a seconds-\/since-\/startup counter. Note that the call R\+T\+O\+S\+::runtime() returns the time elapsed since startup, so there is no need to maintain a seconds-\/since-\/startup this way yourself.
+
+
+\begin{DoxyCode}
+pool< unsigned int > seconds;
+
+\textcolor{keywordtype}{void} show\_time( \textcolor{keywordtype}{void} )\{
+   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n = seconds.read();
+   std::cout << ( seconds / 60 ) % 60 << \textcolor{stringliteral}{":"} << seconds % 60;
+\}
+
+\textcolor{keyword}{class }seconds\_counter\_class : \textcolor{keyword}{public} periodic\_task \{
+   seconds\_counter( \textcolor{keywordtype}{void} )\{
+      periodic\_task::periodic\_task( \textcolor{stringliteral}{"sec-counter"}, 10, 1000 MS );
+      seconds.write( 0 );
+   \}
+   \textcolor{keywordtype}{void} main( \textcolor{keywordtype}{void} )\{
+      \textcolor{keywordflow}{for}( ; ; ) \{
+         (void) wait(); \textcolor{comment}{// only one thing to wait for}
+         seconds.write( seconds.read() + 1 );
+      \}
+   \}
+\}
+
+seconds\_counter\_class seconds\_counter;
+\end{DoxyCode}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+T\+O\+S\+::pool@{R\+T\+O\+S\+::pool}!pool@{pool}}
+\index{pool@{pool}!R\+T\+O\+S\+::pool@{R\+T\+O\+S\+::pool}}
+\subsubsection[{\texorpdfstring{pool(const char $\ast$name="""")}{pool(const char *name="")}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf R\+T\+O\+S\+::pool}$<$ T $>$\+::{\bf pool} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_r_t_o_s_1_1pool_a34dfd08a46f1fd274f1692469eebaf36}{}\label{class_r_t_o_s_1_1pool_a34dfd08a46f1fd274f1692469eebaf36}
+
+
+construct a pool, specify its name (for debgging only) 
+
+Use it to make (global) variables use for communication between tasks explicit.
+
+\hyperlink{class_the}{The} template argument T must be a class that has a non-\/arguments constructor and supports assignment. 
+
+\subsection{Member Function Documentation}
+\index{R\+T\+O\+S\+::pool@{R\+T\+O\+S\+::pool}!read@{read}}
+\index{read@{read}!R\+T\+O\+S\+::pool@{R\+T\+O\+S\+::pool}}
+\subsubsection[{\texorpdfstring{read(void)}{read(void)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf R\+T\+O\+S\+::pool}$<$ T $>$\+::read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_r_t_o_s_1_1pool_a0ef6382b71ae141cf38f477c8bfea325}{}\label{class_r_t_o_s_1_1pool_a0ef6382b71ae141cf38f477c8bfea325}
+
+
+atomic read operation on a pool 
+
+A read opeartion returns the most recently written data.
+
+In the context of co-\/operative multitasking a read of write operation on anything is always atomic, unless the implementation of that operating somehow invokes the \hyperlink{class_r_t_o_s}{R\+T\+OS}. But for clearness it is a good idea to implement such task-\/global data as pools. \index{R\+T\+O\+S\+::pool@{R\+T\+O\+S\+::pool}!write@{write}}
+\index{write@{write}!R\+T\+O\+S\+::pool@{R\+T\+O\+S\+::pool}}
+\subsubsection[{\texorpdfstring{write(\+T item)}{write(T item)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf R\+T\+O\+S\+::pool}$<$ T $>$\+::write (
+\begin{DoxyParamCaption}
+\item[{T}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_r_t_o_s_1_1pool_a2bd2a2bfb99d74c8b123de344698ff53}{}\label{class_r_t_o_s_1_1pool_a2bd2a2bfb99d74c8b123de344698ff53}
+
+
+atomic write operation on a pool 
+
+A read opeartion returns the most recently written data.
+
+In the context of co-\/operative multitasking a read of write operation on anything is always atomic, unless the implementation of that operating somehow invokes the \hyperlink{class_r_t_o_s}{R\+T\+OS}. But for clearness it is a good idea to implement such task-\/global data as pools. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+h\end{DoxyCompactItemize}
