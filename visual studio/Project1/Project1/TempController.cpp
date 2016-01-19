@@ -6,7 +6,7 @@ TempController::TempController(Heater & heater, TempSensor & tempsensor, Washing
 	wascontroller{wascontroller},
 	uartptr{uartptr},
 	task{ 3, "watercontroller" },
-	interval_clock{ this, 20 * bmptk::us, "interval" },
+	interval_clock{ this, 500 US, "interval" },
 	response_flag{this, "uart_response_ready"},
 	temp_pool{"temp"},
 	temp_mutex{"temp"},

@@ -4,8 +4,8 @@
 
 WashingMachineController::WashingMachineController(Wasprogramma & was) :
 	wasprogramma{was},
-	task{0, "beep"},			// priority instellen nog !!!!!!!!!
-	interval_clock{this, 500 * bmptk::us, "washing_timer"},
+	task{0, "beep"},
+	interval_clock{this, 500 US, "washing_timer"},
 	temp_reached_flag{this, "temp_reached"},
 	level_reached_flag{this, "water_reached"},
 	response_flag{this, "uart_response_ready"},
@@ -24,16 +24,18 @@ WashingMachineController::WashingMachineController(Wasprogramma & was) :
 	door = Door();
 
 	//controllers aanmaken:
-	motorcontroller = MotorController(motor, *this, nullptr);
-	tempcontroller = TempController(heater, tempsensor, *this, nullptr);
-	watercontroller = WaterController(watersensor, pump, valve, *this, nullptr);
+	motorcontroller = new MotorController(motor, *this, nullptr);
+	tempcontroller = new TempController(heater, tempsensor, *this, nullptr);
+	watercontroller = new WaterController(watersensor, pump, valve, *this, nullptr);
 
 	// uart aanmaken:
-	UART *uart = new UART("/dev/ttyAMA0", 9600, motorcontroller, tempcontroller, watercontroller, *this);
+	uart = new UART("/dev/ttyAMA0", 9600, *motorcontroller, *tempcontroller, *watercontroller, *this);
 	shared_ptr<UART> uartptr(uart);
 
 	// nu de controllers een shared pointer geven van de uart:
-	motorcontroller.setUartPointer(uartptr);
+	motorcontroller->setUartPointer(uartptr);
+	tempcontroller->setUartPointer(uartptr);
+	watercontroller->setUartPointer(uartptr);
 }
 
 void WashingMachineController::doorlock(bool lock) {
@@ -72,36 +74,36 @@ void WashingMachineController::startWasprogramma() {
 	doorlock(1);																	// deur dicht
 
 	// voorwas (zonder zeep!):
-	watercontroller.setWaterLevel(wasprogramma.getLevel());							// water erbij
+	watercontroller->setWaterLevel(wasprogramma.getLevel());						// water erbij
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
-	tempcontroller.setTemp(wasprogramma.getTemp());									// verwarmen
+	tempcontroller->setTemp(wasprogramma.getTemp());								// verwarmen
 	wait(temp_reached_flag);														// wachten tot temp is bereikt
-	motorcontroller.setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());		// draaien
+	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
-	watercontroller.setWaterLevel(0);												// water weg
+	watercontroller->setWaterLevel(0);												// water weg
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	//hoofdwas:
-	watercontroller.setWaterLevel(wasprogramma.getLevel());							// water erbij
+	watercontroller->setWaterLevel(wasprogramma.getLevel());						// water erbij
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
-	tempcontroller.setTemp(wasprogramma.getTemp());									// verwarmen
+	tempcontroller->setTemp(wasprogramma.getTemp());								// verwarmen
 	wait(temp_reached_flag);														// wachten tot temp is bereikt
 	dispendSoap();																	// zeep erbij
-	motorcontroller.setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());		// draaien
+	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
-	watercontroller.setWaterLevel(0);												// water weg
+	watercontroller->setWaterLevel(0);												// water weg
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	// spoelen:
-	watercontroller.setWaterLevel(wasprogramma.getLevel());							// water erbij
+	watercontroller->setWaterLevel(wasprogramma.getLevel());						// water erbij
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
-	motorcontroller.setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());		// draaien
+	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
-	watercontroller.setWaterLevel(0);												// water weg
+	watercontroller->setWaterLevel(0);												// water weg
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	// centrifugeren:
-	motorcontroller.setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());		// draaien
+	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
 
 	doorlock(0);																	// deur ontgrendelen
@@ -121,7 +123,7 @@ char * WashingMachineController::readResponse() {
 }
 
 char * WashingMachineController::uartTask(char * command) {
-	uart.writeChannel(command);
+	uart->writeChannel(command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }

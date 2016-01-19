@@ -7,7 +7,7 @@ WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve &
 	wascontroller{wascontroller},
 	uartptr{ uartptr },
 	task{3, "watercontroller"},
-	interval_clock{this, 500 * bmptk::us, "interval"},
+	interval_clock{this, 500 US, "interval"},
 	response_flag{this, "uart_response_ready"},
 	water_level_pool{"water_level"},
 	water_level_mutex{"water_level"},

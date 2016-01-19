@@ -16,10 +16,10 @@ class WashingMachineController : public RTOS::task {
 private:
 	Wasprogramma wasprogramma;
 	Door door;
-	TempController tempcontroller;
-	WaterController watercontroller;
-	MotorController motorcontroller;
-	UART uart;
+	TempController *tempcontroller;
+	WaterController *watercontroller;
+	MotorController *motorcontroller;
+	UART *uart;
 	SoapDispenser soap;
 	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag, response_flag;
 	RTOS::pool< char * > response_pool;
