@@ -57,6 +57,12 @@
     <ClCompile Include="TempController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DoorSoapController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libfiber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MotorController.h">
@@ -99,6 +105,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Protocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorSoapController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libfiber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

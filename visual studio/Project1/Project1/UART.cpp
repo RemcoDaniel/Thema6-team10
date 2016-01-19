@@ -31,8 +31,6 @@ UART::UART(const char * device, unsigned int baudrate, MotorController & motorct
 	}
 }
 
-UART::UART() {}
-
 void UART::executeCommand(char * s){
 	theSerialPort.writeString(s);
 

@@ -23,21 +23,18 @@ WashingMachineController::WashingMachineController(Wasprogramma & was) :
 	soap = SoapDispenser();
 	door = Door();
 
-	//controllers:
-	motorcontroller = MotorController(motor, *this);
-	tempcontroller = TempController(heater, tempsensor, *this);
-	watercontroller = WaterController(watersensor, pump, valve, *this);
+	//controllers aanmaken:
+	motorcontroller = MotorController(motor, *this, nullptr);
+	tempcontroller = TempController(heater, tempsensor, *this, nullptr);
+	watercontroller = WaterController(watersensor, pump, valve, *this, nullptr);
 
-	//uart:
-	uart = UART("/dev/ttyAMA0", 9600, motorcontroller, tempcontroller, watercontroller, *this);
+	// uart aanmaken:
+	UART *uart = new UART("/dev/ttyAMA0", 9600, motorcontroller, tempcontroller, watercontroller, *this);
+	shared_ptr<UART> uartptr(uart);
 
-	// uart doorgeven aan de controllers:
-	motorcontroller.setUart(uart);
-	tempcontroller.setUart(uart);
-	watercontroller.setUart(uart);
+	// nu de controllers een shared pointer geven van de uart:
+	motorcontroller.setUartPointer(uartptr);
 }
-
-WashingMachineController::WashingMachineController() {}
 
 void WashingMachineController::doorlock(bool lock) {
 	char * command;

@@ -13,7 +13,7 @@ class TempController : public RTOS::task {
 private:
 	Heater heater;
 	TempSensor tempsensor;
-	UART uart;
+	shared_ptr<UART> uartptr;
 	WashingMachineController wascontroller;
 	RTOS::flag response_flag;
 	RTOS::pool< int > temp_pool;
@@ -30,9 +30,8 @@ private:
 	char* uartTask(char * command);
 
 public:
-	TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller);
-	TempController();
-	void setUart(UART uart);
+	TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller, shared_ptr<UART> uartptr);
+	void setUartPointer(shared_ptr<UART> u);
 
 	void setTemp(int temp);
 

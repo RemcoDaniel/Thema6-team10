@@ -35,7 +35,6 @@ private:
 
 public:
 	WashingMachineController(Wasprogramma & was);
-	WashingMachineController();
 
 	void setTempReached();
 	void setWaterLevelReached();

@@ -28,7 +28,6 @@ private:
 
 public:
 	UART(const char * device, unsigned int baudrate, MotorController & motorctrl, TempController & tempctrl, WaterController & waterctrl, WashingMachineController & wasctrl);
-	UART();
 	void executeCommand(char * s);
 
 	void writeChannel(char * request);

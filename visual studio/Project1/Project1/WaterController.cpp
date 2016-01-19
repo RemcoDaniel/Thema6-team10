@@ -1,10 +1,11 @@
 #include "WaterController.h"
 
-WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller) :
+WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller, shared_ptr<UART> uartptr) :
 	watersensor{watersensor},
 	pump{pump},
 	valve{valve},
 	wascontroller{wascontroller},
+	uartptr{ uartptr },
 	task{3, "watercontroller"},
 	interval_clock{this, 500 * bmptk::us, "interval"},
 	response_flag{this, "uart_response_ready"},
@@ -14,10 +15,8 @@ WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve &
 	response_mutex{"uart_response"}
 {}
 
-WaterController::WaterController() {}
-
-void WaterController::setUart(UART u) {
-	uart = u;
+void WaterController::setUartPointer(shared_ptr<UART> u) {
+	uartptr = u;
 }
 
 int WaterController::getNewWaterLevel() {
@@ -68,7 +67,7 @@ char * WaterController::readResponse() {
 }
 
 char * WaterController::uartTask(char * command) {
-	uart.writeChannel(command);
+	uartptr->writeChannel(command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }

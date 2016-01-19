@@ -16,7 +16,7 @@ private:
 	WashingMachineController wascontroller;
 	Pump pump;
 	Valve valve;
-	UART uart;
+	shared_ptr<UART> uartptr;
 	RTOS::flag response_flag;
 	RTOS::pool< int > water_level_pool;
 	RTOS::pool< char * > response_pool;
@@ -33,10 +33,8 @@ private:
 	char* uartTask(char * command);
 
 public:
-	WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller);
-	WaterController();
-	void setUart(UART uart);
-
+	WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller, shared_ptr<UART> uartptr);
+	void setUartPointer(shared_ptr<UART> u);
 	void setWaterLevel(int level);
 
 	//uart:
