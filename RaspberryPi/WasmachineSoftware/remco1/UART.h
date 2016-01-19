@@ -12,8 +12,8 @@ class MotorController;
 class TempController;
 #include "WaterController.h"
 class WaterController;
-#include "WashingMachineController.h"
 class WashingMachineController;
+#include "WashingMachineController.h"
 
 class UART : public RTOS::task {
 private:
