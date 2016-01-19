@@ -1,49 +1,55 @@
 #-----------------------------------------------------------------------------------------
 # Makefile for GCC & gmake
 #-----------------------------------------------------------------------------------------
+# Copyright (c) 2014 Marten Wensink
 #
-# 
+# This software is provided 'as-is', without any express or implied
+# warranty. In no event will the authors be held liable for any damages
+# arising from the use of this software.
 #
+# Permission is granted to anyone to use this software for any purpose,
+# including commercial applications, and to alter it and redistribute it
+# freely, subject to the following restrictions:
 #
+#     1. The origin of this software must not be misrepresented; you must not
+#     claim that you wrote the original software. If you use this software
+#     in a product, an acknowledgment in the product documentation would be
+#     appreciated but is not required.
 #
+#     2. Altered source versions must be plainly marked as such, and must not be
+#     misrepresented as being the original software.
 #
-#
+#     3. This notice may not be removed or altered from any source
+#     distribution.
 #-----------------------------------------------------------------------------------------
 
 # Compiler settings
 CPP = g++
 #CPPFLAGS = -std=c++11 -W -O3 -c -I./source
-CPPFLAGS = -std=c++11 -W -O3 -c -Wall -Wextra -pedantic -Werror -I./pRTOS/source -I./pRTOS -I./libserial
+CPPFLAGS = -std=c++11 -W -O3 -c -Wall -Wextra -pedantic -Werror -I./source
 LFLAGS =
 LIBS =
 
-# Wasmachine object files
-WASMACHINE_OBJS = main.o 
+# Object files for the test program
+TEST_OBJS = test.o
 
 # RTOS object files
 RTOS_OBJS = libfiber.o pRTOS.o
 
-# Libserial object files
-LIBSERIAL_OBJS = libserial.o
-
-all: main
+all: test
 
 clean:
-	rm main *.o $(RTOS_OBJS) $(LIBSERIAL_OBJS)
+	rm test *.o $(RTOS_OBJS)
 
-main: $(WASMACHINE_OBJS) $(RTOS_OBJS) $(LIBSERIAL_OBJS)
-	$(CPP) $(LFLAGS) -o $@ $(WASMACHINE_OBJS) $(RTOS_OBJS) &(LIBSERIAL_OBJS)
+test: $(TEST_OBJS) $(RTOS_OBJS)
+	$(CPP) $(LFLAGS) -o $@ $(TEST_OBJS) $(RTOS_OBJS)
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS) $<
 
-%.o: ./pRTOS/source/%.cpp
-	$(CPP) $(CPPFLAGS) $<
-
-%.o: ./libserial/%.cpp
+%.o: ./source/%.cpp
 	$(CPP) $(CPPFLAGS) $<
 
 # Dependencies
-main.o: main.cpp ./pRTOS/source/pRTOS.h ./pRTOS/source/libfiber.h ./Protocol.h
-pRTOS.o: ./pRTOS/source/pRTOS.cpp ./pRTOS/source/pRTOS.h ./pRTOS/source/libfiber.cpp ./pRTOS/source/libfiber.h
-libserial.o: ./libserial/libserial.cpp ./libserial/libserial.h
+test.o: test.cpp ./source/pRTOS.h ./source/libfiber.h
+pRTOS.o: ./source/pRTOS.cpp ./source/pRTOS.h ./source/libfiber.cpp ./source/libfiber.h

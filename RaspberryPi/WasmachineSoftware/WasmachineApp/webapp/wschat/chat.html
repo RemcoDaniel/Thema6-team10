@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>  Chat </title>
+<script src="myscript.js"> </script>
+</head>
+<body bgcolor="#ffffff">
+
+<div id="top">
+Vul je naam in en druk op connect. <input type = "text" id = "naamvak"/> <button onclick = "WebSocketConnect()" >connect </button>
+</div>
+
+
+<ul id = "messagelist">  </ul>
+
+
+<div id = "bottom" style = "display: none;">
+<input type = "text" id = "textvak" onkeydown="if (event.keyCode == 13) sendMessage()"/>
+<button onclick = "sendMessage()" >Send </button>
+<button onclick = "closeConnection()">Bye</button>
+</div>
+
+</body>
+</html>
