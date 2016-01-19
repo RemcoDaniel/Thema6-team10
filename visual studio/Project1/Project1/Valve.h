@@ -1,7 +1,9 @@
 /**
  * \class The Valve boundry class
  */
-
+ 
+// file Valve.h
+#pragma once
 #ifndef _VALVE_H
 #define _VALVE_H
 

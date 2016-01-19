@@ -24,6 +24,8 @@
 int main(){
 	try{
 		// eerst wasprogramma maken! deze kan hij dan uit gaan voeren		// dit moet nog anders worden gedaan!!!!!!
+		Wasprogramma wasprog = Wasprogramma(40, 20, 50, 1);
+
 		// de wasmachinecontroller maakt ook alle andere controllers aan + de boundary objecten + de uart
 		WashingMachineController wasctrl = WashingMachineController(wasprog);
 	}

@@ -2,6 +2,8 @@
  * \class The Pump boundry class
  */
 
+// file Pump.h
+#pragma once
 #ifndef _PUMP_H
 #define _PUMP_H
 

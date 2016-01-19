@@ -1,7 +1,8 @@
 /**
  * \class The TempSensor boundry class
  */
-
+ 
+#pragma once
 #ifndef _TEMPSENSOR_H
 #define _TEMPSENSOR_H
 

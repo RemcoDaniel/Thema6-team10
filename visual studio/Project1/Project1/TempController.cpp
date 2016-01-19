@@ -5,21 +5,22 @@
  * date      19-01-2016
  */
 
-TempController::TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller, shared_ptr<UART> uartptr) :
-	heater{heater},
-	tempsensor{tempsensor},
+TempController::TempController(WashingMachineController * wascontroller) :
 	wascontroller{wascontroller},
-	uartptr{uartptr},
+	uartptr{nullptr},
 	task{ 3, "watercontroller" },
-	interval_clock{ this, 20 * bmptk::us, "interval" },
+	interval_clock{ this, 500 US, "interval" },
 	response_flag{this, "uart_response_ready"},
 	temp_pool{"temp"},
 	temp_mutex{"temp"},
 	response_pool{"uart_response"},
 	response_mutex{"uart_response"}
-{}
+{
+	heater = Heater();
+	tempsensor = TempSensor();
+}
 
-void TempController::setUartPointer(shared_ptr<UART> u) {
+void TempController::setUartPointer(UART * u) {
 	uartptr = u;
 }
 
@@ -85,7 +86,7 @@ void TempController::main() {
 		int temp = getTemp();
 		if (temp >= newtemp) {
 			heat(0);						// heater uit
-			wascontroller.setTempReached();	// flag zetten
+			wascontroller->setTempReached();	// flag zetten
 		}
 		else heat(1);						// heater aan
 	}

@@ -1,13 +1,16 @@
 /**
  * \class The TempController controller class
  */
+ 
 
+#pragma once
 #ifndef _TEMPCONTROLLER_H
 #define _TEMPCONTROLLER_H
 
 #include "Heater.h"
 #include "TempSensor.h"
 #include "WashingMachineController.h"
+class WashingMachineController;
 #include "pRTOS.h"
 #include "UART.h"
 
@@ -15,8 +18,8 @@ class TempController : public RTOS::task {
 private:
 	Heater heater;
 	TempSensor tempsensor;
-	shared_ptr<UART> uartptr;
-	WashingMachineController wascontroller;
+	UART *uartptr;
+	WashingMachineController *wascontroller;
 	RTOS::flag response_flag;
 	RTOS::pool< int > temp_pool;
 	RTOS::pool< char * > response_pool;
@@ -32,8 +35,8 @@ private:
 	char* uartTask(char * command);
 
 public:
-	TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller, shared_ptr<UART> uartptr);
-	void setUartPointer(shared_ptr<UART> u);
+	TempController(WashingMachineController * wascontroller);
+	void setUartPointer(UART * u);
 
 	void setTemp(int temp);
 

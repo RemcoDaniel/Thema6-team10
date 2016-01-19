@@ -2,6 +2,7 @@
  * \class The Motor boundry class
  */
 
+#pragma once
 #ifndef _MOTOR_H
 #define _MOTOR_H
 

@@ -2,12 +2,14 @@
  * \class The WaterController controller class
  */
 
+#pragma once
 #ifndef _WATERCONTROLLER_H
 #define _WATERCONTROLLER_H
 
 #include "pRTOS.h"
 #include "WaterSensor.h"
 #include "WashingMachineController.h"
+class WashingMachineController;
 #include "Pump.h"
 #include "Valve.h"
 #include "UART.h"
@@ -15,10 +17,10 @@
 class WaterController : public RTOS::task {
 private:
 	WaterSensor watersensor;
-	WashingMachineController wascontroller;
 	Pump pump;
 	Valve valve;
-	shared_ptr<UART> uartptr;
+	UART *uartptr;
+	WashingMachineController * wascontroller;
 	RTOS::flag response_flag;
 	RTOS::pool< int > water_level_pool;
 	RTOS::pool< char * > response_pool;
@@ -35,8 +37,8 @@ private:
 	char* uartTask(char * command);
 
 public:
-	WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller, shared_ptr<UART> uartptr);
-	void setUartPointer(shared_ptr<UART> u);
+	WaterController(WashingMachineController * wascontroller);
+	void setUartPointer(UART * u);
 	void setWaterLevel(int level);
 
 	//uart:

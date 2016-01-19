@@ -2,6 +2,7 @@
  * \class The DoorSoapController controller class
  */
 
+#pragma once
 #ifndef _DOORSOAPCONTROLLER_H
 #define _DOORSOAPCONTROLLER_H
 

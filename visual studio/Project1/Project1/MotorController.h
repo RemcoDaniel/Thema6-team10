@@ -2,24 +2,24 @@
  * \class The MotorController controller class
  */
 
+// file MotorController.h
+#pragma once
 #ifndef _MOTORCONTROLLER_H
 #define _MOTORCONTROLLER_H
 
 #include "Motor.h"
 #include "WashingMachineController.h"
+class WashingMachineController;
 #include "pRTOS.h"
 #include "UART.h"
 #include <stdlib.h>
 #include <memory>
 
-using namespace std;
-
 class MotorController : public RTOS::task {
 private:
 	Motor motor;
-	shared_ptr<UART> uartptr;
-
-	WashingMachineController wascontroller;
+	UART *uartptr;
+	WashingMachineController * wascontroller;
 	RTOS::flag response_flag, new_job_flag;
 	RTOS::pool< int > motor_job_pool, motor_time_pool;
 	RTOS::pool< char * > response_pool;
@@ -40,8 +40,8 @@ private:
 	char* uartTask(char * command);
 
 public:
-	MotorController(Motor & motor, WashingMachineController & wascontroller, shared_ptr<UART> uartptr);
-	void setUartPointer(shared_ptr<UART> uartptr);
+	MotorController(WashingMachineController * wascontroller);
+	void setUartPointer(UART *u);
 
 	int getMotorSpeed();		// getal van 0 - 1600 rpm
 	void setMotorJob(int job, int time);

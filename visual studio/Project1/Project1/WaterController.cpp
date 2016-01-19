@@ -7,22 +7,23 @@
 
 #include "WaterController.h"
 
-WaterController::WaterController(WaterSensor & watersensor, Pump & pump, Valve & valve, WashingMachineController & wascontroller, shared_ptr<UART> uartptr) :
-	watersensor{watersensor},
-	pump{pump},
-	valve{valve},
+WaterController::WaterController(WashingMachineController * wascontroller) :
 	wascontroller{wascontroller},
-	uartptr{ uartptr },
+	uartptr{nullptr},
 	task{3, "watercontroller"},
-	interval_clock{this, 500 * bmptk::us, "interval"},
+	interval_clock{this, 500 US, "interval"},
 	response_flag{this, "uart_response_ready"},
 	water_level_pool{"water_level"},
 	water_level_mutex{"water_level"},
 	response_pool{"uart_response"},
 	response_mutex{"uart_response"}
-{}
+{
+	pump = Pump();
+	valve = Valve();
+	watersensor = WaterSensor();
+}
 
-void WaterController::setUartPointer(shared_ptr<UART> u) {
+void WaterController::setUartPointer(UART * u) {
 	uartptr = u;
 }
 
@@ -99,6 +100,7 @@ void WaterController::main() {
 		if (level >= newlevel) {
 			pumping(0);					//pumping off
 			if (level > newlevel) {
+				wascontroller->setWaterLevelReached();
 				valving(1);				// nog ff kijken naar het gedrag van de valve, want dit klopt niet helemaal...		// open valve
 			}
 		}

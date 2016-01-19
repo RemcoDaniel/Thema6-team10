@@ -2,6 +2,7 @@
  * \class The Heater boundry class
  */
 
+#pragma once
 #ifndef _HEATER_H
 #define _HEATER_H
 

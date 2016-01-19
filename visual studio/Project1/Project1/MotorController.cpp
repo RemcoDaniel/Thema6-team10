@@ -7,10 +7,9 @@
 
 #include "MotorController.h"
 
-MotorController::MotorController(Motor & motor, WashingMachineController & wascontroller, shared_ptr<UART> uartptr) :
-	motor{motor},
+MotorController::MotorController(WashingMachineController * wascontroller) :
 	wascontroller{wascontroller},
-	uartptr{uartptr},
+	uartptr{nullptr},
 	task{ 0, "motorctrl" },		// priority, name
 	response_flag{ this, "uart_response_ready" },
 	new_job_flag{ this, "new_job" },
@@ -21,9 +20,11 @@ MotorController::MotorController(Motor & motor, WashingMachineController & wasco
 	response_pool{ "uart_response" },
 	response_mutex{ "uart_response" },
 	rotate_timer{ this, "rotate_timer" }
-{}
+{
+	motor = Motor();
+}
 
-void MotorController::setUartPointer(shared_ptr<UART> u) {
+void MotorController::setUartPointer(UART * u) {
 	uartptr = u;
 }
 
@@ -153,7 +154,7 @@ void MotorController::main() {
 	for (;;) {
 		wait(new_job_flag);				// checken of er een nieuwe taak is
 		startMotorJob();				// deze job uit gaan voeren
-		wascontroller.setMotorDone();	//	flag zetten
+		wascontroller->setMotorDone();	//	flag zetten
 	}
 }
 

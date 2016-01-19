@@ -19,7 +19,7 @@ private:
 	std::string s;
 };
 
-UART::UART(const char * device, unsigned int baudrate, MotorController & motorctrl, TempController & tempctrl, WaterController & waterctrl, WashingMachineController & wasctrl):
+UART::UART(const char * device, unsigned int baudrate, MotorController * motorctrl, TempController * tempctrl, WaterController * waterctrl, WashingMachineController * wasctrl):
 	task{ 0, "uart" },			// de priority moet nog goed worden ingesteld
 	device{ device },
 	baudrate{baudrate},
@@ -27,7 +27,7 @@ UART::UART(const char * device, unsigned int baudrate, MotorController & motorct
 	tempctrl{tempctrl},
 	waterctrl{waterctrl},
 	wasctrl{wasctrl},
-	interval_clock{ this, 10 * bmptk::us, "interval" },
+	interval_clock{ this, 10 MS, "interval" },
 	commandchannel{this, "channel"}
 {
 	int portMakeState = theSerialPort.open(device, baudrate);
@@ -55,16 +55,16 @@ void UART::readChannel() {
 void UART::returnResponse(char * response) {
 	switch (response[0]) {
 		case '0x09':
-		case '0x0A': 	motorctrl.writeResponse(response); motorctrl.setResponseFlag(); break;	// motortaak
+		case '0x0A': 	motorctrl->writeResponse(response); motorctrl->setResponseFlag(); break;	// motortaak
 		case '0x07':
-		case '0x08': 	tempctrl.writeResponse(response); tempctrl.setResponseFlag();	break;	// temperatuurtaak
+		case '0x08': 	tempctrl->writeResponse(response); tempctrl->setResponseFlag();	break;	// temperatuurtaak
 		case '0x03':
 		case '0x05':
-		case '0x06': 	waterctrl.writeResponse(response); waterctrl.setResponseFlag();	break;	// watertaak
+		case '0x06': 	waterctrl->writeResponse(response); waterctrl->setResponseFlag();	break;	// watertaak
 		case '0x01':
 		case '0x02':
 		case '0x04':
-		case '0x0B': 	wasctrl.writeResponse(response); wasctrl.setResponseFlag();		break;	// wasmachinetaak
+		case '0x0B': 	wasctrl->writeResponse(response); wasctrl->setResponseFlag();		break;	// wasmachinetaak
 	}
 }
 

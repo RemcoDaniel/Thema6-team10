@@ -11,6 +11,8 @@ in de controllers: niet char * returnen!!!
 
 wasprogramma maken
 
+verhaaltje schrijven over forward declaren in verslag!
+
 
 =================================================================
 
