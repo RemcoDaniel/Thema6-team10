@@ -1,4 +1,6 @@
-// file Motor.h
+/**
+ * \class The Motor boundry class
+ */
 
 #ifndef _MOTOR_H
 #define _MOTOR_H

@@ -1,4 +1,6 @@
-// file MotorController.h
+/**
+ * \class The MotorController controller class
+ */
 
 #ifndef _MOTORCONTROLLER_H
 #define _MOTORCONTROLLER_H

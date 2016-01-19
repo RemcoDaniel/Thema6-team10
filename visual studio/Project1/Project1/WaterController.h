@@ -1,4 +1,6 @@
-// file WaterController.h
+/**
+ * \class The WaterController controller class
+ */
 
 #ifndef _WATERCONTROLLER_H
 #define _WATERCONTROLLER_H

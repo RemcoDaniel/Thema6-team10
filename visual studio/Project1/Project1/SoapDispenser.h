@@ -1,4 +1,6 @@
-// file SoapDispenser.h
+/**
+ * \class The SoapDispenser boundry class
+ */
 
 #ifndef _SOAPDISPENSER_H
 #define _SOAPDISPENSER_H

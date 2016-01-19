@@ -1,4 +1,6 @@
-// file DoorSoapController.h
+/**
+ * \class The DoorSoapController controller class
+ */
 
 #ifndef _DOORSOAPCONTROLLER_H
 #define _DOORSOAPCONTROLLER_H

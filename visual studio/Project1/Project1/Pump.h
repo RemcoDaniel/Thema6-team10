@@ -1,4 +1,6 @@
-// file Pump.h
+/**
+ * \class The Pump boundry class
+ */
 
 #ifndef _PUMP_H
 #define _PUMP_H

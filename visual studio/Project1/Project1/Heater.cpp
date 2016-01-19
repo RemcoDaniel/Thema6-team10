@@ -1,11 +1,9 @@
-/*
+/**
  * file      Heater.cpp
- * version   4.03
+ * version   0.1
  * author    Remco Nijkamp / Jordan Ranirez / Kevin  Damen / Jeroen Kok
  * date      19-01-2016
  */
- 
- /// @File boundry class
 
 #include "Heater.h"
 

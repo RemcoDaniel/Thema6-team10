@@ -1,0 +1,21 @@
+Not done
+	Door
+	Pump
+	SoapDispenser
+	UART
+	Valve
+	WaterSensor
+	WasProgramma
+	MotorController
+	DoorSoapController
+	TempController
+	UARTController
+	WaterController
+	WashingMachineController
+Working on
+	Heater
+	Motor
+Done
+	
+
+

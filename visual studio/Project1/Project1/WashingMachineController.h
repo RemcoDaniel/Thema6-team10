@@ -1,4 +1,6 @@
-// file WashingMachineController.h
+/**
+ * \class The WashingMachineController controller class
+ */
 
 #ifndef _WASHINGMACHINECONTROLLER_H
 #define _WASHINGMACHINECONTROLLER_H

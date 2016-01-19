@@ -1,4 +1,6 @@
-// file Wasprogramma.h
+/**
+ * \class The Wasprogramma user class
+ */
 
 #ifndef _WASPROGRAMMA_H
 #define _WASPROGRAMMA_H

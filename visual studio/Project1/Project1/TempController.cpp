@@ -1,4 +1,9 @@
-#include "TempController.h"
+/**
+ * file      Heater.cpp
+ * version   0.1
+ * author    Remco Nijkamp / Jordan Ranirez / Kevin  Damen / Jeroen Kok
+ * date      19-01-2016
+ */
 
 TempController::TempController(Heater & heater, TempSensor & tempsensor, WashingMachineController & wascontroller, shared_ptr<UART> uartptr) :
 	heater{heater},

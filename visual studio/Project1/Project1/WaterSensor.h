@@ -1,5 +1,7 @@
-// file WaterSensor.h
-
+/**
+ * \class The WaterSensor boundry class
+ */
+ 
 #ifndef _WATERSENSOR_H
 #define _WATERSENSOR_H
 

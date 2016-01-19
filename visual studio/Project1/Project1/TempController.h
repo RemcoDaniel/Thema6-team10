@@ -1,4 +1,6 @@
-// file TempController.h
+/**
+ * \class The TempController controller class
+ */
 
 #ifndef _TEMPCONTROLLER_H
 #define _TEMPCONTROLLER_H

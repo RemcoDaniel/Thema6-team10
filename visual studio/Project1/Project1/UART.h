@@ -1,4 +1,6 @@
-// file UART.h
+/**
+ * \class The UART boundry class
+ */
 
 #ifndef _UART_H
 #define _UART_H
