@@ -2,14 +2,9 @@
 
 #include "TempSensor.h"
 
-TempSensor::TempSensor(UART uart) : uart(uart) {}
+TempSensor::TempSensor() {}
 
-int TempSensor::getTemp() {
-	uart.sendCommand(0x08, 0x00);
-
-
-	int temp = 0;
-
-	// wachten op antwoord....!!!
-	return temp;
+char * TempSensor::getTempCommand() {
+	char command[3] = { TEMPERATURE_REQ, '\0' };
+	return command;
 }

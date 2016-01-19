@@ -1,59 +1,26 @@
 // file WasProgramma.cpp
 
-#include "WasProgramma.h"
+#include "Wasprogramma.h"
 
-WasProgramma::WasProgramma() {}
+Wasprogramma::Wasprogramma(int temp, int waterlevel, int time, int job) :
+	temp(temp),
+	waterlevel(waterlevel),
+	time(time),
+	job(job)
+{}
 
-void setProgram(temp, water, time) {
-
+int Wasprogramma::getTemp() {
+	return temp;
 }
 
-void setTemp() {
-
+int Wasprogramma::getLevel() {
+	return waterlevel;
 }
 
-void setWater() {
-
+int Wasprogramma::getTime() {
+	return time;
 }
 
-void setTime() {
-
+int Wasprogramma::getJob() {
+	return job;
 }
-
-// dit moet in de washingmachinecontroller:
-// hoe het programma in zijn werk gaat:
-
-// deur dicht
-// voorwas doen (zonder zeep!):
-// water erbij
-// verwarmen
-// draaien
-// water weg
-
-//hoofdwas:
-// water vullen
-// opwarmen
-// zeep erbij
-// draaien
-// water weghalen
-
-// spoelen (draaien hierbij?)
-// spoelwater weg
-
-// centrifugeren
-// deur ontgrendelen
-
-
-
-// stel programma is 60 minuten
-// 1/4 is voorwas
-// 2/4 is hoofdwas
-// 1/4 is spoelen + centrifugeren
-
-// voorwas is helft van de temp van de hoofdwas (de ingestelde temp is de temp van de hoofdwas)
-
-
-
-// aantal wasprogrammas:
-// bonte was
-// lichte was

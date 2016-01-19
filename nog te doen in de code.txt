@@ -1,0 +1,47 @@
+enum class maken voor de wasprogramma's
+
+meer inheritens
+
+const char * maken
+
+pools samenvoegen  (motor task)
+
+in de controllers: niet char * returnen!!!
+
+
+wasprogramma maken
+
+
+=================================================================
+
+toen er aan de code werd gewerkt, bleek een probleem te ontstaan.
+De WashingMachineController heeft namelijk 3 controllers onder zich, de
+WaterController, de TempController en de MotorController.
+Dit zijn allemaal taken en er moet tussen deze taken en de WashingMachineController taak
+communicatie plaats kunnen vinden.
+Ze moeten elkaar dus kennen, in beide richtingen.
+Verder moeten al deze 4 de controllers met de UART taak kunnen communiceren.
+Dus zouden ze ook allemaal een verwijzing moeten hebben naar de uart en andersom.
+Maar nu komt het probleem:
+bij het aanmaken van de objecten ontstond als het ware een kip-ei-probleem.
+Ze waren allemaal afhankelijk van elkaars bestaan bij het aanmaken.
+Bij het uittekenen ontstond een soort driehoeksverhouding zoals te zien in de afbeelding
+hieronder.
+Een oplossing leek om deze driehoek te doorbreken en de WashingMachineController
+niet meer met de UART te laten communiceren.
+Door een extra controller toe te voegen zou de nodige communicatie dan alsnog
+via een kleine omweg plaats kunnen vinden.
+Dit is te zien in de volgende afbeelding.
+Echter na wat uitdenken bleek dat het probleem weliswaar kleiner was geworden,
+maar dat het probleem nogsteeds aanwezig was, maar dan binnen de WashingMachineController.
+
+Een andere oplossing zou zijn om de WashingMachineController alsnog alle controllers
+aan te laten maken en zichzelf mee te geven als parameter.
+Echter dit keer zonder UART maar met een lege shared pointer die straks naar de uart
+zou kunnen wijzen.
+Vervolgens kan de UART aan worden gemaakt en in zijn constructoraanroep als
+parameters de controllers mee kunnen krijgen.
+Nu de uart bestaat kan per controller de shared pointer naar de uart worden
+ingevuld en is de cirkel rond.
+
+===========================================================================

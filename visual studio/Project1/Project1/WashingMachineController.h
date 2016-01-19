@@ -8,29 +8,44 @@
 #include "WaterController.h"
 #include "TempController.h"
 #include "Door.h"
+#include "Wasprogramma.h"
+#include "UART.h"
+#include "SoapDispenser.h"
 
 class WashingMachineController : public RTOS::task {
 private:
-	//time_t time;
-	//currentWasprog wasprogramma;
+	Wasprogramma wasprogramma;
 	Door door;
-	TempController tempcontroller;
-	WaterController watercontroller;
-	MotorController motorcontroller;
-	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag;
+	TempController *tempcontroller;
+	WaterController *watercontroller;
+	MotorController *motorcontroller;
+	UART *uart;
+	SoapDispenser soap;
+	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag, response_flag;
+	RTOS::pool< char * > response_pool;
+	RTOS::mutex response_mutex;
 	RTOS::clock interval_clock;
 
+	void doorlock(bool lock);		// lock = 1 , unlock = 0
+	void dispendSoap();
+
+	//uart:
+	char* readResponse();
+	char* uartTask(char * command);
+
 public:
-	WashingMachineController(Door door, TempController tempcontroller, WaterController watercontroller, MotorController motorcontroller);
+	WashingMachineController(Wasprogramma & was);
 
 	void setTempReached();
 	void setWaterLevelReached();
 	void setMotorDone();
 
-	void loadWasprogramma(int temp, int water, int time);
-
-	void startWasprogramma(Wasprogramma wp);
+	void startWasprogramma();
 	void stopWasprogramma();
+
+	//uart:
+	void setResponseFlag();
+	void writeResponse(char * response);
 
 	void main();
 };
