@@ -1,0 +1,117 @@
+\hypertarget{class_communicating_socket}{}\section{Communicating\+Socket Class Reference}
+\label{class_communicating_socket}\index{Communicating\+Socket@{Communicating\+Socket}}
+
+
+{\ttfamily \#include $<$Practical\+Socket.\+h$>$}
+
+Inheritance diagram for Communicating\+Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_communicating_socket}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_communicating_socket_aca4e86085c064641e86ae24ea29bbb94}{send} (const void $\ast$buffer, int buffer\+Len)  throw (\+Socket\+Exception)
+\item 
+size\+\_\+t \hyperlink{class_communicating_socket_aaec5ba688c6f668d05d52548ecec8546}{recv} (void $\ast$buffer, int buffer\+Len)  throw (\+Socket\+Exception)
+\item 
+size\+\_\+t \hyperlink{class_communicating_socket_a52dd0d72509bee3a7c0ca89a7592a023}{recv\+Fully} (void $\ast$buffer, int buffer\+Len)  throw (\+Socket\+Exception)
+\item 
+\hyperlink{class_socket_address}{Socket\+Address} \hyperlink{class_communicating_socket_a59ad3bbba5b64f9e251d9228d2ee755d}{get\+Foreign\+Address} ()  throw (\+Socket\+Exception)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Abstract base class representing a socket that, once connected, has a foreign address and can communicate with the socket at that foreign address. 
+
+\subsection{Member Function Documentation}
+\index{Communicating\+Socket@{Communicating\+Socket}!get\+Foreign\+Address@{get\+Foreign\+Address}}
+\index{get\+Foreign\+Address@{get\+Foreign\+Address}!Communicating\+Socket@{Communicating\+Socket}}
+\subsubsection[{\texorpdfstring{get\+Foreign\+Address()}{getForeignAddress()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\+Address} Communicating\+Socket\+::get\+Foreign\+Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_communicating_socket_a59ad3bbba5b64f9e251d9228d2ee755d}{}\label{class_communicating_socket_a59ad3bbba5b64f9e251d9228d2ee755d}
+Get the address of the peer to which this socket is connected. \hyperlink{class_the}{The} socket must be connected before this method can be called. \begin{DoxyReturn}{Returns}
+foreign address 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_socket_exception}{Socket\+Exception}} & thrown if unable to fetch foreign address \\
+\hline
+\end{DoxyExceptions}
+\index{Communicating\+Socket@{Communicating\+Socket}!recv@{recv}}
+\index{recv@{recv}!Communicating\+Socket@{Communicating\+Socket}}
+\subsubsection[{\texorpdfstring{recv(void $\ast$buffer, int buffer\+Len)}{recv(void *buffer, int bufferLen)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Communicating\+Socket\+::recv (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buffer, }
+\item[{int}]{buffer\+Len}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_communicating_socket_aaec5ba688c6f668d05d52548ecec8546}{}\label{class_communicating_socket_aaec5ba688c6f668d05d52548ecec8546}
+Read into the given buffer up to buffer\+Len bytes data from this socket. \hyperlink{class_the}{The} socket must be connected before recv can be called. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & buffer to receive the data \\
+\hline
+{\em buffer\+Len} & maximum number of bytes to read into buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read, 0 for E\+OF. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_socket_exception}{Socket\+Exception}} & thrown if unable to receive data \\
+\hline
+\end{DoxyExceptions}
+\index{Communicating\+Socket@{Communicating\+Socket}!recv\+Fully@{recv\+Fully}}
+\index{recv\+Fully@{recv\+Fully}!Communicating\+Socket@{Communicating\+Socket}}
+\subsubsection[{\texorpdfstring{recv\+Fully(void $\ast$buffer, int buffer\+Len)}{recvFully(void *buffer, int bufferLen)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Communicating\+Socket\+::recv\+Fully (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buffer, }
+\item[{int}]{buffer\+Len}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_communicating_socket_a52dd0d72509bee3a7c0ca89a7592a023}{}\label{class_communicating_socket_a52dd0d72509bee3a7c0ca89a7592a023}
+Block until buffer\+Len bytes are read into the given buffer, until the socket is closed or an error is encoutered. \hyperlink{class_the}{The} socket must be connected before recv\+Fully can be called. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & buffer to receive the data \\
+\hline
+{\em buffer\+Len} & maximum number of bytes to read into buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read, 0 for E\+OF, and -\/1 for error 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_socket_exception}{Socket\+Exception}} & thrown if unable to receive data \\
+\hline
+\end{DoxyExceptions}
+\index{Communicating\+Socket@{Communicating\+Socket}!send@{send}}
+\index{send@{send}!Communicating\+Socket@{Communicating\+Socket}}
+\subsubsection[{\texorpdfstring{send(const void $\ast$buffer, int buffer\+Len)}{send(const void *buffer, int bufferLen)}}]{\setlength{\rightskip}{0pt plus 5cm}void Communicating\+Socket\+::send (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buffer, }
+\item[{int}]{buffer\+Len}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_communicating_socket_aca4e86085c064641e86ae24ea29bbb94}{}\label{class_communicating_socket_aca4e86085c064641e86ae24ea29bbb94}
+Write buffer\+Len bytes from the given buffer to this socket. \hyperlink{class_the}{The} socket must be connected before \hyperlink{class_communicating_socket_aca4e86085c064641e86ae24ea29bbb94}{send()} can be called. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & buffer to be written \\
+\hline
+{\em buffer\+Len} & number of bytes from buffer to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_socket_exception}{Socket\+Exception}} & thrown if unable to send data \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Practical\+Socket.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Practical\+Socket.\+cpp\end{DoxyCompactItemize}

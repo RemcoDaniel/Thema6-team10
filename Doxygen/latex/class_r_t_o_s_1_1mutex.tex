@@ -1,0 +1,100 @@
+\hypertarget{class_r_t_o_s_1_1mutex}{}\section{R\+T\+OS\+:\+:mutex Class Reference}
+\label{class_r_t_o_s_1_1mutex}\index{R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}}
+
+
+mutual execlusion semaphore  
+
+
+
+
+{\ttfamily \#include $<$p\+R\+T\+O\+S.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_t_o_s_1_1mutex_a018aed6b83cf182b9990ac90a3254904}{mutex} (const char $\ast$name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em constructor, specify the name \end{DoxyCompactList}\item 
+\hyperlink{class_r_t_o_s_1_1mutex_a58255b4d832c8140f2b45efcc2065733}{$\sim$mutex} (void)
+\begin{DoxyCompactList}\small\item\em generates an error \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1mutex_aef6201cdf6b86c532629b5888d740303}{print} (std\+::ostream \&stream, bool header=true) const \hypertarget{class_r_t_o_s_1_1mutex_aef6201cdf6b86c532629b5888d740303}{}\label{class_r_t_o_s_1_1mutex_aef6201cdf6b86c532629b5888d740303}
+
+\begin{DoxyCompactList}\small\item\em prints a mutex, for debugging only. \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1mutex_a52160d98a50d74a44fc4592a4625c6ed}{wait} (void)
+\item 
+void \hyperlink{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}{signal} (void)
+\begin{DoxyCompactList}\small\item\em release the mutex \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries R\+T\+OS}\hypertarget{class_r_t_o_s_1_1mutex_aa5b30b5b619f01a5d94b779bf0e58610}{}\label{class_r_t_o_s_1_1mutex_aa5b30b5b619f01a5d94b779bf0e58610}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+mutual execlusion semaphore 
+
+A mutex (mutual exclusion semaphore) is a synchronization mechanism that is used to give a task exclusive access to some resource\+: the task can execute a sequence of statements, being sure that no other task is accessing the same resource.
+
+A typical use is to protect a resource (for instance global data) that should be used by only one task at a time, so it can update it and leave it in a consistent state.
+
+A mutex is not created for a particular task, and it is not a waitable.
+
+Initially a mutex is free. \hyperlink{class_the}{The} \hyperlink{class_r_t_o_s_1_1mutex_a52160d98a50d74a44fc4592a4625c6ed}{mutex\+::wait()} operation blocks the task until the mutex is free, and then claims the mutex for the executing task. \hyperlink{class_the}{The} \hyperlink{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}{mutex\+::signal()} operation frees the mutex again. It is an error to call \hyperlink{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}{mutex\+::signal} on a mutex that is not currently owned by the executing task. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}!mutex@{mutex}}
+\index{mutex@{mutex}!R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}}
+\subsubsection[{\texorpdfstring{mutex(const char $\ast$name="""")}{mutex(const char *name="")}}]{\setlength{\rightskip}{0pt plus 5cm}R\+T\+O\+S\+::mutex\+::mutex (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1mutex_a018aed6b83cf182b9990ac90a3254904}{}\label{class_r_t_o_s_1_1mutex_a018aed6b83cf182b9990ac90a3254904}
+
+
+constructor, specify the name 
+
+\hyperlink{class_the}{The} name is used for debugging only. \index{R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}!````~mutex@{$\sim$mutex}}
+\index{````~mutex@{$\sim$mutex}!R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}}
+\subsubsection[{\texorpdfstring{$\sim$mutex(void)}{~mutex(void)}}]{\setlength{\rightskip}{0pt plus 5cm}R\+T\+O\+S\+::mutex\+::$\sim$mutex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1mutex_a58255b4d832c8140f2b45efcc2065733}{}\label{class_r_t_o_s_1_1mutex_a58255b4d832c8140f2b45efcc2065733}
+
+
+generates an error 
+
+A mutex should never be destroyed 
+
+\subsection{Member Function Documentation}
+\index{R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}!signal@{signal}}
+\index{signal@{signal}!R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}}
+\subsubsection[{\texorpdfstring{signal(void)}{signal(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+T\+O\+S\+::mutex\+::signal (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}{}\label{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}
+
+
+release the mutex 
+
+If one or more tasks are waiting for the mutex the fires one is released, and it now owns the mutex. Otherwise, if the mutex is cleared it is now set.
+
+It is an error for a task to call \hyperlink{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}{signal()} on a mutex that it does not own (that it did not call \hyperlink{class_r_t_o_s_1_1mutex_a52160d98a50d74a44fc4592a4625c6ed}{wait()} on). After the signal the task no longer owns the mutex. \index{R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}!wait@{wait}}
+\index{wait@{wait}!R\+T\+O\+S\+::mutex@{R\+T\+O\+S\+::mutex}}
+\subsubsection[{\texorpdfstring{wait(void)}{wait(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+T\+O\+S\+::mutex\+::wait (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1mutex_a52160d98a50d74a44fc4592a4625c6ed}{}\label{class_r_t_o_s_1_1mutex_a52160d98a50d74a44fc4592a4625c6ed}
+claim the mutex
+
+If the mutex was set it it is now cleared, and the calling task owns the mutex.
+
+Otherwise the current task waits (is halted) until the owning task calls \hyperlink{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}{signal()} on the same mutex. \hyperlink{class_the}{The} \hyperlink{class_r_t_o_s_1_1mutex_a9a6cb88e182f977bce35e024449b24cd}{signal()} calls will release the tasks in the order of their \hyperlink{class_r_t_o_s_1_1mutex_a52160d98a50d74a44fc4592a4625c6ed}{wait()} calls. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+cpp\end{DoxyCompactItemize}

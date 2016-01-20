@@ -1,0 +1,78 @@
+\hypertarget{class_r_t_o_s_1_1flag}{}\section{R\+T\+OS\+:\+:flag Class Reference}
+\label{class_r_t_o_s_1_1flag}\index{R\+T\+O\+S\+::flag@{R\+T\+O\+S\+::flag}}
+
+
+basic synchronisation mechanism.  
+
+
+
+
+{\ttfamily \#include $<$p\+R\+T\+O\+S.\+h$>$}
+
+Inheritance diagram for R\+T\+OS\+:\+:flag\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_r_t_o_s_1_1flag}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_t_o_s_1_1flag_a2d05d296b33e6cbc141fd4fb5e6f2740}{flag} (\hyperlink{class_r_t_o_s_1_1task}{task} $\ast$\hyperlink{class_r_t_o_s_1_1event_a1402687edb26c1d5d26e54dbda21919d}{t}, const char $\ast$name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em constructor, specify onwer and name \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1flag_aae862c6b7c385a4920d9a486e25ad5d8}{set} (void)
+\begin{DoxyCompactList}\small\item\em sets the flag \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1flag_a38ac8e72fcd0b7bcc45fd00acb156cbb}{print} (std\+::ostream \&s, bool header=true) const \hypertarget{class_r_t_o_s_1_1flag_a38ac8e72fcd0b7bcc45fd00acb156cbb}{}\label{class_r_t_o_s_1_1flag_a38ac8e72fcd0b7bcc45fd00acb156cbb}
+
+\begin{DoxyCompactList}\small\item\em prints flag infomation (for debugging) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries R\+T\+OS}\hypertarget{class_r_t_o_s_1_1flag_aa5b30b5b619f01a5d94b779bf0e58610}{}\label{class_r_t_o_s_1_1flag_aa5b30b5b619f01a5d94b779bf0e58610}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+basic synchronisation mechanism. 
+
+\hyperlink{class_the}{The} basic synchronization mechanism is the (event) flag. Like all waitables, a flag is created for a particular task. A flag is set by a \hyperlink{class_r_t_o_s_1_1flag_aae862c6b7c385a4920d9a486e25ad5d8}{flag\+::set()} call (or the task\+::set( flag) call, which has the same effect). Like all waitables, when a task is waiting for a flag (using a \hyperlink{class_r_t_o_s_1_1task_a6fc603d0f1c8a94813586d3dfd123fcc}{task\+::wait} call) and that flag becomes set, the wait call will clear the flag, and return an event that compares equal to the flag. Note that a flag does not count\+: setting a flag that is already set has no effect on the flag.
+
+A flag must be created for a specific task. \hyperlink{class_the}{The} normal place to do this is in the task\textquotesingle{}s creator. An flag is initially cleared.
+
+\hyperlink{class_the}{The} example below shows a led\+\_\+task that responds to two event flags. \hyperlink{class_the}{The} shift flag will cause it to shift the pattern on the L\+E\+Ds one position to the left, while the invert flag will cause it to invert the pattern. Two addional tasks do notghing but set these flags at fixed intervals. \hyperlink{class_the}{The} result is a sort of one-\/direction Kitt display, which will occasionally flip polarity. Note that in this example the wait call excplicitly mentions the flags it waits for. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+T\+O\+S\+::flag@{R\+T\+O\+S\+::flag}!flag@{flag}}
+\index{flag@{flag}!R\+T\+O\+S\+::flag@{R\+T\+O\+S\+::flag}}
+\subsubsection[{\texorpdfstring{flag(task $\ast$t, const char $\ast$name="""")}{flag(task *t, const char *name="")}}]{\setlength{\rightskip}{0pt plus 5cm}R\+T\+O\+S\+::flag\+::flag (
+\begin{DoxyParamCaption}
+\item[{{\bf task} $\ast$}]{t, }
+\item[{const char $\ast$}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1flag_a2d05d296b33e6cbc141fd4fb5e6f2740}{}\label{class_r_t_o_s_1_1flag_a2d05d296b33e6cbc141fd4fb5e6f2740}
+
+
+constructor, specify onwer and name 
+
+This call creates a timer for task t. \hyperlink{class_the}{The} name is used for debugging and statistics. 
+
+\subsection{Member Function Documentation}
+\index{R\+T\+O\+S\+::flag@{R\+T\+O\+S\+::flag}!set@{set}}
+\index{set@{set}!R\+T\+O\+S\+::flag@{R\+T\+O\+S\+::flag}}
+\subsubsection[{\texorpdfstring{set(void)}{set(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+T\+O\+S\+::flag\+::set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1flag_aae862c6b7c385a4920d9a486e25ad5d8}{}\label{class_r_t_o_s_1_1flag_aae862c6b7c385a4920d9a486e25ad5d8}
+
+
+sets the flag 
+
+Setting a flag causes the task that waits for this flag to be awakened. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+cpp\end{DoxyCompactItemize}

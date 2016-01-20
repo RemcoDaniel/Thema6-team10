@@ -1,0 +1,53 @@
+\hypertarget{class_u_a_r_t}{}\section{U\+A\+RT Class Reference}
+\label{class_u_a_r_t}\index{U\+A\+RT@{U\+A\+RT}}
+Inheritance diagram for U\+A\+RT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_a_r_t}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries U\+A\+RT} (const char $\ast$device, unsigned int baudrate, \hyperlink{class_motor_controller}{Motor\+Controller} $\ast$motorctrl, \hyperlink{class_temp_controller}{Temp\+Controller} $\ast$tempctrl, \hyperlink{class_water_controller}{Water\+Controller} $\ast$waterctrl, \hyperlink{class_washing_machine_controller}{Washing\+Machine\+Controller} $\ast$wasctrl)\hypertarget{class_u_a_r_t_a973d29310f6f516b29cc12c68d77b00b}{}\label{class_u_a_r_t_a973d29310f6f516b29cc12c68d77b00b}
+
+\item 
+void {\bfseries execute\+Command} (char $\ast$s)\hypertarget{class_u_a_r_t_ae8c21c98efeda377a0c881e312f920ca}{}\label{class_u_a_r_t_ae8c21c98efeda377a0c881e312f920ca}
+
+\item 
+void {\bfseries write\+Channel} (char $\ast$request)\hypertarget{class_u_a_r_t_aa5eb2b1507904d52e63b808621db32ea}{}\label{class_u_a_r_t_aa5eb2b1507904d52e63b808621db32ea}
+
+\item 
+void \hyperlink{class_u_a_r_t_a1152951cf37d51a378dc1bb25d36a37d}{main} ()
+\begin{DoxyCompactList}\small\item\em task body, must be provided by a derived class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{U\+A\+RT@{U\+A\+RT}!main@{main}}
+\index{main@{main}!U\+A\+RT@{U\+A\+RT}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+::main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_u_a_r_t_a1152951cf37d51a378dc1bb25d36a37d}{}\label{class_u_a_r_t_a1152951cf37d51a378dc1bb25d36a37d}
+
+
+task body, must be provided by a derived class 
+
+A task is created by inheriting from task and providing a \hyperlink{class_u_a_r_t_a1152951cf37d51a378dc1bb25d36a37d}{main()} function. Initialisation of the task, including creating its waitables, should be done in the constructor. Don\textquotesingle{}t forget to call the constructor of the task class!
+
+\hyperlink{class_the}{The} \hyperlink{class_u_a_r_t_a1152951cf37d51a378dc1bb25d36a37d}{main()} is the body of the task. It should never terminate.
+
+Each task has a unique priority (an unsigned integer). A lower value indicates a higher priority. \hyperlink{class_the}{The} \hyperlink{class_r_t_o_s}{R\+T\+OS} scheduler will always run the task with the higest-\/priority runnable (neither blocked nor suspended) task. A task runs until it changes this \textquotesingle{}situation\textquotesingle{} by using an \hyperlink{class_r_t_o_s}{R\+T\+OS} call that changes its own state to not runnable, or the state of a higher priority task to runnable.
+
+Timers are served only when the \hyperlink{class_r_t_o_s}{R\+T\+OS} is activated by calling any of its state-\/changing interfaces. Hence the longest run time between such calls determines the granularity (time wise responsiveness) of the application. Within a time consuming computation a task can call \hyperlink{class_r_t_o_s_1_1task_aa3eec7220a2724d30e2156cc395035f2}{release()} to have the \hyperlink{class_r_t_o_s}{R\+T\+OS} serve the timers. 
+
+Implements \hyperlink{class_r_t_o_s_1_1task_addc6d52f8792ddba1158d7ae5ef0037d}{R\+T\+O\+S\+::task}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/U\+A\+R\+T.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/U\+A\+R\+T.\+cpp\end{DoxyCompactItemize}

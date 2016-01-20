@@ -1,0 +1,123 @@
+\hypertarget{class_temp_controller}{}\section{Temp\+Controller Class Reference}
+\label{class_temp_controller}\index{Temp\+Controller@{Temp\+Controller}}
+Inheritance diagram for Temp\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_temp_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Temp\+Controller} (\hyperlink{class_washing_machine_controller}{Washing\+Machine\+Controller} $\ast$wascontroller)\hypertarget{class_temp_controller_a72e4402b3b4278f8f043792d3aef6a6c}{}\label{class_temp_controller_a72e4402b3b4278f8f043792d3aef6a6c}
+
+\item 
+void \hyperlink{class_temp_controller_a28853451754e16f43a08b086f47c2d0c}{set\+Uart\+Pointer} (\hyperlink{class_u_a_r_t}{U\+A\+RT} $\ast$u)
+\begin{DoxyCompactList}\small\item\em Used to (re)set the pointer to the uart. \end{DoxyCompactList}\item 
+void \hyperlink{class_temp_controller_a6ed0fe5c5e16eaeb1cf4823e629204c5}{set\+Temp} (int temp)
+\begin{DoxyCompactList}\small\item\em sets the temprature of the emulator \end{DoxyCompactList}\item 
+void \hyperlink{class_temp_controller_a8652d8509bf7e01e527a9a26bfc5419c}{set\+Response\+Flag} ()
+\begin{DoxyCompactList}\small\item\em sets the response flag \end{DoxyCompactList}\item 
+void \hyperlink{class_temp_controller_a0805825500af4fd932739157174589fe}{write\+Response} (char $\ast$response)
+\begin{DoxyCompactList}\small\item\em writes a response in the response pool \end{DoxyCompactList}\item 
+void \hyperlink{class_temp_controller_a2e2a50ee8bc46aade551f39839a43baf}{main} ()
+\begin{DoxyCompactList}\small\item\em task body, must be provided by a derived class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Temp\+Controller@{Temp\+Controller}!main@{main}}
+\index{main@{main}!Temp\+Controller@{Temp\+Controller}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}void Temp\+Controller\+::main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_temp_controller_a2e2a50ee8bc46aade551f39839a43baf}{}\label{class_temp_controller_a2e2a50ee8bc46aade551f39839a43baf}
+
+
+task body, must be provided by a derived class 
+
+A task is created by inheriting from task and providing a \hyperlink{class_temp_controller_a2e2a50ee8bc46aade551f39839a43baf}{main()} function. Initialisation of the task, including creating its waitables, should be done in the constructor. Don\textquotesingle{}t forget to call the constructor of the task class!
+
+\hyperlink{class_the}{The} \hyperlink{class_temp_controller_a2e2a50ee8bc46aade551f39839a43baf}{main()} is the body of the task. It should never terminate.
+
+Each task has a unique priority (an unsigned integer). A lower value indicates a higher priority. \hyperlink{class_the}{The} \hyperlink{class_r_t_o_s}{R\+T\+OS} scheduler will always run the task with the higest-\/priority runnable (neither blocked nor suspended) task. A task runs until it changes this \textquotesingle{}situation\textquotesingle{} by using an \hyperlink{class_r_t_o_s}{R\+T\+OS} call that changes its own state to not runnable, or the state of a higher priority task to runnable.
+
+Timers are served only when the \hyperlink{class_r_t_o_s}{R\+T\+OS} is activated by calling any of its state-\/changing interfaces. Hence the longest run time between such calls determines the granularity (time wise responsiveness) of the application. Within a time consuming computation a task can call \hyperlink{class_r_t_o_s_1_1task_aa3eec7220a2724d30e2156cc395035f2}{release()} to have the \hyperlink{class_r_t_o_s}{R\+T\+OS} serve the timers. 
+
+Implements \hyperlink{class_r_t_o_s_1_1task_addc6d52f8792ddba1158d7ae5ef0037d}{R\+T\+O\+S\+::task}.
+
+\index{Temp\+Controller@{Temp\+Controller}!set\+Response\+Flag@{set\+Response\+Flag}}
+\index{set\+Response\+Flag@{set\+Response\+Flag}!Temp\+Controller@{Temp\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Response\+Flag()}{setResponseFlag()}}]{\setlength{\rightskip}{0pt plus 5cm}void Temp\+Controller\+::set\+Response\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_temp_controller_a8652d8509bf7e01e527a9a26bfc5419c}{}\label{class_temp_controller_a8652d8509bf7e01e527a9a26bfc5419c}
+
+
+sets the response flag 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Temp\+Controller@{Temp\+Controller}!set\+Temp@{set\+Temp}}
+\index{set\+Temp@{set\+Temp}!Temp\+Controller@{Temp\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Temp(int temp)}{setTemp(int temp)}}]{\setlength{\rightskip}{0pt plus 5cm}void Temp\+Controller\+::set\+Temp (
+\begin{DoxyParamCaption}
+\item[{int}]{temp}
+\end{DoxyParamCaption}
+)}\hypertarget{class_temp_controller_a6ed0fe5c5e16eaeb1cf4823e629204c5}{}\label{class_temp_controller_a6ed0fe5c5e16eaeb1cf4823e629204c5}
+
+
+sets the temprature of the emulator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & in celcius degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Temp\+Controller@{Temp\+Controller}!set\+Uart\+Pointer@{set\+Uart\+Pointer}}
+\index{set\+Uart\+Pointer@{set\+Uart\+Pointer}!Temp\+Controller@{Temp\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Uart\+Pointer(\+U\+A\+R\+T $\ast$u)}{setUartPointer(UART *u)}}]{\setlength{\rightskip}{0pt plus 5cm}void Temp\+Controller\+::set\+Uart\+Pointer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+A\+RT} $\ast$}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{class_temp_controller_a28853451754e16f43a08b086f47c2d0c}{}\label{class_temp_controller_a28853451754e16f43a08b086f47c2d0c}
+
+
+Used to (re)set the pointer to the uart. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u$\ast$} & pointer to the \hyperlink{class_u_a_r_t}{U\+A\+RT} object this controller should use. \\
+\hline
+\end{DoxyParams}
+\index{Temp\+Controller@{Temp\+Controller}!write\+Response@{write\+Response}}
+\index{write\+Response@{write\+Response}!Temp\+Controller@{Temp\+Controller}}
+\subsubsection[{\texorpdfstring{write\+Response(char $\ast$response)}{writeResponse(char *response)}}]{\setlength{\rightskip}{0pt plus 5cm}void Temp\+Controller\+::write\+Response (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{response}
+\end{DoxyParamCaption}
+)}\hypertarget{class_temp_controller_a0805825500af4fd932739157174589fe}{}\label{class_temp_controller_a0805825500af4fd932739157174589fe}
+
+
+writes a response in the response pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & a char array with two positions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Temp\+Controller.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Temp\+Controller.\+cpp\end{DoxyCompactItemize}

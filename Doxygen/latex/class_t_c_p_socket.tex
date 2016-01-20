@@ -1,0 +1,95 @@
+\hypertarget{class_t_c_p_socket}{}\section{T\+C\+P\+Socket Class Reference}
+\label{class_t_c_p_socket}\index{T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+
+
+{\ttfamily \#include $<$Practical\+Socket.\+h$>$}
+
+Inheritance diagram for T\+C\+P\+Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_t_c_p_socket}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_c_p_socket_a7a50427a401d1a6f3209d51818bad901}{T\+C\+P\+Socket} ()
+\item 
+\hyperlink{class_t_c_p_socket_a8acb7c1cfa441458cc08da69faf253f3}{T\+C\+P\+Socket} (const char $\ast$foreign\+Address, in\+\_\+port\+\_\+t foreign\+Port)  throw (\+Socket\+Exception)
+\item 
+void \hyperlink{class_t_c_p_socket_a03a38720ee30fb021ffd9d2a6429a66a}{bind} (const \hyperlink{class_socket_address}{Socket\+Address} \&local\+Address)  throw (\+Socket\+Exception)
+\item 
+void \hyperlink{class_t_c_p_socket_a943f94b4cf9b983e7abb21f867a72697}{connect} (const \hyperlink{class_socket_address}{Socket\+Address} \&foreign\+Address)  throw (\+Socket\+Exception)
+\item 
+std\+::iostream \& \hyperlink{class_t_c_p_socket_a441d8a3b2e043186b70cfea27f3e5780}{get\+Stream} ()  throw (\+Socket\+Exception)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries T\+C\+P\+Server\+Socket}\hypertarget{class_t_c_p_socket_ae8bcdc0d25881a17b23e557296236fa9}{}\label{class_t_c_p_socket_ae8bcdc0d25881a17b23e557296236fa9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+T\+CP socket for communication with other T\+CP sockets 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{T\+C\+P\+Socket@{T\+C\+P\+Socket}!T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+\index{T\+C\+P\+Socket@{T\+C\+P\+Socket}!T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+\subsubsection[{\texorpdfstring{T\+C\+P\+Socket()}{TCPSocket()}}]{\setlength{\rightskip}{0pt plus 5cm}T\+C\+P\+Socket\+::\+T\+C\+P\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_t_c_p_socket_a7a50427a401d1a6f3209d51818bad901}{}\label{class_t_c_p_socket_a7a50427a401d1a6f3209d51818bad901}
+Make a socket that is neither bound nor connected. \index{T\+C\+P\+Socket@{T\+C\+P\+Socket}!T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+\index{T\+C\+P\+Socket@{T\+C\+P\+Socket}!T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+\subsubsection[{\texorpdfstring{T\+C\+P\+Socket(const char $\ast$foreign\+Address, in\+\_\+port\+\_\+t foreign\+Port)}{TCPSocket(const char *foreignAddress, in_port_t foreignPort)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+C\+P\+Socket\+::\+T\+C\+P\+Socket (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{foreign\+Address, }
+\item[{in\+\_\+port\+\_\+t}]{foreign\+Port}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_t_c_p_socket_a8acb7c1cfa441458cc08da69faf253f3}{}\label{class_t_c_p_socket_a8acb7c1cfa441458cc08da69faf253f3}
+Construct a T\+CP socket with a connection to the given foreign address and port. This is interface is provided as a convience for typical applications that don\textquotesingle{}t need to worry about the local address and port. 
+\begin{DoxyParams}{Parameters}
+{\em foreign\+Address} & foreign address (IP address or name) \\
+\hline
+{\em foreign\+Port} & foreign port \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_socket_exception}{Socket\+Exception}} & thrown if unable to create T\+CP socket \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\index{T\+C\+P\+Socket@{T\+C\+P\+Socket}!bind@{bind}}
+\index{bind@{bind}!T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+\subsubsection[{\texorpdfstring{bind(const Socket\+Address \&local\+Address)}{bind(const SocketAddress &localAddress)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+C\+P\+Socket\+::bind (
+\begin{DoxyParamCaption}
+\item[{const {\bf Socket\+Address} \&}]{local\+Address}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_t_c_p_socket_a03a38720ee30fb021ffd9d2a6429a66a}{}\label{class_t_c_p_socket_a03a38720ee30fb021ffd9d2a6429a66a}
+Bind this socket to the given local address. \index{T\+C\+P\+Socket@{T\+C\+P\+Socket}!connect@{connect}}
+\index{connect@{connect}!T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+\subsubsection[{\texorpdfstring{connect(const Socket\+Address \&foreign\+Address)}{connect(const SocketAddress &foreignAddress)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+C\+P\+Socket\+::connect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Socket\+Address} \&}]{foreign\+Address}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_t_c_p_socket_a943f94b4cf9b983e7abb21f867a72697}{}\label{class_t_c_p_socket_a943f94b4cf9b983e7abb21f867a72697}
+Connect this socket to the given foreign address. \index{T\+C\+P\+Socket@{T\+C\+P\+Socket}!get\+Stream@{get\+Stream}}
+\index{get\+Stream@{get\+Stream}!T\+C\+P\+Socket@{T\+C\+P\+Socket}}
+\subsubsection[{\texorpdfstring{get\+Stream()}{getStream()}}]{\setlength{\rightskip}{0pt plus 5cm}iostream \& T\+C\+P\+Socket\+::get\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throw  {\bf Socket\+Exception}) }\hypertarget{class_t_c_p_socket_a441d8a3b2e043186b70cfea27f3e5780}{}\label{class_t_c_p_socket_a441d8a3b2e043186b70cfea27f3e5780}
+Return a reference to an I/O stream wrapper around this \hyperlink{class_communicating_socket}{Communicating\+Socket}. \hyperlink{class_the}{The} caller can use this object to send and receive text-\/encoded messages over the socket. \hyperlink{class_the}{The} returned stream is owned by the socket and is created on the first call to get\+Stream. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Practical\+Socket.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Practical\+Socket.\+cpp\end{DoxyCompactItemize}

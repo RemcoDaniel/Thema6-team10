@@ -1,0 +1,23 @@
+\hyperlink{class_the}{The} \hyperlink{class_r_t_o_s}{R\+T\+OS} can be configured by changing some \#define\textquotesingle{}s in \hyperlink{p_r_t_o_s_8h_source}{p\+R\+T\+O\+S.\+h}
+
+\begin{DoxyParagraph}{global\+\_\+logging}
+
+\end{DoxyParagraph}
+All \hyperlink{class_r_t_o_s}{R\+T\+OS} debug logging can be switched off by defining {\bfseries global\+\_\+logging} as 0 It is advised to make all application debug logging likewise dependent on this macro. Check p\+R\+T\+O\+S.\+cpp for examples
+
+\begin{DoxyParagraph}{R\+T\+O\+S\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+C\+S\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+\end{DoxyParagraph}
+By default {\bfseries R\+T\+O\+S\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+C\+S\+\_\+\+E\+N\+A\+B\+L\+ED} is defined as 1, which enables printing statistics for all objects. It can be defined as 0 to reduce code and data size. N\+O\+TE\+: doing so will disable deadlock detection!
+
+When statistics is enabled, hitting Ctrl-\/C terminates the \hyperlink{class_r_t_o_s}{R\+T\+OS} schedular and shows the statistics.
+
+\begin{DoxyParagraph}{R\+T\+O\+S\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}
+
+\end{DoxyParagraph}
+\hyperlink{class_the}{The} default stack size is 4K. You can choose another value by changing the initialization of {\bfseries R\+T\+O\+S\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}.
+
+\begin{DoxyParagraph}{R\+T\+O\+S\+\_\+\+M\+I\+N\+\_\+\+P\+R\+I\+O\+R\+I\+TY}
+
+\end{DoxyParagraph}
+\hyperlink{class_the}{The} priority you can assign to a task ranges from 0 to 1000, 0 being the highest priority and 1000 the lowest. Tasks should all have a different priority. 

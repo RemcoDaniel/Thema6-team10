@@ -1,0 +1,92 @@
+\hypertarget{class_web_socket}{}\section{Web\+Socket Class Reference}
+\label{class_web_socket}\index{Web\+Socket@{Web\+Socket}}
+
+
+{\ttfamily \#include $<$websocket.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_socket_a69115b798613ceaeccec47bf8609e779}{Web\+Socket} (\hyperlink{class_t_c_p_socket}{T\+C\+P\+Socket} $\ast$sock)
+\item 
+void \hyperlink{class_web_socket_abef10acf60b4d5b87399e6f9c5ad808d}{close} ()
+\item 
+void \hyperlink{class_web_socket_aeaf7a014237f6d326ffef03651243c42}{set\+Listener} (\hyperlink{class_web_socket_listener}{Web\+Socket\+Listener} $\ast$)
+\item 
+void \hyperlink{class_web_socket_ad3a332147420ee0ce12767dc51621fc6}{send\+Text\+Message} (const string \&message)  throw (\+Web\+Socket\+Exception, Socket\+Exception)
+\item 
+string \hyperlink{class_web_socket_a2ab2cf768749032fb550daa935b789af}{get\+Foreign\+Address} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Websocket that is able to communicate with an another websocket over the underlying \hyperlink{class_t_c_p_socket}{T\+C\+P\+Socket}. It can send a message to the other side and listens to incomming messages. \begin{DoxySeeAlso}{See also}
+R\+F\+C6455 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+\href{mailto:jan.zuurbier@hu.nl}{\tt jan.\+zuurbier@hu.\+nl} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Web\+Socket@{Web\+Socket}!Web\+Socket@{Web\+Socket}}
+\index{Web\+Socket@{Web\+Socket}!Web\+Socket@{Web\+Socket}}
+\subsubsection[{\texorpdfstring{Web\+Socket(\+T\+C\+P\+Socket $\ast$sock)}{WebSocket(TCPSocket *sock)}}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Socket\+::\+Web\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+C\+P\+Socket} $\ast$}]{sock}
+\end{DoxyParamCaption}
+)}\hypertarget{class_web_socket_a69115b798613ceaeccec47bf8609e779}{}\label{class_web_socket_a69115b798613ceaeccec47bf8609e779}
+Construct a web socket 
+\begin{DoxyParams}{Parameters}
+{\em sock} & underlying T\+CP socket \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Web\+Socket@{Web\+Socket}!close@{close}}
+\index{close@{close}!Web\+Socket@{Web\+Socket}}
+\subsubsection[{\texorpdfstring{close()}{close()}}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Socket\+::close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_web_socket_abef10acf60b4d5b87399e6f9c5ad808d}{}\label{class_web_socket_abef10acf60b4d5b87399e6f9c5ad808d}
+Closes the websocket connection \index{Web\+Socket@{Web\+Socket}!get\+Foreign\+Address@{get\+Foreign\+Address}}
+\index{get\+Foreign\+Address@{get\+Foreign\+Address}!Web\+Socket@{Web\+Socket}}
+\subsubsection[{\texorpdfstring{get\+Foreign\+Address()}{getForeignAddress()}}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Socket\+::get\+Foreign\+Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_web_socket_a2ab2cf768749032fb550daa935b789af}{}\label{class_web_socket_a2ab2cf768749032fb550daa935b789af}
+Get the IP address of the remote web socket \index{Web\+Socket@{Web\+Socket}!send\+Text\+Message@{send\+Text\+Message}}
+\index{send\+Text\+Message@{send\+Text\+Message}!Web\+Socket@{Web\+Socket}}
+\subsubsection[{\texorpdfstring{send\+Text\+Message(const string \&message)}{sendTextMessage(const string &message)}}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Socket\+::send\+Text\+Message (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{message}
+\end{DoxyParamCaption}
+) throw  {\bf Web\+Socket\+Exception}, {\bf Socket\+Exception}) }\hypertarget{class_web_socket_ad3a332147420ee0ce12767dc51621fc6}{}\label{class_web_socket_ad3a332147420ee0ce12767dc51621fc6}
+Send a text message to the other side 
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to be sent \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_web_socket_exception}{Web\+Socket\+Exception}} & if the message could not be sent. \\
+\hline
+{\em \hyperlink{class_socket_exception}{Socket\+Exception}} & if there is a problem with the underlying tcp socket \\
+\hline
+\end{DoxyExceptions}
+\index{Web\+Socket@{Web\+Socket}!set\+Listener@{set\+Listener}}
+\index{set\+Listener@{set\+Listener}!Web\+Socket@{Web\+Socket}}
+\subsubsection[{\texorpdfstring{set\+Listener(\+Web\+Socket\+Listener $\ast$)}{setListener(WebSocketListener *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Socket\+::set\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Web\+Socket\+Listener} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{class_web_socket_aeaf7a014237f6d326ffef03651243c42}{}\label{class_web_socket_aeaf7a014237f6d326ffef03651243c42}
+Sets the listener for this websocket that handles incomming messages. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/websocket.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/websocket.\+cpp\end{DoxyCompactItemize}

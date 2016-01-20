@@ -1,0 +1,58 @@
+\hypertarget{class_web_socket_listener}{}\section{Web\+Socket\+Listener Class Reference}
+\label{class_web_socket_listener}\index{Web\+Socket\+Listener@{Web\+Socket\+Listener}}
+Inheritance diagram for Web\+Socket\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_web_socket_listener}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_web_socket_listener_a2e3faecac88f46180ce5250d9727b210}{on\+Text\+Message} (const string \&message, \hyperlink{class_web_socket}{Web\+Socket} $\ast$ws)=0
+\item 
+virtual void \hyperlink{class_web_socket_listener_a92b7704ba710bcea748a7832059b364e}{on\+Close} (\hyperlink{class_web_socket}{Web\+Socket} $\ast$ws)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Web\+Socket\+Listener@{Web\+Socket\+Listener}!on\+Close@{on\+Close}}
+\index{on\+Close@{on\+Close}!Web\+Socket\+Listener@{Web\+Socket\+Listener}}
+\subsubsection[{\texorpdfstring{on\+Close(\+Web\+Socket $\ast$ws)=0}{onClose(WebSocket *ws)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Web\+Socket\+Listener\+::on\+Close (
+\begin{DoxyParamCaption}
+\item[{{\bf Web\+Socket} $\ast$}]{ws}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_web_socket_listener_a92b7704ba710bcea748a7832059b364e}{}\label{class_web_socket_listener_a92b7704ba710bcea748a7832059b364e}
+Will be called when the websocket has been close. 
+\begin{DoxyParams}{Parameters}
+{\em ws} & the websocket that has been closed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_wasmachine_app_ab090e05b9c6f65dee323066cc169dc1a}{Wasmachine\+App}.
+
+\index{Web\+Socket\+Listener@{Web\+Socket\+Listener}!on\+Text\+Message@{on\+Text\+Message}}
+\index{on\+Text\+Message@{on\+Text\+Message}!Web\+Socket\+Listener@{Web\+Socket\+Listener}}
+\subsubsection[{\texorpdfstring{on\+Text\+Message(const string \&message, Web\+Socket $\ast$ws)=0}{onTextMessage(const string &message, WebSocket *ws)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Web\+Socket\+Listener\+::on\+Text\+Message (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{message, }
+\item[{{\bf Web\+Socket} $\ast$}]{ws}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_web_socket_listener_a2e3faecac88f46180ce5250d9727b210}{}\label{class_web_socket_listener_a2e3faecac88f46180ce5250d9727b210}
+Will be called when a text message from the other side has been recieved 
+\begin{DoxyParams}{Parameters}
+{\em message} & the text message recieved \\
+\hline
+{\em ws} & the websocket that recieved the message \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_wasmachine_app_a259cd59762cb773cf84d4ba6e007cf16}{Wasmachine\+App}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/websocket.\+h\end{DoxyCompactItemize}

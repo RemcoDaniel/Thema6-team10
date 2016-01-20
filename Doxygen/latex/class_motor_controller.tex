@@ -1,0 +1,142 @@
+\hypertarget{class_motor_controller}{}\section{Motor\+Controller Class Reference}
+\label{class_motor_controller}\index{Motor\+Controller@{Motor\+Controller}}
+Inheritance diagram for Motor\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_motor_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Motor\+Controller} (\hyperlink{class_washing_machine_controller}{Washing\+Machine\+Controller} $\ast$wascontroller)\hypertarget{class_motor_controller_a0e65c9ad63cd7223f5a7142a90560ce2}{}\label{class_motor_controller_a0e65c9ad63cd7223f5a7142a90560ce2}
+
+\item 
+void \hyperlink{class_motor_controller_ae34c69473ebfecda74c19646c7dd552f}{set\+Uart\+Pointer} (\hyperlink{class_u_a_r_t}{U\+A\+RT} $\ast$u)
+\begin{DoxyCompactList}\small\item\em Used to (re)set the pointer to the uart. \end{DoxyCompactList}\item 
+int \hyperlink{class_motor_controller_aecc8cb83b9697bc4fd43494d94d7f451}{get\+Motor\+Speed} ()
+\begin{DoxyCompactList}\small\item\em returns the current speed of the motor \end{DoxyCompactList}\item 
+void \hyperlink{class_motor_controller_ac204dff745500f9b8711fd4d7bc68d6d}{set\+Motor\+Job} (int job, int time)
+\begin{DoxyCompactList}\small\item\em Sets which job should be started and for how long. \end{DoxyCompactList}\item 
+void \hyperlink{class_motor_controller_ade1ac6f1cec888d6c6876c74ab0fb4f8}{set\+Response\+Flag} ()
+\begin{DoxyCompactList}\small\item\em sets the response flag \end{DoxyCompactList}\item 
+void \hyperlink{class_motor_controller_ae0b037cd1c059650c4cf03fee8c1f317}{write\+Response} (char $\ast$response)
+\begin{DoxyCompactList}\small\item\em writes a response in the response pool \end{DoxyCompactList}\item 
+void \hyperlink{class_motor_controller_acf35f82b30986fb4702933d21eee03ea}{main} ()
+\begin{DoxyCompactList}\small\item\em task body, must be provided by a derived class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Motor\+Controller@{Motor\+Controller}!get\+Motor\+Speed@{get\+Motor\+Speed}}
+\index{get\+Motor\+Speed@{get\+Motor\+Speed}!Motor\+Controller@{Motor\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Motor\+Speed()}{getMotorSpeed()}}]{\setlength{\rightskip}{0pt plus 5cm}int Motor\+Controller\+::get\+Motor\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motor_controller_aecc8cb83b9697bc4fd43494d94d7f451}{}\label{class_motor_controller_aecc8cb83b9697bc4fd43494d94d7f451}
+
+
+returns the current speed of the motor 
+
+\begin{DoxyReturn}{Returns}
+the speed int R\+PM 
+\end{DoxyReturn}
+\index{Motor\+Controller@{Motor\+Controller}!main@{main}}
+\index{main@{main}!Motor\+Controller@{Motor\+Controller}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\+Controller\+::main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_motor_controller_acf35f82b30986fb4702933d21eee03ea}{}\label{class_motor_controller_acf35f82b30986fb4702933d21eee03ea}
+
+
+task body, must be provided by a derived class 
+
+A task is created by inheriting from task and providing a \hyperlink{class_motor_controller_acf35f82b30986fb4702933d21eee03ea}{main()} function. Initialisation of the task, including creating its waitables, should be done in the constructor. Don\textquotesingle{}t forget to call the constructor of the task class!
+
+\hyperlink{class_the}{The} \hyperlink{class_motor_controller_acf35f82b30986fb4702933d21eee03ea}{main()} is the body of the task. It should never terminate.
+
+Each task has a unique priority (an unsigned integer). A lower value indicates a higher priority. \hyperlink{class_the}{The} \hyperlink{class_r_t_o_s}{R\+T\+OS} scheduler will always run the task with the higest-\/priority runnable (neither blocked nor suspended) task. A task runs until it changes this \textquotesingle{}situation\textquotesingle{} by using an \hyperlink{class_r_t_o_s}{R\+T\+OS} call that changes its own state to not runnable, or the state of a higher priority task to runnable.
+
+Timers are served only when the \hyperlink{class_r_t_o_s}{R\+T\+OS} is activated by calling any of its state-\/changing interfaces. Hence the longest run time between such calls determines the granularity (time wise responsiveness) of the application. Within a time consuming computation a task can call \hyperlink{class_r_t_o_s_1_1task_aa3eec7220a2724d30e2156cc395035f2}{release()} to have the \hyperlink{class_r_t_o_s}{R\+T\+OS} serve the timers. 
+
+Implements \hyperlink{class_r_t_o_s_1_1task_addc6d52f8792ddba1158d7ae5ef0037d}{R\+T\+O\+S\+::task}.
+
+\index{Motor\+Controller@{Motor\+Controller}!set\+Motor\+Job@{set\+Motor\+Job}}
+\index{set\+Motor\+Job@{set\+Motor\+Job}!Motor\+Controller@{Motor\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Motor\+Job(int job, int time)}{setMotorJob(int job, int time)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\+Controller\+::set\+Motor\+Job (
+\begin{DoxyParamCaption}
+\item[{int}]{job, }
+\item[{int}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motor_controller_ac204dff745500f9b8711fd4d7bc68d6d}{}\label{class_motor_controller_ac204dff745500f9b8711fd4d7bc68d6d}
+
+
+Sets which job should be started and for how long. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & which job should be used \\
+\hline
+{\em int} & the time in seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Motor\+Controller@{Motor\+Controller}!set\+Response\+Flag@{set\+Response\+Flag}}
+\index{set\+Response\+Flag@{set\+Response\+Flag}!Motor\+Controller@{Motor\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Response\+Flag()}{setResponseFlag()}}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\+Controller\+::set\+Response\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motor_controller_ade1ac6f1cec888d6c6876c74ab0fb4f8}{}\label{class_motor_controller_ade1ac6f1cec888d6c6876c74ab0fb4f8}
+
+
+sets the response flag 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Motor\+Controller@{Motor\+Controller}!set\+Uart\+Pointer@{set\+Uart\+Pointer}}
+\index{set\+Uart\+Pointer@{set\+Uart\+Pointer}!Motor\+Controller@{Motor\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Uart\+Pointer(\+U\+A\+R\+T $\ast$u)}{setUartPointer(UART *u)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\+Controller\+::set\+Uart\+Pointer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+A\+RT} $\ast$}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motor_controller_ae34c69473ebfecda74c19646c7dd552f}{}\label{class_motor_controller_ae34c69473ebfecda74c19646c7dd552f}
+
+
+Used to (re)set the pointer to the uart. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u$\ast$} & pointer to the \hyperlink{class_u_a_r_t}{U\+A\+RT} object this controller should use. \\
+\hline
+\end{DoxyParams}
+\index{Motor\+Controller@{Motor\+Controller}!write\+Response@{write\+Response}}
+\index{write\+Response@{write\+Response}!Motor\+Controller@{Motor\+Controller}}
+\subsubsection[{\texorpdfstring{write\+Response(char $\ast$response)}{writeResponse(char *response)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\+Controller\+::write\+Response (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{response}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motor_controller_ae0b037cd1c059650c4cf03fee8c1f317}{}\label{class_motor_controller_ae0b037cd1c059650c4cf03fee8c1f317}
+
+
+writes a response in the response pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & a char array with two positions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Motor\+Controller.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/Motor\+Controller.\+cpp\end{DoxyCompactItemize}

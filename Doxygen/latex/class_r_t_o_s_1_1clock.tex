@@ -1,0 +1,82 @@
+\hypertarget{class_r_t_o_s_1_1clock}{}\section{R\+T\+OS\+:\+:clock Class Reference}
+\label{class_r_t_o_s_1_1clock}\index{R\+T\+O\+S\+::clock@{R\+T\+O\+S\+::clock}}
+
+
+free-\/running clock, ticks at a fixed frequency  
+
+
+
+
+{\ttfamily \#include $<$p\+R\+T\+O\+S.\+h$>$}
+
+Inheritance diagram for R\+T\+OS\+:\+:clock\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_r_t_o_s_1_1clock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_t_o_s_1_1clock_a44aad274f5bcdee510aaf17be6845ae6}{clock} (\hyperlink{class_r_t_o_s_1_1task}{task} $\ast$\hyperlink{class_r_t_o_s_1_1event_a1402687edb26c1d5d26e54dbda21919d}{t}, unsigned long int \+\_\+period, const char $\ast$name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em create a clock for task t, specify interval and name \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1clock_a90d7c2b274fff1b43a1de08e742c41c3}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clear the waitable within the clock \end{DoxyCompactList}\item 
+unsigned long int \hyperlink{class_r_t_o_s_1_1clock_a3ea95e4a1ed3507186493a8f2a7d76ac}{interval} (void)\hypertarget{class_r_t_o_s_1_1clock_a3ea95e4a1ed3507186493a8f2a7d76ac}{}\label{class_r_t_o_s_1_1clock_a3ea95e4a1ed3507186493a8f2a7d76ac}
+
+\begin{DoxyCompactList}\small\item\em the interval of the clock \end{DoxyCompactList}\item 
+void \hyperlink{class_r_t_o_s_1_1clock_ad2d6da1595d84cbcc93cb73ed888a72a}{print} (std\+::ostream \&s, bool header=true) const \hypertarget{class_r_t_o_s_1_1clock_ad2d6da1595d84cbcc93cb73ed888a72a}{}\label{class_r_t_o_s_1_1clock_ad2d6da1595d84cbcc93cb73ed888a72a}
+
+\begin{DoxyCompactList}\small\item\em print the clock (for debugging) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries R\+T\+OS}\hypertarget{class_r_t_o_s_1_1clock_aa5b30b5b619f01a5d94b779bf0e58610}{}\label{class_r_t_o_s_1_1clock_aa5b30b5b619f01a5d94b779bf0e58610}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+free-\/running clock, ticks at a fixed frequency 
+
+A clock is a waitable which is automatically sets itself at fixed intervals. \hyperlink{class_the}{The} interval between these moments is specified when the clock is created. A clock is always running, even when the task to which it belongs is suspended. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+T\+O\+S\+::clock@{R\+T\+O\+S\+::clock}!clock@{clock}}
+\index{clock@{clock}!R\+T\+O\+S\+::clock@{R\+T\+O\+S\+::clock}}
+\subsubsection[{\texorpdfstring{clock(task $\ast$t, unsigned long int \+\_\+period, const char $\ast$name="""")}{clock(task *t, unsigned long int _period, const char *name="")}}]{\setlength{\rightskip}{0pt plus 5cm}R\+T\+O\+S\+::clock\+::clock (
+\begin{DoxyParamCaption}
+\item[{{\bf task} $\ast$}]{t, }
+\item[{unsigned long int}]{\+\_\+period, }
+\item[{const char $\ast$}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_r_t_o_s_1_1clock_a44aad274f5bcdee510aaf17be6845ae6}{}\label{class_r_t_o_s_1_1clock_a44aad274f5bcdee510aaf17be6845ae6}
+
+
+create a clock for task t, specify interval and name 
+
+\hyperlink{class_the}{The} name is used for debugging and statistics. 
+
+\subsection{Member Function Documentation}
+\index{R\+T\+O\+S\+::clock@{R\+T\+O\+S\+::clock}!clear@{clear}}
+\index{clear@{clear}!R\+T\+O\+S\+::clock@{R\+T\+O\+S\+::clock}}
+\subsubsection[{\texorpdfstring{clear(void)}{clear(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+T\+O\+S\+::clock\+::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_r_t_o_s_1_1clock_a90d7c2b274fff1b43a1de08e742c41c3}{}\label{class_r_t_o_s_1_1clock_a90d7c2b274fff1b43a1de08e742c41c3}
+
+
+clear the waitable within the clock 
+
+Note that this does not stop the clock. 
+
+Reimplemented from \hyperlink{class_r_t_o_s_1_1waitable_a44ac71980592721bc03e076acc7e8c67}{R\+T\+O\+S\+::waitable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+h\item 
+C\+:/\+Users/jeroen/\+Documents/\+Git\+Hub/\+Thema6-\/team10/visual studio/\+Project1/\+Project1/p\+R\+T\+O\+S.\+cpp\end{DoxyCompactItemize}
