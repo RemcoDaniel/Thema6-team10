@@ -13,7 +13,11 @@
 class WaterSensor {
 public:
 	WaterSensor();
-	char * getWaterLevelCommand(); ///< Returns the bytes for the waterlevel 
+	char * getWaterLevelCommand();
+	/*! \fn char * getWaterLevelCommand()
+	 *	\brief Returns the bytes to get the waterlevel
+	 *	\return a char pointer to a 2 char array
+	 */
 };
 
 #endif

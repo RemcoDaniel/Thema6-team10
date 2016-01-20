@@ -13,9 +13,21 @@
 class Door {
 public:
 	Door();
-	char * getLockCommand(); ///< Returns the bytes for locking the door.
-	char * getUnlockCommand();  ///< returns the bytes for unlocking the door.
-	char * getStatusCommand(); ///< Returns the bytes for getting the status of the door
+	char * getLockCommand();
+	/*! \fn char * getLockCommand()
+	 *	\brief Returns the bytes to set the lock on
+	 *	\return a char pointer to a 2 char array
+	 */
+	char * getUnlockCommand();
+	/*! \fn char * getUnlockCommand()
+	 *	\brief Returns the bytes to set the lock off
+	 *	\return a char pointer to a 2 char array
+	 */
+	char * getStatusCommand();
+	/*! \fn char * getStatusCommand()
+	 *	\brief Returns the bytes to get the status of the lock
+	 *	\return a char pointer to a 2 char array
+	 */
 };
 
 #endif

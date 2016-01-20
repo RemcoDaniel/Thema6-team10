@@ -15,9 +15,21 @@
 class Valve {
 public:
 	Valve();
-	char * getOnCommand(); ///< Returns the bytes for turning the water valve on
-	char * getOffCommand(); ///< Returns the bytes for turning the water valve off
-	char * getStatusCommand(); ///< Returns the bytes for getting the status of the water valve
+	char * getOnCommand();
+	/*! \fn char * getOnCommand()
+	 *	\brief Returns the bytes to set the valve open
+	 *	\return a char pointer to a 2 char array
+	 */
+	char * getOffCommand();
+	/*! \fn char * getOffCommand()
+	 *	\brief Returns the bytes to set the valve close
+	 *	\return a char pointer to a 2 char array
+	 */
+	char * getStatusCommand();
+	/*! \fn char * getStatusCommand()
+	 *	\brief Returns the bytes to get the status of the valve
+	 *	\return a char pointer to a 2 char array
+	 */
 };
 
 #endif

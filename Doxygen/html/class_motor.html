@@ -96,11 +96,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af6106b4c506411265c5face762b6c004"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#af6106b4c506411265c5face762b6c004">Motor</a> ()</td></tr>
 <tr class="separator:af6106b4c506411265c5face762b6c004"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b0c86d75972d5c6ac476cefa10e19f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b0c86d75972d5c6ac476cefa10e19f9"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#a0b0c86d75972d5c6ac476cefa10e19f9">getMotorSpeedCommand</a> ()</td></tr>
-<tr class="memdesc:a0b0c86d75972d5c6ac476cefa10e19f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to get the RPM of the motor. <br /></td></tr>
+<tr class="memitem:a0b0c86d75972d5c6ac476cefa10e19f9"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#a0b0c86d75972d5c6ac476cefa10e19f9">getMotorSpeedCommand</a> ()</td></tr>
+<tr class="memdesc:a0b0c86d75972d5c6ac476cefa10e19f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to get the speed of the motor.  <a href="#a0b0c86d75972d5c6ac476cefa10e19f9">More...</a><br /></td></tr>
 <tr class="separator:a0b0c86d75972d5c6ac476cefa10e19f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fc83f6c475021bf0d3c4c8a2736cea4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor.html#a2fc83f6c475021bf0d3c4c8a2736cea4">turn</a> (bool dir, int speed)</td></tr>
+<tr class="memdesc:a2fc83f6c475021bf0d3c4c8a2736cea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the right speed and the right direction (or left direction) of the motor.  <a href="#a2fc83f6c475021bf0d3c4c8a2736cea4">More...</a><br /></td></tr>
 <tr class="separator:a2fc83f6c475021bf0d3c4c8a2736cea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -123,6 +123,24 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0b0c86d75972d5c6ac476cefa10e19f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Motor::getMotorSpeedCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the bytes to get the speed of the motor. </p>
+<dl class="section return"><dt>Returns</dt><dd>a char pointer to a 2 char array </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a2fc83f6c475021bf0d3c4c8a2736cea4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +164,16 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the bytes used to set the RPM in a direction. param dir the direction of the motor. 0 = right, 1 = left param speed the speed of the rpm. 0 &lt;= x &lt;= 1600 </p>
+
+<p>Sets the right speed and the right direction (or left direction) of the motor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>the direction of the motor. false = right, true = left </td></tr>
+    <tr><td class="paramname">speed</td><td>the speed of the rpm. 0 &lt;= x &lt;= 1600 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the bytes used to set the RPM in a direction. </dd></dl>
 
 </div>
 </div>

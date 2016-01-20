@@ -96,17 +96,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae787825381f0929291bb08c2c1851fcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pump.html#ae787825381f0929291bb08c2c1851fcb">Pump</a> ()</td></tr>
 <tr class="separator:ae787825381f0929291bb08c2c1851fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e2d31d5c4dc9e6b055102b58c8f4b58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e2d31d5c4dc9e6b055102b58c8f4b58"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pump.html#a3e2d31d5c4dc9e6b055102b58c8f4b58">getOnCommand</a> ()</td></tr>
-<tr class="memdesc:a3e2d31d5c4dc9e6b055102b58c8f4b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes for setting the waterpump on. <br /></td></tr>
+<tr class="memitem:a3e2d31d5c4dc9e6b055102b58c8f4b58"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pump.html#a3e2d31d5c4dc9e6b055102b58c8f4b58">getOnCommand</a> ()</td></tr>
+<tr class="memdesc:a3e2d31d5c4dc9e6b055102b58c8f4b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to set the pump on.  <a href="#a3e2d31d5c4dc9e6b055102b58c8f4b58">More...</a><br /></td></tr>
 <tr class="separator:a3e2d31d5c4dc9e6b055102b58c8f4b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82140fe157003d68d9520082f0099b47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82140fe157003d68d9520082f0099b47"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pump.html#a82140fe157003d68d9520082f0099b47">getOffCommand</a> ()</td></tr>
-<tr class="memdesc:a82140fe157003d68d9520082f0099b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes for setting the waterpump off. <br /></td></tr>
+<tr class="memitem:a82140fe157003d68d9520082f0099b47"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pump.html#a82140fe157003d68d9520082f0099b47">getOffCommand</a> ()</td></tr>
+<tr class="memdesc:a82140fe157003d68d9520082f0099b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to set the pump off.  <a href="#a82140fe157003d68d9520082f0099b47">More...</a><br /></td></tr>
 <tr class="separator:a82140fe157003d68d9520082f0099b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5bae93c8022a1b9880d2bfadf81eae3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5bae93c8022a1b9880d2bfadf81eae3"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pump.html#af5bae93c8022a1b9880d2bfadf81eae3">getStatusCommand</a> ()</td></tr>
-<tr class="memdesc:af5bae93c8022a1b9880d2bfadf81eae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes for getting the status. <br /></td></tr>
+<tr class="memitem:af5bae93c8022a1b9880d2bfadf81eae3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pump.html#af5bae93c8022a1b9880d2bfadf81eae3">getStatusCommand</a> ()</td></tr>
+<tr class="memdesc:af5bae93c8022a1b9880d2bfadf81eae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to get the status of the pump.  <a href="#af5bae93c8022a1b9880d2bfadf81eae3">More...</a><br /></td></tr>
 <tr class="separator:af5bae93c8022a1b9880d2bfadf81eae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -125,6 +122,61 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
       </table>
 </div><div class="memdoc">
 <p>file <a class="el" href="_heater_8cpp.html">Heater.cpp</a> version 0.1 author Remco Nijkamp / Jordan Ranirez / Kevin Damen / Jeroen Kok date 19-01-2016 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a82140fe157003d68d9520082f0099b47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Pump::getOffCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the bytes to set the pump off. </p>
+<dl class="section return"><dt>Returns</dt><dd>a char pointer to a 2 char array </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e2d31d5c4dc9e6b055102b58c8f4b58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Pump::getOnCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the bytes to set the pump on. </p>
+<dl class="section return"><dt>Returns</dt><dd>a char pointer to a 2 char array </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af5bae93c8022a1b9880d2bfadf81eae3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Pump::getStatusCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the bytes to get the status of the pump. </p>
+<dl class="section return"><dt>Returns</dt><dd>a char pointer to a 2 char array </dd></dl>
 
 </div>
 </div>

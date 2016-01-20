@@ -96,17 +96,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ad8ec5e5d58402299e7adcc40693c8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_valve.html#a3ad8ec5e5d58402299e7adcc40693c8d">Valve</a> ()</td></tr>
 <tr class="separator:a3ad8ec5e5d58402299e7adcc40693c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8057b905b4cfa606276f3b16050e5836"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8057b905b4cfa606276f3b16050e5836"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_valve.html#a8057b905b4cfa606276f3b16050e5836">getOnCommand</a> ()</td></tr>
-<tr class="memdesc:a8057b905b4cfa606276f3b16050e5836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes for turning the water valve on. <br /></td></tr>
+<tr class="memitem:a8057b905b4cfa606276f3b16050e5836"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_valve.html#a8057b905b4cfa606276f3b16050e5836">getOnCommand</a> ()</td></tr>
+<tr class="memdesc:a8057b905b4cfa606276f3b16050e5836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to set the valve open.  <a href="#a8057b905b4cfa606276f3b16050e5836">More...</a><br /></td></tr>
 <tr class="separator:a8057b905b4cfa606276f3b16050e5836"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0bbc411022b245629195ad969b64d39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0bbc411022b245629195ad969b64d39"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_valve.html#ad0bbc411022b245629195ad969b64d39">getOffCommand</a> ()</td></tr>
-<tr class="memdesc:ad0bbc411022b245629195ad969b64d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes for turning the water valve off. <br /></td></tr>
+<tr class="memitem:ad0bbc411022b245629195ad969b64d39"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_valve.html#ad0bbc411022b245629195ad969b64d39">getOffCommand</a> ()</td></tr>
+<tr class="memdesc:ad0bbc411022b245629195ad969b64d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to set the valve close.  <a href="#ad0bbc411022b245629195ad969b64d39">More...</a><br /></td></tr>
 <tr class="separator:ad0bbc411022b245629195ad969b64d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d710f8998e859773bd799e66f785a3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d710f8998e859773bd799e66f785a3d"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_valve.html#a3d710f8998e859773bd799e66f785a3d">getStatusCommand</a> ()</td></tr>
-<tr class="memdesc:a3d710f8998e859773bd799e66f785a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes for getting the status of the water valve. <br /></td></tr>
+<tr class="memitem:a3d710f8998e859773bd799e66f785a3d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_valve.html#a3d710f8998e859773bd799e66f785a3d">getStatusCommand</a> ()</td></tr>
+<tr class="memdesc:a3d710f8998e859773bd799e66f785a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bytes to get the status of the valve.  <a href="#a3d710f8998e859773bd799e66f785a3d">More...</a><br /></td></tr>
 <tr class="separator:a3d710f8998e859773bd799e66f785a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -125,6 +122,61 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
       </table>
 </div><div class="memdoc">
 <p>file <a class="el" href="_heater_8cpp.html">Heater.cpp</a> version 0.1 author Remco Nijkamp / Jordan Ranirez / Kevin Damen / Jeroen Kok date 19-01-2016 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad0bbc411022b245629195ad969b64d39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Valve::getOffCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the bytes to set the valve close. </p>
+<dl class="section return"><dt>Returns</dt><dd>a char pointer to a 2 char array </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8057b905b4cfa606276f3b16050e5836"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Valve::getOnCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the bytes to set the valve open. </p>
+<dl class="section return"><dt>Returns</dt><dd>a char pointer to a 2 char array </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d710f8998e859773bd799e66f785a3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Valve::getStatusCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the bytes to get the status of the valve. </p>
+<dl class="section return"><dt>Returns</dt><dd>a char pointer to a 2 char array </dd></dl>
 
 </div>
 </div>
