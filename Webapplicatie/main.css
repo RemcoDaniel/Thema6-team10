@@ -60,6 +60,24 @@ header li:first-child{
 	border-right: 1px solid #00000;
 }
 
+#clock {
+	color: white;
+	background-color: black;
+	padding: 10px ;
+	margin-right: 20px;
+	font-size: 150%;
+	
+}
+
+#countdown {
+	color: white;
+	background-color: black;
+	padding: 10px ;
+	margin-right: 20px;
+	font-size: 150%;
+	
+}
+
 /*==================================StopKnop================================*/
 .MyStopButton {
 	background-color:#c74545;
@@ -129,8 +147,19 @@ header li:first-child{
 	margin-top: 40px;
 }
 
+.tijdoptie{
+	display: inline-block;
+	width: 40%;
+	padding-left: 10px ;
+	background: #4CAF50;
+	font-size: 300%;
+	float: left;
+	margin-left: 150px;
+	margin-top: 40px;
+}
+
 .MyStartButton {
-	margin-top: 200px;
+	margin-top: 0px;
 	margin-left: 400px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
 	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
@@ -169,6 +198,39 @@ header li:first-child{
 	top:1px;
 }
 
+
+/*--------------------------------------------------------------------------------*/
+.popupcontent{
+	background-color: #000;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius: 15px;
+	color: #FFF;
+	max-width: 500px;
+	padding: 0px 10px 10px 10px;
+	position: fixed;
+	width: 80%;
+	z-index: 1002;
+}
+
+.popupcontent h2{
+	font-size: 1.2em;
+	font-weight:bold;
+	padding: 10px;
+}
+
+.buttons {
+	text-align: right;
+}
+
+#loginscherm{
+	font-size: 200%;
+	color: white;
+	margin: 200px;
+	padding: 40px;
+	background: #4CAF50;
+	border: outset #4CAF50;
+}
 
 
 
