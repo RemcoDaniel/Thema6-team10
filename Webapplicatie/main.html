@@ -5,18 +5,18 @@
          <link rel="stylesheet" href="main.css">
 		 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     </head>
-    <body>
+    <body onload="startTime()">
 	
 	<!--mainpage-->
 	
 			<header>
 				<li>Wasmachine App</li>
-				<li>#huidigetijdTimer#</li>
+				<li><div id=clock></div></li>
 				<li>Status:</li>
-				<li>#verwarmen#</li>
+				<li><div id="status">Doet niks</div></li>
 				<li><a href="#" class="MyStopButton">Stop</a></li>
 				<li>resterende tijd:</li>
-				<li>#resterdendetijdTimer#</li>
+				<li><div id="countdown"></div></li>
 			</header>
 			<div id=Mainwasscherm>
 				<div class= navbar>
@@ -29,6 +29,7 @@
 				</div>
 				
 				<div class=wasscherm> 
+				<form method="post" name="WAS">
 					<li>
 						<div class=Wateroptie>
 							<label>Hoeveelheid Water</label><br/>
@@ -72,6 +73,21 @@
 						</div>
 					</li>
 					
+					<li>
+						<div class=tijdoptie>
+							<label>tijdsduur</label>
+							<br/>
+							<input type="radio" name="time" value=5 />5 minuten
+							<br/>
+							<input type="radio" name="time" value=600 />10 minuten
+							<br/>
+							<input type="radio" name="time" value=1800 />30 minuten
+							<br/>
+							<input type="radio" name="time" value=3600 />60 minuten
+							<br/>	
+						</div>
+					</li>
+				</form>	
 					<li>
 						<a class="MyStartButton">Start</a>
 					</li>
@@ -126,18 +142,22 @@
 				</div>
 		</div>
 		
-		<div id=logoutpopup>
-			<h1>are you sure you wanna log out?<h1>
+		<div id=logoutpopup>			
+			<div class=popupcontent>
+				<h2>Are you sure?<h2>
+				<p>Are you sure you wanna log out?</p>
+				<div class=buttons>
+					<input class="logoutbutton" type="button" value="Logout">
+					<input class="CancelButton" type="button" value="Cancel">
+				</div>
+			</div>		
 		</div>
 		
 		<!--inlogscherm----------------------------------------------------------->
 		<div id=loginscherm>
-			<label>Username:</label>
-            <input type="text" name="Username" size="30" />
-            <label>Password:</label>
-            <input type="password" name="Password" size="30" />
-			<input class="inlogbutton" type="submit" value="login">
-            <br/>	
+			Username:<input type="text" id="Username" size="30" />
+            Password:<input type="password" id="Password" size="30" />
+			<input class="inlogbutton" type="submit" value="login"><br/>	
 		</div>
     </body>
 	
@@ -146,13 +166,13 @@
 	<script>
 		jQuery(document).ready(function() {
 			$("#logoutpopup").hide();	
-			jQuery("header").hide();
-			jQuery("#Mainwasscherm").hide();
+			jQuery("header").show();
+			jQuery("#Mainwasscherm").show();
 			jQuery("#logscherm").hide();
 			jQuery("#instellingenscherm").hide();
 			jQuery("#klantenservicescherm").hide();
 			jQuery("#bedrijfsinfoscherm").hide();
-			jQuery("#loginscherm").show();			
+			jQuery("#loginscherm").hide();			
 		});
 		
 		$(".wassen").click(function(){
@@ -210,24 +230,118 @@
 			$("#loginscherm").hide();				
 		});
 		
-		$(".inlogbutton").click(function(){
-			$("#logoutpopup").hide();	
-			$("header").show();
-			$("#Mainwasscherm").show();
-			$("#logscherm").hide();	
-			$("#instellingenscherm").hide();	
-			$("#klantenservicescherm").hide();	
-			$("#bedrijfsinfoscherm").hide();	
-			$("#loginscherm").hide()		
+		$(".inlogbutton").click(function(){	
+			var user = document.getElementById('Username');
+			var pass = document.getElementById('Password');
+			
+			var coruser = "team10"
+			var corpass = "123"
+			
+			if (user.value == coruser && pass.value == corpass){
+				document.getElementById("Username").value = "";
+				document.getElementById("Password").value = "";
+				$("#logoutpopup").hide();	
+				$("header").show();
+				$("#Mainwasscherm").show();
+				$("#logscherm").hide();	
+				$("#instellingenscherm").hide();	
+				$("#klantenservicescherm").hide();	
+				$("#bedrijfsinfoscherm").hide();	
+				$("#loginscherm").hide()	
+			}
+			else {
+				window.alert("Incorrect!");
+				document.getElementById("Username").value = "";
+				document.getElementById("Password").value = "";
+			}
 		});
 		
 		$(".logout").click(function(){
 			$("#logoutpopup").show();
-		});		
+		});	
+
+		$(".CancelButton").click(function(){
+			$("#logoutpopup").hide();		
+		});
 		
+		$(".logoutbutton").click(function(){
+			$("#logoutpopup").hide();	
+			$("header").hide();
+			$("#Mainwasscherm").hide();
+			$("#logscherm").hide();	
+			$("#instellingenscherm").hide();	
+			$("#klantenservicescherm").hide();	
+			$("#bedrijfsinfoscherm").hide();	
+			$("#loginscherm").show()
+		});
+
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			m = checkTime(m);
+			document.getElementById('clock').innerHTML = h + ":" + m;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
 		
+		var countdownTimer = setInterval('timer()', 1000);
+		function timer() {
+			document.getElementById('countdown').innerHTML = "0:00:00";
+			if (counting == true){
+				var days        = Math.floor(seconds/24/60/60);
+				var hoursLeft   = Math.floor((seconds) - (days*86400));
+				var hours       = Math.floor(hoursLeft/3600);
+				var minutesLeft = Math.floor((hoursLeft) - (hours*3600));
+				var minutes     = Math.floor(minutesLeft/60);
+				var remainingSeconds = seconds % 60;
+				if (remainingSeconds < 10) {
+					remainingSeconds = "0" + remainingSeconds; 
+				}
+				if (minutes < 10) {
+					minutes = "0" + minutes; 
+				}				
+				document.getElementById('countdown').innerHTML = hours + ":" + minutes + ":" + remainingSeconds;
+				if (seconds == 0) {
+					clearInterval(countdownTimer);
+					window.alert("de was is klaar!");
+					$(".MyStartButton").show();					
+				} else {
+					seconds--;
+					getStatus();
+				}
+			}
+		}
+		
+		$(".MyStartButton").click(function(){
 			
+			counting = true;
+			getDuur();
+			$(".MyStartButton").hide();
+		});	
+
+		$(".MyStopButton").click(function(){
+			counting = false;
+			document.getElementById('countdown').innerHTML = "Wasmachine was Stopped";
+			$(".MyStartButton").show();
+		});
+
+
+		function getStatus(){
+			var status = "Spoelen" ;
+			document.getElementById("status").innerHTML = status;
+		}
 		
+		function getDuur(){
+			seconds = document.forms["WAS"]["time"].value;
+		}
+		
+		
+
+
 
 
 		
