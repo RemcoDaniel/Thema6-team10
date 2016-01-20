@@ -38,17 +38,50 @@ private:
 
 public:
 	WashingMachineController(Wasprogramma & was);
+	/*! \fn WashingMachineController(Wasprogramma & was)
+	 *	\brief Creates the controller and assignes a washingschedule
+	 *	\return void
+	 */
 
 	void setTempReached();
+	/*! \fn void setTempReached()
+	 *	\brief Sets the temprature as reached
+	 *	\return void
+	 */
 	void setWaterLevelReached();
+	/*! \fn void setWaterLevelReached()
+	 *	\brief Sets the waterlevel as reached
+	 *	\return void
+	 */
 	void setMotorDone();
+	/*! \fn void setMotorDone()
+	 *	\brief Sets the motor as done with the job
+	 *	\return void
+	 */
 
 	void startWasprogramma();
+	/*! \fn void startWasprogramma()
+	 *	\brief Starts the washing schedule
+	 *	\return void
+	 */
 	void stopWasprogramma();
+	/*! \fn void stopWasprogramma()
+	 *	\brief Stops the washing schedule
+	 *	\return void
+	 */
 
 	//uart:
 	void setResponseFlag();
+	/*!	\fn void setResponseFlag()
+	 *	\brief sets the response flag
+	 *	\return void
+	 */
 	void writeResponse(char * response);
+	/*!	\fn void writeResponse(char * response)
+	 *	\brief writes a response in the response pool 
+	 *	\param response a char array with two positions
+	 *	\return void
+	 */
 
 	void main();
 };

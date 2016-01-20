@@ -70,6 +70,7 @@ public:
 	 *	\brief sets the response flag
 	 *	\return void
 	 */
+	 
 	void writeResponse(char * response);
 	/*!	\fn void writeResponse(char * response)
 	 *	\brief writes a response in the response pool 
