@@ -2,7 +2,7 @@
 
 #include "Wasprogramma.h"
 
-Wasprogramma::Wasprogramma(int temp, int waterlevel, int time, int job) :
+Wasprogramma::Wasprogramma(int temp, int waterlevel, unsigned long int time, int job) :
 	temp(temp),
 	waterlevel(waterlevel),
 	time(time),
@@ -17,7 +17,7 @@ int Wasprogramma::getLevel() {
 	return waterlevel;
 }
 
-int Wasprogramma::getTime() {
+unsigned long int Wasprogramma::getTime() {
 	return time;
 }
 

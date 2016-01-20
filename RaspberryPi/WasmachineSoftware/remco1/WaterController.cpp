@@ -29,9 +29,8 @@ int WaterController::getNewWaterLevel() {
 
 int WaterController::getWaterLevel() {
 	char * command = watersensor.getWaterLevelCommand();
-	char * response = uartTask(command);
-	int level = response[1];
-	return level;
+	char response = uartTask(command[0], command[1]);
+	return response;
 }
 
 void WaterController::setWaterLevel(int level) {
@@ -46,7 +45,7 @@ void WaterController::pumping(bool on) {
 		command = pump.getOnCommand();
 	}
 	command = pump.getOffCommand();
-	char * response = uartTask(command);
+	char response = uartTask(command[0], command[1]);
 }
 
 void WaterController::valving(bool on) {
@@ -55,20 +54,20 @@ void WaterController::valving(bool on) {
 		command = valve.getOnCommand();
 	}
 	command = valve.getOffCommand();
-	char * response = uartTask(command);
+	char response = uartTask(command[0], command[1]);
 }
 
 
 // UART =======================================================================================================================
-char * WaterController::readResponse() {
+char WaterController::readResponse() {
 	response_mutex.wait();
-	char * response = response_pool.read();
+	char response = response_pool.read();
 	response_mutex.signal();
 	return response;
 }
 
-char * WaterController::uartTask(char * command) {
-	uartptr->writeChannel(command);
+char WaterController::uartTask(char request, char command) {
+	uartptr->writeChannel(request, command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }
@@ -77,7 +76,7 @@ void WaterController::setResponseFlag() {
 	response_flag.set();
 }
 
-void WaterController::writeResponse(char * response) {
+void WaterController::writeResponse(char response) {
 	response_mutex.wait();
 	response_pool.write(response);
 	response_mutex.signal();

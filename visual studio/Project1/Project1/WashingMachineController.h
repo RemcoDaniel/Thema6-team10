@@ -12,6 +12,11 @@
 #include "UART.h"
 #include "SoapDispenser.h"
 
+class UART;
+class MotorController;
+class WaterController;
+class TempController;
+
 class WashingMachineController : public RTOS::task {
 private:
 	Wasprogramma wasprogramma;
@@ -22,16 +27,17 @@ private:
 	UART *uart;
 	SoapDispenser soap;
 	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag, response_flag;
-	RTOS::pool< char * > response_pool;
+	RTOS::pool< char > response_pool;
 	RTOS::mutex response_mutex;
 	RTOS::clock interval_clock;
 
 	void doorlock(bool lock);		// lock = 1 , unlock = 0
+	bool getDoorStatus();			// open = 1, locked or closed = 0;
 	void dispendSoap();
 
 	//uart:
-	char* readResponse();
-	char* uartTask(char * command);
+	char readResponse();
+	char uartTask(char request, char command);
 
 public:
 	WashingMachineController(Wasprogramma & was);
@@ -45,7 +51,7 @@ public:
 
 	//uart:
 	void setResponseFlag();
-	void writeResponse(char * response);
+	void writeResponse(char response);
 
 	void main();
 };

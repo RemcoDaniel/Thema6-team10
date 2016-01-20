@@ -3,7 +3,8 @@
 #ifndef _VALVE_H
 #define _VALVE_H
 
-#include "WaterController.h"
+#include "Protocol.h"
+#include <stdint.h>
 
 class Valve {
 public:

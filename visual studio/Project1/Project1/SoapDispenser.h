@@ -4,6 +4,7 @@
 #define _SOAPDISPENSER_H
 
 #include "Protocol.h"
+#include <stdint.h>
 
 class SoapDispenser {
 public:

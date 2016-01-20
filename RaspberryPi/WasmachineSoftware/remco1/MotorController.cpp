@@ -25,29 +25,29 @@ void MotorController::setUartPointer(UART * u) {
 
 void MotorController::stopMotor() {
 	char * command = motor.turn(0, 0);
-	char * response = uartTask(command);
-	if (command[1] != response[1]) {		// antwoord moet zelfde zijn als request. niet zo? --> melding maken
+	char response = uartTask(command[0], command[1]);
+	if (command[1] != response) {		// antwoord moet zelfde zijn als request. niet zo? --> melding maken
 		 // melding moet hier komen...
 	}
 }
 
 void MotorController::rotateLeft(int speed) {
 	char * command = motor.turn(1, speed);
-	char * response = uartTask(command);
-	if (command[1] != response[1]) {		// antwoord moet zelfde zijn als request. niet zo? --> melding maken
+	char response = uartTask(command[0], command[1]);
+	if (command[1] != response) {		// antwoord moet zelfde zijn als request. niet zo? --> melding maken
 											// melding moet hier komen...
 	}
 }
 
 void MotorController::rotateRight(int speed) {
 	char * command = motor.turn(0, speed);
-	char * response = uartTask(command);
-	if (command[1] != response[1]) {		// antwoord moet zelfde zijn als request. niet zo? --> melding maken
+	char response = uartTask(command[0], command[1]);
+	if (command[1] != response) {		// antwoord moet zelfde zijn als request. niet zo? --> melding maken
 											// melding moet hier komen...
 	}
 }
 
-void MotorController::setMotorJob(int job, int time) {
+void MotorController::setMotorJob(int job, unsigned long int time) {
 	// eerst de job erin zetten:
 	motor_job_mutex.wait();
 	motor_job_pool.write(job);
@@ -61,24 +61,26 @@ void MotorController::setMotorJob(int job, int time) {
 	new_job_flag.set();
 }
 
-void MotorController::normalMotorJob(int time) {
+void MotorController::normalMotorJob(unsigned long int time) {
 	int speed = 500;
 	for (int i = 0; i < 4; i++) {
 		if (i == 2) {
 			speed = 1000;
 		}
 		rotateLeft(speed);
+		std::cout << "timer zetten\n";
 		rotate_timer.set((time/2)/4);
 		wait(rotate_timer);
 
 		rotateRight(speed);
+		std::cout << "timer 2 zetten\n";
 		rotate_timer.set((time/2)/4);
 		wait(rotate_timer);
 	}
 	stopMotor();
 }
 
-void MotorController::centrifuge(int time) {
+void MotorController::centrifuge(unsigned long int time) {
 	int speed = 100;
 	for (int i = 1; i < 16; i++) {
 		rotateLeft(speed * i);
@@ -113,7 +115,7 @@ void MotorController::startMotorJob() {
 
 int MotorController::getMotorSpeed() {
 	char * command = motor.getMotorSpeedCommand();
-	char * response = uartTask(command);
+	char response = uartTask(command[0], command[1]);
 	int speed = 0;		// nog iets doen met het antwoord, omzetten naar een speed;
 	return speed;
 }
@@ -124,21 +126,21 @@ void MotorController::setResponseFlag() {
 	response_flag.set();
 }
 
-void MotorController::writeResponse(char * response) {
+void MotorController::writeResponse(char response) {
 	response_mutex.wait();
 	response_pool.write(response);
 	response_mutex.signal();
 }
 
-char * MotorController::readResponse() {
+char MotorController::readResponse() {
 	response_mutex.wait();
-	char * response = response_pool.read();
+	char response = response_pool.read();
 	response_mutex.signal();
 	return response;
 }
 
-char * MotorController::uartTask(char * command) {
-	uartptr->writeChannel(command);
+char MotorController::uartTask(char request, char command) {
+	uartptr->writeChannel(request, command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }

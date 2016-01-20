@@ -1,12 +1,11 @@
 // file Motor.cpp
 
 #include "Motor.h"
-#include "Protocol.h"
 
 Motor::Motor() {}
 
 char * Motor::getMotorSpeedCommand() {		// getal van 0 - 1600 rpm
-	char command[3] = { GET_RPM_REQ, '\0' };
+	char command[3] = { GET_RPM_REQ, '\0', '\0' };
 	return command;
 }
 

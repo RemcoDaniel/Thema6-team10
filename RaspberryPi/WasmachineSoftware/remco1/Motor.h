@@ -3,6 +3,9 @@
 #ifndef _MOTOR_H
 #define _MOTOR_H
 
+#include "Protocol.h"
+#include <stdint.h>
+
 class Motor {
 public:
 	Motor();

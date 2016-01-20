@@ -18,11 +18,17 @@
 
 int main(){
 	try{
+		std::cout << "wasprogramma maken\n";
 		// eerst wasprogramma maken! deze kan hij dan uit gaan voeren		// dit moet nog anders worden gedaan!!!!!!
-		Wasprogramma wasprog = Wasprogramma(40, 20, 50, 1);
-
+		Wasprogramma wasprog = Wasprogramma(40, 20, 500 MS, 1);
+		std::cout << "making washingmachine\n";
 		// de wasmachinecontroller maakt ook alle andere controllers aan + de boundary objecten + de uart
 		WashingMachineController wasctrl = WashingMachineController(wasprog);
+		//std::cout << "starting washingmachine\n";
+		//wasctrl.main();
+		std::cout << "starting RTOS\n";
+		RTOS::run();
+		std::cout << "verkeerd gegaan in de main.cpp\n";
 	}
 	catch (std::exception &e){
 		std::cerr << e.what();

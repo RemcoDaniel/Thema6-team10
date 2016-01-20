@@ -4,6 +4,7 @@
 #define _HEATER_H
 
 #include "Protocol.h"
+#include <stdint.h>
 
 class Heater {
 public:

@@ -34,8 +34,8 @@ int TempController::getNewTemp() {
 
 int TempController::getTemp() {
 	char * command = tempsensor.getTempCommand();
-	char * response = uartTask(command);
-	int temp = response[1];
+	char response = uartTask(command[0], command[1]);
+	int temp = response;
 	return temp;
 }
 
@@ -45,19 +45,19 @@ void TempController::heat(bool on) {
 		command = heater.getOnCommand();
 	}
 	command = heater.getOffCommand();
-	char * response = uartTask(command);
+	char response = uartTask(command[0], command[1]);
 }
 
 // UART =======================================================================================================================
-char * TempController::readResponse() {
+char TempController::readResponse() {
 	response_mutex.wait();
-	char * response = response_pool.read();
+	char response = response_pool.read();
 	response_mutex.signal();
 	return response;
 }
 
-char * TempController::uartTask(char * command) {
-	uartptr->writeChannel(command);
+char TempController::uartTask(char request, char command) {
+	uartptr->writeChannel(request, command);
 	wait(response_flag);
 	return readResponse();			// pool uitlezen
 }
@@ -66,7 +66,7 @@ void TempController::setResponseFlag() {
 	response_flag.set();
 }
 
-void TempController::writeResponse(char * response) {
+void TempController::writeResponse(char response) {
 	response_mutex.wait();
 	response_pool.write(response);
 	response_mutex.signal();

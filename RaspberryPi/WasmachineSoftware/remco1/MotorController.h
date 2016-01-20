@@ -5,11 +5,13 @@
 
 #include "Motor.h"
 #include "WashingMachineController.h"
-class WashingMachineController;
 #include "pRTOS.h"
 #include "UART.h"
 #include <stdlib.h>
 #include <memory>
+
+class WashingMachineController;
+class UART;
 
 class MotorController : public RTOS::task {
 private:
@@ -18,7 +20,7 @@ private:
 	WashingMachineController * wascontroller;
 	RTOS::flag response_flag, new_job_flag;
 	RTOS::pool< int > motor_job_pool, motor_time_pool;
-	RTOS::pool< char * > response_pool;
+	RTOS::pool< char > response_pool;
 	RTOS::mutex motor_job_mutex, motor_time_mutex, response_mutex;
 	RTOS::timer rotate_timer;
 	int taak;
@@ -27,24 +29,24 @@ private:
 	void rotateRight(int speed);
 	void rotateLeft(int speed);
 
-	void normalMotorJob(int time);
-	void centrifuge(int time);
+	void normalMotorJob(unsigned long int time);
+	void centrifuge(unsigned long int time);
 	void startMotorJob();
 
 	//uart:
-	char* readResponse();
-	char* uartTask(char * command);
+	char readResponse();
+	char uartTask(char request, char command);
 
 public:
 	MotorController(WashingMachineController * wascontroller);
 	void setUartPointer(UART *u);
 
 	int getMotorSpeed();		// getal van 0 - 1600 rpm
-	void setMotorJob(int job, int time);
+	void setMotorJob(int job, unsigned long int time);
 
 	//uart:
 	void setResponseFlag();
-	void writeResponse(char * response);
+	void writeResponse(char response);
 
 	void main();
 };

@@ -3,7 +3,8 @@
 #ifndef _WATERSENSOR_H
 #define _WATERSENSOR_H
 
-#include "WaterController.h"
+#include "Protocol.h"
+#include <stdint.h>
 
 class WaterSensor {
 public:

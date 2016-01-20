@@ -3,7 +3,8 @@
 #ifndef _PUMP_H
 #define _PUMP_H
 
-#include "WaterController.h"
+#include "Protocol.h"
+#include <stdint.h>
 
 class Pump {
 public:

@@ -4,6 +4,7 @@
 #define _TEMPSENSOR_H
 
 #include "Protocol.h"
+#include <stdint.h>
 
 class TempSensor {
 public:
