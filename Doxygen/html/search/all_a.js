@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['open',['open',['../class_lib_serial.html#adbcac5969ef17791e9115f090cf158ce',1,'LibSerial']]],
-  ['operator_21_3d',['operator!=',['../class_r_t_o_s_1_1event.html#a7d5e26e1dcd4f4d43cc569188ae4ed12',1,'RTOS::event::operator!=(const event &amp;rhs) const '],['../class_r_t_o_s_1_1event.html#a27d10417a15cbb38daca2e7bd3a6a1eb',1,'RTOS::event::operator!=(const waitable &amp;rhs) const ']]],
-  ['operator_2b',['operator+',['../class_r_t_o_s_1_1event.html#addfcf242018d11a0f35f510d17683697',1,'RTOS::event']]],
-  ['operator_3d_3d',['operator==',['../class_r_t_o_s_1_1event.html#ad8d6bd84ac8374c4ab9f9eb8579face0',1,'RTOS::event::operator==(const event &amp;rhs) const '],['../class_r_t_o_s_1_1event.html#a2ecee9deb0913822b19ae609256fa685',1,'RTOS::event::operator==(const waitable &amp;rhs) const ']]]
+  ['libserial_20class',['LibSerial class',['../index.html',1,'']]],
+  ['latency',['Latency',['../latency.html',1,'']]],
+  ['leavegroup',['leaveGroup',['../class_u_d_p_socket.html#ad5f835c48b840e30b471e19d7c3cc2aa',1,'UDPSocket']]],
+  ['libserial',['LibSerial',['../class_lib_serial.html',1,'LibSerial'],['../class_lib_serial.html#a06bf0b9fdef8eb5390bc4f0ec187bd5a',1,'LibSerial::LibSerial()']]],
+  ['libserial_2ecpp',['libserial.cpp',['../libserial_8cpp.html',1,'']]],
+  ['libserial_2eh',['libserial.h',['../libserial_8h.html',1,'']]],
+  ['lookupaddresses',['lookupAddresses',['../class_socket_address.html#afd69ab208c861e71cd323e38694ccb92',1,'SocketAddress::lookupAddresses(const char *host, const char *service, AddressType atype=TCP_SOCKET)'],['../class_socket_address.html#a153f5c22e865c3f9ab1a6be1906b9059',1,'SocketAddress::lookupAddresses(const char *host, in_port_t port, AddressType atype=TCP_SOCKET)']]]
 ];

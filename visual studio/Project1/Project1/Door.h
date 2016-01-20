@@ -1,5 +1,8 @@
 /**
- * \class The Door boundry class
+ * \class Door boundry class
+ *
+ * Used as an interface to get the appropiate bytes for the uart
+ *
  */
 
 #ifndef _DOOR_H
@@ -10,9 +13,9 @@
 class Door {
 public:
 	Door();
-	char * getLockCommand();
-	char * getUnlockCommand();
-	char * getStatusCommand();
+	char * getLockCommand(); ///< Returns the bytes for locking the door.
+	char * getUnlockCommand();  ///< returns the bytes for unlocking the door.
+	char * getStatusCommand(); ///< Returns the bytes for getting the status of the door
 };
 
 #endif

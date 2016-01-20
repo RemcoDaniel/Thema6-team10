@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fiber_5ft',['fiber_t',['../classfiber__t.html#a50a8f05937a58d95a71d3ede82b1efd0',1,'fiber_t']]],
-  ['flag',['flag',['../class_r_t_o_s_1_1flag.html#a2d05d296b33e6cbc141fd4fb5e6f2740',1,'RTOS::flag']]],
-  ['flush',['flush',['../class_lib_serial.html#a71ea44ca686ce86e73d4f5ffcce36266',1,'LibSerial']]]
+  ['disconnect',['disconnect',['../class_u_d_p_socket.html#a7482e8e61cef160e1a7c0d6ac15c01be',1,'UDPSocket']]],
+  ['display_5fstatistics',['display_statistics',['../class_r_t_o_s.html#ace9fc0f1b35c1383b1050222706f3b70',1,'RTOS']]],
+  ['door',['Door',['../class_door.html#a5191a649ed79b50f886e5c43b473c369',1,'Door']]]
 ];

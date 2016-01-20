@@ -103,12 +103,11 @@ Inheritance diagram for TempController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a32ee50a0d7a6ac9cbaf779efc4ae3041"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32ee50a0d7a6ac9cbaf779efc4ae3041"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TempController</b> (<a class="el" href="class_heater.html">Heater</a> &amp;heater, <a class="el" href="class_temp_sensor.html">TempSensor</a> &amp;tempsensor, <a class="el" href="class_washing_machine_controller.html">WashingMachineController</a> &amp;wascontroller, shared_ptr&lt; <a class="el" href="class_u_a_r_t.html">UART</a> &gt; uartptr)</td></tr>
-<tr class="separator:a32ee50a0d7a6ac9cbaf779efc4ae3041"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5341f3579b7d078d8b32560107eadfb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5341f3579b7d078d8b32560107eadfb0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setUartPointer</b> (shared_ptr&lt; <a class="el" href="class_u_a_r_t.html">UART</a> &gt; u)</td></tr>
-<tr class="separator:a5341f3579b7d078d8b32560107eadfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e4402b3b4278f8f043792d3aef6a6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_temp_controller.html#a72e4402b3b4278f8f043792d3aef6a6c">TempController</a> (<a class="el" href="class_washing_machine_controller.html">WashingMachineController</a> *wascontroller)</td></tr>
+<tr class="separator:a72e4402b3b4278f8f043792d3aef6a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28853451754e16f43a08b086f47c2d0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28853451754e16f43a08b086f47c2d0c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUartPointer</b> (<a class="el" href="class_u_a_r_t.html">UART</a> *u)</td></tr>
+<tr class="separator:a28853451754e16f43a08b086f47c2d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ed0fe5c5e16eaeb1cf4823e629204c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ed0fe5c5e16eaeb1cf4823e629204c5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setTemp</b> (int temp)</td></tr>
 <tr class="separator:a6ed0fe5c5e16eaeb1cf4823e629204c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +184,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a72e4402b3b4278f8f043792d3aef6a6c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TempController::TempController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_washing_machine_controller.html">WashingMachineController</a> *&#160;</td>
+          <td class="paramname"><em>wascontroller</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>file Heater.cpp version 0.1 author Remco Nijkamp / Jordan Ranirez / Kevin Damen / Jeroen Kok date 19-01-2016 </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2e2a50ee8bc46aade551f39839a43baf"></a>
 <div class="memitem">

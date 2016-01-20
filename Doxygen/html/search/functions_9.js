@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../class_r_t_o_s_1_1task.html#a56e4d07750c49b6620b0407013b177c1',1,'RTOS::task']]]
+  ['joingroup',['joinGroup',['../class_u_d_p_socket.html#ac6cdb609f7f9579384129042f90cd220',1,'UDPSocket']]]
 ];

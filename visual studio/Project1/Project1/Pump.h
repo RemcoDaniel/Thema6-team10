@@ -1,9 +1,10 @@
 /**
- * \class The Pump boundry class
+ * \class Pump boundry class
+ *
+ * Used as an interface to get the appropiate bytes for the uart
+ *
  */
 
-// file Pump.h
-#pragma once
 #ifndef _PUMP_H
 #define _PUMP_H
 
@@ -12,9 +13,9 @@
 class Pump {
 public:
 	Pump();
-	char * getOnCommand();
-	char * getOffCommand();
-	char * getStatusCommand();
+	char * getOnCommand(); ///< Returns the bytes for setting the waterpump on
+	char * getOffCommand(); ///< Returns the bytes for setting the waterpump off
+	char * getStatusCommand(); ///< Returns the bytes for getting the status. 
 };
 
 #endif

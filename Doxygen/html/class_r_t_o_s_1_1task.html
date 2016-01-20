@@ -108,12 +108,11 @@ Inheritance diagram for RTOS::task:</div>
  <div class="center">
   <img src="class_r_t_o_s_1_1task.png" usemap="#RTOS::task_map" alt=""/>
   <map id="RTOS::task_map" name="RTOS::task_map">
-<area href="class_door_soap_controller.html" alt="DoorSoapController" shape="rect" coords="0,56,165,80"/>
-<area href="class_motor_controller.html" alt="MotorController" shape="rect" coords="175,56,340,80"/>
-<area href="class_temp_controller.html" alt="TempController" shape="rect" coords="350,56,515,80"/>
-<area href="class_u_a_r_t.html" alt="UART" shape="rect" coords="525,56,690,80"/>
-<area href="class_washing_machine_controller.html" alt="WashingMachineController" shape="rect" coords="700,56,865,80"/>
-<area href="class_water_controller.html" alt="WaterController" shape="rect" coords="875,56,1040,80"/>
+<area href="class_motor_controller.html" alt="MotorController" shape="rect" coords="0,56,165,80"/>
+<area href="class_temp_controller.html" alt="TempController" shape="rect" coords="175,56,340,80"/>
+<area href="class_u_a_r_t.html" alt="UART" shape="rect" coords="350,56,515,80"/>
+<area href="class_washing_machine_controller.html" alt="WashingMachineController" shape="rect" coords="525,56,690,80"/>
+<area href="class_water_controller.html" alt="WaterController" shape="rect" coords="700,56,865,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -307,7 +306,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>task_trampoline</b> (
 <p>Each task has a unique priority (an unsigned integer). A lower value indicates a higher priority. <a class="el" href="class_the.html">The</a> <a class="el" href="class_r_t_o_s.html" title="static class, namespace-like container for RTOS declarations ">RTOS</a> scheduler will always run the task with the higest-priority runnable (neither blocked nor suspended) task. A task runs until it changes this 'situation' by using an <a class="el" href="class_r_t_o_s.html" title="static class, namespace-like container for RTOS declarations ">RTOS</a> call that changes its own state to not runnable, or the state of a higher priority task to runnable.</p>
 <p>Timers are served only when the <a class="el" href="class_r_t_o_s.html" title="static class, namespace-like container for RTOS declarations ">RTOS</a> is activated by calling any of its state-changing interfaces. Hence the longest run time between such calls determines the granularity (time wise responsiveness) of the application. Within a time consuming computation a task can call <a class="el" href="class_r_t_o_s_1_1task.html#aa3eec7220a2724d30e2156cc395035f2" title="release the CPU to the scheduler ">release()</a> to have the <a class="el" href="class_r_t_o_s.html" title="static class, namespace-like container for RTOS declarations ">RTOS</a> serve the timers. </p>
 
-<p>Implemented in <a class="el" href="class_motor_controller.html#acf35f82b30986fb4702933d21eee03ea">MotorController</a>, <a class="el" href="class_washing_machine_controller.html#a0d955e011f1f59e902fb62e4d03fc883">WashingMachineController</a>, <a class="el" href="class_water_controller.html#a617fdcb283f49ef2e512a75fe5a72950">WaterController</a>, <a class="el" href="class_temp_controller.html#a2e2a50ee8bc46aade551f39839a43baf">TempController</a>, <a class="el" href="class_door_soap_controller.html#ac8ad8ea136b4ff66805419f394c5acc0">DoorSoapController</a>, and <a class="el" href="class_u_a_r_t.html#a1152951cf37d51a378dc1bb25d36a37d">UART</a>.</p>
+<p>Implemented in <a class="el" href="class_motor_controller.html#acf35f82b30986fb4702933d21eee03ea">MotorController</a>, <a class="el" href="class_washing_machine_controller.html#a0d955e011f1f59e902fb62e4d03fc883">WashingMachineController</a>, <a class="el" href="class_water_controller.html#a617fdcb283f49ef2e512a75fe5a72950">WaterController</a>, <a class="el" href="class_temp_controller.html#a2e2a50ee8bc46aade551f39839a43baf">TempController</a>, and <a class="el" href="class_u_a_r_t.html#a1152951cf37d51a378dc1bb25d36a37d">UART</a>.</p>
 
 </div>
 </div>

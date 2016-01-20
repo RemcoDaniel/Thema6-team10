@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['debug_20logging_20support',['Debug logging support',['../debug.html',1,'']]],
-  ['display_5fstatistics',['display_statistics',['../class_r_t_o_s.html#ace9fc0f1b35c1383b1050222706f3b70',1,'RTOS']]],
-  ['door',['Door',['../class_door.html',1,'']]],
-  ['doorsoapcontroller',['DoorSoapController',['../class_door_soap_controller.html',1,'']]]
+  ['bind',['bind',['../class_t_c_p_socket.html#a03a38720ee30fb021ffd9d2a6429a66a',1,'TCPSocket::bind()'],['../class_t_c_p_server_socket.html#a779d077e4dd9a885ce06fdceff63baa4',1,'TCPServerSocket::bind()']]],
+  ['broadcaster',['Broadcaster',['../class_broadcaster.html',1,'']]]
 ];

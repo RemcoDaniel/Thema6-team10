@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['mailbox',['mailbox',['../class_r_t_o_s_1_1mailbox.html',1,'RTOS']]],
-  ['mailbox',['mailbox',['../class_r_t_o_s_1_1mailbox.html#aaee470ef9fc6627e848e45ca353415ff',1,'RTOS::mailbox']]],
-  ['mailbox_5fbase',['mailbox_base',['../class_r_t_o_s_1_1mailbox__base.html',1,'RTOS']]],
-  ['main',['main',['../class_door_soap_controller.html#ac8ad8ea136b4ff66805419f394c5acc0',1,'DoorSoapController::main()'],['../class_motor_controller.html#acf35f82b30986fb4702933d21eee03ea',1,'MotorController::main()'],['../class_r_t_o_s_1_1task.html#addc6d52f8792ddba1158d7ae5ef0037d',1,'RTOS::task::main()'],['../class_temp_controller.html#a2e2a50ee8bc46aade551f39839a43baf',1,'TempController::main()'],['../class_u_a_r_t.html#a1152951cf37d51a378dc1bb25d36a37d',1,'UART::main()'],['../class_washing_machine_controller.html#a0d955e011f1f59e902fb62e4d03fc883',1,'WashingMachineController::main()'],['../class_water_controller.html#a617fdcb283f49ef2e512a75fe5a72950',1,'WaterController::main()']]],
-  ['main_5ffiber',['main_fiber',['../classfiber__t.html#ae6a75ba1b2421668d4611272a7c841fa',1,'fiber_t']]],
-  ['mask',['mask',['../class_r_t_o_s_1_1event.html#a74f6161d8c82d461ae3ba29f0e222b59',1,'RTOS::event']]],
-  ['motor',['Motor',['../class_motor.html',1,'']]],
-  ['motorcontroller',['MotorController',['../class_motor_controller.html',1,'']]],
-  ['mutex',['mutex',['../class_r_t_o_s_1_1mutex.html',1,'RTOS']]],
-  ['mutex',['mutex',['../class_r_t_o_s_1_1mutex.html#a018aed6b83cf182b9990ac90a3254904',1,'RTOS::mutex']]]
+  ['ignore_5factivation_5ftime',['ignore_activation_time',['../class_r_t_o_s_1_1task.html#a0ea383a40c40d9f69fe8e29fb36fa40d',1,'RTOS::task']]],
+  ['interval',['interval',['../class_r_t_o_s_1_1clock.html#a3ea95e4a1ed3507186493a8f2a7d76ac',1,'RTOS::clock']]],
+  ['is_5fblocked',['is_blocked',['../class_r_t_o_s_1_1task.html#a1e0b2566b673b0e4e6efd63a80284d35',1,'RTOS::task']]],
+  ['is_5fready',['is_ready',['../class_r_t_o_s_1_1task.html#a8ec666474a7668f78da3438dfa818a8e',1,'RTOS::task']]],
+  ['is_5fsuspended',['is_suspended',['../class_r_t_o_s_1_1task.html#ab02fe6432956956957bb2629dc9a3031',1,'RTOS::task']]]
 ];

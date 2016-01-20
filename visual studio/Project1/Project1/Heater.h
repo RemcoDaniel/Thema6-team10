@@ -1,8 +1,10 @@
 /**
- * \class The Heater boundry class
+ * \class Heater boundry class
+ *
+ * Used as an interface to get the appropiate bytes for the uart
+ *
  */
 
-#pragma once
 #ifndef _HEATER_H
 #define _HEATER_H
 
@@ -11,9 +13,9 @@
 class Heater {
 public:
 	Heater();
-	char * getOnCommand(); ///< Used to get the 2 bytes for the UART that mean "turn the Heater on"
-	char * getOffCommand(); ///< Used to get the 2 bytes for the UART that mean "turn the Heater off"
-	char * getStatusCommand(); ///< Used to get the 2 bytes for the UART that mean "is the Heater on or not" 
+	char * getOnCommand(); ///< Returns the bytes to set the heater on
+	char * getOffCommand(); ///< Returns the bytes to set the heater offf.
+	char * getStatusCommand();  ///< Returns the bytes to get the status of the heater
 };
 
 #endif

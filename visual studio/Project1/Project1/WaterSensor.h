@@ -1,8 +1,10 @@
 /**
- * \class The WaterSensor boundry class
+ * \class WaterSensor boundry class
+ *
+ * Used as an interface to get the appropiate bytes for the uart
+ *
  */
 
-#pragma once
 #ifndef _WATERSENSOR_H
 #define _WATERSENSOR_H
 
@@ -11,7 +13,7 @@
 class WaterSensor {
 public:
 	WaterSensor();
-	char * getWaterLevelCommand();
+	char * getWaterLevelCommand(); ///< Returns the bytes for the waterlevel 
 };
 
 #endif

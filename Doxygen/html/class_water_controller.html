@@ -103,12 +103,11 @@ Inheritance diagram for WaterController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c3e05d57fa688fc5183230d330141b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c3e05d57fa688fc5183230d330141b3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WaterController</b> (<a class="el" href="class_water_sensor.html">WaterSensor</a> &amp;watersensor, <a class="el" href="class_pump.html">Pump</a> &amp;pump, <a class="el" href="class_valve.html">Valve</a> &amp;valve, <a class="el" href="class_washing_machine_controller.html">WashingMachineController</a> &amp;wascontroller, shared_ptr&lt; <a class="el" href="class_u_a_r_t.html">UART</a> &gt; uartptr)</td></tr>
-<tr class="separator:a3c3e05d57fa688fc5183230d330141b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a208f42ad1242b146d96fb19626feb811"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a208f42ad1242b146d96fb19626feb811"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setUartPointer</b> (shared_ptr&lt; <a class="el" href="class_u_a_r_t.html">UART</a> &gt; u)</td></tr>
-<tr class="separator:a208f42ad1242b146d96fb19626feb811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bda64ac4cf2a0b08c2fbb8e52874aaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_water_controller.html#a3bda64ac4cf2a0b08c2fbb8e52874aaa">WaterController</a> (<a class="el" href="class_washing_machine_controller.html">WashingMachineController</a> *wascontroller)</td></tr>
+<tr class="separator:a3bda64ac4cf2a0b08c2fbb8e52874aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7421f33e418ce11509802ff9486513b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7421f33e418ce11509802ff9486513b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUartPointer</b> (<a class="el" href="class_u_a_r_t.html">UART</a> *u)</td></tr>
+<tr class="separator:ac7421f33e418ce11509802ff9486513b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a513f385f75e0e358e6fee6726c625454"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a513f385f75e0e358e6fee6726c625454"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setWaterLevel</b> (int level)</td></tr>
 <tr class="separator:a513f385f75e0e358e6fee6726c625454"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +184,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3bda64ac4cf2a0b08c2fbb8e52874aaa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WaterController::WaterController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_washing_machine_controller.html">WashingMachineController</a> *&#160;</td>
+          <td class="paramname"><em>wascontroller</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>file Heater.cpp version 0.1 author Remco Nijkamp / Jordan Ranirez / Kevin Damen / Jeroen Kok date 19-01-2016 </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a617fdcb283f49ef2e512a75fe5a72950"></a>
 <div class="memitem">
