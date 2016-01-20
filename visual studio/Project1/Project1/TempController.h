@@ -1,9 +1,10 @@
 /**
  * \class The TempController controller class
+ *
+ * Makes sure that the temprature is right.
+ *
  */
  
-
-#pragma once
 #ifndef _TEMPCONTROLLER_H
 #define _TEMPCONTROLLER_H
 

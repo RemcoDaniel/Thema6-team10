@@ -9,5 +9,6 @@ var searchData=
   ['websocket',['WebSocket',['../class_web_socket.html#a69115b798613ceaeccec47bf8609e779',1,'WebSocket']]],
   ['write',['write',['../class_lib_serial.html#a3dc028d5d297b832da5b7e681facd83c',1,'LibSerial::write()'],['../class_r_t_o_s_1_1pool.html#a2bd2a2bfb99d74c8b123de344698ff53',1,'RTOS::pool::write()'],['../class_r_t_o_s_1_1mailbox.html#ad140965320e8b42ca16a5d288858f70d',1,'RTOS::mailbox::write()'],['../class_r_t_o_s_1_1channel.html#a09e4d10e0336283eb9ae402df0a25dbc',1,'RTOS::channel::write()']]],
   ['writechar',['writeChar',['../class_lib_serial.html#aace55a1a3fbf452728e00fc5ee7afafd',1,'LibSerial']]],
+  ['writeresponse',['writeResponse',['../class_motor_controller.html#ae0b037cd1c059650c4cf03fee8c1f317',1,'MotorController']]],
   ['writestring',['writeString',['../class_lib_serial.html#a113ef8fcfd06b7b46a4a7c8a059dfa4d',1,'LibSerial']]]
 ];

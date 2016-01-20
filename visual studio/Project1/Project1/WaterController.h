@@ -1,8 +1,11 @@
 /**
  * \class The WaterController controller class
+ *
+ * Makes sure the water is at the right level
+ *
  */
 
-#pragma once
+
 #ifndef _WATERCONTROLLER_H
 #define _WATERCONTROLLER_H
 
