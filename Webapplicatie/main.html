@@ -34,11 +34,11 @@
 					<li>
 						<div id=Wateroptie>
 							<label class="SelectionLabel">Hoeveelheid Water</label><br/>
-							<input data-wasapp="0X00" data-select="Wateroptie" type="radio" id=water1 name="watervalue" value=50 />&#09 50liter
+							<input data-wasapp="0X00" data-select="Wateroptie" type="radio" id=water1 name="watervalue" value=50 />&#09 Extra Water
 							<br/>
-							<input data-wasapp="0X00" data-select="Wateroptie" type="radio" id=water2 name="watervalue" value=100 />&#09 100liter
+							<input data-wasapp="0X00" data-select="Wateroptie" type="radio" id=water2 name="watervalue" value=100 />&#09 Normale Hoeveelheid
 							<br/>
-							<input data-wasapp="0X00" data-select="Wateroptie" type="radio" id=water3 name="watervalue" value=200 />&#09 200liter
+							<input data-wasapp="0X00" data-select="Wateroptie" type="radio" id=water3 name="watervalue" value=200 />&#09 Minder Water
 							<br/>
 						</div>
 					</li>
@@ -47,13 +47,13 @@
 						<div id=wastype>
 						<label class="SelectionLabel">Type was</label>
 							<br/>
-							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was1 name="wastype" value="wol" />&#09 wol
+							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was1 name="wastype" value="wol" />&#09 Witte was
 							<br/>
-							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was2  name="wastype" value="zwart" />&#09 zwart
+							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was2  name="wastype" value="zwart" />&#09 Bonte was
 							<br/>
-							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was3 name="wastype" value="witte" />&#09 witte was
+							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was3 name="wastype" value="witte" />&#09 Fijne was
 							<br/>
-							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was4 name="wastype" value="bont" />&#09 bonte was
+							<input data-wasapp="0X00" data-select="WasOptie" type="radio" id=was4 name="wastype" value="bont" />&#09 Wolle was
 							<br/>
 						</div>
 					</li>
@@ -63,13 +63,15 @@
 						<div id=tempoptie>
 							<label class="SelectionLabel">Temperatuur</label>
 							<br/>
-							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp1 name="temp" value=10 />&#09 10graden
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp1 name="temp" value=10 />&#09 15&#176C Koud programma 
 							<br/>
-							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp2 name="temp" value=40 />&#09 40graden
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp2 name="temp" value=40 />&#09 30&#176C 
 							<br/>
-							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp3 name="temp" value=60 />&#09 60graden
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp2 name="temp" value=40 />&#09 40&#176C
 							<br/>
-							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp4 name="temp" value=90 />&#09 90graden
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp3 name="temp" value=60 />&#09 60&#176C
+							<br/>
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp4 name="temp" value=90 />&#09 90&#176C
 							<br/>	
 						</div>
 					</li>
@@ -192,11 +194,11 @@
 		jQuery(document).ready(function() {
 			$("#logoutpopup").hide();	
 			jQuery("header").show();
-			jQuery("#Mainwasscherm").hide();
+			jQuery("#Mainwasscherm").show();
 			jQuery("#logscherm").hide();
 			jQuery("#instellingenscherm").hide();
 			jQuery("#klantenservicescherm").hide();
-			jQuery("#bedrijfsinfoscherm").show();
+			jQuery("#bedrijfsinfoscherm").hide();
 			jQuery("#loginscherm").hide();			
 		});
 		
@@ -204,6 +206,9 @@
 		
 		$( "input" ).on( "click", function() {
   			wasmachineDatapack.water = $( "input[name=watervalue]:checked" ).attr('data-wasapp');
+  			wasmachineDatapack.type = $( "input[name=wastype]:checked" ).attr('data-wasapp');
+  			wasmachineDatapack.temp = $( "input[name=temp]:checked" ).attr('data-wasapp');
+  			wasmachineDatapack.time = $( "input[name=time]:checked" ).attr('data-wasapp');
 		});
 		
 		$(".wassen").click(function(){

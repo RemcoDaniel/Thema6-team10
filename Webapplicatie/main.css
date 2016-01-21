@@ -79,7 +79,7 @@ header li:first-child{
 	
 }
 
-/*==================================StopKnop================================*/
+
 .MyStopButton {
 	position: relative;
 	background-color:#c74545;
@@ -217,7 +217,7 @@ header li:first-child{
 }
 
 
-/*--------------------------------------------------------------------------------*/
+/*========================================log out pop up=======================================================================*/
 .popupcontent{
 	background-color: #000;
 	-webkit-border-radius: 15px;
@@ -248,6 +248,8 @@ header li:first-child{
     left: 40%;
 }
 
+/*============================================inlog scherm==================================================================*/
+
 #loginscherm{
 	font-size: 200%;
 	color: white;
@@ -259,6 +261,7 @@ header li:first-child{
 
 #loginscherm input[type=text]{
 	margin-left: 20px;
+	font-size: 130%;
 	width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -275,6 +278,8 @@ header li:first-child{
 
 #loginscherm input[type=password]{
 	width: 25%;
+	font-weight: bold;
+	font-size: 130%;	
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
