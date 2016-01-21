@@ -5,16 +5,16 @@ broadcaster{ b }{
 }
 
 void WasmachineApp::onTextMessage(const string & msg, WebSocket * ws){
-	if (msg.compare("FFx02")){
-		ws->sendTextMessage("De was wordt gestart");
+	if (msg.compare("STATUS_STOP") == 0){
+		std::cout << "Sending stopped to webapp" << std::endl;
+		ws->sendTextMessage("Stopped");
+		msgQue.push()
+	}
+	else if(msg.compare("STATUS_START") == 0){
+		ws->sendTextMessage("Starting");
 	}
 
-	//broadcaster->broadcast(msg);
-	cout << "Recieved: " << msg << endl;
-}
-
-void WasmachineApp::sendTextMessage(const string &msg, WebSocket *ws){
-	ws->sendTextMessage(msg);
+	std::cout << "Msg Rec: " << msg << std::endl;
 }
 
 void WasmachineApp::onClose(WebSocket * ws){

@@ -8,6 +8,7 @@ void WasmachineApp::onTextMessage(const string & msg, WebSocket * ws){
 	if (msg.compare("STATUS_STOP") == 0){
 		std::cout << "Sending stopped to webapp" << std::endl;
 		ws->sendTextMessage("Stopped");
+		msgQue.push()
 	}
 	else if(msg.compare("STATUS_START") == 0){
 		ws->sendTextMessage("Starting");
