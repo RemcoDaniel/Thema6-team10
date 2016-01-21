@@ -1,7 +1,7 @@
 var searchData=
 [
   ['send',['send',['../class_communicating_socket.html#aca4e86085c064641e86ae24ea29bbb94',1,'CommunicatingSocket']]],
-  ['sendtextmessage',['sendTextMessage',['../class_web_socket.html#ad3a332147420ee0ce12767dc51621fc6',1,'WebSocket']]],
+  ['sendtextmessage',['sendTextMessage',['../class_wasmachine_app.html#a9cab93c6a2013c8fff9d1d10965373fc',1,'WasmachineApp::sendTextMessage()'],['../class_web_socket.html#ad3a332147420ee0ce12767dc51621fc6',1,'WebSocket::sendTextMessage()']]],
   ['sendto',['sendTo',['../class_u_d_p_socket.html#a3ade39f7c95c22fbce4606e8d7bada18',1,'UDPSocket']]],
   ['set',['set',['../class_r_t_o_s_1_1waitable.html#a3a72bdf94092471e82ba2d04cdc4a58e',1,'RTOS::waitable::set()'],['../class_r_t_o_s_1_1flag.html#aae862c6b7c385a4920d9a486e25ad5d8',1,'RTOS::flag::set()'],['../class_r_t_o_s_1_1task.html#aea8c0cfa2cb431922880cb948ada8854',1,'RTOS::task::set()'],['../class_r_t_o_s_1_1timer.html#a534e80e413c82507b436ef098f8a7ffb',1,'RTOS::timer::set()']]],
   ['setbroadcast',['setBroadcast',['../class_u_d_p_socket.html#a316f08a017aa160643812f3c08734d27',1,'UDPSocket']]],

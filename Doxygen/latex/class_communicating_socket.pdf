@@ -56,12 +56,12 @@ endobj
 <?adobe-xap-filters esc="CRLF"?>
 <x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
 <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
-<rdf:Description rdf:about='uuid:8e31d789-c290-11e5-0000-6d65b598c474' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='MiKTeX GPL Ghostscript 9.05'/>
-<rdf:Description rdf:about='uuid:8e31d789-c290-11e5-0000-6d65b598c474' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2016-01-21T12:49:41+01:00</xmp:ModifyDate>
-<xmp:CreateDate>2016-01-21T12:49:41+01:00</xmp:CreateDate>
+<rdf:Description rdf:about='uuid:c89f72ad-c298-11e5-0000-6d65b598c474' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='MiKTeX GPL Ghostscript 9.05'/>
+<rdf:Description rdf:about='uuid:c89f72ad-c298-11e5-0000-6d65b598c474' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2016-01-21T13:48:35+01:00</xmp:ModifyDate>
+<xmp:CreateDate>2016-01-21T13:48:35+01:00</xmp:CreateDate>
 <xmp:CreatorTool>Doxygen</xmp:CreatorTool></rdf:Description>
-<rdf:Description rdf:about='uuid:8e31d789-c290-11e5-0000-6d65b598c474' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:8e31d789-c290-11e5-0000-6d65b598c474'/>
-<rdf:Description rdf:about='uuid:8e31d789-c290-11e5-0000-6d65b598c474' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>ClassName</rdf:li></rdf:Alt></dc:title><dc:creator><rdf:Seq><rdf:li>()</rdf:li></rdf:Seq></dc:creator></rdf:Description>
+<rdf:Description rdf:about='uuid:c89f72ad-c298-11e5-0000-6d65b598c474' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:c89f72ad-c298-11e5-0000-6d65b598c474'/>
+<rdf:Description rdf:about='uuid:c89f72ad-c298-11e5-0000-6d65b598c474' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>ClassName</rdf:li></rdf:Alt></dc:title><dc:creator><rdf:Seq><rdf:li>()</rdf:li></rdf:Seq></dc:creator></rdf:Description>
 </rdf:RDF>
 </x:xmpmeta>
                                                                         
@@ -71,8 +71,8 @@ endstream
 endobj
 2 0 obj
 <</Producer(MiKTeX GPL Ghostscript 9.05)
-/CreationDate(D:20160121124941+01'00')
-/ModDate(D:20160121124941+01'00')
+/CreationDate(D:20160121134835+01'00')
+/ModDate(D:20160121134835+01'00')
 /Title(ClassName)
 /Creator(Doxygen)
 /Author()>>endobj
@@ -92,7 +92,7 @@ xref
 0000000814 00000 n 
 trailer
 << /Size 12 /Root 1 0 R /Info 2 0 R
-/ID [<162511EE0DB5EC966BC6B1A31E99A9C9><162511EE0DB5EC966BC6B1A31E99A9C9>]
+/ID [<A3A7D7A4ADEF7740440EAEF78E399B76><A3A7D7A4ADEF7740440EAEF78E399B76>]
 >>
 startxref
 2471

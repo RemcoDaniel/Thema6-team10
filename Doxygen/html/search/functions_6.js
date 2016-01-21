@@ -1,8 +1,11 @@
 var searchData=
 [
   ['getaddress',['getAddress',['../class_socket_address.html#a76e48b22389ecf01bfdb64f92b34dbce',1,'SocketAddress']]],
+  ['getbroadcaster',['getBroadcaster',['../class_wasmachine_app.html#a39959c6696735b05dabc8028966ed36f',1,'WasmachineApp']]],
   ['getclosecommand',['getCloseCommand',['../class_soap_dispenser.html#a95857bee83a3a26caa30bdfac2872c48',1,'SoapDispenser']]],
   ['getforeignaddress',['getForeignAddress',['../class_communicating_socket.html#a59ad3bbba5b64f9e251d9228d2ee755d',1,'CommunicatingSocket::getForeignAddress()'],['../class_web_socket.html#a2ab2cf768749032fb550daa935b789af',1,'WebSocket::getForeignAddress()']]],
+  ['getjob',['getJob',['../class_wasprogramma.html#aeb21e9e3aee86497c420b3f30633f8c0',1,'Wasprogramma']]],
+  ['getlevel',['getLevel',['../class_wasprogramma.html#acb75962e91340a05afb9208df0986fdf',1,'Wasprogramma']]],
   ['getlocaladdress',['getLocalAddress',['../class_socket.html#a49cc7d2d47c3e4d85dc7149de09ad7a0',1,'Socket']]],
   ['getlockcommand',['getLockCommand',['../class_door.html#a4283898426c5ec79a5b04885ff094f27',1,'Door']]],
   ['getmotorspeed',['getMotorSpeed',['../class_motor_controller.html#aecc8cb83b9697bc4fd43494d94d7f451',1,'MotorController']]],
@@ -15,7 +18,9 @@ var searchData=
   ['getsockaddrlen',['getSockaddrLen',['../class_socket_address.html#a6f7a6bd6e2f4776bf8ae2872fde0c2ba',1,'SocketAddress']]],
   ['getstatuscommand',['getStatusCommand',['../class_door.html#a04f5e66e03b817d6ff9848a5fe81eefc',1,'Door::getStatusCommand()'],['../class_heater.html#a69dbcc90067c604925c926faa287bf35',1,'Heater::getStatusCommand()'],['../class_pump.html#af5bae93c8022a1b9880d2bfadf81eae3',1,'Pump::getStatusCommand()'],['../class_soap_dispenser.html#a650fdf9c06456f931ca3574c7a63ad73',1,'SoapDispenser::getStatusCommand()'],['../class_valve.html#a3d710f8998e859773bd799e66f785a3d',1,'Valve::getStatusCommand()']]],
   ['getstream',['getStream',['../class_t_c_p_socket.html#a441d8a3b2e043186b70cfea27f3e5780',1,'TCPSocket']]],
+  ['gettemp',['getTemp',['../class_wasprogramma.html#a4fec376e0f3b90ad1cff57b57bc5f3b3',1,'Wasprogramma']]],
   ['gettempcommand',['getTempCommand',['../class_temp_sensor.html#af3a019c55b2df306b803e1a7f9ce3f6d',1,'TempSensor']]],
+  ['gettime',['getTime',['../class_wasprogramma.html#a3e7c63b2af9a06e1735e65b631979b8e',1,'Wasprogramma']]],
   ['getunlockcommand',['getUnlockCommand',['../class_door.html#a7f6bb388e70e0b98efd45f10558d07cc',1,'Door']]],
   ['getwaterlevelcommand',['getWaterLevelCommand',['../class_water_sensor.html#ab48d856949f14f8b6a04739f46393caa',1,'WaterSensor']]]
 ];
