@@ -12,18 +12,35 @@ Inheritance diagram for U\+A\+RT\+:\begin{figure}[H]
 {\bfseries U\+A\+RT} (const char $\ast$device, unsigned int baudrate, \hyperlink{class_motor_controller}{Motor\+Controller} $\ast$motorctrl, \hyperlink{class_temp_controller}{Temp\+Controller} $\ast$tempctrl, \hyperlink{class_water_controller}{Water\+Controller} $\ast$waterctrl, \hyperlink{class_washing_machine_controller}{Washing\+Machine\+Controller} $\ast$wasctrl)\hypertarget{class_u_a_r_t_a973d29310f6f516b29cc12c68d77b00b}{}\label{class_u_a_r_t_a973d29310f6f516b29cc12c68d77b00b}
 
 \item 
-void {\bfseries execute\+Command} (char $\ast$s)\hypertarget{class_u_a_r_t_ae8c21c98efeda377a0c881e312f920ca}{}\label{class_u_a_r_t_ae8c21c98efeda377a0c881e312f920ca}
-
-\item 
-void {\bfseries write\+Channel} (char $\ast$request)\hypertarget{class_u_a_r_t_aa5eb2b1507904d52e63b808621db32ea}{}\label{class_u_a_r_t_aa5eb2b1507904d52e63b808621db32ea}
-
-\item 
+void \hyperlink{class_u_a_r_t_ae8c21c98efeda377a0c881e312f920ca}{execute\+Command} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Sends the given command and returns the response from the emulator. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_a_r_t_aa5eb2b1507904d52e63b808621db32ea}{write\+Channel} (char $\ast$request)
+\begin{DoxyCompactList}\small\item\em Puts two chars on the \hyperlink{class_u_a_r_t}{U\+A\+RT}. \end{DoxyCompactList}\item 
 void \hyperlink{class_u_a_r_t_a1152951cf37d51a378dc1bb25d36a37d}{main} ()
 \begin{DoxyCompactList}\small\item\em task body, must be provided by a derived class \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Member Function Documentation}
+\index{U\+A\+RT@{U\+A\+RT}!execute\+Command@{execute\+Command}}
+\index{execute\+Command@{execute\+Command}!U\+A\+RT@{U\+A\+RT}}
+\subsubsection[{\texorpdfstring{execute\+Command(char $\ast$s)}{executeCommand(char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+::execute\+Command (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{class_u_a_r_t_ae8c21c98efeda377a0c881e312f920ca}{}\label{class_u_a_r_t_ae8c21c98efeda377a0c881e312f920ca}
+
+
+Sends the given command and returns the response from the emulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the request you want to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_the}{The} response of the emulator 
+\end{DoxyReturn}
 \index{U\+A\+RT@{U\+A\+RT}!main@{main}}
 \index{main@{main}!U\+A\+RT@{U\+A\+RT}}
 \subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+::main (
@@ -45,6 +62,22 @@ Timers are served only when the \hyperlink{class_r_t_o_s}{R\+T\+OS} is activated
 
 Implements \hyperlink{class_r_t_o_s_1_1task_addc6d52f8792ddba1158d7ae5ef0037d}{R\+T\+O\+S\+::task}.
 
+\index{U\+A\+RT@{U\+A\+RT}!write\+Channel@{write\+Channel}}
+\index{write\+Channel@{write\+Channel}!U\+A\+RT@{U\+A\+RT}}
+\subsubsection[{\texorpdfstring{write\+Channel(char $\ast$request)}{writeChannel(char *request)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+::write\+Channel (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{class_u_a_r_t_aa5eb2b1507904d52e63b808621db32ea}{}\label{class_u_a_r_t_aa5eb2b1507904d52e63b808621db32ea}
+
+
+Puts two chars on the \hyperlink{class_u_a_r_t}{U\+A\+RT}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \hyperlink{class_the}{The} two chars you want to send over the \hyperlink{class_u_a_r_t}{U\+A\+RT} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

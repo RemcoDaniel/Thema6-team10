@@ -106,11 +106,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973d29310f6f516b29cc12c68d77b00b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a973d29310f6f516b29cc12c68d77b00b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>UART</b> (const char *device, unsigned int baudrate, <a class="el" href="class_motor_controller.html">MotorController</a> *motorctrl, <a class="el" href="class_temp_controller.html">TempController</a> *tempctrl, <a class="el" href="class_water_controller.html">WaterController</a> *waterctrl, <a class="el" href="class_washing_machine_controller.html">WashingMachineController</a> *wasctrl)</td></tr>
 <tr class="separator:a973d29310f6f516b29cc12c68d77b00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8c21c98efeda377a0c881e312f920ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8c21c98efeda377a0c881e312f920ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>executeCommand</b> (char *s)</td></tr>
+<tr class="memitem:ae8c21c98efeda377a0c881e312f920ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t.html#ae8c21c98efeda377a0c881e312f920ca">executeCommand</a> (char *s)</td></tr>
+<tr class="memdesc:ae8c21c98efeda377a0c881e312f920ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the given command and returns the response from the emulator.  <a href="#ae8c21c98efeda377a0c881e312f920ca">More...</a><br /></td></tr>
 <tr class="separator:ae8c21c98efeda377a0c881e312f920ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5eb2b1507904d52e63b808621db32ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5eb2b1507904d52e63b808621db32ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writeChannel</b> (char *request)</td></tr>
+<tr class="memitem:aa5eb2b1507904d52e63b808621db32ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t.html#aa5eb2b1507904d52e63b808621db32ea">writeChannel</a> (char *request)</td></tr>
+<tr class="memdesc:aa5eb2b1507904d52e63b808621db32ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts two chars on the <a class="el" href="class_u_a_r_t.html">UART</a>.  <a href="#aa5eb2b1507904d52e63b808621db32ea">More...</a><br /></td></tr>
 <tr class="separator:aa5eb2b1507904d52e63b808621db32ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1152951cf37d51a378dc1bb25d36a37d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t.html#a1152951cf37d51a378dc1bb25d36a37d">main</a> ()</td></tr>
 <tr class="memdesc:a1152951cf37d51a378dc1bb25d36a37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">task body, must be provided by a derived class  <a href="#a1152951cf37d51a378dc1bb25d36a37d">More...</a><br /></td></tr>
@@ -180,6 +180,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae8c21c98efeda377a0c881e312f920ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART::executeCommand </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends the given command and returns the response from the emulator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>the request you want to send </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_the.html">The</a> response of the emulator </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a1152951cf37d51a378dc1bb25d36a37d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -208,6 +233,30 @@ Additional Inherited Members</h2></td></tr>
 <p>Timers are served only when the <a class="el" href="class_r_t_o_s.html" title="static class, namespace-like container for RTOS declarations ">RTOS</a> is activated by calling any of its state-changing interfaces. Hence the longest run time between such calls determines the granularity (time wise responsiveness) of the application. Within a time consuming computation a task can call <a class="el" href="class_r_t_o_s_1_1task.html#aa3eec7220a2724d30e2156cc395035f2" title="release the CPU to the scheduler ">release()</a> to have the <a class="el" href="class_r_t_o_s.html" title="static class, namespace-like container for RTOS declarations ">RTOS</a> serve the timers. </p>
 
 <p>Implements <a class="el" href="class_r_t_o_s_1_1task.html#addc6d52f8792ddba1158d7ae5ef0037d">RTOS::task</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5eb2b1507904d52e63b808621db32ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART::writeChannel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Puts two chars on the <a class="el" href="class_u_a_r_t.html">UART</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td><a class="el" href="class_the.html">The</a> two chars you want to send over the <a class="el" href="class_u_a_r_t.html">UART</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
