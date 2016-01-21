@@ -3,6 +3,10 @@
 #ifndef _WASPROGRAMMA_H
 #define _WASPROGRAMMA_H
 
+struct wasprogrammaStruct{
+	int temperature, waterlevel, time, job;
+};
+
 class Wasprogramma {
 private:
 	int temp, waterlevel, time, job;

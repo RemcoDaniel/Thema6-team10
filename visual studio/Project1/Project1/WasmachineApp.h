@@ -5,6 +5,7 @@
 #include "wsmulticaster.h"
 #include <string>
 #include <queue> 
+#include "WasProgramma.h"
 
 class WasmachineApp : public WebSocketListener{
 public:
@@ -14,8 +15,12 @@ public:
 	void broadcastMessage(const string & msg);
 	Broadcaster* getBroadcaster();
 
+	bool isMsg();
+	wasprogrammaStruct getLastMsg();
+
 private:
-	std::queue<int> msgQue;
+	wasprogrammaStruct wasprogramma;
+	std::queue<wasprogrammaStruct> msgQue;
 	Broadcaster *broadcaster;
 };
 
