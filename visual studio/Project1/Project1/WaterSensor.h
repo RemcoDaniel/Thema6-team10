@@ -7,6 +7,8 @@
 #include <stdint.h>
 
 class WaterSensor {
+private:
+	char waterlevelcommand[3] = { WATER_LEVEL_REQ , UNDEFINED_CMD, '\0' };
 public:
 	WaterSensor();
 	char * getWaterLevelCommand();

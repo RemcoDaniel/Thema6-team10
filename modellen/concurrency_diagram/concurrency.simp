@@ -25,7 +25,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyEventFlag" />
-        <value>11</value>
+        <value>12</value>
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyQueue" />
@@ -59,7 +59,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyEventFlag" />
-        <value>12</value>
+        <value>13</value>
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyQueue" />
@@ -79,7 +79,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="AbstractElementGroup" />
-        <value>161</value>
+        <value>3</value>
       </counter>
     </entity-ids>
     <diagrams>
@@ -143,7 +143,7 @@
           </authors>
           <description />
           <creation-date>01/13/2016 19:37:33</creation-date>
-          <change-date>01/20/2016 11:55:05</change-date>
+          <change-date>01/21/2016 13:06:14</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -1000,6 +1000,13 @@
               </messages>
             </communication-message>
           </item>
+          <item id="di395201144125894718" cid="EVF012" type="concurrency-eventflag" name="start temp flag" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="01/21/2016 13:06:14">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <communication-lifeline classifier-name="" is-active="false" is-multi-object="false" />
+          </item>
         </abstract-items>
         <layer name="Default" visible="true" enabled="true" locked="false">
           <item id="di552608333904601160" iid="68b4226361e048bb975b6081c0f0c997" creation-date="01/17/2016 13:33:57" order-index="54" type="entity">
@@ -1633,6 +1640,9 @@
             <relation from="di943038993336445123" from-iid="398c8ff893364934aafa4ab94f43cdc0" to="di766584313439764240" to-iid="5ca25ccd8bcb414ca301488bf1e9eeac" />
             <positions normal="-20,15" reverse="0,30" />
             <communication-message />
+          </item>
+          <item id="di395201144125894718" iid="87a0c1f97bb44dceaf7d7ad9628811ba" creation-date="01/21/2016 13:06:14" order-index="93" type="entity">
+            <layout ax="650" ay="230" awidth="40" aheight="40" x="650" y="230" width="40" height="40" angle="0" name-position="0,10" name-anchor="bottom" />
           </item>
         </layer>
       </diagram>

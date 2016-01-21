@@ -4,8 +4,9 @@ WaterController::WaterController(WashingMachineController * wascontroller) :
 	wascontroller{wascontroller},
 	uartptr{nullptr},
 	task{3, "watercontroller"},
-	interval_clock{this, 500 US, "interval"},
+	interval_clock{this, 300 MS, "interval"},
 	response_flag{this, "uart_response_ready"},
+	start_flag{ this, "start_waterController" },
 	water_level_pool{"water_level"},
 	water_level_mutex{"water_level"},
 	response_pool{"uart_response"},
@@ -20,6 +21,11 @@ void WaterController::setUartPointer(UART * u) {
 	uartptr = u;
 }
 
+void WaterController::startWaterController() {
+	std::cout << "watercontroller started\n";
+	start_flag.set();
+}
+
 int WaterController::getNewWaterLevel() {
 	water_level_mutex.wait();
 	int level = water_level_pool.read();
@@ -28,7 +34,8 @@ int WaterController::getNewWaterLevel() {
 }
 
 int WaterController::getWaterLevel() {
-	char * command = watersensor.getWaterLevelCommand();
+	command = watersensor.getWaterLevelCommand();
+	//std::cout << "getting waterlevel from uart\n";
 	char response = uartTask(command[0], command[1]);
 	return response;
 }
@@ -40,11 +47,13 @@ void WaterController::setWaterLevel(int level) {
 }
 
 void WaterController::pumping(bool on) {
-	char * command;
 	if (on) {
 		command = pump.getOnCommand();
 	}
-	command = pump.getOffCommand();
+	else {
+		command = pump.getOffCommand();
+	}
+	//std::cout << unsigned(command[0]) << unsigned(command[1]) << " pump command\n";
 	char response = uartTask(command[0], command[1]);
 }
 
@@ -53,7 +62,9 @@ void WaterController::valving(bool on) {
 	if (on) {
 		command = valve.getOnCommand();
 	}
-	command = valve.getOffCommand();
+	else {
+		command = valve.getOffCommand();
+	}
 	char response = uartTask(command[0], command[1]);
 }
 
@@ -63,6 +74,8 @@ char WaterController::readResponse() {
 	response_mutex.wait();
 	char response = response_pool.read();
 	response_mutex.signal();
+
+	//std::cout << unsigned(response) << " dit is het antwoord voor de watercontroller\n";
 	return response;
 }
 
@@ -85,18 +98,26 @@ void WaterController::writeResponse(char response) {
 
 // MAIN =======================================================================================================================
 void WaterController::main() {
+	wait(start_flag);
 	for (;;) {
 		wait(interval_clock);
 		int newlevel = getNewWaterLevel();
+		//std::cout << newlevel << " dit is het nieuwe level\n";
 		int level = getWaterLevel();
+		//std::cout << level << " dit is het huidige level\n";
 		if (level >= newlevel) {
-			pumping(0);					//pumping off
+			wascontroller->setWaterLevelReached();
+			valving(0);	
 			if (level > newlevel) {
-				wascontroller->setWaterLevelReached();
-				valving(1);				// nog ff kijken naar het gedrag van de valve, want dit klopt niet helemaal...		// open valve
+				//std::cout << "teveel water.......\n";
+				pumping(1);		
 			}
 		}
-		else valving(0); pumping(1);	// close valve	// pumping on
+		else {
+			//std::cout << "te weinig water... vullen\n";
+			pumping(0);	
+			valving(1);
+		}
 	}
 }
 

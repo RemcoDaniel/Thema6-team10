@@ -11,7 +11,7 @@ UART::UART(const char * device, unsigned int baudrate, MotorController * motorct
 	tempctrl{ tempctrl },
 	waterctrl{ waterctrl },
 	wasctrl{ wasctrl },
-	interval_clock{ this, 10 MS, "interval" },
+	interval_clock{ this, 50 MS, "interval" },
 	commandchannel{ this, "channel" }
 {
 	int portMakeState = theSerialPort.open(device, baudrate);
@@ -26,29 +26,22 @@ void UART::executeCommand(char request, char command) {
 	theSerialPort.writeString(s);
 
 	while (theSerialPort.peek() < 2) {
-		//std::cout << "peeking\n";
 		wait(interval_clock);
 	}
 
 	char response[3];
 	theSerialPort.read(&response, 2);
 	theSerialPort.flush();
-	//std::cout << "Dit is de response: " << unsigned(response[0]) << "  " << unsigned(response[1]) << ":einde" << std::endl;
-
-	//theSerialPort.readString(response, char(0xFF), 2);
 	returnResponse(response[0], response[1]);
 }
 
 void UART::readChannel() {
 	char response = commandchannel.read();
 	char command = commandchannel.read();
-	//std::cout << "UART read channel:" << unsigned(response) << " " << unsigned(command) << "\n";
 	executeCommand(response, command);
 }
 
 void UART::returnResponse(char response, char command) {
-	//std::cout << "uart giving response\n";
-	//std::cout << response << " msg\n";
 	switch (response) {
 		case 0x89:
 		case 0x8A: 	motorctrl->writeResponse(command); motorctrl->setResponseFlag();	break;	// motortaak
@@ -61,12 +54,11 @@ void UART::returnResponse(char response, char command) {
 		case 0x82:
 		case 0x84:
 		case 0x8B: 	wasctrl->writeResponse(command); wasctrl->setResponseFlag();		break;	// wasmachinetaak
-		default:		std::cout << "foutafhandeling moet hier!\n";						break;
+		default:		std::cout << "foutafhandeling moet hier!\n";					break;
 	}
 }
 
 void UART::writeChannel(char request, char command) {
-	//std::cout << "in de channel: " << unsigned(request) << " " << unsigned(command) << "\n";
 	commandchannel.write(request);
 	commandchannel.write(command);
 }
@@ -79,7 +71,6 @@ void UART::main() {
 	//=========================================================================
 	std::cout << "uart started\n";
 	for (;;) {
-		//std::cout << "lezen\n";
 		readChannel();
 		wait(interval_clock);
 	}

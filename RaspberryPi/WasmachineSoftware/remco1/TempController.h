@@ -14,11 +14,12 @@ class UART;
 
 class TempController : public RTOS::task {
 private:
+	char * command = 0;
 	Heater heater;
 	TempSensor tempsensor;
 	UART *uartptr;
 	WashingMachineController *wascontroller;
-	RTOS::flag response_flag;
+	RTOS::flag response_flag, start_flag;
 	RTOS::pool< int > temp_pool;
 	RTOS::pool< char > response_pool;
 	RTOS::mutex temp_mutex, response_mutex;
@@ -37,6 +38,7 @@ public:
 	void setUartPointer(UART * u);
 
 	void setTemp(int temp);
+	void startTempController();
 
 	//uart:
 	void setResponseFlag();

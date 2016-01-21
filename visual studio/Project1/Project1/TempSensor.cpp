@@ -5,6 +5,5 @@
 TempSensor::TempSensor() {}
 
 char * TempSensor::getTempCommand() {
-	char command[3] = { TEMPERATURE_REQ, STOP_CMD, '\0' };
-	return command;
+	return tempcommand;
 }

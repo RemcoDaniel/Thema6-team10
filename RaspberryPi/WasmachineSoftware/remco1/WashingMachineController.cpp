@@ -5,7 +5,7 @@
 WashingMachineController::WashingMachineController(Wasprogramma & was) :
 	wasprogramma{was},
 	task{0, "beep"},
-	interval_clock{this, 500 US, "washing_timer"},
+	interval_clock{this, 500 MS, "washing_timer"},
 	temp_reached_flag{this, "temp_reached"},
 	level_reached_flag{this, "water_reached"},
 	response_flag{this, "uart_response_ready"},
@@ -29,15 +29,11 @@ WashingMachineController::WashingMachineController(Wasprogramma & was) :
 	motorcontroller->setUartPointer(uart);
 	tempcontroller->setUartPointer(uart);
 	watercontroller->setUartPointer(uart);
-
-	std::cout << "wasmachine constructor done\n";
 }
 
 bool WashingMachineController::getDoorStatus() {
-	std::cout << "getting door status\n";
 	char command[3] = { DOOR_LOCK_REQ , STATUS_CMD, '\0' };
 	char response = uartTask(command[0], command[1]);
-	std::cout << "response door binnen\n";
 	int status = unsigned(response);
 
 	if (status == OPENED) {
@@ -46,26 +42,28 @@ bool WashingMachineController::getDoorStatus() {
 	else {
 		return 1;
 	}
-	std::cout << "got status\n";
 	return status;
 }
 
 void WashingMachineController::doorlock(bool lock) {
-	//char * command = door.getUnlockCommand();;
 	if (lock) {
-		//command = door.getLockCommand();
 		char response = uartTask(DOOR_LOCK_REQ, LOCK_CMD);
 	}
 	else {
 		char response = uartTask(DOOR_LOCK_REQ, UNLOCK_CMD);
 	}
-	std::cout << "lock/unlock door\n";
-	//std::cout << unsigned(command[0]) << " " << unsigned(command[1]) << " dit staat er dus :D\n";
-	//char response = uartTask(command[0], command[1]);
+}
+
+void WashingMachineController::signalLed(bool on) {
+	if (on) {
+		char response = uartTask(SIGNAL_LED_REQ, ON_CMD);
+	}
+	else {
+		char response = uartTask(SIGNAL_LED_REQ, OFF_CMD);
+	}
 }
 
 void WashingMachineController::dispendSoap() {
-	char * command;
 	command = soap.getOpenCommand();
 	command = soap.getCloseCommand();
 
@@ -88,50 +86,69 @@ void WashingMachineController::setMotorDone() {
 
 // WASPROGRAMMA ============================================================================================
 void WashingMachineController::startWasprogramma() {
-	std::cout << "0\n";
+	signalLed(0);																	// signaalled uit
 
 	// voorwas (zonder zeep!):
-	std::cout << "1\n";
-	watercontroller->setWaterLevel(wasprogramma.getLevel());						// water erbij
-	std::cout << "voor de flag\n";
-	wait(level_reached_flag);														// wachten tot voldoende water (flag)
-	std::cout << "na de flag\n";
-	tempcontroller->setTemp(wasprogramma.getTemp());								// verwarmen
-	wait(temp_reached_flag);														// wachten tot temp is bereikt
-
-	//motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
-	//wait(motor_done_flag);															// wachten tot motor klaar is
-	//watercontroller->setWaterLevel(0);												// water weg
-	//wait(level_reached_flag);														// wachten tot water weg is (flag)
-
-	//hoofdwas:
-	std::cout << "2\n";
+	std::cout << "START VOORWAS\n";
+	std::cout << "water toevoegen\n";
+	watercontroller->startWaterController();
 	watercontroller->setWaterLevel(wasprogramma.getLevel());						// water erbij
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
+	std::cout << "verwarmen\n";
+	tempcontroller->startTempController();
 	tempcontroller->setTemp(wasprogramma.getTemp());								// verwarmen
 	wait(temp_reached_flag);														// wachten tot temp is bereikt
-	dispendSoap();																	// zeep erbij
+	std::cout << "draaien\n";
+	motorcontroller->startMotorController();
 	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
+	std::cout << "water weg gaan pompen\n";
+	watercontroller->setWaterLevel(0);												// water weg
+	wait(level_reached_flag);														// wachten tot water weg is (flag)
+
+	//hoofdwas:
+	std::cout << "START HOOFDWAS\n";
+	std::cout << "water toevoegen\n";
+	watercontroller->setWaterLevel(wasprogramma.getLevel());						// water erbij
+	wait(level_reached_flag);														// wachten tot voldoende water (flag)
+	std::cout << "verwarmen\n";
+	tempcontroller->setTemp(wasprogramma.getTemp());								// verwarmen
+	wait(temp_reached_flag);														// wachten tot temp is bereikt
+	std::cout << "zeep toevoegen\n";
+	dispendSoap();																	// zeep erbij    //========================================================!!!
+	std::cout << "draaien\n";
+	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
+	wait(motor_done_flag);															// wachten tot motor klaar is
+	std::cout << "water wegpompen\n";
 	watercontroller->setWaterLevel(0);												// water weg
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	// spoelen:
-	std::cout << "3\n";
+	std::cout << "START SPOELEN\n";
+	std::cout << "water toevoegen\n";
 	watercontroller->setWaterLevel(wasprogramma.getLevel());						// water erbij
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
+	std::cout << "draaien\n";
 	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
+	std::cout << "water wegpompen\n";
 	watercontroller->setWaterLevel(0);												// water weg
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	// centrifugeren:
-	std::cout << "4\n";
+	std::cout << "START CENTRIFUGEREN\n";
+	std::cout << "draaien\n";
 	motorcontroller->setMotorJob(wasprogramma.getJob(), wasprogramma.getTime());	// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
 
-	std::cout << "5\n";
+	// temp en waterlevel op 0 zetten voor volgende wasbeurt:
+	tempcontroller->setTemp(0);
+	watercontroller->setWaterLevel(0);
+
+	std::cout << "deur ontgrendelen\n";
 	doorlock(0);																	// deur ontgrendelen
+	signalLed(1);																	// signaalled aan
+	std::cout << "WAS IS KLAAR\n";
 }
 
 void WashingMachineController::stopWasprogramma() {
@@ -150,7 +167,6 @@ char WashingMachineController::readResponse() {
 char WashingMachineController::uartTask(char request, char command) {
 	uart->writeChannel(request, command);
 	wait(response_flag);
-	std::cout << "washing machine read uart response\n";
 	return readResponse();			// pool uitlezen
 }
 
@@ -169,13 +185,10 @@ void WashingMachineController::writeResponse(char response) {
 void WashingMachineController::main() {
 	for (;;) {
 		std::cout << "starting washing program\n";
-		// wachten op signaal voor nieuw wasprogramma
 		// wachten op signaal van de uart dat machine gestart is:
 		wait(response_flag);
-		std::cout << "flag gezien\n";
 
 		while (!getDoorStatus()) {
-			std::cout << "door not closed!\n";
 			wait(interval_clock);
 		}
 		doorlock(1);																	// deur dicht

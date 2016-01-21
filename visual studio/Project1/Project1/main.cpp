@@ -20,7 +20,7 @@ int main(){
 	try{
 		std::cout << "wasprogramma maken\n";
 		// eerst wasprogramma maken! deze kan hij dan uit gaan voeren		// dit moet nog anders worden gedaan!!!!!!
-		Wasprogramma wasprog = Wasprogramma(40, 20, 500 MS, 1);
+		Wasprogramma wasprog = Wasprogramma(25, 10, 2 S, 1);
 		std::cout << "making washingmachine\n";
 		// de wasmachinecontroller maakt ook alle andere controllers aan + de boundary objecten + de uart
 		WashingMachineController wasctrl = WashingMachineController(wasprog);

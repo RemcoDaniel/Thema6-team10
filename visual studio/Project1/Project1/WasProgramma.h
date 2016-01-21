@@ -3,6 +3,8 @@
 #ifndef _WASPROGRAMMA_H
 #define _WASPROGRAMMA_H
 
+#include <iostream>
+
 class Wasprogramma {
 private:
 	int temp, waterlevel, job;

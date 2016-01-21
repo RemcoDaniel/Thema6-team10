@@ -15,12 +15,13 @@ class UART;
 
 class WaterController : public RTOS::task {
 private:
+	char * command = 0;
 	WaterSensor watersensor;
 	Pump pump;
 	Valve valve;
 	UART *uartptr;
 	WashingMachineController * wascontroller;
-	RTOS::flag response_flag;
+	RTOS::flag response_flag, start_flag;
 	RTOS::pool< int > water_level_pool;
 	RTOS::pool< char > response_pool;
 	RTOS::mutex water_level_mutex, response_mutex;
@@ -39,6 +40,8 @@ public:
 	WaterController(WashingMachineController * wascontroller);
 	void setUartPointer(UART * u);
 	void setWaterLevel(int level);
+
+	void startWaterController();
 
 	//uart:
 	void setResponseFlag();

@@ -19,6 +19,7 @@ class TempController;
 
 class WashingMachineController : public RTOS::task {
 private:
+	char * command = 0;
 	Wasprogramma wasprogramma;
 	Door door;
 	TempController *tempcontroller;
@@ -34,6 +35,7 @@ private:
 	void doorlock(bool lock);		// lock = 1 , unlock = 0
 	bool getDoorStatus();			// open = 1, locked or closed = 0;
 	void dispendSoap();
+	void signalLed(bool on);
 
 	//uart:
 	char readResponse();
