@@ -34,9 +34,20 @@ private:
 	void returnResponse(char * response);
 
 public:
-	UART(const char * device, unsigned int baudrate, MotorController * motorctrl, TempController * tempctrl, WaterController * waterctrl, WashingMachineController * wasctrl);
-	void executeCommand(char * s);
 
+	UART(const char * device, unsigned int baudrate, MotorController * motorctrl, TempController * tempctrl, WaterController * waterctrl, WashingMachineController * wasctrl);
+	
+	/*!	\fn void executeCommand(char * s)
+	 *	\brief Sends the given command and returns the response from the emulator
+	 *	\param s the request you want to send
+	 *	\return The response of the emulator
+	 */
+	void executeCommand(char * s);
+	
+	/*! \fn void writeChannel(char * request)
+	 *	\brief Puts two chars on the UART
+	 *	\param s The two chars you want to send over the UART
+	 */
 	void writeChannel(char * request);
 
 	void main();
