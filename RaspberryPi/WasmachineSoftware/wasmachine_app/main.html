@@ -3,7 +3,7 @@
     <head>
          <title>wasmachine applicatie</title>
          <link rel="stylesheet" href="main.css">
-		 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		 <script src="jquery-1.11.0.min.js"></script>
 		 <script src="wasmachineWebsocket.js"> </script> 
     </head>
     <body onload="startTime()">
@@ -192,6 +192,7 @@
 	
 	<script>
 		jQuery(document).ready(function() {
+			WebSocketConnect();
 			$("#logoutpopup").hide();	
 			jQuery("header").show();
 			jQuery("#Mainwasscherm").show();
@@ -203,6 +204,7 @@
 		});
 		
 		var wasmachineDatapack = {water:"", temp:"", type:"", time:""};
+		var wasmachineWebStatus = "STATUS_STOP";
 		
 		$( "input" ).on( "click", function() {
   			wasmachineDatapack.water = $( "input[name=watervalue]:checked" ).attr('data-wasapp');
@@ -212,7 +214,6 @@
 		});
 		
 		$(".wassen").click(function(){
-			//WebSocketConnect();
 			$("#logoutpopup").hide();	
 			$("header").show();
 			$("#Mainwasscherm").show();
@@ -357,7 +358,9 @@
 		}
 		
 		$(".MyStartButton").click(function(){
-			//sendMessage();
+			wasmachineWebStatus = "STATUS_START";
+			sendWebStatus();
+			sendMessage();
 			validate();
 			getDuur();
 			if (done == true){
@@ -369,6 +372,8 @@
 		});	
 
 		$(".MyStopButton").click(function(){
+			wasmachineWebStatus = "STATUS_STOP";
+			sendWebStatus();
 			counting = false;
 			document.getElementById('status').innerHTML = "Stopped";
 			$(".MyStartButton").show();

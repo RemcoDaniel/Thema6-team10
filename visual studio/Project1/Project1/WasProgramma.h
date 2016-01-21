@@ -5,6 +5,10 @@
 
 #include <iostream>
 
+struct wasprogrammaStruct{
+	int temperature, waterlevel, time, job;
+};
+
 class Wasprogramma {
 private:
 	int temp, waterlevel, job;

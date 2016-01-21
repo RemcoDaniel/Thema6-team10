@@ -1,0 +1,1589 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="9.15" multi-file="no">
+  <meta>
+    <name>Project</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>32</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlEnumeration" />
+        <value>1</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>33</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlEnumeration" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlAssociation" />
+        <value>118</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlRealization" />
+        <value>24</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlProvidedInterfaceConnector" />
+        <value>3</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlInterface" />
+        <value>3</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlDependency" />
+        <value>18</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlGeneralization" />
+        <value>6</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlComment" />
+        <value>4</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlCommentConnector" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="AbstractElementGroup" />
+        <value>427</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>129</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>82</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management>
+    <persons>
+      <person id="Pac45bfbc317245229b3f32e2822e067a">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <glossary />
+  <types>
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="Button" tid="" name="Button" description="" nullable="false" />
+      <type id="UARTCommand: String" tid="" name="UARTCommand: String" description="" nullable="false" />
+      <type id="string" tid="" name="string" description="" nullable="false" />
+      <type id="void" tid="" name="void" description="" nullable="false" />
+      <type id="Class:di315267620698858895" tid="" name="ButtonListener" description="" nullable="false" class-ref="di315267620698858895" />
+      <type id="Integer []" tid="" name="Integer []" description="" nullable="false" />
+      <type id="Float" tid="" name="Float" description="" nullable="false" />
+      <type id="Unsigned Integer" tid="" name="Unsigned Integer" description="" nullable="false" />
+      <type id="Char *" tid="" name="Char *" description="" nullable="false" />
+      <type id="int" tid="" name="int" description="" nullable="false" />
+      <type id="port" tid="" name="port" description="" nullable="false" />
+      <type id="Class:di677883195308955403" tid="" name="TempController" description="" nullable="false" class-ref="di677883195308955403" />
+      <type id="Class:di426704020167463771" tid="" name="WaterController" description="" nullable="false" class-ref="di426704020167463771" />
+      <type id="Class:di956674592834654243" tid="" name="MotorController" description="" nullable="false" class-ref="di956674592834654243" />
+      <type id="Class:di916566220864144123" tid="" name="User" description="" nullable="false" class-ref="di916566220864144123" />
+      <type id="List&lt;Subject&gt;" tid="" name="List&lt;Subject&gt;" description="" nullable="false" />
+      <type id="wp:Wasprogramma" tid="" name="wp:Wasprogramma" description="" nullable="false" />
+      <type id="void ()" tid="" name="void ()" description="" nullable="false" />
+      <type id="name:string" tid="" name="name:string" description="" nullable="false" />
+      <type id="*Socket" tid="" name="*Socket" description="" nullable="false" />
+      <type id="Class:di410427493856227971" tid="" name="Socket" description="" nullable="false" class-ref="di410427493856227971" />
+      <type id="webPort: int" tid="" name="webPort: int" description="" nullable="false" />
+      <type id="Class:di865958448679699767" tid="" name="WashingMachineController" description="" nullable="false" class-ref="di865958448679699767" />
+      <type id="* Socket" tid="" name="* Socket" description="" nullable="false" />
+      <type id="Class:di396600517944715753" tid="" name="Wasprogramma" description="" nullable="false" class-ref="di396600517944715753" />
+      <type id="Sensor" tid="" name="Sensor" description="" nullable="false" />
+      <type id="wasProg: string" tid="" name="wasProg: string" description="" nullable="false" />
+      <type id=":flag response_flag" tid="" name=":flag response_flag" description="" nullable="false" />
+      <type id=":pool&lt;int&gt; temp_pool" tid="" name=":pool&lt;int&gt; temp_pool" description="" nullable="false" />
+      <type id=":pool&lt;char&gt; response_pool" tid="" name=":pool&lt;char&gt; response_pool" description="" nullable="false" />
+      <type id=":mutex temp_mutex" tid="" name=":mutex temp_mutex" description="" nullable="false" />
+      <type id=":mutex response_mutex" tid="" name=":mutex response_mutex" description="" nullable="false" />
+      <type id=":clock interval_clock" tid="" name=":clock interval_clock" description="" nullable="false" />
+      <type id="WaterSensor" tid="" name="WaterSensor" description="" nullable="false" />
+      <type id="Class:di694391954984680351" tid="" name="Valve" description="" nullable="false" class-ref="di694391954984680351" />
+      <type id="*uartptr" tid="" name="*uartptr" description="" nullable="false" />
+      <type id="*wascontroller" tid="" name="*wascontroller" description="" nullable="false" />
+      <type id="RTOS::flag" tid="" name="RTOS::flag" description="" nullable="false" />
+      <type id="RTOS::pool&lt; int &gt;" tid="" name="RTOS::pool&lt; int &gt;" description="" nullable="false" />
+      <type id="RTOS::pool&lt; char * &gt;" tid="" name="RTOS::pool&lt; char * &gt;" description="" nullable="false" />
+      <type id="RTOS::mutex" tid="" name="RTOS::mutex" description="" nullable="false" />
+      <type id="Class:di709665965391747309" tid="" name="Motor" description="" nullable="false" class-ref="di709665965391747309" />
+      <type id="UART*" tid="" name="UART*" description="" nullable="false" />
+      <type id="WashingMachineController *" tid="" name="WashingMachineController *" description="" nullable="false" />
+      <type id="RTOS::timer" tid="" name="RTOS::timer" description="" nullable="false" />
+      <type id="()" tid="" name="()" description="" nullable="false" />
+      <type id="Char*" tid="" name="Char*" description="" nullable="false" />
+      <type id="char *" tid="" name="char *" description="" nullable="false" />
+      <type id="const char *" tid="" name="const char *" description="" nullable="false" />
+      <type id="LibSerial" tid="" name="LibSerial" description="" nullable="false" />
+      <type id="RTOS::channel&lt; char *, 100 &gt;" tid="" name="RTOS::channel&lt; char *, 100 &gt;" description="" nullable="false" />
+      <type id=":clock" tid="" name=":clock" description="" nullable="false" />
+    </custom-types>
+  </types>
+  <filters />
+  <items>
+    <item id="di383550174257118955" cid="C001" type="class" name="Heater" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <operations>
+        <operation id="oc3584dbccfc9471ba71e03e59f4c794e186" cid="OP076" name="getOnCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="oc0f81236aa9342f89220b605b2096b40452" cid="OP077" name="getOffCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o9218ba2047ca4292999ef7d35720ba4c80" cid="OP078" name="getStatusCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di439789895190205011" cid="C001" type="class" name="Pump" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <operations>
+        <operation id="oaa71e0774fa4428faa70990e943ace52453" cid="OP110" name="Pump" type="()" type-id="()" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o0d66163b16784104bc87f08e0dd0b5b8333" cid="OP111" name="getOnCommand" type="char *" type-id="char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="od2fc0f9f2b404526adc590862506239c233" cid="OP112" name="getOffCommand" type="char *" type-id="char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="oab021c4c52aa42b180d669066577a67c393" cid="OP113" name="getStatusCommand" type="char *" type-id="char *" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di709665965391747309" cid="C001" type="class" name="Motor" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <operations>
+        <operation id="ofd040665cde74903adc6d5797c29f84342" cid="OP118" name="Motor" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o4a568fb6c745458dbebcad104f722d4d732" cid="OP119" name="getMotorSpeedCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o222d65ae9d2e487bbbdf12d3b12a257b231" cid="OP120" name="NewOperation3" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di953459054243421518" cid="C001" type="class" name="TempSensor" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <attributes>
+        <attribute id="a6afd05c00ad742a1a9c802966b8e9a22960" cid="AT045" name="getTempCommand()" type="void" type-id="void" visibility="public">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <source-codes>
+        <source-code language="ActionScript" />
+      </source-codes>
+    </item>
+    <item id="di743992221106055807" cid="C001" type="class" name="Water sensor" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <operations>
+        <operation id="oa5975da8b837429c8fd5188e5890f4ca666" cid="OP108" name="getWaterLevelCommand" type="Char*" type-id="Char*" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="of486678a8060420b95f927eff06e3117378" cid="OP109" name="WaterSensor" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di694391954984680351" cid="C001" type="class" name="Valve" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <operations>
+        <operation id="oa04312606bd94b899b06087c9fa316d1374" cid="OP114" name="Valve" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o0d78cbca8b704cec8ade5c05971102ee74" cid="OP115" name="getOnCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o7b7788bfe20b4fe0837324cf16a5e273414" cid="OP116" name="getoffCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o43bc6c37a7024d9b8b8cca6b4876b651694" cid="OP117" name="getStatusCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di104094324195382052" cid="C001" type="class" name="Door" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <operations>
+        <operation id="o17a9052bb8aa4779957ac07fdb209a5f252" cid="OP104" name="Door" type="void" type-id="void" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o7e19f36c06694fb4ab072f9714af76e22" cid="OP105" name="getlockCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o8bffac38e8e64450b8f5f2c32150bde8342" cid="OP106" name="getUnlockCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o1c6ffcafa0cb493981d1a608e75eec07602" cid="OP107" name="getStatusCommand" type="Char *" type-id="Char *" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di161119503318519108" cid="C001" type="class" name="SoapDispenser" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+      <stereotypes>
+        <stereotype name="boundary" />
+      </stereotypes>
+      <documentation>
+        <text>
+          <styles>
+            <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+              <text>
+                <solid-brush color="#FF000000" />
+              </text>
+            </style>
+          </styles>
+          <content>
+            <paragraph>
+              <p s="S1">
+                <t>
+</t>
+              </p>
+            </paragraph>
+          </content>
+        </text>
+      </documentation>
+      <style class="default" />
+      <operations>
+        <operation id="o4fc8e11043064a5eb98fc447ede5bfbb125" cid="OP121" name="SoapDispenser" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o0cc8a5ea207e43a1a5765768d01c2cfd834" cid="OP122" name="getOpenCommand" type="char *" type-id="char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o55b17be25eab408a8fa1df6c8eb49f4e574" cid="OP123" name="getCloseCommand" type="char *" type-id="char *" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o0dfd04955f714fa88eabd339f115b3b4454" cid="OP124" name="getStatusCommand" type="char *" type-id="char *" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+  </items>
+  <models>
+    <model id="pa1ddfa7396d6482084193fca25efec7b_772183369" name="Model 1" type="model" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>12/09/2015 01:49:24</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p2edf46ee03724794a363a6763b86b55f_514055180" name="ClassDiagram1" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="164,-178" zoom="0.4">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>12/09/2015 01:49:24</creation-date>
+          <change-date>01/21/2016 15:18:51</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="di657593867833011171" cid="C001" type="class" name="Subject" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
+            <stereotypes>
+              <stereotype name="interface" />
+            </stereotypes>
+            <documentation>
+              <text>
+                <styles>
+                  <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </styles>
+                <content>
+                  <paragraph>
+                    <p s="S1">
+                      <t>
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </documentation>
+            <style class="default" />
+            <operations>
+              <operation id="o91b22dc039d141c8b743ab9ee2dc923d873" cid="OP001" name="registerObserver" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="offfdd3a1693a4b0b83f6db30ca64f928826" cid="OP002" name="removeObserver" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o7944e87e006b4171b38e0a2f463d5096209" cid="OP003" name="notifyObserver" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di703389020407601566" cid="C002" type="class" name="Observer" style-class="" visibility="private" creation-date="12/09/2015 01:49:34">
+            <stereotypes>
+              <stereotype name="interface" />
+            </stereotypes>
+            <documentation>
+              <text>
+                <styles>
+                  <style name="S1" font-name="Microsoft Sans Serif" font-size="7.8" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </styles>
+                <content>
+                  <paragraph>
+                    <p s="S1">
+                      <t>
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </documentation>
+            <style class="default" />
+            <operations>
+              <operation id="of8380c6edcb741a4be9b9f0cb7bf190b680" cid="OP004" name="update" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di971286783667499823" cid="REL026" type="relationship" name="" style-class="" visibility="private" creation-date="12/14/2015 02:59:38" from="di657593867833011171" to="di703389020407601566">
+            <style class="default" />
+            <relation from="di657593867833011171" to="di703389020407601566">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di464834074497675906" cid="REL107" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="01/21/2016 14:26:42" from="di920990760331727176" to="di677883195308955403">
+            <style class="default" />
+            <relation from="di920990760331727176" to="di677883195308955403">
+              <start-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di865958448679699767" cid="C005" type="class" name="WashingMachineController" style-class="" visibility="private" creation-date="12/09/2015 13:56:57">
+            <style class="default" />
+            <attributes>
+              <attribute id="a967c85e94e37473bad12a97db1db0c2a160" cid="AT013" name="time" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8fc31dccbb1e4c4998ba130a05e5415c462" cid="AT014" name="currentWasprog" type="Wasprogramma" type-id="Class:di396600517944715753" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ada2e00be31364d9c9b291016fa77badb681" cid="AT021" name="theTemperaturController" type="TempController" type-id="Class:di677883195308955403" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1ac3b3eef47943c5907e7d567901d66d153" cid="AT022" name="theWaterController" type="WaterController" type-id="Class:di426704020167463771" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6499f0d09de642fba0fa66be021b678e221" cid="AT023" name="theMotorController" type="MotorController" type-id="Class:di956674592834654243" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a838de60cf8774970b9602b6d6c3e61c3160" cid="AT025" name="theUART" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a236bf6c1d26f45bc9f1640aae19b7fae549" cid="AT026" name="subjectList" type="List&lt;Subject&gt;" type-id="List&lt;Subject&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oa43bfb45886845299eb32e338d4e19c5591" cid="OP041" name="registerObserver" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="od80cd5a8afcc4f229b53e2597fa1ebed931" cid="OP042" name="removeObserver" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="ob991ed7a64284059a84d67a1b104c581419" cid="OP043" name="notifyObserver" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o95cf6d4c7b164e20874866f81f151506200" cid="OP047" name="WashingMachineController" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o392178632740405ba248f381baf17d69901" cid="OP054" name="startWasprogramma" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd3c491fc43f94d7f88e03eb99cedb258" name="" type="wp:Wasprogramma" type-id="wp:Wasprogramma" direction="In" />
+                </parameters>
+              </operation>
+              <operation id="o0d777b219eea4067a18e012f26aecd0c392" cid="OP055" name="stopWasprogramma" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o7e6fee9201484669b5c78326aa131067216" cid="OP056" name="stop" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o130e57ca332e4dbdaf0df1b4dc18a37f583" cid="OP057" name="start" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="oc21afaf6ce0d4bbebabc30691fa1196e666" cid="OP058" name="errorHandeling" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di290610061221245387" cid="DEP003" type="dependency" name="" style-class="" visibility="private" creation-date="12/14/2015 03:13:46" from="di491725866737395880" to="di420065746404133330">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di789427647295784021" cid="REA009" type="realization" name="" style-class="" visibility="private" creation-date="12/14/2015 03:02:08" from="di335687270831956186" to="di657593867833011171">
+            <style class="default" />
+          </item>
+          <item id="di491725866737395880" cid="C012" type="class" name="HTTPWebServer" style-class="" visibility="private" creation-date="12/09/2015 14:30:52">
+            <style class="default" />
+            <attributes>
+              <attribute id="a013f3442a09640928dcf1765abcd2da539" cid="AT033" name="webSocket" type="Socket" type-id="Class:di410427493856227971" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1a05b4fd7c714994afa7d1e9f3f4a23c43" cid="AT037" name="webPort" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a05946c650eee4c52909b55a338cf6066185" cid="AT038" name="maxSocket" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="adb06c9a0d9a943db902b8af0f8551aae335" cid="AT040" name="theWasmachine" type="WashingMachineController" type-id="Class:di865958448679699767" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="of42c2c79251a433cae94203beba3282f982" cid="OP044" name="update" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o047d5d0658f14b6dae6faf4e2f69afdb796" cid="OP048" name="getContent" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd6e66d7aee8d44e782a697dcfd131957" name="content" type="string" type-id="string" direction="In" />
+                </parameters>
+              </operation>
+              <operation id="of4e14b06b03d45c596dd4d5deac4d1a1459" cid="OP064" name="HTTPRequest" type="string" type-id="string" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="" name="req" type="string" type-id="string" direction="In" />
+                </parameters>
+              </operation>
+              <operation id="o61b6a2bcf4174f66b2dc7c2c246493e051" cid="OP065" name="HTTPWebServer" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="" name="" type="webPort: int" type-id="webPort: int" direction="In" />
+                  <parameter id="" name="maxSocket" type="int" type-id="int" />
+                </parameters>
+              </operation>
+              <operation id="o194782b4efd8479abcead6011546493d892" cid="OP069" name="signalWasmachine" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di920990760331727176" cid="C015" type="class" name="UARTController" style-class="" visibility="private" creation-date="12/13/2015 21:50:39">
+            <style class="default" />
+            <attributes>
+              <attribute id="a057d00b17cb642809309802e0f4bea25559" cid="AT004" name="motorctrl" type="MotorController" type-id="Class:di956674592834654243" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4d1d95c656034074ae4a0ae9a40cf6bb464" cid="AT017" name="tempctrl" type="TempController" type-id="Class:di677883195308955403" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a252c45e6bfa2436eb242a00c86d26431595" cid="AT018" name="waterctrl" type="WaterController" type-id="Class:di426704020167463771" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aba6e0ec2adc1495ab5e3d28ea83e388a458" cid="AT075" name="wasctrl" type="WashingMachineController" type-id="Class:di865958448679699767" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac6ac8e2e253f4650b031e08fa2acec3a838" cid="AT076" name="device" type="const char *" type-id="const char *" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a3579b728ddbd4bd6ae09878131662dd1874" cid="AT077" name="baudrate; unsigned int" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac28fea4e9dca4786a660aacc7b940b1e786" cid="AT078" name="theSerialPort" type="LibSerial" type-id="LibSerial" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7629c88bdf094cc8b8773e5ad9ca584d586" cid="AT079" name="commandchannel" type="RTOS::channel&lt; char *, 100 &gt;" type-id="RTOS::channel&lt; char *, 100 &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aca8a7ec6a63c4c48badf06a6222d4061349" cid="AT080" name="interval_clock; RTOS" type=":clock" type-id=":clock" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o9282d1cbb32942cf9a930e2b13193b7d436" cid="OP036" name="readChannel" type="void" type-id="void" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="oaabd5dfe30d540da866d0c6ee9f92959747" cid="OP016" name="returnResponse" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p9c2a4b65253e46ebbf30185e1c500df7" name="response char *" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o1096f4c46776405b8e0dc311430f8c6d62" cid="OP017" name="UART" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p37bfc3905d2446a08a3037db32ac8661" name="const char * device" type="" type-id="" />
+                  <parameter id="p56f334e8cd16402b8b876a78c79ea5c2" name="unsigned int baudrate" type="" type-id="" />
+                  <parameter id="pb6f08f8e64a745d48facd3d3a754f62d" name="MotorController * motorctrl" type="" type-id="" />
+                  <parameter id="pea55dc8213a84f34b6194c3d14a75f57" name="TempController * tempctrl" type="" type-id="" />
+                  <parameter id="p69cebd05cf9d452196432fddacf7a22c" name="WaterController * waterctrl" type="" type-id="" />
+                  <parameter id="pf2a7fa56dd1e4e2a9daf6c65b8e2dfd7" name="WashingMachineController * wasctrl" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o27240b5facc34130ba08a7798b50bb58538" cid="OP125" name="executeCommand" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pcc6641b0856c4942a7cb6db5a103f9f4" name="char * s" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="oae4a073d8ec84cacbda6213fb2e8526548" cid="OP126" name="writeChannel" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p24c041f7832c497187d76528259b3e05" name="char * request" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="ofc0dcb032b384f97a073f035dcb57fc9518" cid="OP127" name="main" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di956674592834654243" cid="C015" type="class" name="MotorController" style-class="" visibility="private" creation-date="12/13/2015 21:50:39">
+            <style class="default" />
+            <attributes>
+              <attribute id="ac13ec0d94f6f4eb882960c74d94d91f7531" cid="AT011" name="motor" type="Motor" type-id="Class:di709665965391747309" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a47ea2c3d224a40a9be83d51991b85a67988" cid="AT012" name="uartptr" type="UART*" type-id="UART*" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7ce64db27e4342dbad897e62080d21ac178" cid="AT065" name="wascontroller" type="WashingMachineController *" type-id="WashingMachineController *" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac68cdb5a449b459f9824511afb60c89d529" cid="AT066" name="response_flag" type="RTOS::flag" type-id="RTOS::flag" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab1842e1dfc5f46dcb57f7a413d254f84524" cid="AT067" name="new_job_flag" type="RTOS::flag" type-id="RTOS::flag" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="afefe45f501c84630a71f136fbab7ef39957" cid="AT068" name="motor_job_pool" type="RTOS::pool&lt; int &gt;" type-id="RTOS::pool&lt; int &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a120a87a423764b1f919df920a3f7d819247" cid="AT069" name="motor_time_pool" type="RTOS::pool&lt; int &gt;" type-id="RTOS::pool&lt; int &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a322187a9bfa94567ac42ddb2aabcef0d922" cid="AT070" name="motor_job_mutex" type="RTOS::mutex" type-id="RTOS::mutex" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a98f13d0aef8346ae948aef6eddc8c60a798" cid="AT071" name="motor_time_mutex" type="RTOS::mutex" type-id="RTOS::mutex" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aaa614e2766324353ba774e6dd4edb153234" cid="AT072" name="response_mutex" type="RTOS::mutex" type-id="RTOS::mutex" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a83317a8481c64585aa5fc62f990b2355704" cid="AT073" name="rotate_timer" type="RTOS::timer" type-id="RTOS::timer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7e040dd105d84a11b38086e257a518c7589" cid="AT074" name="taak" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oedb847d990544b98bb76d77713ec7623544" cid="OP022" name="stopMotor" type="void" type-id="void" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="o26716df3dea247199b16dc575615a325798" cid="OP090" name="rotateRight" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="paa3c606f26bd4e3984815ec81f261c23" name="int speed" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o7cdbeec06f1247cc8de338b216dd11a8137" cid="OP091" name="rotateLeft" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p613a22452d99434cad1a1bde7f5cfbb8" name="int speed" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o950c564d77904c459356442da9d164c2747" cid="OP092" name="normalMotorJob" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p826834a308a04604b253fb2588b62444" name="int time" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o6106fef4a29646a9916b93483509ae80794" cid="OP093" name="centrifuge" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p31659c2f62774a80a30e68b7b5be3556" name="int time" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="oa3c53007937f4d71a59956be3479ac5a33" cid="OP094" name="startMotorJob" type="void" type-id="void" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="oe7f0b2e6cf3440dfb236d4c87a17b482341" cid="OP095" name="readResponse" type="void" type-id="void" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="oe7fdf81c36234ed2951bf6bf6fc3e52c751" cid="OP096" name="uartTask" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd94c6468274c41568a696bdb3ab193fd" name="char * command" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="oc86be0481c0440a6af7637bf1348247d899" cid="OP097" name="MotorController" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd695c9ae1b6e437fa0170d33eeaaf250" name="WashingMachineController * wascontroller" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o31fe1add295044e99a67e605eda55ba5719" cid="OP098" name="setUartPointer" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pf84b417c9e66409080e4f0ba36613fc4" name="UART *u" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="oe209d84953cd45129f4329640f92efc1439" cid="OP099" name="getMotorSpeed" type="int" type-id="int" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o94db126b7ef34f01a8fc56961b5fb0d3889" cid="OP100" name="setMotorJob" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0b4b0514982d461eb3f6698c0b3694b5" name="int job" type="" type-id="" />
+                  <parameter id="pafe43fff42b0403c8d5ec9766b0441a0" name="int time" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="od0d251cbc4ce4290ba980fa6ba5934aa429" cid="OP101" name="setResponseFlag" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o8b58f46533ca419d9c4a21653e69f5a5156" cid="OP102" name="writeResponse" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pc295934892ee4486afec195e1ff30539" name="char * response" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o0dbd6de67ab6403fb0b919a3e66d9793494" cid="OP103" name="main" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di426704020167463771" cid="C015" type="class" name="WaterController" style-class="" visibility="private" creation-date="12/13/2015 21:50:39">
+            <style class="default" />
+            <attributes>
+              <attribute id="abcc7591e37234a039947b0068a202b6a646" cid="AT008" name="watersensor" type="WaterSensor" type-id="WaterSensor" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae92919e108944a61b2b97facfaf09abc227" cid="AT009" name="pumpPump" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab981f35c7944414a9898eeb1f2975d7c126" cid="AT035" name="valve" type="Valve" type-id="Class:di694391954984680351" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a33dc491d142147ed86d3ee13a58f5ae0699" cid="AT058" name="UART" type="*uartptr" type-id="*uartptr" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a75f98e4331494ac5ac4376d2be12da95810" cid="AT059" name="WashingMachineController" type="*wascontroller" type-id="*wascontroller" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ad50cfe8619e0482b85dbb1353bf0bf31621" cid="AT060" name="response_flag" type="RTOS::flag" type-id="RTOS::flag" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aa2d98eb90bb7456a8d9536208f772265866" cid="AT061" name="water_level_pool" type="RTOS::pool&lt; int &gt;" type-id="RTOS::pool&lt; int &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a990ca4cd6f4f4aa39574463c7f7cd1f3214" cid="AT062" name="response_pool" type="RTOS::pool&lt; char * &gt;" type-id="RTOS::pool&lt; char * &gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6de01ff65d1a40f98fc85305ee9e626f563" cid="AT063" name="response_mutex" type="RTOS::mutex" type-id="RTOS::mutex" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a348883019ce84ce08ad792ebfe68b6e5823" cid="AT064" name="water_level_mutex" type="RTOS::mutex" type-id="RTOS::mutex" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="obf7911d01e674b27b1110e015ca2a7f0136" cid="OP020" name="getNewWaterLevel" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="o390b50fbc0da47d09b41b636f8df157c176" cid="OP021" name="pumping" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="" name="bool on" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="od920676566034723bf0f55c054f3c057647" cid="OP059" name="valving" type="void" type-id="void" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pa86270a335a140cd9c9011ce6510474c" name="bool on" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="of4260d1422514b09be16448529a45128104" cid="OP060" name="readResponse" type="Char *" type-id="Char *" visibility="private">
+                <style class="default" />
+              </operation>
+              <operation id="o763e756232a24c0fab38aa9b84511982942" cid="OP067" name="uartTask" type="Char *" type-id="Char *" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p5518bc748f114ed598f0afdb328d1b19" name="char * command" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="odd8f88826baa47a986603c4c73a757de350" cid="OP084" name="WaterController" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p5a4be088c6fd427ab351029e373c3b85" name="WashingMachineController * wascontroller" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o11231db284c44f438415d59bfd82bb2a842" cid="OP085" name="setUartPointer" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd6c8a8e4350f47058d987be2126e5248" name="UART * u" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o75a11573071541908c77e74b61f8e6ed993" cid="OP086" name="setWaterLevel" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p7e3dd0e2c17d475f91a98235cf23c72a" name="int level" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o7f9f63b1d28146ce9c96cdf4182edaa5130" cid="OP087" name="setResponseFlag" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="ob81b8059f1724dc8ba7a24abd83921dc152" cid="OP088" name="writeResponse" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pc75965cb7a6844559cd9a946eb578866" name="char * response" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="of43edb49822346ba9fdab07bbee61319429" cid="OP089" name="main" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di677883195308955403" cid="C015" type="class" name="TempController" style-class="" visibility="private" creation-date="12/13/2015 21:50:39">
+            <style class="default" />
+            <attributes>
+              <attribute id="ad40cc7e09ede42f58ff4d59d15a9b634136" cid="AT007" name="Heater heater" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="abe56a58557554e238da953a2180c9c2967" cid="AT048" name="TempSensor tempsensor" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a82899b0c6a6c4372b382d9fe99622d4e156" cid="AT049" name="UART *uartptr" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a3bd967ac50c54cbe997817f222fb2112503" cid="AT050" name="WashingMachineController *wascontroller" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae431cc3a87a442298d0451c27ea387de603" cid="AT051" name="RTOS" type=":flag response_flag" type-id=":flag response_flag" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7ddb8a9608b64580bf0269021899d7df606" cid="AT052" name="RTOS" type=":pool&lt;int&gt; temp_pool" type-id=":pool&lt;int&gt; temp_pool" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aec8c08b0627f45a68b699bf1eabfb2cf392" cid="AT053" name="RTOS" type=":pool&lt;char&gt; response_pool" type-id=":pool&lt;char&gt; response_pool" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac23c1fc935ff4df895e606af1039488f265" cid="AT054" name="RTOS" type=":mutex temp_mutex" type-id=":mutex temp_mutex" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7c41663c43224b37a9a89573f66c8553208" cid="AT055" name="RTOS" type=":mutex response_mutex" type-id=":mutex response_mutex" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a442120c6d33148f9b8c5ed8e475d4bd4977" cid="AT056" name="RTOS" type=":clock interval_clock" type-id=":clock interval_clock" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oe0fb017ecad746b5a559824aecb61458478" cid="OP018" name="getNewTemp" type="int" type-id="int" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="oca83ad404ace4612adf61e892ae7def8757" cid="OP019" name="getTemp" type="int" type-id="int" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o722ec2c3cc8a46ffb07bbd7b13187aa9257" cid="OP027" name="heat" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pdde23d48c1fe48c082a139b10aee66ed" name="on bool" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o1f84241b6f15427fb10c51575886faa5721" cid="OP066" name="updateState" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o829343c511504bc09fde0635e0fdf158274" cid="OP080" name="setUartPointer" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pff2095ac80484d67bddbca794fdfe593" name="UART * u" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="ofb1333a90c4441119c44fdff307b8620309" cid="OP081" name="setTemp" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p02bad383894948d3bf4428b69ffba46d" name="temp int" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="oe15bbede8fbd4988b7f4bf1e34cac8af661" cid="OP082" name="setResponseFlag" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o1d8fe2d9bf7949c7bc724bcfdd20b49b455" cid="OP083" name="main" type="void" type-id="void" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di146675822136826390" cid="REL117" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="01/21/2016 15:15:58" from="di426704020167463771" to="di743992221106055807">
+            <style class="default" />
+            <relation from="di426704020167463771" to="di743992221106055807">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di420966202220133931" cid="REL115" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="01/21/2016 15:15:19" from="di426704020167463771" to="di694391954984680351">
+            <style class="default" />
+            <relation from="di426704020167463771" to="di694391954984680351">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di801656774287206363" cid="REL059" type="relationship" name="" style-class="" visibility="private" creation-date="12/26/2015 21:33:41" from="di956674592834654243" to="di709665965391747309">
+            <style class="default" />
+            <relation from="di956674592834654243" to="di709665965391747309">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di199571029148477597" cid="REL108" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="01/21/2016 14:26:57" from="di920990760331727176" to="di426704020167463771">
+            <style class="default" />
+            <relation from="di920990760331727176" to="di426704020167463771">
+              <start-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di194700743947104980" cid="REL043" type="relationship" name="" style-class="" visibility="private" creation-date="12/15/2015 16:21:26" from="di865958448679699767" to="di956674592834654243">
+            <style class="default" />
+            <relation from="di865958448679699767" to="di956674592834654243">
+              <start-role id="" name="" navigability="" association-type="aggregation" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di930900802662164938" cid="REL045" type="relationship" name="" style-class="" visibility="private" creation-date="12/15/2015 16:21:37" from="di865958448679699767" to="di677883195308955403">
+            <style class="default" />
+            <relation from="di865958448679699767" to="di677883195308955403">
+              <start-role id="" name="" navigability="" association-type="aggregation" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di287016379811195310" cid="REL044" type="relationship" name="" style-class="" visibility="private" creation-date="12/15/2015 16:21:32" from="di865958448679699767" to="di426704020167463771">
+            <style class="default" />
+            <relation from="di865958448679699767" to="di426704020167463771">
+              <start-role id="" name="" navigability="" association-type="aggregation" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di396600517944715753" cid="C017" type="class" name="Wasprogramma" style-class="" visibility="private" creation-date="12/14/2015 02:52:26">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a0c1f26c6154d44a5803b91e503b0c6bd774" cid="AT043" name="fileName" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o935189269f1643e2b249e73e5944a09d737" cid="OP073" name="getWasprogramma" type="string" type-id="string" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="" name="" type="wasProg: string" type-id="wasProg: string" direction="In" />
+                </parameters>
+              </operation>
+            </operations>
+          </item>
+          <item id="di324692555652373340" cid="DEP002" type="dependency" name="" style-class="" visibility="private" creation-date="12/14/2015 02:56:14" from="di865958448679699767" to="di396600517944715753">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di420065746404133330" cid="C018" type="class" name="Content" style-class="" visibility="private" creation-date="12/14/2015 03:01:15">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="a0746033a57f845bbacee82416f7cf235938" cid="AT016" name="Content" type="Char *" type-id="Char *" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+          </item>
+          <item id="di695329851490573843" cid="REA008" type="realization" name="" style-class="" visibility="private" creation-date="12/14/2015 03:01:44" from="di262649960130001110" to="di703389020407601566">
+            <style class="default" />
+          </item>
+          <item id="di916566220864144123" cid="C018" type="class" name="User" style-class="" visibility="private" creation-date="12/14/2015 03:01:15">
+            <stereotypes>
+              <stereotype name="entity" />
+            </stereotypes>
+            <style class="default" />
+            <attributes>
+              <attribute id="af34721d8792c4c45af0ad86719c2bb36637" cid="AT027" name="name" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ad9c66b69a89043c9a3bf1499261cc81d956" cid="AT028" name="password" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a19e083874ac64e22b4c935de667e737f84" cid="AT029" name="lastActionTime" type="int" type-id="int" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae36315f0ad7f41d38a608d6846131f0b547" cid="AT030" name="authToken" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a9612ac55affe4411aaae07bea0d89929463" cid="AT034" name="loginStatus" type="" type-id="" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+          </item>
+          <item id="di895915688693185565" cid="REL106" type="relationship" name="" style-class="" visibility="private" creation-date="01/14/2016 13:06:36" from="di335687270831956186" to="di262649960130001110">
+            <style class="default" />
+            <relation from="di335687270831956186" to="di262649960130001110">
+              <start-role id="" name="" navigability="" association-type="aggregation" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di713503812233343191" cid="C022" type="class" name="UserController" style-class="" visibility="private" creation-date="12/14/2015 12:39:38">
+            <style class="default" />
+            <operations>
+              <operation id="of90c15d695b84bbe84d6f311a5244aeb468" cid="OP045" name="login" type="int" type-id="int" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pacae731f4d694e05850d3cc8ad3888e0" name="name" type="string" type-id="string" direction="In" />
+                  <parameter id="p8e0da62a9ddf4cdbad2d859d90ce99da" name="password" type="string" type-id="string" />
+                </parameters>
+              </operation>
+              <operation id="ob1ae19a108fb4d959cac0a6d564ce54797" cid="OP046" name="logout" type="int" type-id="int" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="" name="in" type="name:string" type-id="name:string" />
+                  <parameter id="" name="auth" type="string" type-id="string" />
+                </parameters>
+              </operation>
+              <operation id="o72778cd4b67045d2b349788ad1a9407a953" cid="OP051" name="getAuthToken" type="string" type-id="string" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o2ce1f66181dc4cf782b649cf84730a5a555" cid="OP052" name="checkAuthToken" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pe36717137ffb40bdbf11ac53941e2d09" name="User" type="" type-id="" />
+                </parameters>
+              </operation>
+              <operation id="o0b78ebd6c28a49dd9a6b9f367e48be32419" cid="OP053" name="register" type="int" type-id="int" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di803124967964480124" cid="REL035" type="relationship" name="" style-class="" visibility="private" creation-date="12/14/2015 12:41:19" from="di491725866737395880" to="di713503812233343191">
+            <style class="default" />
+            <relation from="di491725866737395880" to="di713503812233343191">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="currentUser" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di781771546495466011" cid="DEP008" type="dependency" name="" style-class="" visibility="private" creation-date="12/14/2015 12:40:21" from="di713503812233343191" to="di916566220864144123">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di376654527859243457" cid="REL112" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="01/21/2016 14:27:59" from="di677883195308955403" to="di383550174257118955">
+            <style class="default" />
+            <relation from="di677883195308955403" to="di383550174257118955">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di285574270382724657" cid="REL116" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="01/21/2016 15:15:30" from="di426704020167463771" to="di439789895190205011">
+            <style class="default" />
+            <relation from="di426704020167463771" to="di439789895190205011">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di305642254395303654" cid="REL080" type="relationship" name="" style-class="" visibility="private" creation-date="01/13/2016 15:00:46" from="di677883195308955403" to="di953459054243421518">
+            <style class="default" />
+            <relation from="di677883195308955403" to="di953459054243421518">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di286084024593291606" cid="REL109" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="01/21/2016 14:27:06" from="di920990760331727176" to="di956674592834654243">
+            <style class="default" />
+            <relation from="di920990760331727176" to="di956674592834654243">
+              <start-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di925685186526340392" cid="C027" type="class" name="TCPSocket" style-class="" visibility="private" creation-date="01/11/2016 12:37:46">
+            <style class="default" />
+          </item>
+          <item id="di764857022649452531" cid="C028" type="class" name="WebSocket" style-class="" visibility="private" creation-date="01/11/2016 12:37:57">
+            <style class="default" />
+          </item>
+          <item id="di359441731933098465" cid="C029" type="class" name="WebSocketListner" style-class="" visibility="private" creation-date="01/11/2016 12:46:49">
+            <stereotypes>
+              <stereotype name="interface" />
+            </stereotypes>
+            <style class="default" />
+          </item>
+          <item id="di262649960130001110" cid="C030" type="class" name="Server" style-class="" visibility="private" creation-date="01/11/2016 13:50:48">
+            <style class="default" />
+          </item>
+          <item id="di196442969618639619" cid="REL072" type="relationship" name="" style-class="" visibility="private" creation-date="01/12/2016 11:53:20" from="di764857022649452531" to="di925685186526340392">
+            <style class="default" />
+            <relation from="di764857022649452531" to="di925685186526340392">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di195096472806754414" cid="REL087" type="relationship" name="" style-class="" visibility="private" creation-date="01/13/2016 15:39:20" from="di262649960130001110" to="di764857022649452531">
+            <style class="default" />
+            <relation from="di262649960130001110" to="di764857022649452531">
+              <start-role id="" name="" navigability="" association-type="aggregation" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di575295565715413756" cid="REA015" type="realization" name="" style-class="" visibility="private" creation-date="01/12/2016 11:57:08" from="di262649960130001110" to="di359441731933098465">
+            <style class="default" />
+          </item>
+          <item id="di360444297230698550" cid="REL076" type="relationship" name="" style-class="" visibility="private" creation-date="01/12/2016 11:59:48" from="di764857022649452531" to="di359441731933098465">
+            <style class="default" />
+            <relation from="di764857022649452531" to="di359441731933098465">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di402289379281469144" cid="CMT003" type="comment" name="" style-class="" visibility="private" creation-date="01/14/2016 12:53:58">
+            <style class="default" />
+            <comment>Nog een class toevoegen voor het pollen van de server, en het regelen van data versturen naar de server
+</comment>
+          </item>
+          <item id="di335687270831956186" cid="C032" type="class" name="CommunicationController" style-class="" visibility="private" creation-date="01/14/2016 12:55:26">
+            <style class="default" />
+          </item>
+        </abstract-items>
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di865958448679699767" iid="f52f83a56d9c4abfaa3ad6ed7d96abc0" creation-date="12/09/2015 13:56:57" order-index="4" type="entity">
+            <layout ax="239" ay="450.5" awidth="351" aheight="338" x="239" y="450.5" width="351" height="338" angle="0" />
+            <class />
+          </item>
+          <item id="di491725866737395880" iid="ca38fd2472824e12bb7088c4a50ee223" creation-date="12/09/2015 14:30:52" order-index="16" type="entity">
+            <layout ax="1046" ay="336" awidth="174" aheight="300.5" x="1046" y="336" width="174" height="300.5" angle="0" />
+            <class />
+          </item>
+          <item id="di956674592834654243" iid="f950b33bfd744ec89bfd2b20ff079897" creation-date="12/13/2015 21:50:39" order-index="19" type="entity">
+            <layout ax="-565" ay="695.25" awidth="327" aheight="522" x="-565" y="695.25" width="327" height="522" angle="0" />
+            <class />
+          </item>
+          <item id="di426704020167463771" iid="dc0eb7c7dbdf4e57a7abd60bceeb6de4" creation-date="12/13/2015 21:50:39" order-index="19" type="entity">
+            <layout ax="-556.5" ay="255.5" awidth="310" aheight="420" x="-556.5" y="255.5" width="310" height="420" angle="0" />
+            <class />
+          </item>
+          <item id="di677883195308955403" iid="cc94ecf23475403eb2738c44f01e30aa" creation-date="12/13/2015 21:50:39" order-index="19" type="entity">
+            <layout ax="-565" ay="-139" awidth="328" aheight="355" x="-565" y="-139" width="328" height="355" angle="0" />
+            <class />
+          </item>
+          <item id="di383550174257118955" iid="1622c3dec07a4ad880bf1ce502b55c84" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-848" ay="-119" awidth="211" aheight="116" x="-848" y="-119" width="211" height="116" angle="0" />
+            <class />
+          </item>
+          <item id="di439789895190205011" iid="8c06064037df4d51ae97a9649e41a08a" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-885.5" ay="433.75" awidth="209" aheight="133" x="-885.5" y="433.75" width="209" height="133" angle="0" />
+            <class />
+          </item>
+          <item id="di709665965391747309" iid="c18b79e1e05f43fcb85f9b9279d3c8d6" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-873" ay="868.75" awidth="245" aheight="116" x="-873" y="868.75" width="245" height="116" angle="0" />
+            <class />
+          </item>
+          <item id="di953459054243421518" iid="5f52bc50f7a44b2b982ccb35b23cb797" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-848" ay="37.5" awidth="186" aheight="82" x="-848" y="37.5" width="186" height="82" angle="0" />
+            <class />
+          </item>
+          <item id="di743992221106055807" iid="95be10599aeb4cd382f6e2e8a8a9d153" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-848" ay="293.5" awidth="245" aheight="104" x="-848" y="293.5" width="245" height="104" angle="0" />
+            <class />
+          </item>
+          <item id="di657593867833011171" iid="7a8ef2969fa24686bd9bd9b54ccb9649" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="654.5" ay="280.5" awidth="151" aheight="97" x="654.5" y="280.5" width="151" height="97" angle="0" />
+            <class />
+          </item>
+          <item id="di703389020407601566" iid="e4730692214c4bef9623a975dc311944" creation-date="12/09/2015 01:49:34" order-index="1" type="entity">
+            <layout ax="879" ay="290.5" awidth="140" aheight="76" x="879" y="290.5" width="140" height="76" angle="0" />
+            <class />
+          </item>
+          <item id="di396600517944715753" iid="cfc8fe4f365e4a878e15250c7569fd0e" creation-date="12/14/2015 02:52:26" order-index="40" type="entity">
+            <layout ax="781" ay="464" awidth="183" aheight="160" x="781" y="464" width="183" height="160" angle="0" />
+            <class />
+          </item>
+          <item id="di324692555652373340" iid="581fee3732474ec29895e89a20667ed0" creation-date="12/14/2015 02:56:14" order-index="42" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="590" y1="591" x2="781" y2="559" start-border-pos="0.353768297906458" end-border-pos="0.85140552520752" name-position="0,0">
+              <points>
+                <point x="590" y="591" />
+                <point x="781" y="559" />
+              </points>
+            </layout>
+            <relation from="di865958448679699767" from-iid="f52f83a56d9c4abfaa3ad6ed7d96abc0" to="di396600517944715753" to-iid="cfc8fe4f365e4a878e15250c7569fd0e" />
+          </item>
+          <item id="di971286783667499823" iid="144d817b8fae4aedab9ba97ccd09cea5" creation-date="12/14/2015 02:59:38" order-index="44" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="806" y1="329" x2="879" y2="328" start-border-pos="0.374117349840931" end-border-pos="0.875593285811575" name-position="0,0">
+              <points>
+                <point x="806" y="329" />
+                <point x="879" y="328" />
+              </points>
+            </layout>
+            <relation from="di657593867833011171" from-iid="7a8ef2969fa24686bd9bd9b54ccb9649" to="di703389020407601566" to-iid="e4730692214c4bef9623a975dc311944" />
+          </item>
+          <item id="di420065746404133330" iid="211c9c0bf0574640902e0fcf65fd1e9c" creation-date="12/14/2015 03:01:15" order-index="46" type="entity">
+            <layout ax="1046" ay="707" awidth="140" aheight="81.5" x="1046" y="707" width="140" height="81.5" angle="0" />
+            <class />
+          </item>
+          <item id="di695329851490573843" iid="8128e4ace0e4436a9bfa5e4968465de0" creation-date="12/14/2015 03:01:44" order-index="47" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1072" y1="217" x2="991" y2="290" start-border-pos="0.775611233711243" end-border-pos="0.200266810825893" name-position="0,0">
+              <points>
+                <point x="1072" y="217" />
+                <point x="991" y="290" />
+              </points>
+            </layout>
+            <relation from="di262649960130001110" from-iid="d623dee9f0e54859a0a37599eedcbc08" to="di703389020407601566" to-iid="e4730692214c4bef9623a975dc311944" />
+          </item>
+          <item id="di789427647295784021" iid="088502954b4b4a9abc83296a25f8d266" creation-date="12/14/2015 03:02:08" order-index="48" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="730" y1="236" x2="730" y2="280" start-border-pos="0.625" end-border-pos="0.125" name-position="0,0">
+              <points>
+                <point x="730" y="236" />
+                <point x="730" y="280" />
+              </points>
+            </layout>
+            <relation from="di335687270831956186" from-iid="27af557af7e0481a9ff488069c1d1d58" to="di657593867833011171" to-iid="7a8ef2969fa24686bd9bd9b54ccb9649" />
+          </item>
+          <item id="di290610061221245387" iid="c60dead6490d4b8ebeaf182224843763" creation-date="12/14/2015 03:13:46" order-index="49" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1123" y1="636" x2="1119" y2="707" start-border-pos="0.638983890928071" end-border-pos="0.129750497000558" name-position="0,0">
+              <points>
+                <point x="1123" y="636" />
+                <point x="1119" y="707" />
+              </points>
+            </layout>
+            <relation from="di491725866737395880" from-iid="ca38fd2472824e12bb7088c4a50ee223" to="di420065746404133330" to-iid="211c9c0bf0574640902e0fcf65fd1e9c" />
+          </item>
+          <item id="di916566220864144123" iid="79df6e21422c4f9bbeea531923163e8d" creation-date="12/14/2015 03:01:15" order-index="46" type="entity">
+            <layout ax="1346" ay="564.5" awidth="140" aheight="160" x="1346" y="564.5" width="140" height="160" angle="0" />
+            <class />
+          </item>
+          <item id="di713503812233343191" iid="5e3c0b1b68ee40c1b8eb4fb91cd1b9c3" creation-date="12/14/2015 12:39:38" order-index="58" type="entity">
+            <layout ax="1303" ay="336" awidth="226" aheight="166" x="1303" y="336" width="226" height="166" angle="0" />
+            <class />
+          </item>
+          <item id="di781771546495466011" iid="a99d91b65c3d43dabae8bb1f8e60deae" creation-date="12/14/2015 12:40:21" order-index="60" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1416" y1="502" x2="1416" y2="564" start-border-pos="0.625" end-border-pos="0.125" name-position="10,-10">
+              <points>
+                <point x="1416" y="502" />
+                <point x="1416" y="564" />
+              </points>
+            </layout>
+            <relation from="di713503812233343191" from-iid="5e3c0b1b68ee40c1b8eb4fb91cd1b9c3" to="di916566220864144123" to-iid="79df6e21422c4f9bbeea531923163e8d" />
+          </item>
+          <item id="di803124967964480124" iid="cb333549897947efa5e89dcc1648d60e" creation-date="12/14/2015 12:41:19" order-index="61" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1220" y1="465" x2="1303" y2="446" start-border-pos="0.35765626624896" end-border-pos="0.834709856883589" name-position="10,-10">
+              <points>
+                <point x="1220" y="465" />
+                <point x="1303" y="446" />
+              </points>
+            </layout>
+            <relation from="di491725866737395880" from-iid="ca38fd2472824e12bb7088c4a50ee223" to="di713503812233343191" to-iid="5e3c0b1b68ee40c1b8eb4fb91cd1b9c3" />
+          </item>
+          <item id="di194700743947104980" iid="36b0ce07ba784f6a9bfe25c7718e2997" creation-date="12/15/2015 16:21:26" order-index="73" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="239" y1="692" x2="-238" y2="888" start-border-pos="0.8213322204951" end-border-pos="0.342538592459142" name-position="10,-10">
+              <points>
+                <point x="239" y="692" />
+                <point x="-238" y="888" />
+              </points>
+            </layout>
+            <relation from="di865958448679699767" from-iid="f52f83a56d9c4abfaa3ad6ed7d96abc0" to="di956674592834654243" to-iid="f950b33bfd744ec89bfd2b20ff079897" />
+          </item>
+          <item id="di287016379811195310" iid="3b343124cea34b228d17ef479414d317" creation-date="12/15/2015 16:21:32" order-index="74" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="239" y1="587" x2="-246" y2="495" start-border-pos="0.899058415339543" end-border-pos="0.392822120303199" name-position="10,-10">
+              <points>
+                <point x="239" y="587" />
+                <point x="-246" y="495" />
+              </points>
+            </layout>
+            <relation from="di865958448679699767" from-iid="f52f83a56d9c4abfaa3ad6ed7d96abc0" to="di426704020167463771" to-iid="dc0eb7c7dbdf4e57a7abd60bceeb6de4" />
+          </item>
+          <item id="di930900802662164938" iid="f71d9ea436f44170b5d2c9e8e02f18fd" creation-date="12/15/2015 16:21:37" order-index="75" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="239" y1="495" x2="-237" y2="155" start-border-pos="0.967063113782533" end-border-pos="0.457122609313105" name-position="10,-10">
+              <points>
+                <point x="239" y="495" />
+                <point x="-237" y="155" />
+              </points>
+            </layout>
+            <relation from="di865958448679699767" from-iid="f52f83a56d9c4abfaa3ad6ed7d96abc0" to="di677883195308955403" to-iid="cc94ecf23475403eb2738c44f01e30aa" />
+          </item>
+          <item id="di920990760331727176" iid="fda23549f17c4a99b1612d43135544ab" creation-date="12/13/2015 21:50:39" order-index="19" type="entity">
+            <layout ax="-1468" ay="276" awidth="339" aheight="364" x="-1468" y="276" width="339" height="364" angle="0" />
+            <class />
+          </item>
+          <item id="di694391954984680351" iid="40a23c88367d495581973d27642d8d10" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-873" ay="603" awidth="211" aheight="133" x="-873" y="603" width="211" height="133" angle="0" />
+            <class />
+          </item>
+          <item id="di104094324195382052" iid="93d2e58dac7c4a70ac0069c52490b5ce" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-856.5" ay="1235.5" awidth="212" aheight="133" x="-856.5" y="1235.5" width="212" height="133" angle="0" />
+            <class />
+          </item>
+          <item id="di801656774287206363" iid="98b6e11faa6c46b6a36e52a0e0b733e7" creation-date="12/26/2015 21:33:41" order-index="99" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-565" y1="942" x2="-628" y2="937" start-border-pos="0.881625149898602" end-border-pos="0.397449756490773" name-position="0,0">
+              <points>
+                <point x="-565" y="942" />
+                <point x="-628" y="937" />
+              </points>
+            </layout>
+            <relation from="di956674592834654243" from-iid="f950b33bfd744ec89bfd2b20ff079897" to="di709665965391747309" to-iid="c18b79e1e05f43fcb85f9b9279d3c8d6" />
+          </item>
+          <item id="di925685186526340392" iid="2499017d961a4e89950e2994c0619659" creation-date="01/11/2016 12:37:46" order-index="112" type="entity">
+            <layout ax="1344" ay="-342" awidth="140" aheight="160" x="1344" y="-342" width="140" height="160" angle="0" />
+            <class />
+          </item>
+          <item id="di359441731933098465" iid="9a0ff042fc0a4219aee3ccfd3c77ff55" creation-date="01/11/2016 12:46:49" order-index="114" type="entity">
+            <layout ax="1339" ay="73.5" awidth="154" aheight="160" x="1339" y="73.5" width="154" height="160" angle="0" />
+            <class />
+          </item>
+          <item id="di764857022649452531" iid="838a72626ac74cab85b6ffad8205138f" creation-date="01/11/2016 12:37:57" order-index="113" type="entity">
+            <layout ax="1346" ay="-119" awidth="140" aheight="154" x="1346" y="-119" width="140" height="154" angle="0" />
+            <class />
+          </item>
+          <item id="di262649960130001110" iid="d623dee9f0e54859a0a37599eedcbc08" creation-date="01/11/2016 13:50:48" order-index="115" type="entity">
+            <layout ax="1072.5" ay="73.5" awidth="140" aheight="160" x="1072.5" y="73.5" width="140" height="160" angle="0" />
+            <class />
+          </item>
+          <item id="di196442969618639619" iid="f343c5ed204941709403bc0eb8f29bdc" creation-date="01/12/2016 11:53:20" order-index="116" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1415" y1="-119" x2="1415" y2="-182" start-border-pos="0.12375008719308" end-border-pos="0.62370125906808" name-position="10,-10">
+              <points>
+                <point x="1415" y="-119" />
+                <point x="1415" y="-182" />
+              </points>
+            </layout>
+            <relation from="di764857022649452531" from-iid="838a72626ac74cab85b6ffad8205138f" to="di925685186526340392" to-iid="2499017d961a4e89950e2994c0619659" />
+          </item>
+          <item id="di575295565715413756" iid="c8681f7214a24090987515dedfd1bf6f" creation-date="01/12/2016 11:57:08" order-index="120" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1212" y1="154" x2="1339" y2="154" start-border-pos="0.37578125" end-border-pos="0.87421875" name-position="10,-10">
+              <points>
+                <point x="1212" y="154" />
+                <point x="1339" y="154" />
+              </points>
+            </layout>
+            <relation from="di262649960130001110" from-iid="d623dee9f0e54859a0a37599eedcbc08" to="di359441731933098465" to-iid="9a0ff042fc0a4219aee3ccfd3c77ff55" />
+          </item>
+          <item id="di360444297230698550" iid="cedd60c094af436da0784278a16b716f" creation-date="01/12/2016 11:59:48" order-index="121" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1416" y1="35" x2="1416" y2="74" start-border-pos="0.625" end-border-pos="0.125" name-position="10,-10">
+              <points>
+                <point x="1416" y="35" />
+                <point x="1416" y="74" />
+              </points>
+            </layout>
+            <relation from="di764857022649452531" from-iid="838a72626ac74cab85b6ffad8205138f" to="di359441731933098465" to-iid="9a0ff042fc0a4219aee3ccfd3c77ff55" />
+          </item>
+          <item id="di305642254395303654" iid="320a0fd7367842fc876ebb5a1a60e21e" creation-date="01/13/2016 15:00:46" order-index="127" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-565" y1="57" x2="-662" y2="67" start-border-pos="0.862302060194418" end-border-pos="0.341437572386207" name-position="10,-10">
+              <points>
+                <point x="-565" y="57" />
+                <point x="-662" y="67" />
+              </points>
+            </layout>
+            <relation from="di677883195308955403" from-iid="cc94ecf23475403eb2738c44f01e30aa" from-field="oe0fb017ecad746b5a559824aecb61458478" to="di953459054243421518" to-iid="5f52bc50f7a44b2b982ccb35b23cb797" />
+          </item>
+          <item id="di195096472806754414" iid="3d3fe84820074068a20c300fdb725e9a" creation-date="01/13/2016 15:39:20" order-index="135" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="1212" y1="104" x2="1346" y2="8" start-border-pos="0.297542202472687" end-border-pos="0.793712674797355" name-position="10,-10">
+              <points>
+                <point x="1212" y="104" />
+                <point x="1346" y="8" />
+              </points>
+            </layout>
+            <relation from="di262649960130001110" from-iid="d623dee9f0e54859a0a37599eedcbc08" to="di764857022649452531" to-iid="838a72626ac74cab85b6ffad8205138f" />
+          </item>
+          <item id="di161119503318519108" iid="b7a5bcb80c024b64b9de084f6f289925" creation-date="12/09/2015 01:49:30" order-index="0" type="entity">
+            <layout ax="-867" ay="1431.75" awidth="209" aheight="133" x="-867" y="1431.75" width="209" height="133" angle="0" />
+            <class />
+          </item>
+          <item id="di402289379281469144" iid="10f31cca2a8f422b9d366ae9e94f511e" creation-date="01/14/2016 12:53:58" order-index="150" type="entity">
+            <layout ax="851" ay="-3.5" awidth="140" aheight="103" x="851" y="-3.5" width="140" height="103" angle="0" />
+          </item>
+          <item id="di335687270831956186" iid="27af557af7e0481a9ff488069c1d1d58" creation-date="01/14/2016 12:55:26" order-index="151" type="entity">
+            <layout ax="660" ay="76.5" awidth="140" aheight="160" x="660" y="76.5" width="140" height="160" angle="0" />
+            <class />
+          </item>
+          <item id="di895915688693185565" iid="5b28e8d81e864180b999ea2106b5934a" creation-date="01/14/2016 13:06:36" order-index="153" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="800" y1="156" x2="1072" y2="154" start-border-pos="0.373687791824341" end-border-pos="0.873687791824341" name-position="10,-10">
+              <points>
+                <point x="800" y="156" />
+                <point x="1072" y="154" />
+              </points>
+            </layout>
+            <relation from="di335687270831956186" from-iid="27af557af7e0481a9ff488069c1d1d58" to="di262649960130001110" to-iid="d623dee9f0e54859a0a37599eedcbc08" />
+          </item>
+          <item id="di464834074497675906" iid="b473891f339e40148e19056b1b55c3a2" creation-date="01/21/2016 14:26:42" order-index="154" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-1129" y1="379" x2="-565" y2="115" start-border-pos="0.320652175735641" end-border-pos="0.821275141541387" name-position="28,-13">
+              <points>
+                <point x="-1129" y="379" />
+                <point x="-565" y="115" />
+              </points>
+            </layout>
+            <relation from="di920990760331727176" from-iid="fda23549f17c4a99b1612d43135544ab" to="di677883195308955403" to-iid="cc94ecf23475403eb2738c44f01e30aa" />
+          </item>
+          <item id="di199571029148477597" iid="345d15979bbc474f9a05d7d07da0f2be" creation-date="01/21/2016 14:26:57" order-index="155" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-1129" y1="460" x2="-556" y2="465" start-border-pos="0.37603636102362" end-border-pos="0.875520833333333" name-position="0,0">
+              <points>
+                <point x="-1129" y="460" />
+                <point x="-556" y="465" />
+              </points>
+            </layout>
+            <relation from="di920990760331727176" from-iid="fda23549f17c4a99b1612d43135544ab" to="di426704020167463771" to-iid="dc0eb7c7dbdf4e57a7abd60bceeb6de4" />
+          </item>
+          <item id="di286084024593291606" iid="d523668be06a41438511142f12ebebee" creation-date="01/21/2016 14:27:06" order-index="156" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-1129" y1="552" x2="-565" y2="865" start-border-pos="0.439512902563745" end-border-pos="0.918508624665125" name-position="0,0">
+              <points>
+                <point x="-1129" y="552" />
+                <point x="-565" y="865" />
+              </points>
+            </layout>
+            <relation from="di920990760331727176" from-iid="fda23549f17c4a99b1612d43135544ab" to="di956674592834654243" to-iid="f950b33bfd744ec89bfd2b20ff079897" />
+          </item>
+          <item id="di376654527859243457" iid="cb41254867894e3a85e8b02b813b69c0" creation-date="01/21/2016 14:27:59" order-index="157" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-565" y1="-10" x2="-637" y2="-31" start-border-pos="0.908882326475332" end-border-pos="0.440697998836123" name-position="0,0">
+              <points>
+                <point x="-565" y="-10" />
+                <point x="-637" y="-31" />
+              </points>
+            </layout>
+            <relation from="di677883195308955403" from-iid="cc94ecf23475403eb2738c44f01e30aa" to="di383550174257118955" to-iid="1622c3dec07a4ad880bf1ce502b55c84" />
+          </item>
+          <item id="di420966202220133931" iid="0752d334ec304ee1bc0efad9a80e2ee4" creation-date="01/21/2016 15:15:19" order-index="158" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-556" y1="552" x2="-662" y2="611" start-border-pos="0.823609488351004" end-border-pos="0.264883514633752" name-position="0,0">
+              <points>
+                <point x="-556" y="552" />
+                <point x="-662" y="611" />
+              </points>
+            </layout>
+            <relation from="di426704020167463771" from-iid="dc0eb7c7dbdf4e57a7abd60bceeb6de4" to="di694391954984680351" to-iid="40a23c88367d495581973d27642d8d10" />
+          </item>
+          <item id="di285574270382724657" iid="84fa3245c09c42d9b9d77793db059282" creation-date="01/21/2016 15:15:30" order-index="159" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-556" y1="480" x2="-676" y2="491" start-border-pos="0.866478983561198" end-border-pos="0.356824200852473" name-position="0,0">
+              <points>
+                <point x="-556" y="480" />
+                <point x="-676" y="491" />
+              </points>
+            </layout>
+            <relation from="di426704020167463771" from-iid="dc0eb7c7dbdf4e57a7abd60bceeb6de4" to="di439789895190205011" to-iid="8c06064037df4d51ae97a9649e41a08a" />
+          </item>
+          <item id="di146675822136826390" iid="fc01df7130aa40e4a74237ff0b9a83aa" creation-date="01/21/2016 15:15:58" order-index="160" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-556" y1="409" x2="-603" y2="392" start-border-pos="0.908653004964193" end-border-pos="0.48571043748122" name-position="0,0">
+              <points>
+                <point x="-556" y="409" />
+                <point x="-603" y="392" />
+              </points>
+            </layout>
+            <relation from="di426704020167463771" from-iid="dc0eb7c7dbdf4e57a7abd60bceeb6de4" to="di743992221106055807" to-iid="95be10599aeb4cd382f6e2e8a8a9d153" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+  <documents />
+  <document-templates />
+</sim-project>
