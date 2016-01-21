@@ -28,6 +28,7 @@ body {
 .navbar li a:hover {
     background-color: #555;
     color: white;
+	cursor:pointer;
 }
 
 .navbar .active {
@@ -80,6 +81,7 @@ header li:first-child{
 
 /*==================================StopKnop================================*/
 .MyStopButton {
+	position: relative;
 	background-color:#c74545;
 	-moz-border-radius:19px;
 	-webkit-border-radius:19px;
@@ -255,6 +257,37 @@ header li:first-child{
 	border: outset #4CAF50;
 }
 
+#loginscherm input[type=text]{
+	margin-left: 20px;
+	width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#loginscherm input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+#loginscherm input[type=password]{
+	width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#loginscherm input[type=password]:focus {
+    border: 3px solid #555;
+}
+
 .inlogbutton{
 	font-size: 105%;
 }
@@ -276,9 +309,34 @@ header li:first-child{
 	margin-left:300px ;
 }
 
-.img{
+#imgRemco{
 	-webkit-user-select: none;
-	width: 25%;
+	width: auto;
+	height: 400px;
+}
+
+#imgJeroen {
+	-webkit-user-select: none;
+	width: auto;
+	height: 400px;
+}
+
+#imgKevin {
+	-webkit-user-select: none;
+	width: auto;
+	height: 400px;
+}
+
+#namen{
+	margin-left: 50px;
+}
+
+#namen li {
+	list-style-type: none;
+    display:inline-block;
+    vertical-align: top;
+    width: 25%;
+    float: left;
 }
 
 
