@@ -2,7 +2,8 @@
 
 #include "WebController.h"
 
-WebController::WebController() :
+WebController::WebController(WasmachineApp app) :
+	app{app},
 	task{ 1, "webctrl" },		// priority, name
 	interval_clock{ this, 1 S, "interval" },
 	temp_pool{ "temp" },
@@ -57,11 +58,15 @@ void WebController::logging() {
 	// hier moet hij de temp, waterlevel en motorrpm opvragen en naar de andere kant sturen
 }
 
+void WebController::messageHandling() {
+	app.getLastMsg();			// hier iets mee!
+}
+
 // MAIN =======================================================================================================================
 void WebController::main() {
 	for (;;) {
 		wait(interval_clock);
-		logging();
-		// en kijken of er een nieuw verzoek is, bijvoorbeeld een was starten
+		messageHandling();
+		logging();			// moet dit altijd, of alleen als erom wordt gevraagd?
 	}
 }

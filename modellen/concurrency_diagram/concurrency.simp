@@ -25,7 +25,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyEventFlag" />
-        <value>12</value>
+        <value>14</value>
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyQueue" />
@@ -59,7 +59,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyEventFlag" />
-        <value>13</value>
+        <value>15</value>
       </counter>
       <counter>
         <item-type stereotype="" type="ConcurrencyQueue" />
@@ -79,7 +79,7 @@
       </counter>
       <counter>
         <item-type stereotype="" type="AbstractElementGroup" />
-        <value>3</value>
+        <value>5</value>
       </counter>
     </entity-ids>
     <diagrams>
@@ -143,7 +143,7 @@
           </authors>
           <description />
           <creation-date>01/13/2016 19:37:33</creation-date>
-          <change-date>01/21/2016 13:06:14</change-date>
+          <change-date>01/21/2016 20:47:50</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -1007,6 +1007,20 @@
             <style class="default" />
             <communication-lifeline classifier-name="" is-active="false" is-multi-object="false" />
           </item>
+          <item id="di412242119226402329" cid="EVF013" type="concurrency-eventflag" name="start water flag" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="01/21/2016 20:47:40">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <communication-lifeline classifier-name="" is-active="false" is-multi-object="false" />
+          </item>
+          <item id="di401573534148001290" cid="EVF014" type="concurrency-eventflag" name="start motor flag" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creation-date="01/21/2016 20:47:50">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <communication-lifeline classifier-name="" is-active="false" is-multi-object="false" />
+          </item>
         </abstract-items>
         <layer name="Default" visible="true" enabled="true" locked="false">
           <item id="di552608333904601160" iid="68b4226361e048bb975b6081c0f0c997" creation-date="01/17/2016 13:33:57" order-index="54" type="entity">
@@ -1643,6 +1657,12 @@
           </item>
           <item id="di395201144125894718" iid="87a0c1f97bb44dceaf7d7ad9628811ba" creation-date="01/21/2016 13:06:14" order-index="93" type="entity">
             <layout ax="650" ay="230" awidth="40" aheight="40" x="650" y="230" width="40" height="40" angle="0" name-position="0,10" name-anchor="bottom" />
+          </item>
+          <item id="di412242119226402329" iid="c86588b5a5ab4372bb01b8c747733727" creation-date="01/21/2016 20:47:40" order-index="94" type="entity">
+            <layout ax="634" ay="874" awidth="40" aheight="40" x="634" y="874" width="40" height="40" angle="0" name-position="0,10" name-anchor="bottom" />
+          </item>
+          <item id="di401573534148001290" iid="18203c1d5c724c0a992103c13129b812" creation-date="01/21/2016 20:47:50" order-index="95" type="entity">
+            <layout ax="1712" ay="666" awidth="40" aheight="40" x="1712" y="666" width="40" height="40" angle="0" name-position="0,10" name-anchor="bottom" />
           </item>
         </layer>
       </diagram>
