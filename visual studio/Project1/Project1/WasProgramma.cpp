@@ -1,6 +1,6 @@
 // file WasProgramma.cpp
 
-#include "Wasprogramma.h"
+#include "WasProgramma.h"
 
 Wasprogramma::Wasprogramma(int t, int waterlevel, unsigned long int time, int job) :
 	temp(t),
@@ -33,3 +33,4 @@ unsigned long int Wasprogramma::getTime() {
 int Wasprogramma::getJob() {
 	return job;
 }
+

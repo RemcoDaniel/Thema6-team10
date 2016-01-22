@@ -12,14 +12,12 @@ struct wasprogrammaStruct{
 
 class Wasprogramma {
 private:
-	int temp, waterlevel, job;
-	unsigned long int time;
+	int temp, waterlevel, time, job;
 public:
-	Wasprogramma(int temp, int waterlevel, unsigned long int time, int job);
-
+	Wasprogramma(int temp, int waterlevel, int time, int job);
 	int getLevel();
 	int getTemp();
-	unsigned long int getTime();
+	int getTime();
 	int getJob();
 };
 
