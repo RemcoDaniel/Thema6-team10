@@ -15,8 +15,8 @@ int main(){
 		char y[3] = {MACHINE_REQ, START_CMD,'\0'};
 		u.executeCommand(y);
 
-		char x[3] = {SIGNAL_LED_REQ, ON_CMD, '\0'};
-		u.executeCommand(x);
+		//char x[3] = {SIGNAL_LED_REQ, ON_CMD, '\0'};
+		//u.executeCommand(x);
 	}
 	catch (std::exception &e){
 		std::cerr << e.what();

@@ -13,17 +13,6 @@ baudrate{baudrate}
 	}
 }
 
-void UART::sendCommand(unsigned int byte1, unsigned int byte2) {
-	printf("dit werkt\n");
-	//printf("%u", code);
-
-	unsigned int code = byte1 << 8 | byte2;
-	printf("%x\n", byte1);
-	printf("%x\n", byte2);
-	printf("%x\n", code);
-
-}
-
 int UART::readAnswer(){
 	return 0;
 }
@@ -33,11 +22,12 @@ char * UART::executeCommand(const char * s){
 	theSerialPort.writeString(s);
 
 	while(theSerialPort.peek() < 2){
-		std::cout << "jup\n";
 	}
 
 	char * response = 0;
 	theSerialPort.readString(response, char(0xFF), 2);
+	
+	std::cout << response << " msg\n";
 	
 	return response;
 }

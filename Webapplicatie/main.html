@@ -3,8 +3,8 @@
     <head>
          <title>wasmachine applicatie</title>
          <link rel="stylesheet" href="main.css">
-		 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		 <script src="wasmachineWebsocket.js"> </script> 
+		 <script src="./Misc/jquery-1.11.0.min.js"></script>
+		 <script src="./Misc/wasmachineWebsocket.js"> </script> 
     </head>
     <body onload="startTime()">
 	
@@ -23,7 +23,6 @@
 				<div class= navbar>
 					<li class=wassen><a class=active>Wassen</a></li>		
 					<li class=log><a>Log</a></li>
-					<li class=instelling><a>Instellingen</a></li>
 					<li class=klantenservice><a>Klantenservice</a></li>
 					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
 					<li class=logout><a>Log out</a></li>
@@ -67,11 +66,11 @@
 							<br/>
 							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp2 name="temp" value=40 />&#09 30&#176C 
 							<br/>
-							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp2 name="temp" value=40 />&#09 40&#176C
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp3 name="temp" value=40 />&#09 40&#176C
 							<br/>
-							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp3 name="temp" value=60 />&#09 60&#176C
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp4 name="temp" value=60 />&#09 60&#176C
 							<br/>
-							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp4 name="temp" value=90 />&#09 90&#176C
+							<input data-wasapp="0X00" data-select="TempOptie" type="radio" id=temp5 name="temp" value=90 />&#09 90&#176C
 							<br/>	
 						</div>
 					</li>
@@ -80,13 +79,13 @@
 						<div id=tijdoptie>
 							<label class="SelectionLabel">tijdsduur</label>
 							<br/>
-							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time1 name="time" value=5 />&#09 5 minuten
+							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time1 name="time" value=5 />&#09 30 minuten
 							<br/>
-							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time2 name="time" value=600 />&#09 10 minuten
+							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time2 name="time" value=600 />&#09 60 minuten
 							<br/>
-							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time3 name="time" value=1800 />&#09 30 minuten
+							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time3 name="time" value=1800 />&#09 90 minuten
 							<br/>
-							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time4 name="time" value=3600 />&#09 60 minuten
+							<input data-wasapp="0X00" data-select="TijdOptie" type="radio" id=time4 name="time" value=3600 />&#09 120 minuten
 							<br/>	
 						</div>
 					</li>
@@ -99,34 +98,37 @@
 		
 		<!--logscherm----------------------------------------------------------->
 		<div id=logscherm>
-				<div class= navbar>
-					<li class=wassen><a>Wassen</a></li>		
-					<li class=log><a class=active>Log</a></li>
-					<li class=instelling><a>Instellingen</a></li>
-					<li class=klantenservice><a>Klantenservice</a></li>
-					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
-					<li class=logout><a>Log out</a></li>
-				</div>
+			<div class= navbar>
+				<li class=wassen><a>Wassen</a></li>		
+				<li class=log><a class=active>Log</a></li>
+				<li class=klantenservice><a>Klantenservice</a></li>
+				<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+				<li class=logout><a>Log out</a></li>
+			</div>
+			<div id=logscreen style="width:80%;">
+			<H2>Verbruik</H2>
+			<table style="width:60%">
+				<tr>
+					<td style="width:50%;">Totaal Waterverbruik:</td>
+					<td id=totWaterverbruik style="width:10%;">9999999</td>
+					<td>Liter</td>
+				</tr>
+					<td style="width:50%;">Totaal Energieverbruik:</td>
+					<td id=totEnergieverbruik style="width:10%;">9999999</td>
+					<td>kWh</td>
+				<tr>
+					
+				</tr>
+			</table>
+			</div>
 		</div>
 		
-		<!--instellingenscherm----------------------------------------------------------->
-		<div id=instellingenscherm>
-				<div class= navbar>
-					<li class=wassen><a>Wassen</a></li>		
-					<li class=log><a>Log</a></li>
-					<li class=instelling><a class=active>Instellingen</a></li>
-					<li class=klantenservice><a>Klantenservice</a></li>
-					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
-					<li class=logout><a>Log out</a></li>
-				</div>
-		</div>
-		
+	
 		<!--klantenservicescherm----------------------------------------------------------->
 		<div id=klantenservicescherm>
 			<div class= navbar>
 				<li class=wassen><a>Wassen</a></li>		
 				<li class=log><a>Log</a></li>
-				<li class=instelling><a>Instellingen</a></li>
 				<li class=klantenservice><a class=active>Klantenservice</a></li>
 				<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
 				<li class=logout><a>Log out</a></li>
@@ -145,7 +147,6 @@
 			<div class= navbar>
 				<li class=wassen><a>Wassen</a></li>		
 				<li class=log><a>Log</a></li>
-				<li class=instelling><a>Instellingen</a></li>
 				<li class=klantenservice><a>Klantenservice</a></li>
 				<li class=bedrijfsinfo><a class=active>Bedrijfsinfo</a></li>
 				<li class=logout><a>Log out</a></li>
@@ -155,20 +156,27 @@
 				<h1>BedrijfsInfo</h1>
 				<p>Team 10</p>
 				<p>Teamleden:</p>
-				<img id="imgRemco" src="https://scontent.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/12115561_921366751276063_2653104138564786735_n.jpg?oh=8c631665b203108e494ff66e501a4e38&oe=56FFD0AC"/>
-				<img id="imgJordan" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/005/046/138/0792e97.jpg" width="400" height="400"/>
-				<img id="imgJeroen" src="https://photos-5.dropbox.com/t/2/AACGIKgIGiy193-3X1rvj1bhAd4yMClI7pDb9erqQnl10w/12/87831137/jpeg/32x32/1/_/1/2/20160121_110840.jpg/EP2HqkQY5wkgAigC/OFQfpSpKUDYDGR2Y8lCoLKEPKQz10ZpppINkgCQez9w%2Chscef3c7tswG0Hy-Zkmk6QxaqlCXCHKeQ2u_d_mw-eY?size=1280x960&size_mode=3"/>
-				<img id="imgKevin" src="https://scontent.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1908278_655005034546924_8006903173574068367_n.jpg?oh=68084fe4859f872df7ca2feeacbd43ea&oe=5703AE23"/>
-				<div id=namen>
-					<li>Remco Nijkamp</li>
-					<li>Jordan Ramirez</li>
-					<li>Jeroen Kok</li>
-					<li>Kevin Damen</li>
-					
+				<div class=foto>
+					<img id="imgRemco" src="./Misc/Remco.jpg"/>
+						<span class=caption>Remco Nijkamp</span>
+				</div>
+				<div class=foto>
+					<img id="imgJordan" src="./Misc/Jordan.jpg"/>
+						<span class=caption>Jordan Ramirez</span>
+				</div>
+				<div class=foto>
+					<img id="imgJeroen" src="./Misc/Jeroen.jpg"/>
+						<span class=caption>Jeroen Kok</span>
+				</div>
+				<div class=foto>
+					<img id="imgKevin" src="./Misc/Kevin.jpg"/>
+						<span class=caption>Kevin Damen</span>
+				</div>
 				</div>
 			</div>		
 		</div>
 		
+		<!--logout pop up----------------------------------------------------------->
 		<div id=logoutpopup>			
 			<div class=popupcontent>
 				<h2>Are you sure?<h2>
@@ -190,258 +198,330 @@
 	
 	
 	
-	<script>
-		jQuery(document).ready(function() {
-			$("#logoutpopup").hide();	
-			jQuery("header").show();
-			jQuery("#Mainwasscherm").show();
-			jQuery("#logscherm").hide();
-			jQuery("#instellingenscherm").hide();
-			jQuery("#klantenservicescherm").hide();
-			jQuery("#bedrijfsinfoscherm").hide();
-			jQuery("#loginscherm").hide();			
-		});
+
+</html>
+
+<script>
+	jQuery(document).ready(function() {
+		$("#logoutpopup").hide();	
+		jQuery("header").show();
+		jQuery("#Mainwasscherm").show();
+		jQuery("#logscherm").hide();
+		jQuery("#klantenservicescherm").hide();
+		jQuery("#bedrijfsinfoscherm").hide();
+		jQuery("#loginscherm").hide();			
+	});
+	
+	var wasmachineDatapack = {water:"", temp:"", type:"", time:""};
+	
+	$( "input" ).on( "click", function() {
+		wasmachineDatapack.water = $( "input[name=watervalue]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.type = $( "input[name=wastype]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.temp = $( "input[name=temp]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.time = $( "input[name=time]:checked" ).attr('data-wasapp');
+	});
 		
-		var wasmachineDatapack = {water:"", temp:"", type:"", time:""};
+	$(".wassen").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").show();
+		$("#logscherm").hide();		
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").hide();				
+	});
+	
+	$(".log").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").show();		
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").hide();				
+	});
 		
-		$( "input" ).on( "click", function() {
-  			wasmachineDatapack.water = $( "input[name=watervalue]:checked" ).attr('data-wasapp');
-  			wasmachineDatapack.type = $( "input[name=wastype]:checked" ).attr('data-wasapp');
-  			wasmachineDatapack.temp = $( "input[name=temp]:checked" ).attr('data-wasapp');
-  			wasmachineDatapack.time = $( "input[name=time]:checked" ).attr('data-wasapp');
-		});
+	$(".klantenservice").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").hide();	
+		$("#klantenservicescherm").show();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").hide();				
+	});
+
+	$(".bedrijfsinfo").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").hide();	
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").show();	
+		$("#loginscherm").hide();				
+	});
 		
-		$(".wassen").click(function(){
-			//WebSocketConnect();
+	$(".inlogbutton").click(function(){	
+		var user = document.getElementById('Username');
+		var pass = document.getElementById('Password');
+			
+		var coruser = "team10"
+		var corpass = "123"
+		
+		if (user.value == coruser && pass.value == corpass){
+			document.getElementById("Username").value = "";
+			document.getElementById("Password").value = "";
 			$("#logoutpopup").hide();	
 			$("header").show();
 			$("#Mainwasscherm").show();
 			$("#logscherm").hide();	
-			$("#instellingenscherm").hide();	
 			$("#klantenservicescherm").hide();	
 			$("#bedrijfsinfoscherm").hide();	
-			$("#loginscherm").hide();				
-		});
-		
-		$(".log").click(function(){
-			$("#logoutpopup").hide();	
-			$("header").show();
-			$("#Mainwasscherm").hide();
-			$("#logscherm").show();	
-			$("#instellingenscherm").hide();	
-			$("#klantenservicescherm").hide();	
-			$("#bedrijfsinfoscherm").hide();	
-			$("#loginscherm").hide();				
-		});
-		
-		$(".instelling").click(function(){
-			$("#logoutpopup").hide();	
-			$("header").show();
-			$("#Mainwasscherm").hide();
-			$("#logscherm").hide();	
-			$("#instellingenscherm").show();	
-			$("#klantenservicescherm").hide();	
-			$("#bedrijfsinfoscherm").hide();	
-			$("#loginscherm").hide();				
-		});
-		
-		$(".klantenservice").click(function(){
-			$("#logoutpopup").hide();	
-			$("header").show();
-			$("#Mainwasscherm").hide();
-			$("#logscherm").hide();	
-			$("#instellingenscherm").hide();	
-			$("#klantenservicescherm").show();	
-			$("#bedrijfsinfoscherm").hide();	
-			$("#loginscherm").hide();				
-		});
-
-		$(".bedrijfsinfo").click(function(){
-			$("#logoutpopup").hide();	
-			$("header").show();
-			$("#Mainwasscherm").hide();
-			$("#logscherm").hide();	
-			$("#instellingenscherm").hide();	
-			$("#klantenservicescherm").hide();	
-			$("#bedrijfsinfoscherm").show();	
-			$("#loginscherm").hide();				
-		});
-		
-		$(".inlogbutton").click(function(){	
-			var user = document.getElementById('Username');
-			var pass = document.getElementById('Password');
-			
-			var coruser = "team10"
-			var corpass = "123"
-			
-			if (user.value == coruser && pass.value == corpass){
-				document.getElementById("Username").value = "";
-				document.getElementById("Password").value = "";
-				$("#logoutpopup").hide();	
-				$("header").show();
-				$("#Mainwasscherm").show();
-				$("#logscherm").hide();	
-				$("#instellingenscherm").hide();	
-				$("#klantenservicescherm").hide();	
-				$("#bedrijfsinfoscherm").hide();	
-				$("#loginscherm").hide()	
-			}
-			else {
-				window.alert("Incorrect!");
-				document.getElementById("Username").value = "";
-				document.getElementById("Password").value = "";
-			}
-		});
-		
-		$(".logout").click(function(){
-			$("#logoutpopup").show();
-		});	
-
-		$(".CancelButton").click(function(){
-			$("#logoutpopup").hide();		
-		});
-		
-		$(".logoutbutton").click(function(){
-			$("#logoutpopup").hide();	
-			$("header").hide();
-			$("#Mainwasscherm").hide();
-			$("#logscherm").hide();	
-			$("#instellingenscherm").hide();	
-			$("#klantenservicescherm").hide();	
-			$("#bedrijfsinfoscherm").hide();	
-			$("#loginscherm").show()
-		});
-
-		function startTime() {
-			var today = new Date();
-			var h = today.getHours();
-			var m = today.getMinutes();
-			m = checkTime(m);
-			document.getElementById('clock').innerHTML = h + ":" + m;
-			var t = setTimeout(startTime, 500);
+			$("#loginscherm").hide()	
 		}
-		function checkTime(i) {
-			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-			return i;
+		else {
+			window.alert("Incorrect!");
+			document.getElementById("Username").value = "";
+			document.getElementById("Password").value = "";
 		}
+	});
 		
-		var countdownTimer = setInterval('timer()', 1000);
-		function timer() {
+	$(".logout").click(function(){
+		$("#logoutpopup").show();
+	});	
+
+	$(".CancelButton").click(function(){
+		$("#logoutpopup").hide();		
+	});
+		
+	$(".logoutbutton").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").hide();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").hide();	
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").show()
+	});
+
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		m = checkTime(m);
+		document.getElementById('clock').innerHTML = h + ":" + m;
+		var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i) {
+		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		return i;
+	}
+		
+	var countdownTimer = setInterval('timer()', 1000);
+	function timer() {
 		document.getElementById('countdown').innerHTML = "0:00:00";
 				
-					var days        = Math.floor(seconds/24/60/60);
-					var hoursLeft   = Math.floor((seconds) - (days*86400));
-					var hours       = Math.floor(hoursLeft/3600);
-					var minutesLeft = Math.floor((hoursLeft) - (hours*3600));
-					var minutes     = Math.floor(minutesLeft/60);
-					var remainingSeconds = seconds % 60;
-				if (counting == true){	
-					if (remainingSeconds < 10) {
-						remainingSeconds = "0" + remainingSeconds; 
-					}
-					if (minutes < 10) {
-						minutes = "0" + minutes; 
-					}				
-					document.getElementById('countdown').innerHTML = hours + ":" + minutes + ":" + remainingSeconds;
-					if (seconds == 0) {
-						document.getElementById("status").innerHTML = "Done!"
-						$(".MyStartButton").show();	
-						counting = false;
-					} else {
-						document.getElementById("status").innerHTML = status;
-						seconds--;
-						getStatus();
-					}
-				}
-			
-		}
-		
-		$(".MyStartButton").click(function(){
-			//sendMessage();
-			validate();
-			getDuur();
-			if (done == true){
-				getDuur();
+		var days        = Math.floor(seconds/24/60/60);
+		var hoursLeft   = Math.floor((seconds) - (days*86400));
+		var hours       = Math.floor(hoursLeft/3600);
+		var minutesLeft = Math.floor((hoursLeft) - (hours*3600));
+		var minutes     = Math.floor(minutesLeft/60);
+		var remainingSeconds = seconds % 60;
+		if (counting == true){	
+			if (remainingSeconds < 10) {
+				remainingSeconds = "0" + remainingSeconds; 
+			}
+			if (minutes < 10) {
+				minutes = "0" + minutes; 
+			}				
+			document.getElementById('countdown').innerHTML = hours + ":" + minutes + ":" + remainingSeconds;
+			if (seconds == 0) {
+				document.getElementById("status").innerHTML = "Done!"
+				$(".MyStartButton").show();	
+				counting = false;
+				var audio = new Audio('./Misc/Loud-alarm-clock-sound.wav');
+				audio.play();
+			} else {
+				document.getElementById("status").innerHTML = status;
+				seconds--;
 				getStatus();
-				counting = true;
-				$(".MyStartButton").hide();
 			}
-		});	
-
-		$(".MyStopButton").click(function(){
-			counting = false;
-			document.getElementById('status').innerHTML = "Stopped";
-			$(".MyStartButton").show();
-		});
-
-
-		function getStatus(){
-			var status = "spoelen" ;
-			document.getElementById("status").innerHTML = status;
 		}
+			
+	}
 		
-		function getDuur(){
-			seconds = document.forms["WAS"]["time"].value;
+	$(".MyStartButton").click(function(){
+		//sendMessage();
+		validate();
+		getDuur();
+		if (done == true){
+			getDuur();
+			getStatus();
+			counting = true;
+			$(".MyStartButton").hide();
 		}
-		
-		
-		var done = "";
-		function validate() {
-			var timedone = true;
-			var waterdone = true;
-			var wasdone = true;
-			var tempdone = true;
-			
-			var Time1 = document.getElementById('time1').checked;
-			var Time2 = document.getElementById('time2').checked;
-			var Time3 = document.getElementById('time3').checked;
-			var Time4 = document.getElementById('time4').checked;
-			
-			var Water1 = document.getElementById('water1').checked;
-			var Water2 = document.getElementById('water2').checked;
-			var Water3 = document.getElementById('water3').checked;
-			
-			var Was1 = document.getElementById('was1').checked; 
-			var Was2 = document.getElementById('was2').checked; 
-			var Was3 = document.getElementById('was3').checked; 
-			var Was4 = document.getElementById('was4').checked; 
-			
-			var Temp1 = document.getElementById('temp1').checked; 
-			var Temp2 = document.getElementById('temp2').checked; 
-			var Temp3 = document.getElementById('temp3').checked; 
-			var Temp4 = document.getElementById('temp4').checked; 
-			
-			
-			
-			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == ""){
-				timedone = false;
-				document.getElementById("tijdoptie").style.background = "red";
-			}
-			else {document.getElementById("tijdoptie").style.background = "#4CAF50";}
-			if (Water1 == "" && Water2 == "" && Water3 == ""){
-				waterdone = false;
-				document.getElementById("Wateroptie").style.background = "red";
-			}
-			else{document.getElementById("Wateroptie").style.background = "#4CAF50";}
-			if (Was1 == "" && Was2 == "" && Was3 == "" && Was4 == ""){
-				wasdone = false;
-				document.getElementById("wastype").style.background = "red";
-			}else {document.getElementById("wastype").style.background = "#4CAF50";}
-			if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == ""){
-				tempdone = false;
-				document.getElementById("tempoptie").style.background = "red";
-			}else{document.getElementById("tempoptie").style.background = "#4CAF50";}	
+	});	
 
-			if (timedone == true && waterdone == true && wasdone == true && tempdone == true){
-				done = true;
+	$(".MyStopButton").click(function(){
+		counting = false;
+		document.getElementById('status').innerHTML = "Stopped";
+		$(".MyStartButton").show();
+	});
+
+
+	function getStatus(){
+		var status = "spoelen" ;
+		document.getElementById("status").innerHTML = status;
+	}
+		
+	function getDuur(){
+		seconds = document.forms["WAS"]["time"].value;
+	}
+		
+	var done = "";
+	function validate() {
+		var timedone = true;
+		var waterdone = true;
+		var wasdone = true;
+		var tempdone = true;
+			
+		var Time1 = document.getElementById('time1').checked;
+		var Time2 = document.getElementById('time2').checked;
+		var Time3 = document.getElementById('time3').checked;
+		var Time4 = document.getElementById('time4').checked;
+		
+		var Water1 = document.getElementById('water1').checked;
+		var Water2 = document.getElementById('water2').checked;
+		var Water3 = document.getElementById('water3').checked;
+		
+		var Was1 = document.getElementById('was1').checked; 
+		var Was2 = document.getElementById('was2').checked; 
+		var Was3 = document.getElementById('was3').checked; 
+		var Was4 = document.getElementById('was4').checked; 
+		
+		var Temp1 = document.getElementById('temp1').checked; 
+		var Temp2 = document.getElementById('temp2').checked; 
+		var Temp3 = document.getElementById('temp3').checked; 
+		var Temp4 = document.getElementById('temp4').checked;
+		var Temp5 = document.getElementById('temp5').checked;
+			
+		if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == ""){
+			timedone = false;
+			document.getElementById("tijdoptie").style.background = "red";
+		}
+		else {document.getElementById("tijdoptie").style.background = "#4CAF50";}
+		if (Water1 == "" && Water2 == "" && Water3 == ""){
+			waterdone = false;
+			document.getElementById("Wateroptie").style.background = "red";
+		}
+		else{document.getElementById("Wateroptie").style.background = "#4CAF50";}
+		if (Was1 == "" && Was2 == "" && Was3 == "" && Was4 == ""){
+			wasdone = false;
+			document.getElementById("wastype").style.background = "red";
+		}else {document.getElementById("wastype").style.background = "#4CAF50";}
+		if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == ""){
+			tempdone = false;
+			document.getElementById("tempoptie").style.background = "red";
+		}else{document.getElementById("tempoptie").style.background = "#4CAF50";}	
+
+		if (timedone == true && waterdone == true && wasdone == true && tempdone == true){
+			done = true;
+		}
+		else {
+			done = false;
+		}			
+		
+	}
+		
+
+	var changable1 = false;	
+	var changable2 = false;	
+	var changable3 = false;	
+	var changable4 = false;	
+	var checkInterval = setInterval('AutoSelect()', 100);
+	function AutoSelect(){
+		var Time1 = document.getElementById('time1').checked;
+		var Time2 = document.getElementById('time2').checked;
+		var Time3 = document.getElementById('time3').checked;
+		var Time4 = document.getElementById('time4').checked;
+			
+		var Water1 = document.getElementById('water1').checked;
+		var Water2 = document.getElementById('water2').checked;
+		var Water3 = document.getElementById('water3').checked;
+			
+		var Was1 = document.getElementById('was1').checked; 
+		var Was2 = document.getElementById('was2').checked; 
+		var Was3 = document.getElementById('was3').checked; 
+		var Was4 = document.getElementById('was4').checked; 
+				
+		var Temp1 = document.getElementById('temp1').checked; 
+		var Temp2 = document.getElementById('temp2').checked; 
+		var Temp3 = document.getElementById('temp3').checked; 
+		var Temp4 = document.getElementById('temp4').checked;
+		var Temp5 = document.getElementById('temp5').checked;
+		
+		if (Was1 == true){ //witte was standaard==================================================================
+			changable2 = false;
+			changable3 = false;
+			changable4 = false;			
+				if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable1 == false){
+				document.getElementById('temp4').checked = true;					
 			}
-			else {
-				done = false;
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable1 == false){
+				document.getElementById('water2').checked = true;
 			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable1 == false){
+				document.getElementById('time3').checked = true;
+				changable1 = true;					
+			}
+		}
 			
+		if (Was2 == true){ //Bonte was standaard==========================================================
+			changable1 = false;
+			changable3 = false;
+			changable4 = false;
 			
-			
-		}		
+			if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable2 == false){
+				document.getElementById('temp3').checked = true;
+			}
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable2 == false){
+				document.getElementById('water2').checked = true;
+			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable2 == false){
+				document.getElementById('time3').checked = true;
+				changable2 = true;					
+			}			
+		}
+		if (Was3 == true){ //Fijne was standaard===============================================================
+			changable1 = false;
+			changable2 = false;
+			changable4 = false;
+			if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable3 == false ){
+				document.getElementById('temp2').checked = true;
+			}
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable3 == false){
+				document.getElementById('water2').checked = true;
+			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable3 == false){
+				document.getElementById('time3').checked = true;
+				changable3 = true;					
+			}			
+		}
+		if (Was4 == true){ //Wolle was standaard====================================================================
+			changable1 = false;
+			changable2 = false;
+			changable3 = false;
+			if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable4 == false){
+				document.getElementById('temp2').checked = true;
+			}
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable4 == false){
+				document.getElementById('water2').checked = true;
+			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable4 == false){
+				document.getElementById('time3').checked = true;
+				changable4 = true;
+			}			
+		}			
+	}
 	
 	</script>
-</html>

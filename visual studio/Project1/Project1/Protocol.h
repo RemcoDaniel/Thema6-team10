@@ -34,6 +34,8 @@
 #define LOCK_CMD              (uint8_t) 0x40
 #define UNLOCK_CMD            (uint8_t) 0x80
 
+#define UNDEFINED_CMD		  (uint8_t) 0x99
+
 // Door status IDs
 #define OPENED                (uint8_t) 0x01
 #define CLOSED                (uint8_t) 0x02

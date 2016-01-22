@@ -168,7 +168,7 @@ int LibSerial::writeString(const char * string) {
 \return -1 error while writting data
 */
 int LibSerial::write(const void * buffer, unsigned int nbBytes) {
-	if (::write(fd, buffer, nbBytes) != (ssize_t)nbBytes)  // Write data
+	if (::write(fd, buffer, nbBytes) != (size_t)nbBytes)  // Write data
 		return -1;                                            // Error while writing
 	return 1;                                                // Write operation successfull
 }

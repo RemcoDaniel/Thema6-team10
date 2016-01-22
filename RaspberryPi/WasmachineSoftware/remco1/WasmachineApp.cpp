@@ -13,6 +13,10 @@ void WasmachineApp::onTextMessage(const string & msg, WebSocket * ws){
 	cout << "Recieved: " << msg << endl;
 }
 
+void WasmachineApp::sendTextMessage(const string &msg, WebSocket *ws){
+	ws->sendTextMessage(msg);
+}
+
 void WasmachineApp::onClose(WebSocket * ws){
 	broadcaster->remove(ws);
 	delete ws;
