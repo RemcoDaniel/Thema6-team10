@@ -5,8 +5,9 @@ broadcaster{ b }{
 }
 
 void WasmachineApp::onTextMessage(const string & msg, WebSocket * ws){
-	if (msg.find("NEW_CONNECTION") == 0){
-		std::cout << "New connection from: " << msg;
+	//std::cout << "Msg: " << msg;
+	if (msg.find("NEW_CONNECTION ") == 0){
+		std::cout << "New connection from: " << msg << std::endl;
 	}
 	else if (msg.compare("STATUS_STOP") == 0){
 		std::cout << "<---------!!!--------->" << std::endl;
@@ -28,13 +29,14 @@ void WasmachineApp::onTextMessage(const string & msg, WebSocket * ws){
 wasprogrammaStruct WasmachineApp::jsonStringtoWasprogramma(const string &msg){
 	std::string parsed;
 	wasprogrammaStruct decodedStruct;
-	std::cout << "Msg lenght: " << msg.length() << std::endl;
+	//std::cout << "Msg lenght: " << msg.length() << std::endl;
 	for (int i = 0; i < msg.length(); ++i){
-		if ((msg[i] >= 'a' && msg[i] <= 'z') || (msg[i] >= 'A' && msg[i] <= 'Z') || msg[i] == ':' || msg[i] == ',' || (msg[i] >= 0 && msg[i] <= 9)){
+		if ((msg[i] >= 'a' && msg[i] <= 'z') || (msg[i] >= 'A' && msg[i] <= 'Z') || msg[i] == ':' || msg[i] == ',' || (msg[i] >= '0' && msg[i] <= '9')){
 			parsed += msg[i];
 		}
 	}
-	std::cout << "The parsed string: " << parsed << std::endl;
+	parsed += ",";
+	//std::cout << "The parsed string: " << parsed << std::endl;
 	std::string splitComma = ",";
 	std::string splitDouble = ":";
 	std::string sub1;
@@ -42,14 +44,14 @@ wasprogrammaStruct WasmachineApp::jsonStringtoWasprogramma(const string &msg){
 	int pos = 0;
 	int pos2 = 0;
 	while((pos = parsed.find(splitComma)) != std::string::npos) {
-		std::cout << "Sub1 " << sub1 << std::endl;
 		sub1 = parsed.substr(0, pos);
+		//std::cout << "Sub1 " << sub1 << std::endl;
 		parsed.erase(0, pos + splitComma.length());
-		while ((pos2 = sub1.find(splitDouble)) != std::string::npos){
-			std::cout << "Sub2 " << sub2 << std::endl;
+		if((pos2 = sub1.find(splitDouble)) != std::string::npos){
 			sub2 = sub1.substr(0, pos2);
+			//std::cout << "Sub2 " << sub2 << std::endl;
 			sub1.erase(0, pos2 + splitDouble.length());
-			std::cout << "Sub3 " << sub1 << std::endl;
+			//std::cout << "Sub3 " << sub1 << std::endl;
 			if (sub2.compare("water") == 0){
 				decodedStruct.waterlevel = atoi(sub1.c_str());
 			}

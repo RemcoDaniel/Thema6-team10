@@ -1,0 +1,25 @@
+<html></html>
+<head></head>
+<body></body> 
+<title></title> in de <head> voor de titel
+<strong> bold </strong>
+<em> schuin </em>
+
+<p> paragraaf </p>
+<h1/2/3/4/5/6> </h1/2/3/4/5/6> 
+
+<a href="website"> </a> weblink
+<img src="plaatje"> afbeelding 
+
+<br> line break
+
+<ul> </ul> unordered list punten
+<ol> </ol> ordered list 1. 2. 3. 
+<li> </li> line item
+
+<div> </div>
+<span> </span>
+
+<link href="styles/main.css" rel="stylesheet"> </style> css style toevoegen
+
+
