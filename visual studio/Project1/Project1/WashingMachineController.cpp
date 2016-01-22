@@ -2,16 +2,20 @@
 
 #include "WashingMachineController.h"
 
-WashingMachineController::WashingMachineController(Wasprogramma & was) :
-	wasprogramma{was},
+WashingMachineController::WashingMachineController(WasmachineApp app) :
+	app{app},
+	wasprogramma{nullptr},
 	task{0, "beep"},
 	interval_clock{this, 500 MS, "washing_timer"},
 	temp_reached_flag{this, "temp_reached"},
 	level_reached_flag{this, "water_reached"},
 	response_flag{this, "uart_response_ready"},
+	program_ready_flag{this, "washingprogram_ready"},
 	motor_done_flag{this, "motor_done"},
 	response_pool{"uart_response"},
-	response_mutex{"uart_response"}
+	response_mutex{"uart_response"},
+	program_pool{"washing_program"},
+	program_mutex{"washing_program"}
 {
 	// boundaries:
 	soap = SoapDispenser();
@@ -25,6 +29,8 @@ WashingMachineController::WashingMachineController(Wasprogramma & was) :
 	// uart aanmaken:
 	uart = new UART("/dev/ttyAMA0", 9600, motorcontroller, tempcontroller, watercontroller, this);
 
+	webcontroller = new WebController(app, this, motorcontroller, tempcontroller, watercontroller);
+	
 	// nu de controllers een shared pointer geven van de uart:
 	motorcontroller->setUartPointer(uart);
 	tempcontroller->setUartPointer(uart);
@@ -83,8 +89,20 @@ void WashingMachineController::setMotorDone() {
 	motor_done_flag.set();
 }
 
+void WashingMachineController::setProgram(Wasprogramma * was) {
+	program_mutex.wait();
+	program_pool.write(was);
+	program_mutex.signal();
+	program_ready_flag.set();
+}
 
 // WASPROGRAMMA ============================================================================================
+char WashingMachineController::getProgram() {
+	program_mutex.wait();
+	wasprogramma = program_pool.read();
+	program_mutex.signal();
+}
+
 void WashingMachineController::startWasprogramma() {
 	signalLed(0);																	// signaalled uit
 
@@ -151,10 +169,6 @@ void WashingMachineController::startWasprogramma() {
 	std::cout << "WAS IS KLAAR\n";
 }
 
-void WashingMachineController::stopWasprogramma() {
-
-}
-
 
 // UART =======================================================================================================================
 char WashingMachineController::readResponse() {
@@ -184,16 +198,19 @@ void WashingMachineController::writeResponse(char response) {
 // MAIN =======================================================================================================================
 void WashingMachineController::main() {
 	for (;;) {
+		// wachten tot wasprogramma aanwezig is
+		wait(program_ready_flag);
+		getProgram();
+		
 		std::cout << "starting washing program\n";
 		// wachten op signaal van de uart dat machine gestart is:
 		wait(response_flag);
-
-		while (!getDoorStatus()) {
+		
+		while (!getDoorStatus()) {		// wachten tot deur wasmachine is gesloten
 			wait(interval_clock);
 		}
 		doorlock(1);
-
+		
 		startWasprogramma();		// wasprogramma starten
-		// kan ondertussen signaal krijgen dat wasprogramma onderbroken moet worden!!!!!!!!!!!!!
 	}
 }

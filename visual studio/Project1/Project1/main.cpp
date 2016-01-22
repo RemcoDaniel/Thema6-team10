@@ -15,20 +15,14 @@
 #include "WaterController.h"
 #include "Door.h"
 #include "SoapDispenser.h"
+#include "WebController.h"
 
 int main(){
 	try{
-		std::cout << "wasprogramma maken\n";
-		// eerst wasprogramma maken! deze kan hij dan uit gaan voeren		// dit moet nog anders worden gedaan!!!!!!
-		Wasprogramma wasprog = Wasprogramma(25, 10, 2 S, 1);
-		std::cout << "making washingmachine\n";
 		// de wasmachinecontroller maakt ook alle andere controllers aan + de boundary objecten + de uart
-		WashingMachineController wasctrl = WashingMachineController(wasprog);
-		//std::cout << "starting washingmachine\n";
-		//wasctrl.main();
-		std::cout << "starting RTOS\n";
+		WasmachineApp app = WasmachineApp();
+		WashingMachineController wasctrl = WashingMachineController(app);
 		RTOS::run();
-		std::cout << "verkeerd gegaan in de main.cpp\n";
 	}
 	catch (std::exception &e){
 		std::cerr << e.what();

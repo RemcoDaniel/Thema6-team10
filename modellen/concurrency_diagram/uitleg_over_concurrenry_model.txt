@@ -10,7 +10,7 @@ ook onder deze taak vallen:
 - taak voor het waterniveau (klasse WaterController is de taak; klassen WaterSensor, Pump en Valve vallen hier ook onder)
 - taak voor samenwerking met de webapplicatie (klasse  ............)
 
-
+=================================================================================================
 In het concurrency diagram zijn de verschillende taken binnen het systeem
 afgebeeld en de manieren waarop ze onderling communiceren weergegeven.
 
@@ -35,7 +35,7 @@ Een clock en een timer zijn vormen van tijd-mechanismen. Na enige tijd krijgt de
 clock of timer bezit een seintje dat een bepaalde tijd is verstreken.
 De clock zal telkens na een vaste tijdsduur een seintje geven, terwijl een timer elke keer dat
 hij is "afgegaan" opnieuw zal moeten worden gezet.
-
+=================================================================================================
 
 washingmachinecontroller heeft een eigen taak.
 deze stuurt naar de tempcontroller dat hij een bepaalde temp wil hebben

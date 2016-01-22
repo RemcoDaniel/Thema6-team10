@@ -15,6 +15,7 @@ class WasmachineApp;
 class WebController : public RTOS::task {
 private:
 	WasmachineApp app;
+	WashingMachineController wasctrl;
 	RTOS::pool< int > temp_pool, water_pool, motor_pool;
 	RTOS::mutex temp_mutex, water_mutex, motor_mutex;
 	RTOS::clock interval_clock;
@@ -28,7 +29,7 @@ private:
 	void logging();
 
 public:
-	WebController(WasmachineApp app);
+	WebController(WasmachineApp app, WashingMachineController * was, MotorController * motor, TempController * temp, WaterController * water);
 
 	void setTemp(int temp);
 	void setWaterLevel(int water);

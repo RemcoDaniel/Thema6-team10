@@ -11,25 +11,32 @@
 #include "Wasprogramma.h"
 #include "UART.h"
 #include "SoapDispenser.h"
+#include "WebController.h"
+#include "WasmachineApp.h"
 
 class UART;
 class MotorController;
 class WaterController;
 class TempController;
+class WebController;
+class WasmachineApp;
 
 class WashingMachineController : public RTOS::task {
 private:
+	WasmachineApp app;
 	char * command = 0;
-	Wasprogramma wasprogramma;
+	Wasprogramma * wasprogramma;
 	Door door;
 	TempController *tempcontroller;
 	WaterController *watercontroller;
 	MotorController *motorcontroller;
+	WebController * webcontroller;
 	UART *uart;
 	SoapDispenser soap;
-	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag, response_flag;
+	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag, response_flag, program_ready_flag;
 	RTOS::pool< char > response_pool;
-	RTOS::mutex response_mutex;
+	RTOS::pool< Wasprogramma * > program_pool;
+	RTOS::mutex response_mutex, program_mutex;
 	RTOS::clock interval_clock;
 
 	void doorlock(bool lock);		// lock = 1 , unlock = 0
@@ -37,19 +44,21 @@ private:
 	void dispendSoap();
 	void signalLed(bool on);
 
+	void getProgram();
+	
 	//uart:
 	char readResponse();
 	char uartTask(char request, char command);
 
 public:
-	WashingMachineController(Wasprogramma & was);
+	WashingMachineController(WasmachineApp app);
 
 	void setTempReached();
 	void setWaterLevelReached();
 	void setMotorDone();
+	void setProgram(Wasprogramma * was);
 
 	void startWasprogramma();
-	void stopWasprogramma();
 
 	//uart:
 	void setResponseFlag();

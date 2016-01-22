@@ -2,8 +2,9 @@
 
 #include "WebController.h"
 
-WebController::WebController(WasmachineApp app) :
+WebController::WebController(WasmachineApp app, WashingMachineController * was, MotorController * motor, TempController * temp, WaterController * water) :
 	app{app},
+	wasctrl{was},
 	task{ 1, "webctrl" },		// priority, name
 	interval_clock{ this, 1 S, "interval" },
 	temp_pool{ "temp" },
@@ -59,7 +60,11 @@ void WebController::logging() {
 }
 
 void WebController::messageHandling() {
-	app.getLastMsg();			// hier iets mee!
+	if(app.isMsg()) {
+		wasprogrammaStruct wasstruct = app.getLastMsg();
+		Wasprogramma * was = new Wasprogramma(wasstruct.temperature, wasstruct.waterlevel, wasstruct.time, wasstruct.job);
+		wasctrl.setProgram(was); // wasmachinecontroller het wasprogramma geven
+	}
 }
 
 // MAIN =======================================================================================================================
@@ -67,6 +72,6 @@ void WebController::main() {
 	for (;;) {
 		wait(interval_clock);
 		messageHandling();
-		logging();			// moet dit altijd, of alleen als erom wordt gevraagd?
+		//logging();			// moet dit altijd, of alleen als erom wordt gevraagd?
 	}
 }
