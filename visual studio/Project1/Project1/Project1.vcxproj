@@ -126,6 +126,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="Door.cpp" />
     <ClCompile Include="DoorSoapController.cpp" />
     <ClCompile Include="Heater.cpp" />
     <ClCompile Include="libfiber.cpp" />
@@ -133,33 +135,49 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Motor.cpp" />
     <ClCompile Include="MotorController.cpp" />
+    <ClCompile Include="PracticalSocket.cpp" />
     <ClCompile Include="pRTOS.cpp" />
     <ClCompile Include="Pump.cpp" />
+    <ClCompile Include="SoapDispenser.cpp" />
+    <ClCompile Include="TCPServer.cpp" />
     <ClCompile Include="TempController.cpp" />
     <ClCompile Include="TempSensor.cpp" />
     <ClCompile Include="UART.cpp" />
     <ClCompile Include="Valve.cpp" />
     <ClCompile Include="WashingMachineController.cpp" />
+    <ClCompile Include="WasmachineApp.cpp" />
+    <ClCompile Include="WasProgramma.cpp" />
     <ClCompile Include="WaterController.cpp" />
     <ClCompile Include="WaterSensor.cpp" />
+    <ClCompile Include="websocket.cpp" />
+    <ClCompile Include="wsmulticaster.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="Door.h" />
     <ClInclude Include="DoorSoapController.h" />
     <ClInclude Include="Heater.h" />
     <ClInclude Include="libfiber.h" />
     <ClInclude Include="libserial.h" />
     <ClInclude Include="Motor.h" />
     <ClInclude Include="MotorController.h" />
+    <ClInclude Include="PracticalSocket.h" />
     <ClInclude Include="Protocol.h" />
     <ClInclude Include="pRTOS.h" />
     <ClInclude Include="Pump.h" />
+    <ClInclude Include="SoapDispenser.h" />
+    <ClInclude Include="TCPServer.h" />
     <ClInclude Include="TempController.h" />
     <ClInclude Include="TempSensor.h" />
     <ClInclude Include="UART.h" />
     <ClInclude Include="Valve.h" />
     <ClInclude Include="WashingMachineController.h" />
+    <ClInclude Include="WasmachineApp.h" />
+    <ClInclude Include="WasProgramma.h" />
     <ClInclude Include="WaterController.h" />
     <ClInclude Include="WaterSensor.h" />
+    <ClInclude Include="websocket.h" />
+    <ClInclude Include="wsmulticaster.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,6 +18,8 @@ public:
 	bool isMsg();
 	wasprogrammaStruct getLastMsg();
 
+	wasprogrammaStruct jsonStringtoWasprogramma(const string &msg);
+
 private:
 	wasprogrammaStruct wasprogramma;
 	std::queue<wasprogrammaStruct> msgQue;
