@@ -1,0 +1,59 @@
+UART:
+
+De Uart kent 4 toestanden waarin hij zich kan verkeren; running, reading, waiting en responding.
+Zodra de RTOS run wordt aangeroepen zal een interval clock in worden gesteld met een interval 
+van 50 ms. Nu komt de Uart in de toestand running terecht. Hierin is hij actief en wacht op
+een seintje van de interval clock. Zodra dit seintje binnen is, vindt een verandering van
+toestand plaats. De Uart is nu in de toestand reading waarin hij een commando uit de channel
+leest en deze doorstuurt naar over de seriele port. Vervolgens zal hij in de toestand waiting
+terechtkomen. Hierin blijft hij wachten tot de seriele port een bericht van 2 bytes klaar heeft
+als antwoord. Nu zal de Uart overgaan naar de toestand responsing. In deze toestand zal hij
+een response bericht sturen naar een andere controller, waarna hij weer terugkomt in de toestand
+running, om weer te wachten op een signaal van de clock dat hij een nieuw bericht moet verwerken.
+=================================================================================================
+
+WashingMachineController:
+
+
+
+=================================================================================================
+
+MotorController:
+
+De MotorController kent 5 toestanden; waiting, running, measuring, running washingprogram en rotating.
+Zodra de RTOS run wordt aangeroepen komt de MotorController in de toestand waiting terecht.
+In deze toestand wacht hij op het setten van de start flag, waarna hij actief mag worden en over
+zal gaan in de toestand running. In deze 
+=================================================================================================
+
+WaterController:
+
+De WaterController kent 5 toestanden; waiting, running, measuring, filling en emptying.
+Zodra de RTOS run wordt aangeroepen komt de WaterController in de toestand waiting terecht.
+Ook is de interval clock op 300 ms ingesteld, hier zal hij in de toestand running naar luisteren.
+In waiting wacht de watercontroller op het setten van de start flag, waarna hij actief mag 
+worden en over zal gaan in de toestand running. In deze toestand zal hij wachten op een signaal
+van de interval clock en nadat dit signaal is gegeven, zal hij overgaan in de toestand measuring.
+Hierin wordt gekeken wat de nieuwe gewenste temperatuur is en wat de huidige temperatuur is.
+Deze 2 temperaturen zullen met elkaar worden vergeleken. Vervolgens zal op grond van de uitkomst
+van deze vergelijken over worden gegaan in de toestand filling, waarin de trommel met water gevuld,
+of in de toestand emptying, waarin water wordt afgevoerd. Een dere optie is dat het waterlevel
+precies goed is. In dat geval zal niet eerst de toestand filling of emptying worden aangenomen,
+maar zal direct worden teruggekeerd in de toestand running.
+=================================================================================================
+
+TempController:
+
+De TempController kent 5 toestanden; waiting, running, measuring, heating en cooling.
+Zodra de RTOS run wordt aangeroepen zal de interval clock worden ingesteld op 300 ms,
+ook komt de tempcontroller in de toestand waiting terecht, waarin hij wacht op de start flag.
+Zodra de start flag is geset, komt de TempController in de toestand running terecht.
+Als vervolgens de interval clock een signaal geeft, zal worden overgegaan naar de toestand
+measuring. In deze toestand zal de nieuwe gewenste temperatuur worden gelezen en worden gekeken
+wat de huidige temperatuur is. Deze zullen met elkaar worden vergeleken. Nu vindt een splitsing
+plaats. Mits de gewenste temperatuur hoger is dan de huidige temperatuur, zal worden overgegaan
+naar de toestand heating, waarin de verwarming aan wordt gezet. Hierna komt de TempController
+weer in de toestand running terecht. Als de gewenste temperatuur lager is dan de huidige temperatuur
+zal in plaats van de toestand heating, de toestand cooling worden aangenomen. Hierin wordt de
+verwarming uitgezet en krijgt de WashingMachineController een signaal dat de temperatuur warm
+genoeg is. Hierna zal ook de toestand running weer worden aangenomen.

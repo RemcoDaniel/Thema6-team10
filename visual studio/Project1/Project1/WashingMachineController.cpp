@@ -191,7 +191,7 @@ void WashingMachineController::main() {
 		while (!getDoorStatus()) {
 			wait(interval_clock);
 		}
-		doorlock(1);																	// deur dicht
+		doorlock(1);
 
 		startWasprogramma();		// wasprogramma starten
 		// kan ondertussen signaal krijgen dat wasprogramma onderbroken moet worden!!!!!!!!!!!!!
