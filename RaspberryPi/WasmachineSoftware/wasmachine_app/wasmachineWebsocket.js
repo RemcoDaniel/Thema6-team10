@@ -27,16 +27,18 @@ function sendWebStatus() {
 }
 
 function closeConnection() {
-	ws.send(naam + " gaat weg.");
+	console.log("connection closed");
+	ws.send("NEW_CONNECTION " + naam + " gaat weg.");
 	ws.close();
 }
 
 function onOpen (evt) {
 	console.log("connection open");
-	ws.send(naam + " heeft zich aangesloten bij het gesprek");
+	ws.send("NEW_CONNECTION " + naam + " heeft zich aangesloten bij het gesprek");
  }
 
 function onMessage (evt){
+	console.log(evt.data);
  }
 
 function onClose (evt){
