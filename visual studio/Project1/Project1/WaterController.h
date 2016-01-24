@@ -58,6 +58,10 @@ public:
 	 */
 	void setWaterLevel(int level);
 
+	/*!	\fn void startWaterController()
+	 *	\brief sets start_flag
+	 *	\return void
+	 */
 	void startWaterController();
 
 	//uart:

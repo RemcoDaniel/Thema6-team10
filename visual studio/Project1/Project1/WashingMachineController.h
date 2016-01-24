@@ -55,54 +55,63 @@ private:
 
 public:
 
-	WashingMachineController(WasmachineApp * app);
 	/*! \fn WashingMachineController(WasmachineApp * app)
 	 *	\brief Creates the controller and assignes a washingschedule
 	 *	\return void
 	 */
+	WashingMachineController(WasmachineApp * app);
 
-	void setTempReached();
 	/*! \fn void setTempReached()
 	 *	\brief Sets the temprature as reached
 	 *	\return void
 	 */
-	void setWaterLevelReached();
+	void setTempReached();
+
 	/*! \fn void setWaterLevelReached()
 	 *	\brief Sets the waterlevel as reached
 	 *	\return void
 	 */
-	void setMotorDone();
+	void setWaterLevelReached();
+
 	/*! \fn void setMotorDone()
 	 *	\brief Sets the motor as done with the job
 	 *	\return void
 	 */
+	void setMotorDone();
+	
+	/*! \fn void setProgram(Wasprogramma * was)
+	 *	\brief Sets the wasprogramma that's going to be used
+	 *	\return void
+	 */
+	void setProgram(Wasprogramma * was);
 
-	void startWasprogramma();
 	/*! \fn void startWasprogramma()
 	 *	\brief Starts the washing schedule
 	 *	\return void
 	 */
-	void stopWasprogramma();
+	void startWasprogramma();
+	
 	/*! \fn void stopWasprogramma()
 	 *	\brief Stops the washing schedule
 	 *	\return void
 	 */
+	void stopWasprogramma();
+
 
 	//uart:
-	void setResponseFlag();
 	/*!	\fn void setResponseFlag()
 	 *	\brief sets the response flag
 	 *	\return void
 	 */
-	 
-	void writeResponse(char response);
+	void setResponseFlag();
+
 	/*!	\fn void writeResponse(char * response)
 	 *	\brief writes a response in the response pool 
 	 *	\param response a char array with two positions
 	 *	\return void
 	 */
-	 
-	void setProgram(Wasprogramma * was);
+	void writeResponse(char response);
+
 
 	void main();
 };

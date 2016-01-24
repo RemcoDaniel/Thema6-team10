@@ -20,19 +20,19 @@ private:
 public:
 	Motor();
 	
-	char * getMotorSpeedCommand();
 	/*! \fn char * getMotorSpeedCommand()
 	 *	\brief Returns the bytes to get the speed of the motor
 	 *	\return a char pointer to a 2 char array
 	 */
+	char * getMotorSpeedCommand();
 	
-	char * turn(bool dir, int speed);
 	/*! \fn char * turn(bool dir, int speed)
 	 *	\brief Sets the right speed and the right direction (or left direction) of the motor
 	 *	\param dir the direction of the motor. false = right, true = left
 	 *	\param speed the speed of the rpm. 0 <= x <= 1600
 	 *	\return the bytes used to set the RPM in a direction.
 	 */
+	char * turn(bool dir, int speed);
 };
 
 #endif

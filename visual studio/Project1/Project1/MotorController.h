@@ -53,6 +53,10 @@ public:
 	 *  \param u* pointer to the UART object this controller should use.
 	 */
 	void setUartPointer(UART *u);
+	
+	/*! \fn void startMotorController()
+	 *  \brief sets the start_flag
+	 */
 	void startMotorController();
 	
 	/*! \fn int getMotorSpeed()
@@ -61,14 +65,12 @@ public:
 	 */
 	int getMotorSpeed();		// getal van 0 - 1600 rpm
 	 
-	/*!	\fn void setMotorJob(int job, unsigned long int time);
+	/*!	\fn void setMotorJobTime(unsigned long int time)
 	 *	\brief Sets which job should be started and for how long
 	 *	\param int which job should be used
 	 *	\param int the time in seconds
 	 *	\return void
 	 */
-	void setMotorJob(int job, unsigned long int time);
-
 	void setMotorJobTime(unsigned long int time);
 
 	//uart:
@@ -78,14 +80,12 @@ public:
 	 */
 	void setResponseFlag();
 	 
-	/*!	\fn void writeResponse(char * response)
+	/*!	\fn void writeResponse(char response)
 	 *	\brief writes a response in the response pool 
 	 *	\param response a char array with two positions
 	 *	\return void
 	 */
-	void writeResponse(char * response);
-	
-	void startMotorController();
+	void writeResponse(char response);
 
 	void main();
 };

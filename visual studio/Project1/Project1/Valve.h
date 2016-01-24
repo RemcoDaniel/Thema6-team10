@@ -21,21 +21,21 @@ private:
 
 public:
 	Valve();
-	char * getOnCommand();
 	/*! \fn char * getOnCommand()
 	 *	\brief Returns the bytes to set the valve open
 	 *	\return a char pointer to a 2 char array
 	 */
-	char * getOffCommand();
+	char * getOnCommand();
 	/*! \fn char * getOffCommand()
 	 *	\brief Returns the bytes to set the valve close
 	 *	\return a char pointer to a 2 char array
 	 */
-	char * getStatusCommand();
+	char * getOffCommand();
 	/*! \fn char * getStatusCommand()
 	 *	\brief Returns the bytes to get the status of the valve
 	 *	\return a char pointer to a 2 char array
 	 */
+	char * getStatusCommand();
 };
 
 #endif
