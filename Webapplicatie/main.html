@@ -353,7 +353,6 @@
 	$(".MyStartButton").click(function(){
 		//sendMessage();
 		validate();
-		getDuur();
 		if (done == true){
 			getDuur();
 			getStatus();
@@ -377,6 +376,8 @@
 	function getDuur(){
 		seconds = document.forms["WAS"]["time"].value;
 	}
+	
+	
 		
 	var done = "";
 	function validate() {
