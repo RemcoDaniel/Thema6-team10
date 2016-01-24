@@ -1,0 +1,32 @@
+Algemeen:
+Zoals te zien in het klassendiagram, bestaat het diagram uit twee delen;
+een deel voor de werking van de wasmachine, en een deel voor de communicatie met de
+webapplicatie.
+
+Wasmachine deel:
+Voor de verwezelijking van het wasmachine deel is gekozen voor 1 controller die het geheel
+stuurt, met daaronder 3 controllers die zorgen voor de besturing van de afzonderlijke
+hardware objecten. Er is een TempController die alle zaken rond de temperatuur regelt.
+Deze controller klasse heeft 2 boundary klassen onder zich, de Heater en de TempSensor.
+
+De WaterController regelt op zijn beurt alle zaken die met het waterniveau te maken hebben.
+Onder hem vallen de boundary klassen WaterSensor, Pump en Valve.
+
+Tot slot regelt de MotorController alle zaken die voor de motor zijn. Hij heeft dan ook
+de Motor als boundary klasse onder zich.
+
+
+Er is een UART klasse die de communicatie over de seriele port verzorgd.
+De UART kent de drie controllers die samenwerken met de boundary klassen en er vindt
+wederzijdse communicatie plaats. Dus ook de controllers kennen de UART.
+
+De WashingMachineController staat in verbinding met de .....
+De werking is als volgt:
+de WashingMachineController krijgt een nieuw wasprogramma om uit te voeren.
+Op zijn beurt coordineert hij dit wasprogramma door de onderliggende controllers verschillende
+taken te geven. Zo zal hij tegen de TempController zeggen dat een bepaalde temperatuur moet
+worden aangenomen. Dit geeft hij nu dus uit handen en de TempController zal verder regelen
+dat deze temperatuur bereikt zal worden en belangrijker nog, zal worden behouden.
+
+De drie controllers kennen ook de WashingMachineController, aangezien ze signalen terug moeten
+kunnen geven, bijvoorbeeld of een temperatuur bereikt.
