@@ -39,6 +39,8 @@ function onOpen (evt) {
 
 function onMessage (evt){
 	console.log(evt.data);
+	var status = evt.data ;
+	document.getElementById("status").innerHTML = status;
  }
 
 function onClose (evt){
