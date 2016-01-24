@@ -3,6 +3,7 @@
  */
  
 #pragma once
+
 #ifndef _UART_H
 #define _UART_H
 
@@ -10,12 +11,13 @@
 #include "libserial.h"
 #include "pRTOS.h"
 #include "MotorController.h"
-class MotorController;
 #include "TempController.h"
-class TempController;
 #include "WaterController.h"
-class WaterController;
 #include "WashingMachineController.h"
+
+class TempController;
+class WaterController;
+class MotorController;
 class WashingMachineController;
 
 class UART : public RTOS::task {
@@ -27,11 +29,11 @@ private:
 	const char * device;
 	unsigned int baudrate;
 	LibSerial theSerialPort;
-	RTOS::channel< char *, 100 > commandchannel;
+	RTOS::channel< char, 100 > commandchannel;
 	RTOS::clock interval_clock;
 
 	void readChannel();
-	void returnResponse(char * response);
+	void returnResponse(char response, char command);
 
 public:
 
@@ -42,13 +44,13 @@ public:
 	 *	\param s the request you want to send
 	 *	\return The response of the emulator
 	 */
-	void executeCommand(char * s);
+	void executeCommand(char request, char command);
 	
 	/*! \fn void writeChannel(char * request)
 	 *	\brief Puts two chars on the UART
 	 *	\param s The two chars you want to send over the UART
 	 */
-	void writeChannel(char * request);
+	void writeChannel(char request, char command);
 
 	void main();
 };

@@ -1,5 +1,44 @@
+Voor de realisatie van het systeem zijn een aantal taken in het leven geroepen.
+Elke taak is opgehangen aan een controller klasse.
+De volgende taken zijn naar voren gekomen bij het uitdenken van het systeem,
+met daarachter welke klasse de rol van deze taak vervult en welke klassen
+ook onder deze taak vallen:
+- taak voor de UART (klasse UART is de taak)
+- taak voor de wasmachine als geheel (klasse WashingMachineController is de taak, klassen Door en SoapDispenser vallen hier ook onder)
+- taak voor de motor (klasse MotorController is de taak; klasse Motor valt hier ook onder)
+- taak voor de temperatuur (klasse TempController is de taak; klassen TempSensor en Heater vallen hier ook onder)
+- taak voor het waterniveau (klasse WaterController is de taak; klassen WaterSensor, Pump en Valve vallen hier ook onder)
+- taak voor samenwerking met de webapplicatie (klasse  ............)
+
+=================================================================================================
+In het concurrency diagram zijn de verschillende taken binnen het systeem
+afgebeeld en de manieren waarop ze onderling communiceren weergegeven.
+
+De manieren van communicatie tussen de taken die in dit project zijn gebruikt zijn
+de pool met mutex, de channel, de flag, de clock en de timer.
+
+Een pool is een manier om data uit te wisselen zonder synchronisatie. Het betreft een
+enkele waarde, bijvoorbeeld een integer. Het gevaar van een pool is dat de taken
+die de pool delen tegelijkertijd willen lezen en schrijven in de pool.
+Om dit te voorkomen kan een mutex op de pool worden gezet. Hiermee kan de
+gemeenschappelijke toegang tot de pool worden gecoordineerd en conflicten worden
+voorkomen.
+
+Een channel is een buffer met een vaste grootte waarnaar meerdere taken kunnen
+schrijven en er slechts 'e'en lezer is.
+
+Een flag is als het ware een statusvlag die door een taakkan worden gezet om een andere taak
+een seintje te geven dat een actie heeft plaatsgevonden.
+Hierbij vindt verder geen overdracht van data plaats.
+
+Een clock en een timer zijn vormen van tijd-mechanismen. Na enige tijd krijgt de taak die de
+clock of timer bezit een seintje dat een bepaalde tijd is verstreken.
+De clock zal telkens na een vaste tijdsduur een seintje geven, terwijl een timer elke keer dat
+hij is "afgegaan" opnieuw zal moeten worden gezet.
+=================================================================================================
+
 washingmachinecontroller heeft een eigen taak.
-deze stuur naar de tempcontroller dat hij een bepaalde temp wil hebben
+deze stuurt naar de tempcontroller dat hij een bepaalde temp wil hebben
 dit gebeurt over een pool met mutex erop
 de tempcontroller (ook een taak) gaat nu regelen dat deze temp wordt bereikt
 hij werkt samen met de tempsensor en de heater.

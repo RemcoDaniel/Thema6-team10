@@ -20,14 +20,14 @@
 #include "WaterController.h"
 #include "Door.h"
 #include "SoapDispenser.h"
+#include "WebController.h"
 
 int main(){
 	try{
-		// eerst wasprogramma maken! deze kan hij dan uit gaan voeren		// dit moet nog anders worden gedaan!!!!!!
-		Wasprogramma wasprog = Wasprogramma(40, 20, 50, 1);
-
 		// de wasmachinecontroller maakt ook alle andere controllers aan + de boundary objecten + de uart
-		WashingMachineController wasctrl = WashingMachineController(wasprog);
+		WasmachineApp app = WasmachineApp();
+		WashingMachineController wasctrl = WashingMachineController(app);
+		RTOS::run();
 	}
 	catch (std::exception &e){
 		std::cerr << e.what();

@@ -10,16 +10,13 @@
 Door::Door() {}
 
 char * Door::getLockCommand() {
-	char command[3] = { DOOR_LOCK_REQ, LOCK_CMD, '\0' };
-	return command;
+	return lockcommand;
 }
 
 char * Door::getUnlockCommand() {
-	char command[3] = { DOOR_LOCK_REQ, UNLOCK_CMD, '\0' };
-	return command;
+	return unlockcommand;
 }
 
 char * Door::getStatusCommand() {
-	char command[3] = { DOOR_LOCK_REQ, STATUS_CMD, '\0' };
-	return command;
+	return statuscommand;
 }

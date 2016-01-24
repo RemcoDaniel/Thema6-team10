@@ -10,6 +10,5 @@
 TempSensor::TempSensor() {}
 
 char * TempSensor::getTempCommand() {
-	char command[3] = { TEMPERATURE_REQ, '\0' };
-	return command;
+	return tempcommand;
 }

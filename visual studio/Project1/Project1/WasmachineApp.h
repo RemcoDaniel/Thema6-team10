@@ -4,6 +4,8 @@
 #include "websocket.h"
 #include "wsmulticaster.h"
 #include <string>
+#include <queue> 
+#include "WasProgramma.h"
 
 class WasmachineApp : public WebSocketListener{
 public:
@@ -28,22 +30,29 @@ public:
 	 *	\param	msg string
 	 *	\param	ws pointer to the websocket
 	 */
-	 void onClose(WebSocket *ws) override;
+	void onClose(WebSocket *ws) override;
 	 
 	/*!	\fn		void broadcastMessage(const string & msg)
 	 *	\brief	When the websocket is closed, this is called
 	 *	\param	ws pointer to the websocket
 	 */
-	 void broadcastMessage(const string & msg);
+	void broadcastMessage(const string & msg);
 	 
 	/*!	\fn		Broadcaster* getBroadcaster()
 	 *	\brief	Returns a pointer to the broadcaster
 	 *	\param	msg string
 	 *	\return Pointer to the broadcaster
 	 */
-	 Broadcaster* getBroadcaster();
+	Broadcaster* getBroadcaster();
+
+	bool isMsg();
+	wasprogrammaStruct getLastMsg();
+
+	wasprogrammaStruct jsonStringtoWasprogramma(const string &msg);
 
 private:
+	wasprogrammaStruct wasprogramma;
+	std::queue<wasprogrammaStruct> msgQue;
 	Broadcaster *broadcaster;
 };
 

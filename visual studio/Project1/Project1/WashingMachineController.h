@@ -14,30 +14,48 @@
 #include "Wasprogramma.h"
 #include "UART.h"
 #include "SoapDispenser.h"
+#include "WebController.h"
+#include "WasmachineApp.h"
+
+class UART;
+class MotorController;
+class WaterController;
+class TempController;
+class WebController;
+class WasmachineApp;
 
 class WashingMachineController : public RTOS::task {
 private:
-	Wasprogramma wasprogramma;
+	WasmachineApp app;
+	char * command = 0;
+	Wasprogramma * wasprogramma;
 	Door door;
 	TempController *tempcontroller;
 	WaterController *watercontroller;
 	MotorController *motorcontroller;
+	WebController * webcontroller;
 	UART *uart;
 	SoapDispenser soap;
-	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag, response_flag;
-	RTOS::pool< char * > response_pool;
-	RTOS::mutex response_mutex;
+	RTOS::flag temp_reached_flag, level_reached_flag, motor_done_flag, response_flag, program_ready_flag;
+	RTOS::pool< char > response_pool;
+	RTOS::pool< Wasprogramma * > program_pool;
+	RTOS::mutex response_mutex, program_mutex;
 	RTOS::clock interval_clock;
 
 	void doorlock(bool lock);		// lock = 1 , unlock = 0
+	bool getDoorStatus();			// open = 1, locked or closed = 0;
 	void dispendSoap();
+	void signalLed(bool on);
 
+	void getProgram();
+	
 	//uart:
-	char* readResponse();
-	char* uartTask(char * command);
+	char readResponse();
+	char uartTask(char request, char command);
 
 public:
-	WashingMachineController(Wasprogramma & was);
+
+	WashingMachineController(WasmachineApp app);
 	/*! \fn WashingMachineController(Wasprogramma & was)
 	 *	\brief Creates the controller and assignes a washingschedule
 	 *	\return void
@@ -76,12 +94,15 @@ public:
 	 *	\brief sets the response flag
 	 *	\return void
 	 */
-	void writeResponse(char * response);
+	 
+	void writeResponse(char response);
 	/*!	\fn void writeResponse(char * response)
 	 *	\brief writes a response in the response pool 
 	 *	\param response a char array with two positions
 	 *	\return void
 	 */
+	 
+	void setProgram(Wasprogramma * was);
 
 	void main();
 };

@@ -1,0 +1,6 @@
+background:color
+font-family: fonttype
+
+color:color
+padding:#px #px #px #px
+

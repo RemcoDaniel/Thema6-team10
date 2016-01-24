@@ -5,16 +5,13 @@
 Heater::Heater() {}
 
 char * Heater::getOnCommand() {
-	char command[3] = { HEATING_UNIT_REQ, ON_CMD, '\0' };
-	return command;
+	return oncommand;
 }
 
 char * Heater::getOffCommand() {
-	char command[3] = { HEATING_UNIT_REQ, OFF_CMD, '\0' };
-	return command;
+	return offcommand;
 }
 
 char * Heater::getStatusCommand() {
-	char command[3] = { HEATING_UNIT_REQ, STATUS_CMD, '\0' };
-	return command;
+	return statuscommand;
 }

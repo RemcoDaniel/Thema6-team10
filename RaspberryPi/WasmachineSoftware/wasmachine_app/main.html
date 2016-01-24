@@ -1,0 +1,546 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+         <title>wasmachine applicatie</title>
+         <link rel="stylesheet" href="main.css">
+		 <script src="./Misc/jquery-1.11.0.min.js"></script>
+		 <script src="wasmachineWebsocket.js"> </script> 
+    </head>
+    <body onload="startTime()">
+	
+	<!--mainpage-->
+	
+			<header>
+				<li>Wasmachine App</li>
+				<li><div id=clock></div></li>
+				<li>Status:</li>
+				<li><div id="status">Doet niks</div></li>
+				<li><a href="#" class="MyStopButton">Stop</a></li>
+				<li>resterende tijd:</li>
+				<li><div id="countdown"></div></li>
+			</header>
+			<div id=Mainwasscherm>
+				<div class= navbar>
+					<li class=wassen><a class=active>Wassen</a></li>		
+					<li class=log><a>Log</a></li>
+					<li class=klantenservice><a>Klantenservice</a></li>
+					<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+					<li class=logout><a>Log out</a></li>
+				</div>
+				
+				<div class=wasscherm> 
+				<form method="post" onsubmit="return validate()" name="WAS" id="form">
+					<li>
+						<div id=Wateroptie>
+							<label class="SelectionLabel">Hoeveelheid Water</label><br/>
+							<input data-wasapp="100" data-select="Wateroptie" type="radio" id=water1 name="watervalue" value=50 />&#09 Extra Water
+							<br/>
+							<input data-wasapp="50" data-select="Wateroptie" type="radio" id=water2 name="watervalue" value=100 />&#09 Normale Hoeveelheid
+							<br/>
+							<input data-wasapp="25" data-select="Wateroptie" type="radio" id=water3 name="watervalue" value=200 />&#09 Minder Water
+							<br/>
+						</div>
+					</li>
+					
+					<li>
+						<div id=wastype>
+						<label class="SelectionLabel">Type was</label>
+							<br/>
+							<input data-wasapp="1" data-select="WasOptie" type="radio" id=was1 name="wastype" value="wol" />&#09 Witte was
+							<br/>
+							<input data-wasapp="2" data-select="WasOptie" type="radio" id=was2  name="wastype" value="zwart" />&#09 Bonte was
+							<br/>
+							<input data-wasapp="3" data-select="WasOptie" type="radio" id=was3 name="wastype" value="witte" />&#09 Fijne was
+							<br/>
+							<input data-wasapp="4" data-select="WasOptie" type="radio" id=was4 name="wastype" value="bont" />&#09 Wolle was
+							<br/>
+						</div>
+					</li>
+					
+					
+					<li>
+						<div id=tempoptie>
+							<label class="SelectionLabel">Temperatuur</label>
+							<br/>
+							<input data-wasapp="15" data-select="TempOptie" type="radio" id=temp1 name="temp" value=10 />&#09 15&#176C Koud programma 
+							<br/>
+							<input data-wasapp="30" data-select="TempOptie" type="radio" id=temp2 name="temp" value=30 />&#09 30&#176C 
+							<br/>
+							<input data-wasapp="40" data-select="TempOptie" type="radio" id=temp3 name="temp" value=40 />&#09 40&#176C
+							<br/>
+							<input data-wasapp="60" data-select="TempOptie" type="radio" id=temp4 name="temp" value=60 />&#09 60&#176C
+							<br/>
+							<input data-wasapp="90" data-select="TempOptie" type="radio" id=temp5 name="temp" value=90 />&#09 90&#176C
+							<br/>	
+						</div>
+					</li>
+					
+					<li>
+						<div id=tijdoptie>
+							<label class="SelectionLabel">tijdsduur</label>
+							<br/>
+							<input data-wasapp="30" data-select="TijdOptie" type="radio" id=time1 name="time" value=5 />&#09 30 minuten
+							<br/>
+							<input data-wasapp="60" data-select="TijdOptie" type="radio" id=time2 name="time" value=600 />&#09 60 minuten
+							<br/>
+							<input data-wasapp="90" data-select="TijdOptie" type="radio" id=time3 name="time" value=1800 />&#09 90 minuten
+							<br/>
+							<input data-wasapp="120" data-select="TijdOptie" type="radio" id=time4 name="time" value=3600 />&#09 120 minuten
+							<br/>	
+						</div>
+					</li>
+				</form>	
+					<li>
+						<a class="MyStartButton">Start</a>
+					</li>
+				</div>
+			</div>	
+		
+		<!--logscherm----------------------------------------------------------->
+		<div id=logscherm>
+			<div class= navbar>
+				<li class=wassen><a>Wassen</a></li>		
+				<li class=log><a class=active>Log</a></li>
+				<li class=klantenservice><a>Klantenservice</a></li>
+				<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+				<li class=logout><a>Log out</a></li>
+			</div>
+			<div id=logscreen style="width:80%;">
+			<H2>Verbruik</H2>
+			<table style="width:60%">
+				<tr>
+					<td style="width:50%;">Totaal Waterverbruik:</td>
+					<td id=totWaterverbruik style="width:10%;">9999999</td>
+					<td>Liter</td>
+				</tr>
+					<td style="width:50%;">Totaal Energieverbruik:</td>
+					<td id=totEnergieverbruik style="width:10%;">9999999</td>
+					<td>kWh</td>
+				<tr>
+					
+				</tr>
+			</table>
+			</div>
+		</div>
+		
+	
+		<!--klantenservicescherm----------------------------------------------------------->
+		<div id=klantenservicescherm>
+			<div class= navbar>
+				<li class=wassen><a>Wassen</a></li>		
+				<li class=log><a>Log</a></li>
+				<li class=klantenservice><a class=active>Klantenservice</a></li>
+				<li class=bedrijfsinfo><a>Bedrijfsinfo</a></li>
+				<li class=logout><a>Log out</a></li>
+			</div>
+			
+			<div id=klantenservicescreen>
+				<h1>Klantenservice</h1>
+				<p>Als je problemen ondervindt met de webapplicatie kunt u ons bereiken op deze manieren</p><br>
+				<p>Mail: seseellybon@gmail.com</p>
+				<p>Telefoon: +31 6 134 311 69 </p>
+			</div>				
+		</div>
+		
+		<!--bedrijfsinfoscherm----------------------------------------------------------->
+		<div id=bedrijfsinfoscherm>
+			<div class= navbar>
+				<li class=wassen><a>Wassen</a></li>		
+				<li class=log><a>Log</a></li>
+				<li class=klantenservice><a>Klantenservice</a></li>
+				<li class=bedrijfsinfo><a class=active>Bedrijfsinfo</a></li>
+				<li class=logout><a>Log out</a></li>
+			</div>
+				
+			<div id=bedrijfsinfoscreen>
+				<h1>BedrijfsInfo</h1>
+				<p>Team 10</p>
+				<p>Teamleden:</p>
+				<div class=foto>
+					<img id="imgRemco" src="./Misc/Remco.jpg"/>
+						<span class=caption>Remco Nijkamp</span>
+				</div>
+				<div class=foto>
+					<img id="imgJordan" src="./Misc/Jordan.jpg"/>
+						<span class=caption>Jordan Ramirez</span>
+				</div>
+				<div class=foto>
+					<img id="imgJeroen" src="./Misc/Jeroen.jpg"/>
+						<span class=caption>Jeroen Kok</span>
+				</div>
+				<div class=foto>
+					<img id="imgKevin" src="./Misc/Kevin.jpg"/>
+						<span class=caption>Kevin Damen</span>
+				</div>
+				</div>
+			</div>		
+		</div>
+		
+		<!--logout pop up----------------------------------------------------------->
+		<div id=logoutpopup>			
+			<div class=popupcontent>
+				<h2>Are you sure?<h2>
+				<p>Are you sure you wanna log out?</p>
+				<div class=buttons>
+					<input class="logoutbutton" type="button" value="Logout">
+					<input class="CancelButton" type="button" value="Cancel">
+				</div>
+			</div>		
+		</div>
+		
+		<!--inlogscherm----------------------------------------------------------->
+		<div id=loginscherm>
+			Username:&#09 <input type="text" id="Username" size="30" />
+            Password:&#09<input type="password" id="Password" size="30" />
+			<input class="inlogbutton" type="submit" value="login"><br/>	
+		</div>
+    </body>
+	
+	
+	
+
+</html>
+
+<script>
+	WebSocketConnect();
+
+	jQuery(document).ready(function() {
+		$("#logoutpopup").hide();	
+		jQuery("header").show();
+		jQuery("#Mainwasscherm").show();
+		jQuery("#logscherm").hide();
+		jQuery("#klantenservicescherm").hide();
+		jQuery("#bedrijfsinfoscherm").hide();
+		jQuery("#loginscherm").hide();			
+	});
+	
+	var wasmachineDatapack = {water:"", temp:"", type:"", time:""};
+	var wasmachineWebStatus = "STATUS_STOP";
+	
+	$( "input" ).on( "change", function() {
+		wasmachineDatapack.water = $( "input[name=watervalue]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.type = $( "input[name=wastype]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.temp = $( "input[name=temp]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.time = $( "input[name=time]:checked" ).attr('data-wasapp');
+	});
+
+	function setWasmachineDatapack(){
+		wasmachineDatapack.water = $( "input[name=watervalue]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.type = $( "input[name=wastype]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.temp = $( "input[name=temp]:checked" ).attr('data-wasapp');
+		wasmachineDatapack.time = $( "input[name=time]:checked" ).attr('data-wasapp');
+	}
+		
+	$(".wassen").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").show();
+		$("#logscherm").hide();		
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").hide();				
+	});
+	
+	$(".log").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").show();		
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").hide();				
+	});
+		
+	$(".klantenservice").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").hide();	
+		$("#klantenservicescherm").show();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").hide();				
+	});
+
+	$(".bedrijfsinfo").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").show();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").hide();	
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").show();	
+		$("#loginscherm").hide();				
+	});
+		
+	$(".inlogbutton").click(function(){	
+		var user = document.getElementById('Username');
+		var pass = document.getElementById('Password');
+			
+		var coruser = "team10"
+		var corpass = "123"
+		
+		if (user.value == coruser && pass.value == corpass){
+			document.getElementById("Username").value = "";
+			document.getElementById("Password").value = "";
+			$("#logoutpopup").hide();	
+			$("header").show();
+			$("#Mainwasscherm").show();
+			$("#logscherm").hide();	
+			$("#klantenservicescherm").hide();	
+			$("#bedrijfsinfoscherm").hide();	
+			$("#loginscherm").hide()	
+		}
+		else {
+			window.alert("Incorrect!");
+			document.getElementById("Username").value = "";
+			document.getElementById("Password").value = "";
+		}
+	});
+		
+	$(".logout").click(function(){
+		$("#logoutpopup").show();
+	});	
+
+	$(".CancelButton").click(function(){
+		$("#logoutpopup").hide();		
+	});
+		
+	$(".logoutbutton").click(function(){
+		$("#logoutpopup").hide();	
+		$("header").hide();
+		$("#Mainwasscherm").hide();
+		$("#logscherm").hide();	
+		$("#klantenservicescherm").hide();	
+		$("#bedrijfsinfoscherm").hide();	
+		$("#loginscherm").show()
+	});
+
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		m = checkTime(m);
+		document.getElementById('clock').innerHTML = h + ":" + m;
+		var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i) {
+		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		return i;
+	}
+		
+	var countdownTimer = setInterval('timer()', 1000);
+	function timer() {
+		document.getElementById('countdown').innerHTML = "0:00:00";
+				
+		var days        = Math.floor(seconds/24/60/60);
+		var hoursLeft   = Math.floor((seconds) - (days*86400));
+		var hours       = Math.floor(hoursLeft/3600);
+		var minutesLeft = Math.floor((hoursLeft) - (hours*3600));
+		var minutes     = Math.floor(minutesLeft/60);
+		var remainingSeconds = seconds % 60;
+		if (counting == true){	
+			if (remainingSeconds < 10) {
+				remainingSeconds = "0" + remainingSeconds; 
+			}
+			if (minutes < 10) {
+				minutes = "0" + minutes; 
+			}				
+			document.getElementById('countdown').innerHTML = hours + ":" + minutes + ":" + remainingSeconds;
+			if (seconds == 0) {
+				document.getElementById("status").innerHTML = "Done!"
+				$(".MyStartButton").show();	
+				counting = false;
+				var audio = new Audio('./Misc/Loud-alarm-clock-sound.wav');
+				audio.play();
+			} else {
+				document.getElementById("status").innerHTML = status;
+				seconds--;
+				getStatus();
+			}
+		}
+			
+	}
+		
+	$(".MyStartButton").click(function(){
+		validate();
+		getDuur();
+		if (done == true){
+			getDuur();
+			getStatus();
+			counting = true;
+
+			wasmachineWebStatus = "STATUS_START";
+			sendWebStatus();
+
+			$(".MyStartButton").hide();
+			setWasmachineDatapack();
+			sendMessage();
+		}
+	});	
+
+	$(".MyStopButton").click(function(){
+		counting = false;
+		document.getElementById('status').innerHTML = "Stopped";
+		
+		wasmachineWebStatus = "STATUS_STOP";
+		sendWebStatus();
+
+		$(".MyStartButton").show();
+	});
+
+
+	function getStatus(){
+		var status = "spoelen" ;
+		document.getElementById("status").innerHTML = status;
+	}
+		
+	function getDuur(){
+		seconds = document.forms["WAS"]["time"].value;
+	}
+		
+	var done = "";
+	function validate() {
+		var timedone = true;
+		var waterdone = true;
+		var wasdone = true;
+		var tempdone = true;
+			
+		var Time1 = document.getElementById('time1').checked;
+		var Time2 = document.getElementById('time2').checked;
+		var Time3 = document.getElementById('time3').checked;
+		var Time4 = document.getElementById('time4').checked;
+		
+		var Water1 = document.getElementById('water1').checked;
+		var Water2 = document.getElementById('water2').checked;
+		var Water3 = document.getElementById('water3').checked;
+		
+		var Was1 = document.getElementById('was1').checked; 
+		var Was2 = document.getElementById('was2').checked; 
+		var Was3 = document.getElementById('was3').checked; 
+		var Was4 = document.getElementById('was4').checked; 
+		
+		var Temp1 = document.getElementById('temp1').checked; 
+		var Temp2 = document.getElementById('temp2').checked; 
+		var Temp3 = document.getElementById('temp3').checked; 
+		var Temp4 = document.getElementById('temp4').checked;
+		var Temp5 = document.getElementById('temp5').checked;
+			
+		if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == ""){
+			timedone = false;
+			document.getElementById("tijdoptie").style.background = "red";
+		}
+		else {document.getElementById("tijdoptie").style.background = "#4CAF50";}
+		if (Water1 == "" && Water2 == "" && Water3 == ""){
+			waterdone = false;
+			document.getElementById("Wateroptie").style.background = "red";
+		}
+		else{document.getElementById("Wateroptie").style.background = "#4CAF50";}
+		if (Was1 == "" && Was2 == "" && Was3 == "" && Was4 == ""){
+			wasdone = false;
+			document.getElementById("wastype").style.background = "red";
+		}else {document.getElementById("wastype").style.background = "#4CAF50";}
+		if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == ""){
+			tempdone = false;
+			document.getElementById("tempoptie").style.background = "red";
+		}else{document.getElementById("tempoptie").style.background = "#4CAF50";}	
+
+		if (timedone == true && waterdone == true && wasdone == true && tempdone == true){
+			done = true;
+		}
+		else {
+			done = false;
+		}			
+		
+	}
+		
+
+	var changable1 = false;	
+	var changable2 = false;	
+	var changable3 = false;	
+	var changable4 = false;	
+	var checkInterval = setInterval('AutoSelect()', 100);
+	function AutoSelect(){
+		var Time1 = document.getElementById('time1').checked;
+		var Time2 = document.getElementById('time2').checked;
+		var Time3 = document.getElementById('time3').checked;
+		var Time4 = document.getElementById('time4').checked;
+			
+		var Water1 = document.getElementById('water1').checked;
+		var Water2 = document.getElementById('water2').checked;
+		var Water3 = document.getElementById('water3').checked;
+			
+		var Was1 = document.getElementById('was1').checked; 
+		var Was2 = document.getElementById('was2').checked; 
+		var Was3 = document.getElementById('was3').checked; 
+		var Was4 = document.getElementById('was4').checked; 
+				
+		var Temp1 = document.getElementById('temp1').checked; 
+		var Temp2 = document.getElementById('temp2').checked; 
+		var Temp3 = document.getElementById('temp3').checked; 
+		var Temp4 = document.getElementById('temp4').checked;
+		var Temp5 = document.getElementById('temp5').checked;
+		
+		if (Was1 == true){ //witte was standaard==================================================================
+			changable2 = false;
+			changable3 = false;
+			changable4 = false;			
+				if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable1 == false){
+				document.getElementById('temp4').checked = true;					
+			}
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable1 == false){
+				document.getElementById('water2').checked = true;
+			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable1 == false){
+				document.getElementById('time3').checked = true;
+				changable1 = true;					
+			}
+		}
+			
+		if (Was2 == true){ //Bonte was standaard==========================================================
+			changable1 = false;
+			changable3 = false;
+			changable4 = false;
+			
+			if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable2 == false){
+				document.getElementById('temp3').checked = true;
+			}
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable2 == false){
+				document.getElementById('water2').checked = true;
+			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable2 == false){
+				document.getElementById('time3').checked = true;
+				changable2 = true;					
+			}			
+		}
+		if (Was3 == true){ //Fijne was standaard===============================================================
+			changable1 = false;
+			changable2 = false;
+			changable4 = false;
+			if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable3 == false ){
+				document.getElementById('temp2').checked = true;
+			}
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable3 == false){
+				document.getElementById('water2').checked = true;
+			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable3 == false){
+				document.getElementById('time3').checked = true;
+				changable3 = true;					
+			}			
+		}
+		if (Was4 == true){ //Wolle was standaard====================================================================
+			changable1 = false;
+			changable2 = false;
+			changable3 = false;
+			if (Temp1 == "" && Temp2 == "" && Temp3 == "" && Temp4 == "" && Temp5 == "" || changable4 == false){
+				document.getElementById('temp2').checked = true;
+			}
+		    if (Water1 == "" && Water2 == "" && Water3 == "" || changable4 == false){
+				document.getElementById('water2').checked = true;
+			}
+			if (Time1 == "" && Time2 == "" && Time3 == "" && Time4 == "" || changable4 == false){
+				document.getElementById('time3').checked = true;
+				changable4 = true;
+			}			
+		}			
+	}
+	
+	</script>
