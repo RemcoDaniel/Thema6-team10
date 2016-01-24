@@ -1,11 +1,5 @@
-/**
- * \class The WaterController controller class
- *
- * Makes sure the water is at the right level
- *
- */
-
-
+// file WaterController.h
+#pragma once
 #ifndef _WATERCONTROLLER_H
 #define _WATERCONTROLLER_H
 
@@ -44,34 +38,13 @@ private:
 
 public:
 	WaterController(WashingMachineController * wascontroller);
-	
-	/*! \fn void setUartPointer(UART *u)
-	 *  \brief Used to (re)set the pointer to the uart.
-	 *  \param u* pointer to the UART object this controller should use.
-	 */
 	void setUartPointer(UART * u);
-	 
-	/*!	\fn void setWaterLevel(int level)
-	 *	\brief sets the waterlevel
-	 *	\param level the waterlevel in precent
-	 *	\return void
-	 */
 	void setWaterLevel(int level);
 
 	void startWaterController();
 
 	//uart:
-	/*!	\fn void setResponseFlag()
-	 *	\brief sets the response flag
-	 *	\return void
-	 */
 	void setResponseFlag();
-	
-	/*!	\fn void writeResponse(char response)
-	 *	\brief writes a response in the response pool 
-	 *	\param response a char
-	 *	\return void
-	 */
 	void writeResponse(char response);
 
 	void main();

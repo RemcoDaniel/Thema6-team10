@@ -59,21 +59,13 @@
       </counter>
       <counter>
         <item-type stereotype="" type="AbstractElementGroup" />
-<<<<<<< HEAD
-        <value>427</value>
-=======
         <value>27</value>
->>>>>>> master
       </counter>
     </entity-ids>
     <diagrams>
       <counter>
         <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
-<<<<<<< HEAD
-        <value>1</value>
-=======
         <value>4</value>
->>>>>>> master
       </counter>
     </diagrams>
     <fields>
@@ -461,8 +453,6 @@
         </operation>
       </operations>
     </item>
-<<<<<<< HEAD
-=======
     <item id="di862465183779863701" cid="C001" type="class" name="Heater" style-class="" visibility="private" creation-date="12/09/2015 01:49:30">
       <stereotypes>
         <stereotype name="boundary" />
@@ -718,7 +708,6 @@
         </operation>
       </operations>
     </item>
->>>>>>> master
   </items>
   <models>
     <model id="pa1ddfa7396d6482084193fca25efec7b_772183369" name="Model 1" type="model" namespace="" order-index="1">
@@ -734,11 +723,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-<<<<<<< HEAD
-      <diagram type="uml-class" id="p2edf46ee03724794a363a6763b86b55f_514055180" name="ClassDiagram1" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="164,-178" zoom="0.4">
-=======
       <diagram type="uml-class" id="p2edf46ee03724794a363a6763b86b55f_514055180" name="Volledig Diagram" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-628,-178" zoom="0.4">
->>>>>>> master
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -1852,8 +1837,6 @@
           </item>
         </layer>
       </diagram>
-<<<<<<< HEAD
-=======
       <diagram type="uml-class" id="pc0378b247c244de5854916415e3ff10a_591324262" name="Het westen-mini" order-index="2" overview-order-index="0" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="0,46" zoom="0.5">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
@@ -2943,7 +2926,6 @@
           </item>
         </layer>
       </diagram>
->>>>>>> master
     </model>
   </models>
   <documents />

@@ -1,10 +1,5 @@
-/**
- * \class Heater boundry class
- *
- * Used as an interface to get the appropiate bytes for the uart
- *
- */
-
+// file Heater.h
+#pragma once
 #ifndef _HEATER_H
 #define _HEATER_H
 
@@ -20,23 +15,8 @@ private:
 
 public:
 	Heater();
-	
-	/*! \fn char * getOnCommand()
-	 *	\brief Returns the bytes to set the heater on
-	 *	\return a char pointer to a 2 char array
-	 */
 	char * getOnCommand();
-	
-	/*! \fn char * getOffCommand()
-	 *	\brief Returns the bytes to set the heater off
-	 *	\return a char pointer to a 2 char array
-	 */
 	char * getOffCommand();
-	
-	/*! \fn char * getStatusCommand()
-	 *	\brief Returns the bytes to get the status of the heater
-	 *	\return a char pointer to a 2 char array
-	 */
 	char * getStatusCommand();
 };
 
