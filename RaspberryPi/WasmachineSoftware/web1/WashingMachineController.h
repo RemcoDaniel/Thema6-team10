@@ -23,7 +23,7 @@ class WasmachineApp;
 
 class WashingMachineController : public RTOS::task {
 private:
-	WasmachineApp app;
+	WasmachineApp * app;
 	char * command = 0;
 	Wasprogramma * wasprogramma;
 	Door door;
@@ -51,7 +51,7 @@ private:
 	char uartTask(char request, char command);
 
 public:
-	WashingMachineController(WasmachineApp app);
+	WashingMachineController(WasmachineApp * app);
 
 	void setTempReached();
 	void setWaterLevelReached();

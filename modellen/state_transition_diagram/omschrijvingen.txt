@@ -23,7 +23,17 @@ MotorController:
 De MotorController kent 5 toestanden; waiting, running, measuring, running washingprogram en rotating.
 Zodra de RTOS run wordt aangeroepen komt de MotorController in de toestand waiting terecht.
 In deze toestand wacht hij op het setten van de start flag, waarna hij actief mag worden en over
-zal gaan in de toestand running. In deze 
+zal gaan in de toestand running. In deze toestand zal worden gewacht tot een nieuwe opdracht voor
+de motor klaar staat, ook wel een job. Als dit zo is wordt de new job flag gezet, en na het 
+ontvangen van dit signaal zal de MotorController in de toestand running washingprogram terechtkomen.
+Hier zal hij het programma uit gaan voeren die bestaat uit een aantal malen rotate. Zodra rotate
+aan wordt geroepen wordt overgegaan in de toestand rotating. In deze toestand zal een timer
+worden gezet die aan moet geven na welke periode de motor moet stoppen met draaien.
+Als deze timer een signaal geeft wordt de rotating toestand verlaten en komt er een splitsing.
+Mits de taak van de motor klaar is, zal hij de WashingMachineController hiervan op de hoogte stellen
+door een flag te zetten en vervolgens zelf over te gaan naar de toestand running, waar hij op een 
+nieuwe taak kan wachten. Mocht de taak nog niet ten einde zijn, wordt overgegaan naar de toestand
+running washingprogram en zal vervolgens een nieuwe rotatie uitgevoerd gaan worden.
 =================================================================================================
 
 WaterController:
