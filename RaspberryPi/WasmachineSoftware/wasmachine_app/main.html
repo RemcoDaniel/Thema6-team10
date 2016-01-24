@@ -354,7 +354,6 @@
 			} else {
 				document.getElementById("status").innerHTML = status;
 				seconds--;
-				getStatus();
 			}
 		}
 			
@@ -365,7 +364,6 @@
 		getDuur();
 		if (done == true){
 			getDuur();
-			getStatus();
 			counting = true;
 
 			wasmachineWebStatus = "STATUS_START";
@@ -386,12 +384,6 @@
 
 		$(".MyStartButton").show();
 	});
-
-
-	function getStatus(){
-		var status = "spoelen" ;
-		document.getElementById("status").innerHTML = status;
-	}
 		
 	function getDuur(){
 		seconds = document.forms["WAS"]["time"].value;
