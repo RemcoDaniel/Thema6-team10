@@ -1,7 +1,4 @@
-/**
- * \class The UART boundry class
- */
- 
+// file UART.h
 #pragma once
 
 #ifndef _UART_H
@@ -36,7 +33,6 @@ private:
 	void returnResponse(char response, char command);
 
 public:
-
 	UART(const char * device, unsigned int baudrate, MotorController * motorctrl, TempController * tempctrl, WaterController * waterctrl, WashingMachineController * wasctrl);
 	
 	/*!	\fn void executeCommand(char request, char command)

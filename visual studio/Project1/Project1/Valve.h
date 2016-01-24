@@ -1,10 +1,3 @@
-/**
- * \class Valve boundry class
- *
- * Used as an interface to get the appropiate bytes for the uart
- *
- */
- 
 // file Valve.h
 #pragma once
 #ifndef _VALVE_H

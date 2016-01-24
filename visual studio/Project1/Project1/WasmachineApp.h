@@ -10,38 +10,26 @@
 class WasmachineApp : public WebSocketListener{
 public:
 	WasmachineApp(Broadcaster *broadcaster);
-	
 	/*!	\fn		void onTextMessage(const string & msg, WebSocket *ws) override
 	 *	\brief	When a textmessage is recieved, this is called.
 	 *	\param	msg string
 	 *	\param	ws pointer to the websocket
 	 */
 	void onTextMessage(const string & msg, WebSocket *ws) override;
-	
-	/*!	\fn		void sendTextMessage(const string &msg, WebSocket *ws)
+	/*!	\fn		void onClose(WebSocket *ws) override
 	 *	\brief	When a textmessage is recieved, this is called.
 	 *	\param	msg string
 	 *	\param	ws pointer to the websocket
 	 */
-	void sendTextMessage(const string &msg, WebSocket *ws);
-	
-	/*!	\fn		void onClose(WebSocket *ws)
-	 *	\brief	Sends the msg to the websocket
-	 *	\param	msg string
-	 *	\param	ws pointer to the websocket
-	 */
 	void onClose(WebSocket *ws) override;
-	 
+
 	/*!	\fn		void broadcastMessage(const string & msg)
-	 *	\brief	When the websocket is closed, this is called
-	 *	\param	ws pointer to the websocket
+	 *	\brief	Broadcasts a massage to all IP adresses.
 	 */
 	void broadcastMessage(const string & msg);
-	 
+	
 	/*!	\fn		Broadcaster* getBroadcaster()
-	 *	\brief	Returns a pointer to the broadcaster
-	 *	\param	msg string
-	 *	\return Pointer to the broadcaster
+	 *	\brief	Returns the broadcaster
 	 */
 	Broadcaster* getBroadcaster();
 	

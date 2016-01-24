@@ -1,12 +1,5 @@
-/**
- * \class The MotorController controller class
- *
- * Makes sure the motor is rotating at the right RPM in the right direction (or in the left direction)
- *
- *
- */
- 
- 
+// file MotorController.h
+#pragma once
 #ifndef _MOTORCONTROLLER_H
 #define _MOTORCONTROLLER_H
 
@@ -36,9 +29,9 @@ private:
 	void stopMotor();
 	void rotateRight(int speed);
 	void rotateLeft(int speed);
+
 	void normalMotorJob(unsigned long int time);
 	void centrifuge(unsigned long int time);
-	
 	void startMotorJob();
 
 	//uart:
@@ -47,7 +40,6 @@ private:
 
 public:
 	MotorController(WashingMachineController * wascontroller);
-	
 	/*! \fn void setUartPointer(UART *u)
 	 *  \brief Used to (re)set the pointer to the uart.
 	 *  \param u* pointer to the UART object this controller should use.
@@ -74,12 +66,14 @@ public:
 	void setMotorJobTime(unsigned long int time);
 
 	//uart:
-	/*!	\fn void setResponseFlag()
-	 *	\brief sets the response flag
+	
+	/*!	\fn void writeResponse(char response)
+	 *	\brief writes a response in the response pool 
+	 *	\param response a char array with two positions
 	 *	\return void
 	 */
 	void setResponseFlag();
-	 
+	
 	/*!	\fn void writeResponse(char response)
 	 *	\brief writes a response in the response pool 
 	 *	\param response a char array with two positions

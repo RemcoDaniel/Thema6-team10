@@ -1,7 +1,4 @@
-/**
- * \class The WashingMachineController controller class
- */
- 
+// file WashingMachineController.h
 #pragma once
 #ifndef _WASHINGMACHINECONTROLLER_H
 #define _WASHINGMACHINECONTROLLER_H
@@ -111,7 +108,6 @@ public:
 	 *	\return void
 	 */
 	void writeResponse(char response);
-
 
 	void main();
 };

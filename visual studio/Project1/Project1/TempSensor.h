@@ -1,10 +1,4 @@
-/**
- * \class TempSensor boundry class
- *
- * Used as an interface to get the appropiate bytes for the uart
- *
- */
- 
+// file TempSensor.h
 #pragma once
 #ifndef _TEMPSENSOR_H
 #define _TEMPSENSOR_H
@@ -17,7 +11,7 @@ private:
 	char tempcommand[3] = { TEMPERATURE_REQ, UNDEFINED_CMD , '\0' };
 public:
 	TempSensor();
-	char * getTempCommand(); ///< Returns the bytes used to get the temprature from the temprature sensor
+	char * getTempCommand();
 };
 
 #endif

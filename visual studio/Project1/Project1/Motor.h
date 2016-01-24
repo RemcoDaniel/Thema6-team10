@@ -1,10 +1,5 @@
-/**
- * \class Motor boundry class
- *
- * Used as an interface to get the appropiate bytes for the uart
- *
- */
-
+// file Motor.h
+#pragma once
 #ifndef _MOTOR_H
 #define _MOTOR_H
 
