@@ -35,31 +35,13 @@ private:
 
 public:
 	TempController(WashingMachineController * wascontroller);
-	
-	/*! \fn void setUartPointer(UART *u)
-	 *  \brief Used to (re)set the pointer to the uart.
-	 *  \param u* pointer to the UART object this controller should use.
-	 */
 	void setUartPointer(UART * u);
 
-	/*!	\fn void setTemp(int temp)
-	 *	\brief sets the temprature of the emulator
-	 *	\param temp in celcius degrees
-	 *	\return void
-	 */
 	void setTemp(int temp);
+	void startTempController();
+
 	//uart:
-	/*!	\fn void writeResponse(char response)
-	 *	\brief writes a response in the response pool 
-	 *	\param response a char array with two positions
-	 *	\return void
-	 */
 	void setResponseFlag();
-	/*!	\fn void writeResponse(char response)
-	 *	\brief writes a response in the response pool 
-	 *	\param response a char array with two positions
-	 *	\return void
-	 */
 	void writeResponse(char response);
 
 	void main();

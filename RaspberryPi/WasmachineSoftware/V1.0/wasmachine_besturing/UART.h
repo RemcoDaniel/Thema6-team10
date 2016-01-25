@@ -34,18 +34,8 @@ private:
 
 public:
 	UART(const char * device, unsigned int baudrate, MotorController * motorctrl, TempController * tempctrl, WaterController * waterctrl, WashingMachineController * wasctrl);
-	
-	/*!	\fn void executeCommand(char request, char command)
-	 *	\brief Sends the given command and returns the response from the emulator
-	 *	\param s the request you want to send
-	 *	\return The response of the emulator
-	 */
 	void executeCommand(char request, char command);
-	
-	/*! \fn void writeChannel(char request, char command)
-	 *	\brief Puts two chars on the UART
-	 *	\param s The two chars you want to send over the UART
-	 */
+
 	void writeChannel(char request, char command);
 
 	void main();

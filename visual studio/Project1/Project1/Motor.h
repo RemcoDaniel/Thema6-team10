@@ -14,8 +14,20 @@ private:
 
 public:
 	Motor();
-	char * getMotorSpeedCommand();				// getal van 0 - 1600 rpm
-	char * turn(bool dir, int speed);			// direction: 0 = right, 1 = left
+	
+	/*! \fn char * getMotorSpeedCommand()
+	 *	\brief Returns the bytes to get the speed of the motor
+	 *	\return a char pointer to a 2 char array
+	 */
+	char * getMotorSpeedCommand();
+	
+	/*! \fn char * turn(bool dir, int speed)
+	 *	\brief Sets the right speed and the right direction (or left direction) of the motor
+	 *	\param dir the direction of the motor. false = right, true = left
+	 *	\param speed the speed of the rpm. 0 <= x <= 1600
+	 *	\return the bytes used to set the RPM in a direction.
+	 */
+	char * turn(bool dir, int speed);
 };
 
 #endif

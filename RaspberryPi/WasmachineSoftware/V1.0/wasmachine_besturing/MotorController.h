@@ -40,45 +40,15 @@ private:
 
 public:
 	MotorController(WashingMachineController * wascontroller);
-	/*! \fn void setUartPointer(UART *u)
-	 *  \brief Used to (re)set the pointer to the uart.
-	 *  \param u* pointer to the UART object this controller should use.
-	 */
 	void setUartPointer(UART *u);
-	
-	/*! \fn void startMotorController()
-	 *  \brief sets the start_flag
-	 */
+
 	void startMotorController();
-	
-	/*! \fn int getMotorSpeed()
-	 *	\brief returns the current speed of the motor
-	 *	\return the speed int RPM
-	 */
+
 	int getMotorSpeed();		// getal van 0 - 1600 rpm
-	 
-	/*!	\fn void setMotorJobTime(unsigned long int time)
-	 *	\brief Sets which job should be started and for how long
-	 *	\param int which job should be used
-	 *	\param int the time in seconds
-	 *	\return void
-	 */
 	void setMotorJobTime(unsigned long int time);
 
 	//uart:
-	
-	/*!	\fn void writeResponse(char response)
-	 *	\brief writes a response in the response pool 
-	 *	\param response a char array with two positions
-	 *	\return void
-	 */
 	void setResponseFlag();
-	
-	/*!	\fn void writeResponse(char response)
-	 *	\brief writes a response in the response pool 
-	 *	\param response a char array with two positions
-	 *	\return void
-	 */
 	void writeResponse(char response);
 
 	void main();
