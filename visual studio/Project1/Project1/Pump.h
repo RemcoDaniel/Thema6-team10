@@ -14,8 +14,20 @@ private:
 
 public:
 	Pump();
+	/*! \fn char * getOnCommand()
+	*	\brief Returns the bytes to set the valve open
+	*	\return a char pointer to a 2 char array
+	*/
 	char * getOnCommand();
+	/*! \fn char * getOffCommand()
+	*	\brief Returns the bytes to set the valve open
+	*	\return a char pointer to a 2 char array
+	*/
 	char * getOffCommand();
+	/*! \fn char * getStatusCommand()
+	*	\brief Returns the bytes to set the valve open
+	*	\return a char pointer to a 2 char array
+	*/
 	char * getStatusCommand();
 };
 

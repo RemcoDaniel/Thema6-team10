@@ -14,8 +14,20 @@ private:
 	
 public:
 	SoapDispenser();
+	/*! \fn char * getOpenCommand()
+	*	\brief Returns the bytes to open the dispenser
+	*	\return a char pointer to a 2 char array
+	*/
 	char * getOpenCommand();
+	/*! \fn char * getCloseCommand()
+	*	\brief Returns the bytes to close the dispenser
+	*	\return a char pointer to a 2 char array
+	*/
 	char * getCloseCommand();
+	/*! \fn char * getStatusCommand()
+	*	\brief Returns the bytes to get the status of the dispenser
+	*	\return a char pointer to a 2 char array
+	*/
 	char * getStatusCommand();
 };
 

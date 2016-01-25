@@ -46,7 +46,7 @@ public:
 	 *	\brief Puts two chars on the UART
 	 *	\param s The two chars you want to send over the UART
 	 */
-	void writeChannel(char request, char command));
+	void writeChannel(char request, char command);
 
 	void main();
 };
