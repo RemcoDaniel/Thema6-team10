@@ -1,5 +1,3 @@
-enum class maken voor de wasprogramma's
-
 verhaaltje schrijven over forward declaren in verslag!
 
 fatal error: callback timer destructor called
