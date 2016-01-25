@@ -27,16 +27,25 @@ function sendWebStatus() {
 }
 
 function closeConnection() {
-	ws.send(naam + " gaat weg.");
+	console.log("connection closed");
+	ws.send("NEW_CONNECTION " + naam + " gaat weg.");
 	ws.close();
 }
 
 function onOpen (evt) {
 	console.log("connection open");
-	ws.send(naam + " heeft zich aangesloten bij het gesprek");
+	ws.send("NEW_CONNECTION " + naam + " heeft zich aangesloten bij het gesprek");
  }
 
 function onMessage (evt){
+	console.log(evt.data);
+	if (status != evt.date) {
+		status = evt.data;
+		document.getElementById("status").innerHTML = status;
+		if(status == "klaar") {
+			seconds = 0;
+		}
+	}
  }
 
 function onClose (evt){

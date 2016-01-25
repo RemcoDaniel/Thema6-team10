@@ -178,7 +178,7 @@ header li:first-child{
 
 .MyStartButton {
 	margin-top: 20px;
-	margin-left: 400px;
+	margin-left: 650px;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
 	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
 	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
@@ -314,34 +314,27 @@ header li:first-child{
 	margin-left:300px ;
 }
 
-#imgRemco{
-	-webkit-user-select: none;
-	width: auto;
-	height: 400px;
+div.foto {
+	vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 380px;
+}
+img {
+    width: auto;
+    height: 350px;
+    background-color: grey;
+}
+.caption {
+    display: block;
 }
 
-#imgJeroen {
-	-webkit-user-select: none;
-	width: auto;
-	height: 400px;
-}
 
-#imgKevin {
-	-webkit-user-select: none;
-	width: auto;
-	height: 400px;
-}
-
-#namen{
-	margin-left: 50px;
-}
-
-#namen li {
-	list-style-type: none;
-    display:inline-block;
-    vertical-align: top;
-    width: 25%;
-    float: left;
+#logscreen {
+	font-size: 200%;
+	float: left;
+	margin-top:0px ;
+	margin-left:300px ;
 }
 
 

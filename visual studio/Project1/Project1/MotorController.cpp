@@ -61,13 +61,13 @@ void MotorController::setMotorJobTime(unsigned long int time) {
 }
 
 void MotorController::normalMotorJob(unsigned long int time) {
-	speed = 500;
-	for (int i = 0; i < 4; i++) {
-		if (i == 2) {
-			speed = 1000;
+	speed = 600;
+	for (int i = 0; i < 10; i++) {
+		if (i == 5) {
+			speed = 1200;
 		}
 		rotateLeft(speed);
-		rotate_timer.set(time);			// eigenlijk / 2 / 4
+		rotate_timer.set(time);
 		wait(rotate_timer);
 
 		rotateRight(speed);
@@ -79,16 +79,14 @@ void MotorController::normalMotorJob(unsigned long int time) {
 }
 
 void MotorController::centrifuge(unsigned long int time) {
-	int speed = 100;
 	for (int i = 1; i < 16; i++) {
-		rotateLeft(speed * i);
-		rotate_timer.set((time / 2) / 16);
+		rotateLeft(100 * i);
+		rotate_timer.set(time);
 		wait(rotate_timer);
 	}
-	speed = 100;
 	for (int i = 1; i < 16; i++) {
-		rotateRight(speed * i);
-		rotate_timer.set((time / 2) / 16);
+		rotateRight(100 * i);
+		rotate_timer.set(time);
 		wait(rotate_timer);
 	}
 	stopMotor();
