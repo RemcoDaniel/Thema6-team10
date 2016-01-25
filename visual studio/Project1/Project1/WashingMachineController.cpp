@@ -113,7 +113,7 @@ void WashingMachineController::startWasprogramma() {
 	webcontroller->setStatus(VOORWAS);												// sending status
 	std::cout << "water toevoegen\n";
 	watercontroller->startWaterController();
-	watercontroller->setWaterLevel(wasprogramma->getLevel());						// water erbij
+	watercontroller->setWaterLevel(wasprogramma->getLevel() / 2);					// water erbij
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
 	std::cout << "verwarmen\n";
 	tempcontroller->startTempController();
@@ -125,7 +125,7 @@ void WashingMachineController::startWasprogramma() {
 	wait(motor_done_flag);															// wachten tot motor klaar is
 	std::cout << "water wegpompen\n";
 	watercontroller->setWaterLevel(0);												// water weg
-	wait(level_reached_flag);														// wachten tot water weg is (flag)
+	wait(level_reached_flag);														
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	//hoofdwas:
@@ -133,35 +133,35 @@ void WashingMachineController::startWasprogramma() {
 	webcontroller->setStatus(HOOFDWAS);												// sending status
 	std::cout << "water toevoegen\n";
 	watercontroller->setWaterLevel(wasprogramma->getLevel());						// water erbij
-	wait(level_reached_flag);														// wachten tot voldoende water (flag)
+	wait(level_reached_flag);														
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
 	std::cout << "verwarmen\n";
 	tempcontroller->setTemp(wasprogramma->getTemp());								// verwarmen
 	wait(temp_reached_flag);														// wachten tot temp is bereikt
 	std::cout << "zeep toevoegen\n";
-	dispendSoap();																	// zeep erbij    //========================================================!!!
+	dispendSoap();																	// zeep erbij
 	std::cout << "draaien\n";
 	motorcontroller->setMotorJobTime(wasprogramma->getTime());						// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
 	std::cout << "water wegpompen\n";
 	watercontroller->setWaterLevel(0);												// water weg
-	wait(level_reached_flag);														// wachten tot water weg is (flag)
+	wait(level_reached_flag);														
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	// spoelen:
 	std::cout << "---START SPOELEN---\n";
 	webcontroller->setStatus(SPOELEN);												// sending status
 	std::cout << "water toevoegen\n";
-	watercontroller->setWaterLevel(wasprogramma->getLevel());						// water erbij
-	wait(level_reached_flag);														// wachten tot voldoende water (flag)
+	watercontroller->setWaterLevel(wasprogramma->getLevel() / 2);					// water erbij
+	wait(level_reached_flag);														
 	wait(level_reached_flag);														// wachten tot voldoende water (flag)
 	std::cout << "draaien\n";
 	motorcontroller->setMotorJobTime(wasprogramma->getTime());						// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
 	std::cout << "water wegpompen en heater uitzetten\n";
 	watercontroller->setWaterLevel(0);												// water weg
-	tempcontroller->setTemp(0);
-	wait(level_reached_flag);														// wachten tot water weg is (flag)
+	tempcontroller->setTemp(0);														// verwarming uitzetten
+	wait(level_reached_flag);														
 	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	// centrifugeren:
@@ -170,6 +170,7 @@ void WashingMachineController::startWasprogramma() {
 	std::cout << "draaien\n";
 	motorcontroller->setMotorJobTime(wasprogramma->getTime());						// draaien
 	wait(motor_done_flag);															// wachten tot motor klaar is
+	wait(level_reached_flag);														// wachten tot water weg is (flag)
 
 	std::cout << "deur ontgrendelen\n";
 	doorlock(0);																	// deur ontgrendelen

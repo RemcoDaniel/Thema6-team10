@@ -76,7 +76,9 @@ void WebController::getStatus() {
 
 // AFHANDELING ================================================================================================================
 void WebController::logging() {
-
+	// hier moet hij de temp, waterlevel en motorrpm opvragen en naar de andere kant sturen
+	//WasmachineApp::broadcastMessage(const string & msg);
+	//app->broadcastMessage(const string & msg);
 }
 
 void WebController::sendStatus() {
@@ -95,6 +97,7 @@ void WebController::sendStatus() {
 void WebController::messageHandling() {
 	if(app->isMsg()) {
 		wasprogrammaStruct wasstruct = app->getLastMsg();
+		std::cout << wasstruct.temperature << " dit is temp\n";
 		Wasprogramma * was = new Wasprogramma(wasstruct.temperature, wasstruct.waterlevel, wasstruct.time, wasstruct.job);
 		wasctrl->setProgram(was); // wasmachinecontroller het wasprogramma geven
 	}

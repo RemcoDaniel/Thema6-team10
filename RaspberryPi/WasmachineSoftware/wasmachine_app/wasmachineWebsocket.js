@@ -39,7 +39,13 @@ function onOpen (evt) {
 
 function onMessage (evt){
 	console.log(evt.data);
-	document.getElementById("status").innerHTML = evt.data;
+	if (status != evt.date) {
+		status = evt.data;
+		document.getElementById("status").innerHTML = status;
+		if(status == "klaar") {
+			seconds = 0;
+		}
+	}
  }
 
 function onClose (evt){
